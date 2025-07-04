@@ -5,11 +5,12 @@ h1{
 #pagina{
     display: flex;
     flex-direction: row;
-
     justify-content: center;
 }
 
 #esquerda{
+    position: relative;
+
     border-color: black;
     border-style: solid;
 
@@ -17,11 +18,10 @@ h1{
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     width:40vw;
-    height:70vh;
+    height:80vh;
 }
 
 #direita{
@@ -36,7 +36,7 @@ h1{
     align-items: center;
 
     width:40vw;
-    height:70vh;
+    height:80vh;
 }
 
 #resultadoBusca{
@@ -47,7 +47,7 @@ h1{
 
     width:90%;
     height:80%;
-
+    overflow: scroll;
 }
 
 #busca{
@@ -60,4 +60,47 @@ h1{
 
     width: 90%;
     height: 10%
+}
+
+#disciplinas {
+    display: flex;
+    flex-direction: column;
+}
+
+#disciplinas > li {
+    list-style-type: none;
+    border-top: 1px solid black;
+    margin-bottom: 12px;
+}
+
+#sugestoes{
+    position: absolute;
+
+    display: none;
+
+    border-radius: 10px;
+
+    transform: translate(0,80px);
+
+    padding: 10px;
+    width: 85%;
+
+    background-color: rgb(230, 230, 230);
+}
+
+.itemSugestao{
+    text-align: left;
+    padding: 10px;
+    padding-left: 15px;
+
+    border: none;
+    border-style: none;
+
+    width: 100%;
+
+    background-color: rgb(230, 230, 230);
+}
+
+.itemSugestao:hover{
+    background-color:  rgb(209, 209, 209);
 }
