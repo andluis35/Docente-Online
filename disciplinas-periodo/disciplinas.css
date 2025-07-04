@@ -21,7 +21,7 @@ h1{
     align-items: center;
 
     width:40vw;
-    height:70vh;
+    height:80vh;
 }
 
 #direita{
@@ -36,7 +36,7 @@ h1{
     align-items: center;
 
     width:40vw;
-    height:70vh;
+    height:80vh;
 }
 
 #resultadoBusca{
@@ -60,4 +60,15 @@ h1{
 
     width: 90%;
     height: 10%
+}
+
+#disciplinas {
+    display: flex;
+    flex-direction: column;
+}
+
+#disciplinas > li {
+    list-style-type: none;
+    border-top: 1px solid black;
+    margin-bottom: 12px;
 }
