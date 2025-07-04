@@ -60,7 +60,7 @@ function atualizaSugestoes(conteudoBusca){
         let disciplinas = data;
 
         if(conteudoBusca != ""){
-          filtrarSugestoes(disciplinas, conteudoBusca)
+          filtrarSugestoes(data.disciplinas, conteudoBusca)
         }
         
       })
