@@ -1,0 +1,26 @@
+[
+{
+"codigo": "IME04-10854",
+"nome": "Aspectos Práticos em Ciência da Computação I",
+"turma": 8,
+"horario": ["TER M5 M6", "QUI M5 M6"]
+},
+{
+"codigo": "IME04-10842",
+"nome": "Computação Gráfica",
+"turma": 1,
+"horario": ["TER M1 M2", "QUI M1 M2"]
+},
+{
+"codigo": "IME04-10843",
+"nome": "Inteligência Artificial",
+"turma": 1,
+"horario": ["SEG M5 M6", "QUA M5 M6"]
+},
+{
+"codigo": "IME04-11312",
+"nome": "Otimização em Grafos",
+"turma": 1,
+"horario": ["SEX M2 M3 M4"]
+}
+]
