@@ -10,6 +10,7 @@ fetch ("./disciplinas.json").then((response) => {
     })
 })
 
+
 INPUT_BUSCA.addEventListener('keyup', () => {
     let expressaoDigitada = INPUT_BUSCA.value.toUpperCase();
     let listaDisciplinas = divDisciplinas.getElementsByTagName('li');
@@ -32,7 +33,6 @@ INPUT_BUSCA.addEventListener('keyup', () => {
 
 // Enquanto não há um json oficial com as disciplinas, vou usar um local para a base de testes.
 
-
 let input = document.getElementById("busca");
 atualizaSugestoes(input.value);
 
@@ -53,7 +53,7 @@ function atualizaSugestoes(conteudoBusca){
   let sugestoes = document.getElementById("sugestoes");
   sugestoes.innerHTML = "";
 
-    fetch('disciplinas.json')
+    fetch('./disciplinas.json')
       .then(response => response.json())
       .then(data => {
 
