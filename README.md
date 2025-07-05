@@ -1,3 +1,3 @@
 # Docente-Online
-Projeto FINAL da disciplina Desenvolvimento de Sistemas Web - 2025.1
+Projeto FINAL da disciplina Desenvolvimento de Sistemas Web - 2025.1\n
 Hospedado em: https://andluis35.github.io/Docente-Online/
