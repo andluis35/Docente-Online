@@ -210,6 +210,67 @@
                             "horario": ["TER M5M6", "QUA M3M4", "SEX M3M4"]
                         }
             ]
+        },
+        {
+            "codigo": "IME04-10834",
+            "nome": "Estrutura de Linguagens",
+            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10834",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME04-10834 1 2025/1",
+                            "horario": ["TER M5M6", "QUI M5M6"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "IME04-10834 2 2025/1",
+                            "horario": ["TER N2N3", "QUI N2N3"]
+                        }
+            ]
+        },
+        {
+            "codigo": "FIS01-10982",
+            "nome": "Física I",
+            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10982",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "FIS01-10982 1 2025/1",
+                            "horario": ["TER M1M2", "QUI M1M2", "SEX M3M4"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "FIS01-10982 2 2025/1",
+                            "horario": ["TER N3N4", "QUA N1N2", "QUI N3N4"]
+                        },
+                        {
+                            "numero": 3,
+                            "turmaID": "FIS01-10982 3 2025/1",
+                            "horario": ["SEG T3T4", "TER N3N4", "QUI N3N4"]
+                        }
+            ]
+        },
+        {
+            "codigo": "FIS03-10983",
+            "nome": "Física II",
+            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10983",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "FIS03-10983 1 2025/1",
+                            "horario": ["SEG M5M6", "QUI M3M4", "SEX M5M6"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "FIS03-10983 2 2025/1",
+                            "horario": ["SEG T5T6N1N2", "QUI N1N2"]
+                        },
+                        {
+                            "numero": 3,
+                            "turmaID": "FIS03-10983 3 2025/1",
+                            "horario": ["SEG T5T6N1N2", "QUI N1N2"]
+                        }
+            ]
         }
     ]
 }
