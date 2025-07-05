@@ -71,6 +71,70 @@
             "turmaID": "IME04-10835 1 2025/1",
             "horario": ["SEG M5M6", "QUA M5M6"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME01-04827",
+            "nome": "Cálculo I",
+            "turma": 1,
+            "turmaID": "IME01-04827 1 2025/1",
+            "horario": ["SEG M5M6", "TER M5M6", "QUI M5M6"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME01-04827",
+            "nome": "Cálculo I",
+            "turma": 2,
+            "turmaID": "IME01-04827 2 2025/1",
+            "horario": ["SEG M3M4", "QUA M3M4", "SEX M3M4"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME01-04827",
+            "nome": "Cálculo I",
+            "turma": 3,
+            "turmaID": "IME01-04827 3 2025/1",
+            "horario": ["SEG M5M6", "QUA M5M6", "SEX M5M6"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME01-04827",
+            "nome": "Cálculo I",
+            "turma": 4,
+            "turmaID": "IME01-04827 4 2025/1",
+            "horario": ["SEG M1M2", "QUA M1M2", "SEX M1M2"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME01-04827",
+            "nome": "Cálculo I",
+            "turma": 5,
+            "turmaID": "IME01-04827 5 2025/1",
+            "horario": ["SEG N3N4N5", "QUI N3N4N5"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME01-06766",
+            "nome": "Cálculo II",
+            "turma": 1,
+            "turmaID": "IME01-06766 1 2025/1",
+            "horario": ["SEG N1N2", "QUI N1N2"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME01-06766",
+            "nome": "Cálculo II",
+            "turma": 2,
+            "turmaID": "IME01-06766 2 2025/1",
+            "horario": ["SEG N4N5", "SEX N4N5"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME01-06766",
+            "nome": "Cálculo II",
+            "turma": 3,
+            "turmaID": "IME01-06766 3 2025/1",
+            "horario": ["SEG M1M2", "QUA M1M2"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
         }
     ]
 }
