@@ -1,0 +1,10 @@
+@import '../style/styles.css';
+
+*{
+    font-family: var(--fonte-primaria);
+}
+
+.temp{
+    height: 60px;
+}
+
