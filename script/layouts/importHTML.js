@@ -6,7 +6,7 @@
 //          String idDoElementoContainer: id do elemento que o html será injetado.
 //Sem retorno.
 
-function importLayout(caminhoHTML, idDoElementoContainer) {
+function importHTML(caminhoHTML, idDoElementoContainer) {
     document.addEventListener('DOMContentLoaded', function() {
         fetch(caminhoHTML)
             .then(response => {
