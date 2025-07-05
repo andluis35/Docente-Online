@@ -1,172 +1,88 @@
-{
-    "turmas": [
-        {
-            "codigo": "IME04-10842",
-            "nome": "Computação Gráfica",
-            "turma": 1,
-            "turmaID": "IME04-10842 1 2025/1",
-            "horario": ["TER M1 M2", "QUI M1 M2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10842"
-        },
-        {
-            "codigo": "IME04-10843",
-            "nome": "Inteligência Artificial",
-            "turma": 1,
-            "turmaID": "IME04-10843 1 2025/1",
-            "horario": ["SEG M5 M6", "QUA M5 M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10843"
-        },
-        {
-            "codigo": "IME04-11312",
-            "nome": "Otimização em Grafos",
-            "turma": 1,
-            "turmaID": "IME04-11312 1 2025/1",
-            "horario": ["SEX M2 M3 M4"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11312"
-        },
-        {
-            "codigo": "IME04-11311",
-            "nome": "Algoritmos em Grafos",
-            "turma": 1,
-            "turmaID": "IME04-11311 1 2025/1",
-            "horario": ["SEX N2N3N4"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11311"
-        },
-        {
-            "codigo": "IME04-10833",
-            "nome": "Análise e Projeto de Sistemas",
-            "turma": 1,
-            "turmaID": "IME04-10833 1 2025/1",
-            "horario": ["TER M1M2", "QUI M1M2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10833"
-        },
-        {
-            "codigo": "IME04-10836",
-            "nome": "Arquitetura de Computadores II",
-            "turma": 1,
-            "turmaID": "IME04-10836 1 2025/1",
-            "horario": ["TER M3M4", "QUI M3M4"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10836"
-        },
-        {
-            "codigo": "IME04-10854",
-            "nome": "Aspectos Práticos em Ciência da Computação I",
-            "turma": 8,
-            "turmaID": "IME04-10854 8 2025/1",
-            "horario": ["TER M5M6", "QUI M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10854"
-        },
-        {
-            "codigo": "IME04-10832",
-            "nome": "Banco de Dados I",
-            "turma": 1,
-            "turmaID": "IME04-10832 1 2025/1",
-            "horario": ["QUA M3M4", "SEX M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10832"
-        },
-        {
-            "codigo": "IME04-10835",
-            "nome": "Sistemas Operacionais I",
-            "turma": 1,
-            "turmaID": "IME04-10835 1 2025/1",
-            "horario": ["SEG M5M6", "QUA M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME01-04827",
-            "nome": "Cálculo I",
-            "turma": 1,
-            "turmaID": "IME01-04827 1 2025/1",
-            "horario": ["SEG M5M6", "TER M5M6", "QUI M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME01-04827",
-            "nome": "Cálculo I",
-            "turma": 2,
-            "turmaID": "IME01-04827 2 2025/1",
-            "horario": ["SEG M3M4", "QUA M3M4", "SEX M3M4"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME01-04827",
-            "nome": "Cálculo I",
-            "turma": 3,
-            "turmaID": "IME01-04827 3 2025/1",
-            "horario": ["SEG M5M6", "QUA M5M6", "SEX M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME01-04827",
-            "nome": "Cálculo I",
-            "turma": 4,
-            "turmaID": "IME01-04827 4 2025/1",
-            "horario": ["SEG M1M2", "QUA M1M2", "SEX M1M2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME01-04827",
-            "nome": "Cálculo I",
-            "turma": 5,
-            "turmaID": "IME01-04827 5 2025/1",
-            "horario": ["SEG N3N4N5", "QUI N3N4N5"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME01-06766",
-            "nome": "Cálculo II",
-            "turma": 1,
-            "turmaID": "IME01-06766 1 2025/1",
-            "horario": ["SEG N1N2", "QUI N1N2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME01-06766",
-            "nome": "Cálculo II",
-            "turma": 2,
-            "turmaID": "IME01-06766 2 2025/1",
-            "horario": ["SEG N4N5", "SEX N4N5"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME01-06766",
-            "nome": "Cálculo II",
-            "turma": 3,
-            "turmaID": "IME01-06766 3 2025/1",
-            "horario": ["SEG M1M2", "QUA M1M2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME02-10815",
-            "nome": "Álgebra",
-            "turma": 1,
-            "turmaID": "IME02-10815 1 2025/1",
-            "horario": ["SEG M5M6", "SEX M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME02-10815",
-            "nome": "Álgebra",
-            "turma": 2,
-            "turmaID": "IME02-10815 2 2025/1",
-            "horario": ["SEG N1N2", "QUA N1N2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME02-10818",
-            "nome": "Álgebra Linear",
-            "turma": 1,
-            "turmaID": "IME02-10818 1 2025/1",
-            "horario": ["TER T6N1N2", "QUI T6N1N2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        },
-        {
-            "codigo": "IME02-10818",
-            "nome": "Álgebra Linear",
-            "turma": 2,
-            "turmaID": "IME02-10818 2 2025/1",
-            "horario": ["TER M5M6", "QUA M3M4", "SEX M3M4"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
-        }
-    ]
+{"turmas":[
+		{
+			"turmaID": "IME04-10842 1 2025/1",
+			"alunos":[
+					{
+						"nome": "Débora Regina Soares",
+						"matricula": 2018015670,
+						"e-mail": "deb.soares@uerj.br",
+						"notas":{
+								"P1": 5.5,
+								"P2": 9,
+								"PR": -1.0,
+								"mediaParcial": 7.25,
+								"PF": -1.0,
+								"mediaFinal": 7.25
+							},
+						"faltas": [
+								"06/03/2025, quinta",
+								"18/03/2025, terca",
+								"03/04/2025, quinta",
+								"15/04/2025, terca",
+								"08/05/2025, quinta",
+								"27/05/2025, terca",
+								"12/06/2025, quinta"
+							]
+					},
+					{
+						"nome": "Thiago Emanuel Correia",
+						"matricula": 2019002347,
+						"e-mail": "thi.emc@uerj.br",
+						"notas":{
+								"P1": 7.0,
+								"P2": 6.0,
+								"PR": -1.0,
+								"mediaParcial": 6.5,
+								"PF": 7,
+								"mediaFinal": 6.75
+							},
+						"faltas": [
+								"13/03/2025, quinta",
+								"24/04/2025, quinta",
+								"19/06/2025, quinta"
+							]
+					}
+				]
+		},
+		{
+			"turmaID": "IME04-10843 1 2025/1",
+			"alunos":[
+					{
+						"nome": "Débora Regina Soares",
+						"matricula": 2018015670,
+						"e-mail": "deb.soares@uerj.br",
+						"notas":{
+								"P1": 8,
+								"P2": 3,
+								"PR": -1.0,
+								"mediaParcial": 5.5,
+								"PF": 8,
+								"mediaFinal": 6.75
+							},
+						"faltas": [
+								"10/03/2025, segunda"
+							]
+					},
+					{
+						"nome": "Daniel Luiz Barros",
+						"matricula": 2020004568,
+						"e-mail": "dan.lbarros@uerj.br",
+						"notas":{
+								"P1": 4.5,
+								"P2": -1,
+								"PR": 8,
+								"mediaParcial": 6.25,
+								"PF": 4.75,
+								"mediaFinal": 5.5
+							},
+						"faltas": [
+								"14/05/2025, quarta"
+							]
+					}
+				]
+
+		}
+
+	]
+
 }
