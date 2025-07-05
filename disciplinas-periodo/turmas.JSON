@@ -135,6 +135,38 @@
             "turmaID": "IME01-06766 3 2025/1",
             "horario": ["SEG M1M2", "QUA M1M2"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME02-10815",
+            "nome": "Álgebra",
+            "turma": 1,
+            "turmaID": "IME02-10815 1 2025/1",
+            "horario": ["SEG M5M6", "SEX M5M6"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME02-10815",
+            "nome": "Álgebra",
+            "turma": 2,
+            "turmaID": "IME02-10815 2 2025/1",
+            "horario": ["SEG N1N2", "QUA N1N2"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME02-10818",
+            "nome": "Álgebra Linear",
+            "turma": 1,
+            "turmaID": "IME02-10818 1 2025/1",
+            "horario": ["TER T6N1N2", "QUI T6N1N2"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+        },
+        {
+            "codigo": "IME02-10818",
+            "nome": "Álgebra Linear",
+            "turma": 2,
+            "turmaID": "IME02-10818 2 2025/1",
+            "horario": ["TER M5M6", "QUA M3M4", "SEX M3M4"],
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
         }
     ]
 }
