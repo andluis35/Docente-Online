@@ -1,52 +1,62 @@
 [
     {
         "nome": "Fabio da Silva",
-        "usuario": "123.456.789-01",
+        "cpf": "123.456.789-01",
+        "matricula": "91011-1",
         "senha": "Senha@123"
     },
     {
         "nome": "Cecilia Souza",
-        "usuario": "23456-7",
+        "cpf": "201.302.403-11",
+        "matricula": "23456-7",
         "senha": "Pass!456"
     },
     {
         "nome": "Beto Pereira",
-        "usuario": "987.654.321-00",
+        "cpf": "987.654.321-00",
+        "matricula": "91012-2",
         "senha": "Forte#789"
     },
     {
         "nome": "Maria Oliveira",
-        "usuario": "34578-9",
+        "cpf": "201.302.403-22",
+        "matricula": "34578-9",
         "senha": "Maria123!"
     },
     {
         "nome": "João Santos",
-        "usuario": "112.233.445-56",
+        "cpf": "112.233.445-56",
+        "matricula": "91013-3",
         "senha": "Js!2025"
     },
     {
         "nome": "Ana Costa",
-        "usuario": "56789-0",
+        "cpf": "201.302.403-33",
+        "matricula": "56789-0",
         "senha": "AnaC@123"
     },
     {
         "nome": "José Rodrigues",
-        "usuario": "667.788.990-00",
+        "cpf": "667.788.990-00",
+        "matricula": "91014-4",
         "senha": "R0dr1gues"
     },
     {
         "nome": "Mariana Almeida",
-        "usuario": "56780-1",
+        "cpf": "201.302.403-44",
+        "matricula": "56780-1",
         "senha": "Almeida#22"
     },
     {
         "nome": "Carlos Ferreira",
-        "usuario": "778.899.001-12",
+        "cpf": "778.899.001-12",
+        "matricula": "91015-5",
         "senha": "Ferreira_99"
     },
     {
         "nome": "Laura Gomes",
-        "usuario": "67890-2",
+        "cpf": "201.302.403-55",
+        "matricula": "67890-2",
         "senha": "Lgomes@321"
     }
 ]

@@ -40,7 +40,7 @@ inputMatriculaCpf.addEventListener('input', function () {
       .then(response => response.json())
       .then(usuarios => {
         const usuarioEncontrado = usuarios.find(user =>
-          user.usuario === usuarioDigitado && user.senha === senhaDigitada
+          (user.cpf === usuarioDigitado || user.matricula === usuarioDigitado ) && user.senha === senhaDigitada 
         );
 
         if (usuarioEncontrado) {
