@@ -21,7 +21,7 @@ function atualizaSugestoes(conteudoBusca){
   let sugestoes = document.getElementById("sugestoes");
   sugestoes.innerHTML = "";
 
-    fetch('disciplinas.json')
+    fetch('./disciplinas.json')
       .then(response => response.json())
       .then(data => {
 
