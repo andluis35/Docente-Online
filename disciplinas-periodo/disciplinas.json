@@ -1,67 +1,201 @@
 {
-    "disciplinas": [
+    "disciplinas-turmas": [
         {
             "codigo": "IME04-10842",
             "nome": "Computação Gráfica",
-            "turma": 1,
-            "horario": ["TER M1 M2", "QUI M1 M2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10842"
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10842",
+            "turmas": [ 
+                        {    
+                            "numero": 1,
+                            "turmaID": "IME04-10842 1 2025/1",
+                            "horario": ["TER M1 M2", "QUI M1 M2"]
+                        }
+            ]
         },
         {
             "codigo": "IME04-10843",
-            "nome": "Inteligência Artificial",
-            "turma": 1,
-            "horario": ["SEG M5 M6", "QUA M5 M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10843"
+            "nome": "Inteligência Artificial",            
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10843",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME04-10843 1 2025/1",
+                            "horario": ["SEG M5 M6", "QUA M5 M6"]
+                        }
+            ]
         },
         {
             "codigo": "IME04-11312",
             "nome": "Otimização em Grafos",
-            "turma": 1,
-            "horario": ["SEX M2 M3 M4"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11312"
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11312",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME04-11312 1 2025/1",
+                            "horario": ["SEX M2 M3 M4"]
+                        }
+            ]
         },
         {
             "codigo": "IME04-11311",
             "nome": "Algoritmos em Grafos",
-            "turma": 1,
-            "horario": ["SEX N2N3N4"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11311"
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11311",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME04-11311 1 2025/1",
+                            "horario": ["SEX N2N3N4"]
+                        }
+            ]
         },
         {
             "codigo": "IME04-10833",
             "nome": "Análise e Projeto de Sistemas",
-            "turma": 1,
-            "horario": ["TER M1M2", "QUI M1M2"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10833"
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10833",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME04-10833 1 2025/1",
+                            "horario": ["TER M1M2", "QUI M1M2"]
+                        }
+            ]
         },
         {
             "codigo": "IME04-10836",
             "nome": "Arquitetura de Computadores II",
-            "turma": 1,
-            "horario": ["TER M3M4", "QUI M3M4"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10836"
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10836",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME04-10836 1 2025/1",
+                            "horario": ["TER M3M4", "QUI M3M4"]
+                        }
+            ]
         },
         {
             "codigo": "IME04-10854",
-            "nome": "Aspectos Práticos em Ciência da Computação I",
-            "turma": 8,
-            "horario": ["TER M5M6", "QUI M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10854"
+            "nome": "Aspectos Práticos em Ciência da Computação I",       
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10854",
+            "turmas":[
+                        {
+                            "numero": 8,
+                            "turmaID": "IME04-10854 8 2025/1",
+                            "horario": ["TER M5M6", "QUI M5M6"]
+                        }
+            ]
         },
         {
             "codigo": "IME04-10832",
             "nome": "Banco de Dados I",
-            "turma": 1,
-            "horario": ["QUA M3M4", "SEX M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10832"
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10832",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME04-10832 1 2025/1",
+                            "horario": ["QUA M3M4", "SEX M5M6"]
+                        }
+            ]
         },
         {
             "codigo": "IME04-10835",
             "nome": "Sistemas Operacionais I",
             "turma": 1,
-            "horario": ["SEG M5M6", "QUA M5M6"],
-            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME04-10835 1 2025/1",
+                            "horario": ["SEG M5M6", "QUA M5M6"]
+                        }
+            ]
+        },
+        {
+            "codigo": "IME01-04827",
+            "nome": "Cálculo I",            
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME01-04827 1 2025/1",
+                            "horario": ["SEG M5M6", "TER M5M6", "QUI M5M6"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "IME01-04827 2 2025/1",
+                            "horario": ["SEG M3M4", "QUA M3M4", "SEX M3M4"]
+                        },
+                        {
+                            "numero": 3,
+                            "turmaID": "IME01-04827 3 2025/1",
+                            "horario": ["SEG M5M6", "QUA M5M6", "SEX M5M6"]
+                        },
+                        {
+                            "numero": 4,
+                            "turmaID": "IME01-04827 4 2025/1",
+                            "horario": ["SEG M1M2", "QUA M1M2", "SEX M1M2"]
+                        },
+                        {
+                            "numero": 5,
+                            "turmaID": "IME01-04827 5 2025/1",
+                            "horario": ["SEG N3N4N5", "QUI N3N4N5"]
+                        }
+            ]
+        },
+        {
+            "codigo": "IME01-06766",
+            "nome": "Cálculo II",
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME01-06766 1 2025/1",
+                            "horario": ["SEG N1N2", "QUI N1N2"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "IME01-06766 2 2025/1",
+                            "horario": ["SEG N4N5", "SEX N4N5"]
+                        },
+                        {
+                            "numero": 3,
+                            "turmaID": "IME01-06766 3 2025/1",
+                            "horario": ["SEG M1M2", "QUA M1M2"]
+                        }
+            ]
+        },
+        {
+            "codigo": "IME02-10815",
+            "nome": "Álgebra",
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME02-10815 1 2025/1",
+                            "horario": ["SEG M5M6", "SEX M5M6"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "IME02-10815 2 2025/1",
+                            "horario": ["SEG N1N2", "QUA N1N2"]
+                        }
+            ]
+        },
+        {
+            "codigo": "IME02-10818",
+            "nome": "Álgebra Linear",
+            "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835",
+            "turmas":[
+                        {
+                            "numero": 1,
+                            "turmaID": "IME02-10818 1 2025/1",
+                            "horario": ["TER T6N1N2", "QUI T6N1N2"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "IME02-10818 2 2025/1",
+                            "horario": ["TER M5M6", "QUA M3M4", "SEX M3M4"]
+                        }
+            ]
         }
     ]
 }
