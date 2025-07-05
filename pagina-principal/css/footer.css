@@ -1,0 +1,13 @@
+/* Estilos para ícones (necessários) */
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+/* Estilos personalizados para o footer (opcional) */
+footer {
+  background-color: #f8f9fa; /* Cor de fundo suave */
+}
+footer a:hover {
+  opacity: 0.8;
+}
