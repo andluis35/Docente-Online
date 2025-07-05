@@ -1,0 +1,23 @@
+/* Cores oficiais da UERJ */
+.bg-uerj-azul-escuro {
+  background-color: #016ba5;
+  color: white;
+}
+.bg-uerj-azul-claro {
+  background-color: #0080c6;
+  color: white;
+}
+.bg-uerj-laranja {
+  background-color: #f37032;
+  color: white;
+}
+
+/* Botão primário personalizado */
+.btn-primary {
+  background-color: #f37032;
+  border-color: #f37032;
+}
+.btn-primary:hover {
+  background-color: #e05d1f;
+  border-color: #e05d1f;
+}

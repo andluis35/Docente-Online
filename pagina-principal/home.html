@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Página principal do sistema de gerenciamento docente online da UERJ. Acesse a grade de disciplinas, discentes com matrícula ativa e registre notas e faltas com facilidade."
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/logomarca-uerj.png"
+    />
+    <title>Docente online</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    <link href="css/list.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("html/header.html");
+      });
+      $(function () {
+        $("#navbar").load("html/main/navbar.html");
+      });
+      $(function () {
+        $("#list").load("html/list.html");
+      });
+      $(function () {
+        $("#welcome").load("html/main/welcome.html");
+      });
+      $(function () {
+        $("#calendar").load("html/main/calendar.html");
+      });
+      $(function () {
+        $("#footer").load("html/footer.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+    <div class="container d-flex justify-content-between flex-wrap">
+      <div id="list"></div>
+      <div id="calendar"></div>
+    </div>
+    <div id="welcome"></div>
+    <div id="footer"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

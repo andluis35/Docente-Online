@@ -1,0 +1,33 @@
+/* Estilos personalizados para a UERJ */
+.text-uerj {
+  color: #bb8a0b;
+}
+
+/* Estilos para a lista de disciplinas */
+.scrollarea {
+  overflow-y: auto;
+}
+
+/* Ícones Bootstrap */
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+/* Offcanvas personalizado */
+.offcanvas-start {
+  width: 400px; /* Largura maior para a lista */
+}
+
+.list-group-item {
+  transition: background-color 0.2s;
+}
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .list-group-item {
+    width: 90%vw;
+  }
+}
