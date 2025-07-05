@@ -45,6 +45,11 @@
                             "numero": 1,
                             "turmaID": "IME04-11311 1 2025/1",
                             "horario": ["SEX N2N3N4"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "IME04-11311 2 2025/1",
+                            "horario": ["SEX M1M2M3"]
                         }
             ]
         },
@@ -69,12 +74,17 @@
                             "numero": 1,
                             "turmaID": "IME04-10836 1 2025/1",
                             "horario": ["TER M3M4", "QUI M3M4"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "IME04-10836 2 2025/1",
+                            "horario": ["TER N1N2", "QUI N1N2"]
                         }
             ]
         },
         {
             "codigo": "IME04-10854",
-            "nome": "Aspectos Práticos em Ciência da Computação I",       
+            "nome": "Aspectos Práticos em Ciência da Computação I",
             "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10854",
             "turmas":[
                         {
@@ -99,13 +109,17 @@
         {
             "codigo": "IME04-10835",
             "nome": "Sistemas Operacionais I",
-            "turma": 1,
             "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835",
             "turmas":[
                         {
                             "numero": 1,
                             "turmaID": "IME04-10835 1 2025/1",
                             "horario": ["SEG M5M6", "QUA M5M6"]
+                        },
+                        {
+                            "numero": 2,
+                            "turmaID": "IME04-10835 2 2025/1",
+                            "horario": ["SEG N1N2", "QUA N1N2"]
                         }
             ]
         },
