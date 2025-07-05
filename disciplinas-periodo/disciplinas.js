@@ -1,3 +1,5 @@
+// =-=-=-=-=-=-=-=-=-= Código relacionado ao filtro =-=-=-=-=-=-=-=-=-= //
+
 const INPUT_BUSCA = document.getElementById('busca');
 let divDisciplinas = document.querySelector("#disciplinas");
 
@@ -10,9 +12,12 @@ fetch ("./disciplinas.json").then((response) => {
     })
 })
 
+INPUT_BUSCA.addEventListener("input", () => {
+  filtrarDisciplinas();
+});
 
-INPUT_BUSCA.addEventListener('keyup', () => {
-    let expressaoDigitada = INPUT_BUSCA.value.toUpperCase();
+function filtrarDisciplinas(){
+  let expressaoDigitada = INPUT_BUSCA.value.toUpperCase();
     let listaDisciplinas = divDisciplinas.getElementsByTagName('li');
 
     for (let posicao in listaDisciplinas) {
@@ -28,16 +33,31 @@ INPUT_BUSCA.addEventListener('keyup', () => {
             listaDisciplinas[posicao].style.display = 'none';
         }
     }
+}
 
-});
-
-// Enquanto não há um json oficial com as disciplinas, vou usar um local para a base de testes.
+// =-=-=-=-=-=-=-=-=-= Código relacionado ao LocalStorage =-=-=-=-=-=-=-=-=-= //
 
 let input = document.getElementById("busca");
-atualizaSugestoes(input.value);
+let sugestoes = document.getElementById("sugestoes");
+
+
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    adicionarHistorico(input.value);
+
+    sugestoes.style.display = "none";
+  }
+});
+
+// =-=-=-=-=-=-=-=-=-= Código relacionado ao autocomplete =-=-=-=-=-=-=-=-=-= //
+
+let disciplinas = [];
+
+// Eventos
 
 input.addEventListener("input", () => {
-  atualizaSugestoes(input.value);
+  filtrarSugestoes(input.value);
+  exibirSugestoes(true);  
 });
 
 input.addEventListener("focus", () => {
@@ -45,23 +65,66 @@ input.addEventListener("focus", () => {
 });
 
 input.addEventListener("blur", () => {
-  exibirSugestoes(false);
+  setTimeout(() => {
+    exibirSugestoes(false);
+  }, 100);
 });
 
+function adicionarHistorico(texto){
+  if(!estaNoHistorico(texto)){
+    let item = document.createElement("button");
+    item.textContent = texto;
+    item.classList.add("itemHistorico");
 
-function atualizaSugestoes(conteudoBusca){
+    item.addEventListener("click", () => {
+      input.value = item.textContent;
+      filtrarDisciplinas();
+    });
+
+    let sugestoes = document.getElementById("sugestoes");
+    sugestoes.prepend(item);
+  }
+}
+
+function estaNoHistorico(texto){
   let sugestoes = document.getElementById("sugestoes");
-  sugestoes.innerHTML = "";
+  let itens = Array.from(sugestoes.children);
 
+  let resultado = false;
+
+  itens.forEach(element => {
+    if(element.textContent === texto){
+      resultado = true;
+    }
+  });
+  return resultado;
+}
+
+
+// Todas as disciplinas são adicionadas a caixa de sugestões, apenas sua visibilidade é alterada.
+
+adicionarDisciplinas();
+function adicionarDisciplinas(){
     fetch('./disciplinas.json')
       .then(response => response.json())
       .then(data => {
 
-        let disciplinas = data;
+        item = data.disciplinas;
 
-        if(conteudoBusca != ""){
-          filtrarSugestoes(data.disciplinas, conteudoBusca)
-        }
+        item.forEach(element => {
+          adicionarSugestao(element.nome);
+
+          let disciplina = {
+            codigo: element.codigo,
+            nome: element.nome,
+            turma: 1,
+            horario: element.horario,
+            link: element.link
+          };
+
+          disciplinas.push(disciplina);
+
+        });
         
       })
       .catch(error => {
@@ -69,43 +132,115 @@ function atualizaSugestoes(conteudoBusca){
       });
 }
 
-function filtrarSugestoes(disciplinas, conteudoBusca){
-  disciplinas.forEach(element => {
+// Lógica de filtragem e exibição.
 
-    let busca = conteudoBusca.toLowerCase();
 
-    let nomeDisciplina = element.nome.toLowerCase();
-    let codigoDisciplina = element.codigo.toLowerCase();
+function filtrarSugestoes(conteudoBusca){
+  const Disciplinas = document.getElementById("sugestoes");
+  const itens = Array.from(Disciplinas.children);
 
-    if(nomeDisciplina.includes(busca)){
-      requestAnimationFrame(() => {      
-        adicionarSugestao(element.nome);
-      });
+  itens.forEach(element => {
+    element.style.display = "none";
+
+    if(conteudoBusca!=""){
+
+      if(infoPertenceDisciplina(encontrarDisciplina(element.textContent),conteudoBusca)){
+        element.style.display="block";
+      }
+   }
+  
+  let nomeDisciplina = element.textContent.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+  let regex = new RegExp("\\b" + conteudoBusca, "i");
+  
+  if(element.className == "itemHistorico" && (regex.test(nomeDisciplina))){
+        element.style.display="block";
+      }
+  });
+
+}
+
+function infoPertenceDisciplina(disciplina, info){
+  if(disciplina == null){
+    return false;
+  }
+
+  let nome = disciplina.nome.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+  let codigo = disciplina.codigo;
+  let horario = disciplina.horario;
+
+  let regex = new RegExp("\\b" + info, "i");
+  if(regex.test(nome)){
+    return true;
+  }
+  if(codigo.includes(info)){
+    return true;
+  }
+
+  let infoLC = info.toLowerCase();
+  for(var i=0; i<horario.length; i++){
+    if(horario[i].toLowerCase().includes(info)){
+      return true;
     }
+  }
 
-    else if(codigoDisciplina.includes(busca)){
-      requestAnimationFrame(() => {      
-        adicionarSugestao(element.nome);
-      });
-    }          
+  return false;
+}
+
+function encontrarDisciplina(nomeDisciplina) {
+  return disciplinas.find(element => {
+
+    if(element.nome == nomeDisciplina){
+      return element;
+    }
+    return null;
   });
 }
+
 
 function adicionarSugestao(texto){
   let item = document.createElement("button");
   item.textContent = texto;
   item.classList.add("itemSugestao");
 
+  item.addEventListener("click", () => {
+    item.classList.remove("itemSugestao");
+    item.classList.add("itemHistorico");
+    input.value = item.textContent;
+
+    let sugestoes = document.getElementById("sugestoes");
+    sugestoes.prepend(item);
+
+    filtrarDisciplinas();
+  });
+
+  let sugestoes = document.getElementById("sugestoes");
   sugestoes.appendChild(item);
 }
+
 
 function exibirSugestoes(buscaSelecionada){
   let sugestoes = document.getElementById("sugestoes");
 
-  if(buscaSelecionada){
+  sugestoes.style.display = "none";
+
+  if(buscaSelecionada && input.value !== ""){
     sugestoes.style.display = "block";
   }
-  else{
-    sugestoes.style.display = "none";
+
+  if(buscaSelecionada && existeSugestao()){
+    sugestoes.style.display = "block";
   }
+}
+
+function existeSugestao(){
+  let sugestao = document.getElementById("sugestoes");
+  let itens = Array.from(sugestao.children);
+
+  resultado = false;
+  itens.forEach(element => {
+    if(element.className == "itemHistorico"){
+      resultado = true;
+    }
+  })
+  return resultado;
 }
