@@ -45,12 +45,8 @@
                             "numero": 1,
                             "turmaID": "IME04-11311 1 2025/1",
                             "horario": ["SEX N2N3N4"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "IME04-11311 2 2025/1",
-                            "horario": ["SEX M1M2M3"]
                         }
+
             ]
         },
         {
@@ -74,12 +70,8 @@
                             "numero": 1,
                             "turmaID": "IME04-10836 1 2025/1",
                             "horario": ["TER M3M4", "QUI M3M4"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "IME04-10836 2 2025/1",
-                            "horario": ["TER N1N2", "QUI N1N2"]
                         }
+
             ]
         },
         {
@@ -115,12 +107,8 @@
                             "numero": 1,
                             "turmaID": "IME04-10835 1 2025/1",
                             "horario": ["SEG M5M6", "QUA M5M6"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "IME04-10835 2 2025/1",
-                            "horario": ["SEG N1N2", "QUA N1N2"]
                         }
+
             ]
         },
         {
@@ -132,27 +120,8 @@
                             "numero": 1,
                             "turmaID": "IME01-04827 1 2025/1",
                             "horario": ["SEG M5M6", "TER M5M6", "QUI M5M6"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "IME01-04827 2 2025/1",
-                            "horario": ["SEG M3M4", "QUA M3M4", "SEX M3M4"]
-                        },
-                        {
-                            "numero": 3,
-                            "turmaID": "IME01-04827 3 2025/1",
-                            "horario": ["SEG M5M6", "QUA M5M6", "SEX M5M6"]
-                        },
-                        {
-                            "numero": 4,
-                            "turmaID": "IME01-04827 4 2025/1",
-                            "horario": ["SEG M1M2", "QUA M1M2", "SEX M1M2"]
-                        },
-                        {
-                            "numero": 5,
-                            "turmaID": "IME01-04827 5 2025/1",
-                            "horario": ["SEG N3N4N5", "QUI N3N4N5"]
                         }
+
             ]
         },
         {
@@ -164,17 +133,8 @@
                             "numero": 1,
                             "turmaID": "IME01-06766 1 2025/1",
                             "horario": ["SEG N1N2", "QUI N1N2"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "IME01-06766 2 2025/1",
-                            "horario": ["SEG N4N5", "SEX N4N5"]
-                        },
-                        {
-                            "numero": 3,
-                            "turmaID": "IME01-06766 3 2025/1",
-                            "horario": ["SEG M1M2", "QUA M1M2"]
                         }
+
             ]
         },
         {
@@ -186,12 +146,8 @@
                             "numero": 1,
                             "turmaID": "IME02-10815 1 2025/1",
                             "horario": ["SEG M5M6", "SEX M5M6"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "IME02-10815 2 2025/1",
-                            "horario": ["SEG N1N2", "QUA N1N2"]
                         }
+
             ]
         },
         {
@@ -203,12 +159,8 @@
                             "numero": 1,
                             "turmaID": "IME02-10818 1 2025/1",
                             "horario": ["TER T6N1N2", "QUI T6N1N2"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "IME02-10818 2 2025/1",
-                            "horario": ["TER M5M6", "QUA M3M4", "SEX M3M4"]
                         }
+
             ]
         },
         {
@@ -220,11 +172,6 @@
                             "numero": 1,
                             "turmaID": "IME04-10834 1 2025/1",
                             "horario": ["TER M5M6", "QUI M5M6"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "IME04-10834 2 2025/1",
-                            "horario": ["TER N2N3", "QUI N2N3"]
                         }
             ]
         },
@@ -237,17 +184,8 @@
                             "numero": 1,
                             "turmaID": "FIS01-10982 1 2025/1",
                             "horario": ["TER M1M2", "QUI M1M2", "SEX M3M4"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "FIS01-10982 2 2025/1",
-                            "horario": ["TER N3N4", "QUA N1N2", "QUI N3N4"]
-                        },
-                        {
-                            "numero": 3,
-                            "turmaID": "FIS01-10982 3 2025/1",
-                            "horario": ["SEG T3T4", "TER N3N4", "QUI N3N4"]
                         }
+
             ]
         },
         {
@@ -259,17 +197,8 @@
                             "numero": 1,
                             "turmaID": "FIS03-10983 1 2025/1",
                             "horario": ["SEG M5M6", "QUI M3M4", "SEX M5M6"]
-                        },
-                        {
-                            "numero": 2,
-                            "turmaID": "FIS03-10983 2 2025/1",
-                            "horario": ["SEG T5T6N1N2", "QUI N1N2"]
-                        },
-                        {
-                            "numero": 3,
-                            "turmaID": "FIS03-10983 3 2025/1",
-                            "horario": ["SEG T5T6N1N2", "QUI N1N2"]
                         }
+                        
             ]
         }
     ]
