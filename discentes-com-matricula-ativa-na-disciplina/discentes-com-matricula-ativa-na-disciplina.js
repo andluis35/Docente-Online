@@ -1528,37 +1528,40 @@ let disciplinas = {
     ]
 }
 
-
-
-
-
 //Diz qual turma esta
 let turmaIDAtual;
-
 //Diz lista de alunos da turma atual
 let listaAlunos;
 
+/*
+	Pegar as partes relevantes do site com variáveia aqui, para serem editadas depois no código
+ 
+//Tabela de alunos da matéria
+let tabelaAlunos;
+
+//
+*/
 
 //Inicia página pela primeira vez
 function iniciaPag(){
-	turmaIDAtual = "IME04-10842 1 2025/1";
+	mudaDisciplina("IME04-10842 1 2025/1");
+}
+
+//Aciona ao clicar nos botões de cada disciplina
+function mudaDisciplina(codDisciplina){
+	// Troca a turma no contexto do código e pega informações relevantes da turma
+	turmaIDAtual = codDisciplina;
 	codigoDisciplinaAtual = (turmaIDAtual.split(" "))[0];
 
 	disciplinaAtual = disciplinas.find(disciplina => disciplina.codigo === codigoDisciplinaAtual);
 	turmaAtual = disciplinaAtual?.turmas?.filter(turma => turma.turmaID === turmaIDAtual);
 	
 	listaAlunos = turmas.filter(turma => turma.turmaID === turmaIDAtual).map(turma => turma.alunos);
+
+	//Redefine valores manipulando o DOM para que as informações do site batam com as da nova disciplina
+		
 	
 }
 
 
 iniciaPag();
-mudaDisciplina();
-
-
-
-//Aciona ao clicar nos botões de cada disciplina
-function mudaDisciplina(){
-
-  
-}
