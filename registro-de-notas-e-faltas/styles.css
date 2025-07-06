@@ -14,3 +14,12 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.table > tbody > tr > td > input{
+    width: 4rem;
+    min-width: 3rem
+}
+
+.table > tbody > tr > td > input[placeholder]{
+    text-align: center;
+}
