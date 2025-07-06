@@ -23,12 +23,14 @@
             <div id="navbar">
                 <!--Conteúdo injetado por script.-->
             </div>
+
             <div id="menu-fixo" class="container-md">
                 <!--Conteúdo injetado por script.-->
             </div>
-            <section class="my-5 container-md">
+
+            <section class="my-3 container-md">
                 <h1>Discentes com matrícula ativa</h1>
-                <div class="d-flex flex-column my-5">
+                <div class="d-flex flex-column my-3">
                     <h2>Disciplina: IME-10833</h2>
                     <h2>Nome: Análise e Projeto de Sistemas</h2>
                     <h3>Turma: 1</h3>
@@ -37,155 +39,177 @@
                     <h4>
                         <a href="" class="btn btn-primary">Registro de faltas e notas da disciplina</a>
                     </h4>
-
                 </div>
+
+                <div class="mb-3">
+                    <label for="searchInput" class="form-label">Buscar Aluno:</label>
+                    <input type="text" class="form-control" id="searchInput" placeholder="Digite o nome, matrícula ou email do aluno...">
+                </div>
+
                 <div class="table-responsive">
-                    <table class="table table-sm table-striped table-hover table-bordered">
-                        <thead>
-                        <tr>
-                            <th>Número</th>
-                            <th>Matricula</th>
-                            <th>Nome</th>
-                            <th>email</th>
-                            <th>Nota P1</th>
-                            <th>Nota P2</th>
-                            <th>Nota PF</th>
-                            <th>Média Final</th>
-                            <th>Total de faltas</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>202512345610</td>
-                            <td>Aluno1</td>
-                            <td>aluno1@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>202512345611</td>
-                            <td>Aluno2</td>
-                            <td>aluno2@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>202512345612</td>
-                            <td>Aluno3</td>
-                            <td>aluno3@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>202512345613</td>
-                            <td>Aluno4</td>
-                            <td>aluno4@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>202512345614</td>
-                            <td>Aluno5</td>
-                            <td>aluno5@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>202512345615</td>
-                            <td>Aluno6</td>
-                            <td>aluno6@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>202512345616</td>
-                            <td>Aluno7</td>
-                            <td>aluno7@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>202512345617</td>
-                            <td>Aluno8</td>
-                            <td>aluno8@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>202512345618</td>
-                            <td>Aluno9</td>
-                            <td>aluno9@grad.uni</td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
-                            <td>0.0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="space-between d-flex justify-content-between mt-5">
-                    <button type="button" class="btn btn-primary">
-                        < 10 Anteriores
-                    </button>
-                    <button type="button" class="btn btn-primary disabled">
-                        Próximos 10 >
-                    </button>
-                </div>
+                    <form>
+                        <table class="table table-sm table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Número</th>
+                                    <th>Matricula</th>
+                                    <th>Nome</th>
+                                    <th>email</th>
+                                    <th>Nota P1</th>
+                                    <th>Nota P2</th>
+                                    <th>Nota PF</th>
+                                    <th>Média Final</th>
+                                    <th>Total de faltas</th>
+                                </tr>
+                            </thead>
 
-                <a type="button" class="btn btn-primary mt-5"> Voltar</a>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202512345610</td>
+                                    <td>Aluno1</td>
+                                    <td>aluno1@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>7</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>202512345611</td>
+                                    <td>Aluno2</td>
+                                    <td>aluno2@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>3</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>202512345612</td>
+                                    <td>Aluno3</td>
+                                    <td>aluno3@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>202512345613</td>
+                                    <td>Aluno4</td>
+                                    <td>aluno4@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td>202512345614</td>
+                                    <td>Aluno5</td>
+                                    <td>aluno5@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>6</td>
+                                    <td>202512345615</td>
+                                    <td>Aluno6</td>
+                                    <td>aluno6@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>7</td>
+                                    <td>202512345616</td>
+                                    <td>Aluno7</td>
+                                    <td>aluno7@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>8</td>
+                                    <td>202512345617</td>
+                                    <td>Aluno8</td>
+                                    <td>aluno8@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>9</td>
+                                    <td>202512345618</td>
+                                    <td>Aluno9</td>
+                                    <td>aluno9@grad.uni</td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder="Nota"></td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>10</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="space-between d-flex justify-content-between mt-3">
+                            <button type="button" class="btn btn-primary">
+                                < 10 Anteriores
+                            </button>
+
+                            <button type="submit" class="btn btn-success">Salvar Notas</button>
+
+                            <button type="button" class="btn btn-primary disabled">
+                                Próximos 10 >
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <a type="button" class="btn btn-danger mt-5"> Voltar</a>
             </section>
         </main>
+
         <footer class="w-100" id ="footer">
             <!--Conteúdo injetado por script.-->
         </footer>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-        <script src="../script/layouts/importHTML.js"></script>
+        <script src="/script/layouts/importHTML.js"></script>
         <script>
             importHTML('/pagina-principal/html/main/navbar.html', 'navbar')
             importHTML('/pagina-principal/html/list.html', 'menu-fixo')
