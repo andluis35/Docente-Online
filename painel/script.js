@@ -1,19 +1,15 @@
-(function() {
-    const usuarioString = localStorage.getItem('usuarioAutenticado');
-    console.log(usuarioString)
+import { getSession, endSession } from "../auth/auth.js";
+import { Navigate } from "../route/routes.js";
 
-    if (!usuarioString) {
-        alert('Acesso negado. Faça o login para continuar.');
-        window.location.href = '../login/index.html';
-        return;
-    }
+const userData = getSession()
 
-    const usuario = JSON.parse(usuarioString);
-    document.getElementById('welcome-message').textContent = `Bem-vindo, ${usuario.nome}!`;
+if (!userData) {
+    alert('Acesso negado. Faça o login para continuar.');
+    Navigate.root()
+}
 
-    document.getElementById('logout-button').addEventListener('click', function() {
-        localStorage.removeItem('usuarioAutenticado');
-        alert('Você foi desconectado.');
-        window.location.href = '../login/index.html';
-    });
-})();
+document.getElementById('welcome-message').textContent = `Bem-vindo, ${userData.nome}!`;
+
+document.getElementById('logout-button').addEventListener('click', function() {
+    endSession(); 
+});
