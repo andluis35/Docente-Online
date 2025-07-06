@@ -1,13 +1,11 @@
-import { Navigate } from "./route/routes.js";
-import { getSession } from "./auth/auth.js";
-
 (function() {
-    const userData = getSession();
+    const usuarioString = localStorage.getItem('usuarioAutenticado');
+    console.log(usuarioString)
 
-    if (!userData) {
-        Navigate.login()
+    if (!usuarioString) {
+        window.location.href = 'login/index.html';
         return;
     } else {
-        Navigate.home()
+        window.location.href = 'pagina-principal/home.html';
     }
 })();
