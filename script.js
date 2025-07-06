@@ -8,6 +8,6 @@ import { getSession } from "./auth/auth.js";
         Navigate.login()
         return;
     } else {
-        Navigate.discentes()
+        Navigate.home()
     }
 })();
