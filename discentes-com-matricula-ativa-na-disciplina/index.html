@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>  <!--TODO: problemas com referências dos links injetados. (Não encontra css nem imgs)-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Discentes com matricula ativa</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/pagina-principal/css/list.css">
+        <link rel="stylesheet" href="/pagina-principal/css/footer.css">
+        <link rel="stylesheet" href="/pagina-principal/css/header.css">
+        <link rel="stylesheet" href="/pagina-principal/css/base.css">
+        <link rel="stylesheet" href="/pagina-principal/css/navbar.css">
+    </head>
+    <body class="d-flex flex-column vh-100 fonte-padrao">
+        <header class="w-100" id="header">
+            <!--Conteúdo injetado por script.-->
+        </header>
+
+        <main class="d-flex flex-grow-1 flex-column">
+            <div id="navbar">
+                <!--Conteúdo injetado por script.-->
+            </div>
+
+            <div id="menu-fixo" class="container-md">
+                <!--Conteúdo injetado por script.-->
+            </div>
+
+            <section class="my-3 container-md">
+                <h1>Discentes com matrícula ativa</h1>
+
+                <div class="d-flex flex-column my-3">
+                    <h2>Disciplina: IME-10833</h2>
+                    <h2>Nome: Análise e Projeto de Sistemas</h2>
+                    <h3>Turma: 1</h3>
+                    <h3>Horários: TER M1M2 QUI M1M2</h3>
+                    <h3><a href="">Ementa</a></h3>
+                    <h4>
+                        <a href="" class="btn btn-primary">Registro de faltas e notas da disciplina</a>
+                    </h4>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Número</th>
+                                <th>Matricula</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>202512345610</td>
+                                <td>Aluno1</td>
+                                <td>aluno1@grad.uni</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>202512345611</td>
+                                <td>Aluno2</td>
+                                <td>aluno2@grad.uni</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>202512345612</td>
+                                <td>Aluno3</td>
+                                <td>aluno3@grad.uni</td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>202512345613</td>
+                                <td>Aluno4</td>
+                                <td>aluno4@grad.uni</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>202512345614</td>
+                                <td>Aluno5</td>
+                                <td>aluno5@grad.uni</td>
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>202512345615</td>
+                                <td>Aluno6</td>
+                                <td>aluno6@grad.uni</td>
+                            </tr>
+
+                            <tr>
+                                <td>7</td>
+                                <td>202512345616</td>
+                                <td>Aluno7</td>
+                                <td>aluno7@grad.uni</td>
+                            </tr>
+
+                            <tr>
+                                <td>8</td>
+                                <td>202512345617</td>
+                                <td>Aluno8</td>
+                                <td>aluno8@grad.uni</td>
+                            </tr>
+
+                            <tr>
+                                <td>9</td>
+                                <td>202512345618</td>
+                                <td>Aluno9</td>
+                                <td>aluno9@grad.uni</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a type="button" class="btn btn-danger mt-5"> Voltar</a>
+            </section>
+        </main>
+
+        <footer class="w-100" id ="footer">
+            <!--Conteúdo injetado por script.-->
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <script src="/script/layouts/importHTML.js"></script>
+        <script>
+            importHTML('/pagina-principal/html/main/navbar.html', 'navbar')
+            importHTML('/pagina-principal/html/list.html', 'menu-fixo')
+            importHTML('/pagina-principal/html/header.html/', 'header');
+            importHTML('/pagina-principal/html/footer.html/', 'footer');
+        </script>
+    </body>
+</html>
