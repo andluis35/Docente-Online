@@ -6,6 +6,6 @@
         window.location.href = 'login/index.html';
         return;
     } else {
-        window.location.href = 'painel/index.html';
+        window.location.href = 'pagina-principal/home.html';
     }
 })();

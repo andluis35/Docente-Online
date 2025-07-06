@@ -4,10 +4,10 @@ const INPUT_BUSCA = document.getElementById('busca');
 let divDisciplinas = document.querySelector("#disciplinas");
 
 
-fetch ("./disciplinas.json").then((response) => {
+fetch ("./NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
-            divDisciplinas.innerHTML += `<li> CÓDIGO: ${disciplina.codigo} <br> NOME: ${disciplina.nome} <br> TURMA: ${disciplina.turma} <br> HORÁRIO: ${disciplina.horario} <br> EMENTÁRIO: <a href="${disciplina.link}">${disciplina.link}</a></li>`
+            divDisciplinas.innerHTML += `<li> CÓDIGO: ${disciplina.codigo} <br> NOME: ${disciplina.nome} <br> TURMA: ${disciplina.turmas[0].numero} <br> HORARIO: ${disciplina.turmas[0].horario} <br> EMENTÁRIO: <a href="${disciplina.ementa}">${disciplina.ementa}</a></li>`
         })
     })
 })
@@ -44,7 +44,6 @@ let sugestoes = document.getElementById("sugestoes");
 input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     adicionarHistorico(input.value);
-
     sugestoes.style.display = "none";
   }
 });
@@ -62,6 +61,7 @@ input.addEventListener("input", () => {
 
 input.addEventListener("focus", () => {
   exibirSugestoes(true);
+  filtrarSugestoes(input.value);
 });
 
 input.addEventListener("blur", () => {
@@ -105,7 +105,7 @@ function estaNoHistorico(texto){
 
 adicionarDisciplinas();
 function adicionarDisciplinas(){
-    fetch('./disciplinas.json')
+    fetch('./NOVO-disciplinas.json')
       .then(response => response.json())
       .then(data => {
 
@@ -114,13 +114,23 @@ function adicionarDisciplinas(){
         item.forEach(element => {
           adicionarSugestao(element.nome);
 
+          let turma = [];
+
+          element.turmas.forEach(item => {
+            let t = {
+              numero: item.numero,
+              turmaID: item.turmaID,
+              horario: item.horario
+            }
+            turma.push(t);
+          });
+
           let disciplina = {
             codigo: element.codigo,
             nome: element.nome,
-            turma: 1,
-            horario: element.horario,
-            link: element.link
-          };
+            ementa: element.ementa,
+            turmas: turma
+            };
 
           disciplinas.push(disciplina);
 
@@ -131,7 +141,6 @@ function adicionarDisciplinas(){
         console.error("Erro ao carregar JSON:", error);
       });
 }
-
 // Lógica de filtragem e exibição.
 
 
@@ -166,9 +175,8 @@ function infoPertenceDisciplina(disciplina, info){
 
   let nome = disciplina.nome.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
   let codigo = disciplina.codigo;
-  let horario = disciplina.horario;
 
-  let regex = new RegExp("\\b" + info, "i");
+  let regex = new RegExp("\\b" + info.normalize('NFD').replace(/[\u0300-\u036f]/g, ""), "i");
   if(regex.test(nome)){
     return true;
   }
@@ -176,10 +184,16 @@ function infoPertenceDisciplina(disciplina, info){
     return true;
   }
 
-  let infoLC = info.toLowerCase();
-  for(var i=0; i<horario.length; i++){
-    if(horario[i].toLowerCase().includes(info)){
-      return true;
+  let turma = disciplina.turmas;
+
+  for(var j=0; j<turma.length;j++){
+    let infoLC = info.toLowerCase();
+    horario = turma[j].horario;
+
+    for(var i=0; i<horario.length; i++){
+      if(horario[i].toLowerCase().includes(infoLC)){
+        return true;
+      }
     }
   }
 
