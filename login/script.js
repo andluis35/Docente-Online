@@ -1,9 +1,12 @@
-const usuarioString = localStorage.getItem('usuarioAutenticado');
+import { Navigate } from "../route/routes.js";
+import { getSession , rememberAuthUser } from "../auth/auth.js"
+
 const inputMatriculaCpf = document.getElementById('matriculaCpf');
 
-if (usuarioString) {
-  window.location.href = '../index.html';
+if (getSession()) {
+  Navigate.root()
 }
+
 
 // Máscara para matrícula (6 dígitos) e CPF (11 dígitos)
 inputMatriculaCpf.addEventListener('input', function () {
@@ -44,14 +47,8 @@ inputMatriculaCpf.addEventListener('input', function () {
         );
 
         if (usuarioEncontrado) {
-          const usuarioParaSalvar = {
-                nome: usuarioEncontrado.nome,
-                usuario: usuarioEncontrado.usuario
-            };
-            
-            localStorage.setItem('usuarioAutenticado', JSON.stringify(usuarioParaSalvar));
-
-            window.location.href = '../index.html';
+          rememberAuthUser(usuarioEncontrado);
+          Navigate.root();
         } else {
           alert('Usuário ou senha inválidos.');
         }
