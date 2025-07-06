@@ -1,33 +1,38 @@
 let turmaSelecionada = null;
 
-const mudaTurma = new CustomEvent("mudaTurma", {
-  detail: turmaSelecionada}
-));
+const clicaNovaTurma = new CustomEvent("clicaNovaTurma", {
+  detail: turmaSelecionada
+});
 
 
 // Referencia a lista de disciplinas
 const container = document.querySelector('.list-group.list-group-flush.border-bottom.scrollarea');
 
 //Ao clicar
-container.addEventListener('click', function(event) {
+container.addEventListener('click', function(evento) {
   //Se clicou em algum elemento da lista de disciplinas
-  if (event.target.matches('.list-group-item.list-group-item-action.py-3.lh-sm')){
-    let textoBotao = event.target.textContent;
+  if (evento.target.matches('.list-group-item.list-group-item-action.py-3.lh-sm')){
 
-    const regexCodigo =
-    const regexTurma =
-    
-    turmaSelecionada = textoBotao.;
-    //Envia turma selecionada pro DOM como evento 
-    document.dispatchEvent(mudaTurma);
-    // You can add more logic here, e.g., event.target.id or dataset info
+    //Transforma o texto do elemento clicado em uma lista de strings
+    let textoBotao = (evento.target.textContent).split(/[ \n]+/);
+
+    //Pega o primeiro texto do split (codigo de turma) + " " + penultimo texto (numero da turma)
+    turmaSelecionada = textoBotao[0]+" "+textoBotao[(textoBotao.length-2)];
+
+    //Pega URL da página, tentando deduzir qual html esta aberto no momento
+    const paginaAtual = window.location.pathname;
+
+    //Se a pagina dos discentes por disciplina nao estiver aberta, salva a turma selecionada no localStorage e carrega depois que abrir la
+    if(paginaAtual !== "/Docente-Online/discentes-com-matricula-ativa-na-disciplina/index.html"){
+      localStorage.setItem("turmaAtual", turmaSelecionada);
+
+      //Vai pra pagina dos discentes por disciplina
+      window.location.href = "/Docente-Online/discentes-com-matricula-ativa-na-disciplina/index.html"
+    }
+    //Se a pagina atual ja e a de discentes por disciplina
+    else{
+      //Envia a turma selecionada pro DOM como evento, atualizando na propria pagina.
+      document.dispatchEvent(clicaNovaTurma);
+    }
   }
 });
-
-
-// Cria eventos de acordo com o botao pressionado
-document.addEventListener("trocaDeDisciplina", (e) => {
-  mudaDisciplina(e.detail);
-});
-
-
