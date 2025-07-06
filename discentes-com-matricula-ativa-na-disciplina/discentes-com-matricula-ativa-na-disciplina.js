@@ -1536,10 +1536,13 @@ let listaAlunos;
 /*
 	Pegar as partes relevantes do site com variáveia aqui, para serem editadas depois no código
  
-//Tabela de alunos da matéria
-let tabelaAlunos;
+//Tabela que será usada para mostrar dados dos alunos
+let tabela;
 
-//
+//codDisciplina, nome, site da ementa at  
+let infoDisciplina;
+
+
 */
 
 //Inicia página pela primeira vez
@@ -1552,16 +1555,21 @@ function mudaDisciplina(codDisciplina){
 	// Troca a turma no contexto do código e pega informações relevantes da turma
 	turmaIDAtual = codDisciplina;
 	codigoDisciplinaAtual = (turmaIDAtual.split(" "))[0];
-
+	
 	disciplinaAtual = disciplinas.find(disciplina => disciplina.codigo === codigoDisciplinaAtual);
 	turmaAtual = disciplinaAtual?.turmas?.filter(turma => turma.turmaID === turmaIDAtual);
 	
 	listaAlunos = turmas.filter(turma => turma.turmaID === turmaIDAtual).map(turma => turma.alunos);
-
+	
 	//Redefine valores manipulando o DOM para que as informações do site batam com as da nova disciplina
 		
 	
 }
 
+//Chama a função 
+document.addEventListener("trocaDeDisciplina", (e) => {
+  mudaDisciplina(e.detail);
+});
 
 iniciaPag();
+
