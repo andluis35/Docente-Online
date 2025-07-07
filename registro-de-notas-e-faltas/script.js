@@ -1429,7 +1429,6 @@ Entao, para um infoTurma com n elementos:
 
 
 function carregaDoStorage(){
-	
 	infoTurma = localStorage.getItem("turmaAtualInfo");
 		
 	//Transforma o texto do elemento clicado em uma lista de strings
@@ -1444,7 +1443,8 @@ function carregaDoStorage(){
 
 //Aciona ao clicar nos botões de cada disciplina
 function mudaTurma(novaTurmaID){
-	listaAlunos = turmas.filter(turma => turma.turmaID === novaTurmaID).map(turma => turma.alunos);
+	let turmaAchada = turmas.find(turma => turma.turmaID === novaTurmaID)
+	listaAlunos = turmaAchada?.alunos;
 	
 	//Redefine valores manipulando o DOM para que as informações do site batam com as da nova disciplina
 	atualizaTurmaHTML();
