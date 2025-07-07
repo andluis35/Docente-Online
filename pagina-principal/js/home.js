@@ -39,16 +39,18 @@ $(document).on('click', '#btn-registro-notas', function(event) {
 
 $(document).on('click', '#footer-btn-disciplinas', function(event) {
   event.preventDefault();
-  Navigate.disciplinas();
+  Navigate.disciplinas()
 });
 
 $(document).on('click', '#footer-btn-discentes', function(event) {
   event.preventDefault();
+  console.log('Botão de rodapé "Discentes" clicado.');
   Navigate.notasEFaltas();
 });
 
 $(document).on('click', '#footer-btn-registro', function(event) {
   event.preventDefault();
+  console.log('Botão de rodapé "Registro" clicado.');
   Navigate.notasEFaltas();
 });
 
