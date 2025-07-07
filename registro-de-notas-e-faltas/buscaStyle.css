@@ -1,0 +1,168 @@
+h1{
+    text-align: center;
+}
+
+#pagina{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#esquerda{
+    position: relative;
+
+    border-color: black;
+    border-style: solid;
+
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width:40vw;
+    height:80vh;
+}
+
+#direita{
+    border-color: black;
+    border-style: solid;
+
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: right;
+
+    width:40vw;
+    height:80vh;
+}
+
+#resultadoBusca{
+    border-color: black;
+    border-style: solid;
+
+    margin: 15px;
+
+    width:90%;
+    height:80%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#busca{
+    background-color: rgb(216, 233, 255);
+
+    font-size: 20px;
+
+    margin: 10px;
+    padding: 20px;
+
+    width: 90%;
+    height: 10%
+}
+
+#disciplinas {
+    display: flex;
+    flex-direction: column;
+}
+
+#disciplinas > li {
+    list-style-type: none;
+    border-top: 1px solid black;
+    margin-bottom: 12px;
+}
+
+#sugestoes{
+    position: absolute;
+
+    display: none;
+
+    border-radius: 10px;
+
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    transform: translate(0,90px);
+
+    padding: 10px;
+    width: 85%;
+
+    background-color: rgb(230, 230, 230);
+}
+
+.linhaHistorico{
+    display:flex;
+    flex-direction: row;
+}
+
+.itemHistorico{
+    color: cornflowerblue;
+    font-weight: bold;
+
+    display: none;
+
+    text-align: left;
+
+    padding: 10px;
+    padding-left: 15px;
+
+    border: none;
+    border-style: none;
+
+    width: 100%;
+
+    background-color: rgb(230, 230, 230);
+}
+
+.itemSugestao{
+    display: none;
+
+    text-align: left;
+
+    padding: 10px;
+    padding-left: 15px;
+
+    border: none;
+    border-style: none;
+
+    width: 100%;
+
+    background-color: rgb(230, 230, 230);
+}
+
+.itemLista{
+    padding : 15px;
+
+    background-color: white;
+    border: none;
+
+    border-bottom: solid;
+    border-color: black;
+    border-width: 1px;
+
+    text-align: left;
+}
+
+.disciplinaDetalhada{
+    padding-left: 15px;
+    padding-bottom: 20px;
+    
+    border-bottom: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.itemSugestao:hover{
+    background-color:  rgb(209, 209, 209);
+}
+
+.itemHistorico:hover{
+    background-color:  rgb(209, 209, 209);
+}
+
+.itemLista:hover{
+    background-color:  rgb(209, 209, 209);
+}

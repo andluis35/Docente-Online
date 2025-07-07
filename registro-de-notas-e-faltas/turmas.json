@@ -1,0 +1,128 @@
+{"turmas":[
+		{
+			"turmaID": "IME04-10842 1 2025/1",
+			"alunos":[
+					{
+						"nome": "Débora Regina Soares",
+						"matricula": 2018015670,
+						"email": "deb.soares@uerj.br",
+						"notas":{
+								"P1": 5.5,
+								"P2": 9,
+								"PR": -1.0,
+								"mediaParcial": 7.25,
+								"PF": -1.0,
+								"mediaFinal": 7.25
+							},
+						"faltas": [
+								"06/03/2025, quinta",
+								"18/03/2025, terca",
+								"03/04/2025, quinta",
+								"15/04/2025, terca",
+								"08/05/2025, quinta",
+								"27/05/2025, terca",
+								"12/06/2025, quinta"
+							]
+					},
+					{
+						"nome": "Thiago Emanuel Correia",
+						"matricula": 2019002347,
+						"email": "thi.emc@uerj.br",
+						"notas":{
+								"P1": 7.0,
+								"P2": 6.0,
+								"PR": -1.0,
+								"mediaParcial": 6.5,
+								"PF": 7,
+								"mediaFinal": 6.75
+							},
+						"faltas": [
+								"13/03/2025, quinta",
+								"24/04/2025, quinta",
+								"19/06/2025, quinta"
+							]
+					}
+				]
+		},
+		{
+			"turmaID": "IME04-10843 1 2025/1",
+			"alunos":[
+					{
+						"nome": "Débora Regina Soares",
+						"matricula": 2018015670,
+						"email": "deb.soares@uerj.br",
+						"notas":{
+								"P1": 8,
+								"P2": 3,
+								"PR": -1.0,
+								"mediaParcial": 5.5,
+								"PF": 8,
+								"mediaFinal": 6.75
+							},
+						"faltas": [
+								"10/03/2025, segunda"
+							]
+					},
+					{
+						"nome": "Daniel Luiz Barros",
+						"matricula": 2020004568,
+						"email": "dan.lbarros@uerj.br",
+						"notas":{
+								"P1": 4.5,
+								"P2": -1,
+								"PR": 8,
+								"mediaParcial": 6.25,
+								"PF": 4.75,
+								"mediaFinal": 5.5
+							},
+						"faltas": [
+								"14/05/2025, quarta"
+							]
+					}
+				]
+
+		},
+		{"turmaID": "IME04-11312 1 2025/1",
+			"alunos":[
+					{
+						"nome": "Raissa Silva Nunes",
+						"matricula": 2019015670,
+						"email": "rasilva@uerj.br",
+						"notas":{
+								"P1": 5.4,
+								"P2": 7,
+								"PR": -1.0,
+								"mediaParcial": 7.25,
+								"PF": -1.0,
+								"mediaFinal": 7.25
+							},
+						"faltas": [
+								"06/03/2025, quinta",
+								"18/03/2025, terca",
+								"03/04/2025, quinta"
+							]
+					},
+					{
+						"nome": "André Emanuel Correia",
+						"matricula": 2020002347,
+						"email": "andycorreia@uerj.br",
+						"notas":{
+								"P1": 7.0,
+								"P2": 6.0,
+								"PR": -1.0,
+								"mediaParcial": 6.5,
+								"PF": 7,
+								"mediaFinal": 6.75
+							},
+						"faltas": [
+								"13/03/2025, quinta",
+								"24/04/2025, quinta",
+								"19/06/2025, quinta"
+							]
+					}
+				]
+		}		
+
+	]
+
+}
