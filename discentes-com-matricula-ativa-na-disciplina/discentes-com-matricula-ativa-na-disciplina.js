@@ -1593,7 +1593,7 @@ function atualizaTurmaHTML(){
 	}
 }
 
-function atualizaTableHTML(){
+function atualizaTabelaHTML(){
 	
 	/* TODO: Implementar mudanças na tabela de alunos!
 	tabelaHTML =
@@ -1635,7 +1635,7 @@ function mudaTurma(novaTurmaID){
 	
 	//Redefine valores manipulando o DOM para que as informações do site batam com as da nova disciplina
 	atualizaTurmaHTML();
-	atualizaTableHTML();
+	atualizaTabelaHTML();
 }
 
 //Chama a função 
