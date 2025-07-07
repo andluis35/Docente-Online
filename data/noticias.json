@@ -1,0 +1,68 @@
+{
+    "noticias": [
+        {
+            "titulo": "Faculdade de Enfermagem da Uerj inaugura Pavilhão Professora Nalva Pereira Caldas, em Vila Isabel",
+            "data": "01/07/2025",
+            "hora": "14:26",
+            "categoria": "atualidades",
+            "link": "https://www.uerj.br/noticia/faculdade-de-enfermagem-da-uerj-inaugura-pavilhao-professora-nalva-pereira-caldas-em-vila-isabel/",
+            "imagem": "https://www.uerj.br/wp-content/uploads/2025/07/site_Pavilhao-Faculdade-de-Enfermagem-232x126.png"
+        },
+        {
+            "titulo": "Uerj convoca alunos indeferidos como cotistas para reavaliação de documentos; contato será pelo e-mail institucional",
+            "data": "30/06/2025",
+            "hora": "14:53",
+            "categoria": "atualidades",
+            "link": "https://www.uerj.br/noticia/uerj-convoca-alunos-indeferidos-como-cotistas-para-reavaliacao-de-documentos-contato-sera-pelo-e-mail-institucional/",
+            "imagem": "https://www.uerj.br/wp-content/uploads/2025/06/Foto_Materia-Nao-cotistas-232x126.png"
+        },
+        {
+            "titulo": "Década do Oceano da ONU: Uerj integra pesquisa que embasa meta de proteção de 30% das águas internacionais até 2030",
+            "data": "25/06/2025",
+            "hora": "16:35",
+            "categoria": "atualidades",
+            "link": "https://www.uerj.br/noticia/decada-do-oceano-da-onu-uerj-integra-pesquisa-que-embasa-meta-de-protecao-de-30-das-aguas-internacionais-ate-2030/",
+            "imagem": "https://www.uerj.br/wp-content/uploads/2025/06/site_final2_Materia-232x126.png"
+        },
+        {
+            "titulo": "Uerj realiza primeira Semana da Inovação, com foco em impacto social, tecnologia e cultura científica",
+            "data": "17/06/2025",
+            "hora": "16:22",
+            "categoria": "eventos",
+            "link": "https://www.uerj.br/noticia/uerj-realiza-primeira-semana-da-inovacao-com-foco-em-impacto-social-tecnologia-e-cultura-cientifica/",
+            "imagem": "https://www.uerj.br/wp-content/uploads/2025/06/semana-da-inovaçao-site-232x126.png"
+        },
+        {
+            "titulo": "Prêmio Uerj de Divulgação Científica recebe inscrições até 10 de agosto; evento marcou lançamento do edital",
+            "data": "12/06/2025",
+            "hora": "14:37",
+            "categoria": "atualidades",
+            "link": "https://www.uerj.br/noticia/premio-uerj-de-divulgacao-cientifica-recebe-inscricoes-ate-10-de-agosto-evento-marcou-lancamento-do-edital/",
+            "imagem": "https://www.uerj.br/wp-content/uploads/2025/06/site_final2_Premio-Uerj-232x126.png"
+        },
+        {
+            "titulo": "Uerj coordena sessão temática no Fórum de Reitores das Universidades do Brics+ sobre saúde e qualidade de vida",
+            "data": "10/06/2025",
+            "hora": "17:11",
+            "categoria": "reitoria",
+            "link": "https://www.uerj.br/noticia/uerj-coordena-sessao-tematica-no-forum-de-reitores-das-universidades-do-brics-sobre-saude-e-qualidade-de-vida/",
+            "imagem": "https://www.uerj.br/wp-content/uploads/2025/06/Brics_Portal-232x126.png"
+        },
+        {
+            "titulo": "Comunidade universitária da Uerj define novos membros dos Conselhos Superiores em votação online",
+            "data": "09/06/2025",
+            "hora": "14:40",
+            "categoria": "atualidades",
+            "link": "https://www.uerj.br/noticia/comunidade-universitaria-da-uerj-define-novos-membros-dos-conselhos-superiores-em-votacao-online/",
+            "imagem": "https://www.uerj.br/wp-content/uploads/2025/06/eleiçoes-Uerj-2025-232x126.png"
+        },
+        {
+            "titulo": "Universidade e memória: Uerj colabora com projeto de pesquisa e preservação da história da Mangueira",
+            "data": "05/06/2025",
+            "hora": "10:34",
+            "categoria": "atualidades",
+            "link": "https://www.uerj.br/noticia/universidade-e-memoria-uerj-colabora-com-projeto-de-pesquisa-e-preservacao-da-historia-da-mangueira/",
+            "imagem": "https://www.uerj.br/wp-content/uploads/2025/06/Acervo-Virtual-de-Mangueira-232x126.png"
+        }
+    ]
+}
