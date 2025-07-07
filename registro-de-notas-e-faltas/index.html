@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>  <!--TODO: problemas com referências dos links injetados. (Não encontra css nem imgs)-->
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registro de notas e faltas</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+              rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+              crossorigin="anonymous">
 
+        <link
+                rel="shortcut icon"
+                type="image/x-icon"
+                href="../assets/svg/logo.svg"
+        />
         <link rel="stylesheet" href="./styles.css">
         <link rel="stylesheet" href="../pagina-principal/css/list.css">
         <link rel="stylesheet" href="../pagina-principal/css/footer.css">
@@ -51,12 +58,18 @@
                         </div>
 
                     </div>
+
+                </div>
+
+                <div>
+                    <button href="" class="btn btn-primary" id="troca-contexto">
+                        Discentes com matricula ativa
+                    </button>
                 </div>
 
                 <div class="mb-3">
                     
                 </div>
-
 
                 <form>
                     <div class="table-responsive">
@@ -67,11 +80,11 @@
                                     <th scope="col">Matricula</th>
                                     <th scope="col">Nome</th>
                                     <th scope="col">email</th>
-                                    <th scope="col">Nota P1</th>
-                                    <th scope="col">Nota P2</th>
-                                    <th scope="col" >Nota PF</th>
-                                    <th scope="col">Média Final</th>
-                                    <th scope="col">Total de faltas</th>
+                                    <th scope="col" class="celula-registros">Nota P1</th>
+                                    <th scope="col" class="celula-registros">Nota P2</th>
+                                    <th scope="col" class="celula-registros">Nota PF</th>
+                                    <th scope="col" class="celula-registros">Média Final</th>
+                                    <th scope="col" class="celula-registros">Total de faltas</th>
                                 </tr>
                             </thead>
 
@@ -92,14 +105,24 @@
             <!--Conteúdo injetado por script.-->
         </footer>
         
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-        <script src="../script/layouts/importHTML.js"></script>
-        <script>
-            importHTML('../pagina-principal/html/main/navbar.inc', 'navbar')
-            importHTML('../pagina-principal/html/list.inc', 'menu-fixo')
-            importHTML('../pagina-principal/html/header.inc', 'header');
-            importHTML('../pagina-principal/html/footer.inc', 'footer');
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+                crossorigin="anonymous">
         </script>
-        <script type="text/javascript" src="./script.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <script>
+            $(function() {
+                $('#navbar').load('../pagina-principal/html/main/navbar.inc');
+                $('#menu-fixo').load('../pagina-principal/html/list.inc');
+                $('#header').load('../pagina-principal/html/header.inc');
+                $('#footer').load('../pagina-principal/html/footer.inc');
+            });
+        </script>
+
+        <script type='module' src="../script/layouts/trocaContextoGradeDiscentesERegistros.js"></script>
+        <script type="module" src="./script.js"></script>
+        <script type="module" src="../pagina-principal/js/home.js"></script>
     </body>
 </html>

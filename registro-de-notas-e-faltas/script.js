@@ -65,16 +65,16 @@ function colocarAlunosTabela(){
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
       <td>${element.email}</td>
-      <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P1}></td>
-      <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P2}></td>
-      <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.PF}></td>
-      <td>${element.notas.mediaFinal}</td>
-      <td>${element.faltas.length}</td>`
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P1}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P2}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.PF}></td>
+      <td class="celula-registros">${element.notas.mediaFinal}</td>
+      <td class="celula-registros">${element.faltas.length}</td>`
 
       tabela.appendChild(aluno);
       numero = numero + 1;
   });
-
+  $(document).trigger('tabelaAtualizada');
 }
 
 function exibirInformacoes(disciplina){
