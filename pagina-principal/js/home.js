@@ -24,17 +24,17 @@ $(document).on('click', '#btn-logout', function(event) {
 
 $(document).on('click', '#btn-disciplinas-periodo', function(event) {
   event.preventDefault(); // Impede que o '#' seja adicionado à URL
-  console.log('Botão "Disciplinas do período" clicado.');
+  Navigate.disciplinas();
 });
 
 $(document).on('click', '#btn-discentes-ativos', function(event) {
   event.preventDefault();
-  console.log('Botão "Discentes com matrícula ativa" clicado.');
+  Navigate.discentes();
 });
 
 $(document).on('click', '#btn-registro-notas', function(event) {
   event.preventDefault();
-  console.log('Botão "Registro de notas e faltas" clicado.');
+  Navigate.notasEFaltas();
 });
 
 $(document).on('click', '#footer-btn-disciplinas', function(event) {
