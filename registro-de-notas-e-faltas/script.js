@@ -19,6 +19,7 @@ fetch ("./NOVO-disciplinas.json").then((response) => {
               NOME: ${disciplina.nome} <br> 
               TURMA: ${disciplina.turmas[0].numero} <br> 
               HORARIO: ${disciplina.turmas[0].horario}
+              <span style="display: none;" class = "turmaID">${disciplina.turmas[0].turmaID}</span>
             </button>`;
 
             document.querySelectorAll('.itemLista').forEach(element => {
@@ -104,6 +105,7 @@ function exibirInformacoes(disciplina){
     TURMA: ${jsonDisciplina.turmas[0].numero} <br> 
     HORARIO: ${jsonDisciplina.turmas[0].horario} <br>
     EMENTÁRIO: <a href="${jsonDisciplina.ementa}">${jsonDisciplina.ementa}</a>
+    <span style="display: none;" class = "turmaID">${jsonDisciplina.turmas[0].turmaID}</span>
   </div>
   `
   detalhes.appendChild(infoDisc);
