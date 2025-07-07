@@ -3,14 +3,113 @@
 const INPUT_BUSCA = document.getElementById('busca');
 let divDisciplinas = document.querySelector("#disciplinas");
 
+let disciplinas = [];
+let alunos = [];
+
 
 fetch ("./NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
-            divDisciplinas.innerHTML += `<li> CÓDIGO: ${disciplina.codigo} <br> NOME: ${disciplina.nome} <br> TURMA: ${disciplina.turmas[0].numero} <br> HORARIO: ${disciplina.turmas[0].horario} <br> EMENTÁRIO: <a href="${disciplina.ementa}">${disciplina.ementa}</a></li>`
+
+            salvarDisciplinas(disciplina);
+
+            divDisciplinas.innerHTML += 
+            `<button class="itemLista"> 
+              CÓDIGO: ${disciplina.codigo} <br> 
+              NOME: ${disciplina.nome} <br> 
+              TURMA: ${disciplina.turmas[0].numero} <br> 
+              HORARIO: ${disciplina.turmas[0].horario}
+            </button>`;
+
+            document.querySelectorAll('.itemLista').forEach(element => {
+            element.addEventListener('click', () => {
+              exibirInformacoes(element.textContent);
+              carregarAlunos(encontrarDisciplina((element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim()));
+              });
+            });
         })
     })
 })
+
+function carregarAlunos(disciplina){
+  let turmaID = disciplina.turmas[0].turmaID;
+
+  fetch('./turmas.json')
+      .then(response => response.json())
+      .then(element => {
+
+        let turma = element.turmas.find(item => item.turmaID == turmaID);
+        alunos = turma ? turma.alunos : undefined;
+        colocarAlunosTabela();
+
+
+      })
+      .catch(error => {
+        console.error("Erro ao carregar JSON:", error);
+      });
+}
+
+function colocarAlunosTabela(){
+  let tabela = document.getElementById("alunosTabela");
+  tabela.innerHTML = "";
+  let numero = 1
+
+  if(!alunos){
+    return;
+  }
+
+  alunos.forEach(element => {
+    let aluno = document.createElement("tr")
+    aluno.innerHTML = 
+    `<td>${numero}</td>
+      <td>${element.matricula}</td>
+      <td>${element.nome}</td>
+      <td>${element.email}</td>
+      <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P1}></td>
+      <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P2}></td>
+      <td><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.PF}></td>
+      <td>${element.notas.mediaFinal}</td>
+      <td>${element.faltas.length}</td>`
+
+      tabela.appendChild(aluno);
+      numero = numero + 1;
+  });
+
+}
+
+function exibirInformacoes(disciplina){
+  let detalhes = document.getElementById("infoDisc");
+  detalhes.innerHTML = "";
+
+  let infoDisc = document.createElement("div");
+
+  let nomeDisciplina
+  if(disciplina.includes("NOME:")){
+    nomeDisciplina = (disciplina.match(/NOME:\s*(.*)\n/)[1]).trim();
+  }
+  else{
+    nomeDisciplina = disciplina;
+  }
+
+  let jsonDisciplina = encontrarDisciplina(nomeDisciplina);
+
+  if(!jsonDisciplina){
+    return;
+  }
+
+  infoDisc.innerHTML =
+  `<div class="disciplinaDetalhada">
+    <h1>${nomeDisciplina}</h1> <br>
+    CÓDIGO: ${jsonDisciplina.codigo} <br> 
+    TURMA: ${jsonDisciplina.turmas[0].numero} <br> 
+    HORARIO: ${jsonDisciplina.turmas[0].horario} <br>
+    EMENTÁRIO: <a href="${jsonDisciplina.ementa}">${jsonDisciplina.ementa}</a>
+  </div>
+  `
+  detalhes.appendChild(infoDisc);
+
+}
+
 
 INPUT_BUSCA.addEventListener("input", () => {
   filtrarDisciplinas();
@@ -18,7 +117,7 @@ INPUT_BUSCA.addEventListener("input", () => {
 
 function filtrarDisciplinas(){
   let expressaoDigitada = INPUT_BUSCA.value.toUpperCase();
-    let listaDisciplinas = divDisciplinas.getElementsByTagName('li');
+    let listaDisciplinas = divDisciplinas.getElementsByClassName('itemLista');
 
     for (let posicao in listaDisciplinas) {
         if (isNaN(posicao)) {
@@ -35,6 +134,28 @@ function filtrarDisciplinas(){
     }
 }
 
+function salvarDisciplinas(element){
+  let turma = [];
+
+  element.turmas.forEach(item => {
+  let t = {
+    numero: item.numero,
+    turmaID: item.turmaID,
+    horario: item.horario
+    }
+    turma.push(t);
+    });
+
+    let disciplina = {
+      codigo: element.codigo,
+      nome: element.nome,
+      ementa: element.ementa,
+      turmas: turma
+      };
+
+    disciplinas.push(disciplina);
+}
+
 // =-=-=-=-=-=-=-=-=-= Código relacionado ao LocalStorage =-=-=-=-=-=-=-=-=-= //
 
 let input = document.getElementById("busca");
@@ -49,8 +170,6 @@ input.addEventListener("keydown", (event) => {
 });
 
 // =-=-=-=-=-=-=-=-=-= Código relacionado ao autocomplete =-=-=-=-=-=-=-=-=-= //
-
-let disciplinas = [];
 
 // Eventos
 
@@ -79,6 +198,7 @@ function adicionarHistorico(texto){
     item.addEventListener("click", () => {
       input.value = item.textContent;
       filtrarDisciplinas();
+      exibirInformacoes(item.textContent);
     });
 
     let sugestoes = document.getElementById("sugestoes");
@@ -113,27 +233,6 @@ function adicionarDisciplinas(){
 
         item.forEach(element => {
           adicionarSugestao(element.nome);
-
-          let turma = [];
-
-          element.turmas.forEach(item => {
-            let t = {
-              numero: item.numero,
-              turmaID: item.turmaID,
-              horario: item.horario
-            }
-            turma.push(t);
-          });
-
-          let disciplina = {
-            codigo: element.codigo,
-            nome: element.nome,
-            ementa: element.ementa,
-            turmas: turma
-            };
-
-          disciplinas.push(disciplina);
-
         });
         
       })
@@ -180,7 +279,7 @@ function infoPertenceDisciplina(disciplina, info){
   if(regex.test(nome)){
     return true;
   }
-  if(codigo.includes(info.toLowerCase())){
+  if(codigo.includes(info.toUpperCase())){
     return true;
   }
 
@@ -201,15 +300,8 @@ function infoPertenceDisciplina(disciplina, info){
 }
 
 function encontrarDisciplina(nomeDisciplina) {
-  return disciplinas.find(element => {
-
-    if(element.nome == nomeDisciplina){
-      return element;
-    }
-    return null;
-  });
+  return disciplinas.find(element => element.nome == nomeDisciplina);
 }
-
 
 function adicionarSugestao(texto){
   let item = document.createElement("button");
@@ -223,7 +315,7 @@ function adicionarSugestao(texto){
 
     let sugestoes = document.getElementById("sugestoes");
     sugestoes.prepend(item);
-
+    exibirInformacoes(item.textContent);
     filtrarDisciplinas();
   });
 
