@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>  <!--TODO: problemas com referências dos links injetados. (Não encontra css nem imgs)-->
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Discentes com matricula ativa</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="/pagina-principal/css/list.css">
-        <link rel="stylesheet" href="/pagina-principal/css/footer.css">
-        <link rel="stylesheet" href="/pagina-principal/css/header.css">
-        <link rel="stylesheet" href="/pagina-principal/css/base.css">
-        <link rel="stylesheet" href="/pagina-principal/css/navbar.css">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="../pagina-principal/css/list.css">
+        <link rel="stylesheet" href="../pagina-principal/css/footer.css">
+        <link rel="stylesheet" href="../pagina-principal/css/header.css">
+        <link rel="stylesheet" href="../pagina-principal/css/base.css">
+        <link rel="stylesheet" href="../pagina-principal/css/navbar.css">
     </head>
     <body class="d-flex flex-column vh-100 fonte-padrao">
         <header class="w-100" id="header">
@@ -128,12 +128,14 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-        <script src="/script/layouts/importHTML.js"></script>
+
+        <script src="../script/layouts/importHTML.js"></script>
+
         <script>
-            importHTML('/pagina-principal/html/main/navbar.html', 'navbar')
-            importHTML('/pagina-principal/html/list.html', 'menu-fixo')
-            importHTML('/pagina-principal/html/header.html', 'header');
-            importHTML('/pagina-principal/html/footer.html', 'footer');
+            importHTML('../pagina-principal/html/main/navbar.html', 'navbar')
+            importHTML('../pagina-principal/html/list.html', 'menu-fixo')
+            importHTML('../pagina-principal/html/header.html', 'header');
+            importHTML('../pagina-principal/html/footer.html', 'footer');
         </script>
     </body>
 </html>
