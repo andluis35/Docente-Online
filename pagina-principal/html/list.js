@@ -14,11 +14,11 @@ container.addEventListener('click', function(evento) {
     const paginaAtual = window.location.pathname;
 
     //Se a pagina dos discentes por disciplina nao estiver aberta, salva a turma selecionada no localStorage e carrega depois que abrir la
-    if(paginaAtual !== "/Docente-Online/discentes-com-matricula-ativa-na-disciplina/index.html"){
+    if(paginaAtual !== "/Docente-Online/registro-de-notas-e-faltas/index.html"){
       localStorage.setItem("turmaAtualInfo", textoBotao);
 
       //Vai pra pagina dos discentes por disciplina
-      window.location.href = "/Docente-Online/discentes-com-matricula-ativa-na-disciplina/index.html"
+      window.location.href = "/Docente-Online/registro-de-notas-e-faltas/index.html"
     }
     //Se a pagina atual ja e a de discentes por disciplina
     else{
