@@ -1533,8 +1533,8 @@ let turmaIDAtual;
 //Diz lista de alunos da turma atual
 let listaAlunos;
 
+//Variavel que define o semestre em curso
 let semestreAtual = "2025/1";
-
 
 /*
 	Pegar as partes relevantes do site com variáveia aqui, para serem editadas depois no código
@@ -1550,28 +1550,27 @@ let infoDisciplina;
 
 //Inicia página pela primeira vez
 function iniciaPag(){
-	mudaDisciplina("IME04-10842 1 2025/1");
+	turmaIDAtual = (localStorage.getItem("turmaAtual") + " " + semestreAtual;
+	mudaDisciplina(turmaIDAtual);
 }
 
 //Aciona ao clicar nos botões de cada disciplina
-function mudaDisciplina(codDisciplina){
-	// Troca a turma no contexto do código e pega informações relevantes da turma
-	turmaIDAtual = codDisciplina;
-	codigoDisciplinaAtual = (turmaIDAtual.split(" "))[0];
+function mudaTurma(novaTurmaID){
+	codigoDisciplinaAtual = (novaTurmaID.split(" "))[0];
 	
 	disciplinaAtual = disciplinas.find(disciplina => disciplina.codigo === codigoDisciplinaAtual);
-	turmaAtual = disciplinaAtual?.turmas?.filter(turma => turma.turmaID === turmaIDAtual);
+	turmaAtual = disciplinaAtual?.turmas?.filter(turma => turma.turmaID === novaTurmaID);
 	
-	listaAlunos = turmas.filter(turma => turma.turmaID === turmaIDAtual).map(turma => turma.alunos);
+	listaAlunos = turmas.filter(turma => turma.turmaID === novaTurmaID).map(turma => turma.alunos);
 	
 	//Redefine valores manipulando o DOM para que as informações do site batam com as da nova disciplina
-		
 	
 }
 
 //Chama a função 
-document.addEventListener("trocaDeDisciplina", (e) => {
-  mudaDisciplina(e.detail);
+document.addEventListener("clicaNovaTurma", (e) => {
+	turmaIDAtual = (e.detail + " " + semestreAtual);
+	mudaTurma(turmaIDAtual);
 });
 
 iniciaPag();
