@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbars">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link text-white active" aria-current="page" href="#">
+          <a id="btn-disciplinas-periodo" class="nav-link text-white active" aria-current="page" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -39,7 +39,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white active" aria-current="page" href="#">
+          <a id="btn-discentes-ativos" class="nav-link text-white active" aria-current="page" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -56,7 +56,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white active" aria-current="page" href="#">
+          <a id="btn-registro-notas" class="nav-link text-white active" aria-current="page" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

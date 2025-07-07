@@ -21,7 +21,7 @@
     </div>
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
       <li class="ms-3">
-        <a class="text-body-secondary" href="#" aria-label="Disciplinas do período"
+        <a id="footer-btn-disciplinas" class="text-body-secondary" href="#" aria-label="Disciplinas do período"
           ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li class="ms-3">
-        <a class="text-body-secondary" href="#" aria-label="Disciplinas do período"
+        <a id="footer-btn-discentes" class="text-body-secondary" href="#" aria-label="Disciplinas do período"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -52,7 +52,7 @@
         </a>
       </li>
             <li class="ms-3">
-        <a class="text-body-secondary" href="#" aria-label="Disciplinas do período"
+        <a id="footer-btn-registro" class="text-body-secondary" href="#" aria-label="Disciplinas do período"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

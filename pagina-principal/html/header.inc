@@ -8,7 +8,7 @@
           class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small"
         >
           <li>
-            <a href="#" class="nav-link text-white">
+            <a id="btn-profile" href="#" class="nav-link text-white">
               <svg
                 alt="Ver perfil"
                 xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a id="btn-logout" href="#" class="nav-link text-white">
               <svg
                 alt="Encerrar sessão"
                 xmlns="http://www.w3.org/2000/svg"
