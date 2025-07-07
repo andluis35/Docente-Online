@@ -36,6 +36,10 @@ export class Navigate {
     window.location.href = fullPath('discentes-com-matricula-ativa-na-disciplina/index.html');
   }
 
+  static notasEFaltas(){
+    window.location.href = fullPath('registro-de-notas-e-faltas/index.html');
+  }
+
   static painel() {
     window.location.href = fullPath('painel');
   }
