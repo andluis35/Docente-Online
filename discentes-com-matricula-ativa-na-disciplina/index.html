@@ -7,6 +7,11 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
+        <link
+                rel="shortcut icon"
+                type="image/x-icon"
+                href="../assets/svg/logo.svg"
+        />
         <link rel="stylesheet" href="./styles.css">
         <link rel="stylesheet" href="../pagina-principal/css/list.css">
         <link rel="stylesheet" href="../pagina-principal/css/footer.css">
@@ -129,13 +134,15 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
-        <script src="../script/layouts/importHTML.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
         <script>
-            importHTML('../pagina-principal/html/main/navbar.inc', 'navbar')
-            importHTML('../pagina-principal/html/list.inc', 'menu-fixo')
-            importHTML('../pagina-principal/html/header.inc', 'header');
-            importHTML('../pagina-principal/html/footer.inc', 'footer');
+            $(function() {
+                $('#navbar').load('../pagina-principal/html/main/navbar.inc');
+                $('#menu-fixo').load('../pagina-principal/html/list.inc');
+                $('#header').load('../pagina-principal/html/header.inc');
+                $('#footer').load('../pagina-principal/html/footer.inc');
+            });
         </script>
     </body>
 </html>
