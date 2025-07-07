@@ -13,14 +13,14 @@ container.addEventListener('click', function(evento) {
     //Pega URL da página, tentando deduzir qual html esta aberto no momento
     const paginaAtual = window.location.pathname;
 
-    //Se a pagina dos discentes por disciplina nao estiver aberta, salva a turma selecionada no localStorage e carrega depois que abrir la
+    //Salva a turma selecionada no localStorage, para carregar depois no outro script
+    localStorage.setItem("turmaAtualInfo", textoBotao);
+    
+    //Se a pagina de registro de notas nao for a atual, vai ate a pagina de registro de notas
     if(paginaAtual !== "/Docente-Online/registro-de-notas-e-faltas/index.html"){
-      localStorage.setItem("turmaAtualInfo", textoBotao);
-
-      //Vai pra pagina dos discentes por disciplina
       window.location.href = "/Docente-Online/registro-de-notas-e-faltas/index.html"
     }
-    //Se a pagina atual ja e a de discentes por disciplina
+    //Se a pagina atual ja e a de registro de notas, somente avisa que a turma deve ser alterada 
     else{
       //Envia a turma selecionada pro DOM como evento, atualizando na propria pagina.
       document.dispatchEvent(clicaNovaTurma);
