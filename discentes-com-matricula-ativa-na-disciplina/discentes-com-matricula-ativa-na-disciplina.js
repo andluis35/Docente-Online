@@ -1528,50 +1528,127 @@ let disciplinas = {
     ]
 }
 
-//Diz qual turma esta
+//Diz em qual turma esta
 let turmaIDAtual;
 //Diz lista de alunos da turma atual
 let listaAlunos;
 
+//Codigo da disciplina, nome, numero da turma e horarios
+//Site da ementa pode ser deduzido do codigo da disciplina
+let infoTurma;
+
 //Variavel que define o semestre em curso
 let semestreAtual = "2025/1";
 
-/*
-	Pegar as partes relevantes do site com variáveia aqui, para serem editadas depois no código
+let urlBaseEmentario = "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10833"
+
+
+
+/*----------------Pegar as partes relevantes do site com variáveia aqui, para serem editadas depois no código-------------------*/
  
 //Tabela que será usada para mostrar dados dos alunos
-let tabela;
+let tabelaHTML = document.querySelector('.table.table-sm.table-striped.table-hover.table-bordered');
 
-//codDisciplina, nome, site da ementa at  
-let infoDisciplina;
+//Informacoes sobre a turma no html
+let turmaHTML = document.querySelector('.d-flex.flex-column.my-3');
 
+/*------------------------------------------------------------------------------------------------------------------------------*/
 
+function atualizaHTML(){
+
+	for (const child of turmaHTML.children) {
+  		let textoChildSeparado = (child.textContent).split(/: /);
+		let nomeETurma = (infoTurma[infoTurma.length-2]).split(" - ");
+		let nomeDisciplina = nomeETurma[0];
+		let numeroTurma = (nomeETurma[1].split(" "))[1];
+
+		let numeroEmentario = (infoTurma[0].split("-"))[1];
+
+		let horarios = "";
+		for(let i = 1; i <(infoTurma.length-2); i++){
+			horarios += infoTurma[i];
+			horarios += " ";
+		}
+		
+		switch(textoChildSeparado[0]){
+			case "Disciplina":
+				//"Disciplina" + ": " + Codigo pego no localStorage
+				child.textContent = textoChildSeparado[0] + ": " + infoTurma[0];
+				break;
+			case "Nome":
+				//"Nome" + ": " + Nome pego no localStorage
+				child.textContent = textoChildSeparado[0] + ": " + nomeDisciplina;
+				break;
+			case "Turma":
+				//"Turma" + ": " + Numero da turma pego no localStorage
+				child.textContent = textoChildSeparado[0] + ": " + numeroTurma;
+				break;
+			case "Horários":
+				//"Horários" + ": " + horarios pegos no localStorage
+				child.textContent = textoChildSeparado[0] + ": " + numeroTurma;
+				break;
+			case "Ementa":
+				//link base de todos os ementarios + final do codigo de disciplina
+				child.href = urlBaseEmentario + numeroEmentario;
+				break;
+		}
+	}
+
+	/* TODO: Implementar mudanças na tabela de alunos!
+	tabelaHTML =
+ 	*/
+}
+
+/* Exemplo de infoTurma
+[0]	IME04-10833	//codigo
+[1]	Ter M1 M2	//horario
+[2]	Qui M1 M2	//horario
+[3]	Análise e Projeto de Sistemas - Turma 1	// nome e turma 
+[4]	Ementário	// palavra "Ementario"
+
+Entao, para um infoTurma com n elementos:
+[0] -> Sempre codigo
+[outros] -> Sempre horarios
+[n-2] -> Sempre nome e turma
+[n-1] -> Sempre "Ementario" 
 */
 
-//Inicia página pela primeira vez
-function iniciaPag(){
-	turmaIDAtual = (localStorage.getItem("turmaAtual") + " " + semestreAtual);
-	mudaDisciplina(turmaIDAtual);
+
+function carregaDoStorage(){
+	
+	infoTurma = localStorage.getItem("turmaAtualInfo");
+		
+	//Transforma o texto do elemento clicado em uma lista de strings
+	let infoTurmaSeparada = infoTurma.split(/[ \n]+/);
+	
+	//turmaIDAtual = primeira string (codigo de turma) + " " + penultima string (numero da turma) + " " + semestre atual
+	turmaIDAtual = (infoTurmaSeparada[0]+" "+infoTurmaSeparada[(infoTurmaSeparada.length-2)]+" "+ semestreAtual);
+
+	//Outro split, mas dessa vez so com \n
+	infoTurma = infoTurma.split(\n);
 }
 
 //Aciona ao clicar nos botões de cada disciplina
 function mudaTurma(novaTurmaID){
 	codigoDisciplinaAtual = (novaTurmaID.split(" "))[0];
 	
-	disciplinaAtual = disciplinas.find(disciplina => disciplina.codigo === codigoDisciplinaAtual);
-	turmaAtual = disciplinaAtual?.turmas?.filter(turma => turma.turmaID === novaTurmaID);
-	
 	listaAlunos = turmas.filter(turma => turma.turmaID === novaTurmaID).map(turma => turma.alunos);
 	
 	//Redefine valores manipulando o DOM para que as informações do site batam com as da nova disciplina
-	
+	atualizaHTML();
 }
 
 //Chama a função 
 document.addEventListener("clicaNovaTurma", (e) => {
-	turmaIDAtual = (e.detail + " " + semestreAtual);
+	carregaDoStorage();
 	mudaTurma(turmaIDAtual);
 });
 
+//Inicia página pela primeira vez
+function iniciaPag(){
+	
+	carregaDoStorage();
+	mudaDisciplina(turmaIDAtual);
+}
 iniciaPag();
 
