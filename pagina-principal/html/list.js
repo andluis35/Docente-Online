@@ -3,6 +3,12 @@ const clicaNovaTurma = new CustomEvent("clicaNovaTurma");
 // Referencia a lista de disciplinas
 const container = document.querySelector('.list-group.list-group-flush.border-bottom.scrollarea');
 
+
+//Tira "?" do final do pathname, para facilitar comparacao
+function ajeitaPath(path) {
+  return path.replace(/\?$/, "").replace(/\/$/, "");
+}
+
 //Ao clicar
 container.addEventListener('click', function(evento) {
   //Se clicou em algum elemento da lista de disciplinas
@@ -11,7 +17,7 @@ container.addEventListener('click', function(evento) {
     let textoBotao = evento.target.textContent;
 
     //Pega URL da página, tentando deduzir qual html esta aberto no momento
-    const paginaAtual = window.location.pathname;
+    const paginaAtual = ajeitaPath(window.location.pathname);
 
     //Salva a turma selecionada no localStorage, para carregar depois no outro script
     localStorage.setItem("turmaAtualInfo", textoBotao);
