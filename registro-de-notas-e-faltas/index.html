@@ -98,18 +98,18 @@
                 crossorigin="anonymous">
         </script>
 
-        <script src="../script/layouts/importHTML.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
         <script>
-            importHTML('../pagina-principal/html/main/navbar.inc', 'navbar')
-            importHTML('../pagina-principal/html/list.inc', 'menu-fixo')
-            importHTML('../pagina-principal/html/header.inc', 'header');
-            importHTML('../pagina-principal/html/footer.inc', 'footer');
+            $(function() {
+                $('#navbar').load('../pagina-principal/html/main/navbar.inc');
+                $('#menu-fixo').load('../pagina-principal/html/list.inc');
+                $('#header').load('../pagina-principal/html/header.inc');
+                $('#footer').load('../pagina-principal/html/footer.inc');
+            });
         </script>
 
         <script type="text/javascript" src="./script.js"></script>
-
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
         <script type="module" src="../pagina-principal/js/home.js"></script>
     </body>
