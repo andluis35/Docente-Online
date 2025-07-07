@@ -58,6 +58,13 @@
                         </div>
 
                     </div>
+
+                </div>
+
+                <div>
+                    <button href="" class="btn btn-primary" id="troca-contexto">
+                        Discentes com matricula ativa
+                    </button>
                 </div>
 
                 <div class="mb-3">
@@ -73,11 +80,11 @@
                                     <th scope="col">Matricula</th>
                                     <th scope="col">Nome</th>
                                     <th scope="col">email</th>
-                                    <th scope="col">Nota P1</th>
-                                    <th scope="col">Nota P2</th>
-                                    <th scope="col" >Nota PF</th>
-                                    <th scope="col">Média Final</th>
-                                    <th scope="col">Total de faltas</th>
+                                    <th scope="col" class="celula-registros">Nota P1</th>
+                                    <th scope="col" class="celula-registros">Nota P2</th>
+                                    <th scope="col" class="celula-registros">Nota PF</th>
+                                    <th scope="col" class="celula-registros">Média Final</th>
+                                    <th scope="col" class="celula-registros">Total de faltas</th>
                                 </tr>
                             </thead>
 
@@ -114,8 +121,8 @@
             });
         </script>
 
-        <script type="text/javascript" src="./script.js"></script>
-
+        <script type='module' src="../script/layouts/trocaContextoGradeDiscentesERegistros.js"></script>
+        <script type="module" src="./script.js"></script>
         <script type="module" src="../pagina-principal/js/home.js"></script>
     </body>
 </html>
