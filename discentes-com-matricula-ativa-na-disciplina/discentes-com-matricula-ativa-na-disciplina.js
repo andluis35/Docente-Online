@@ -1540,9 +1540,7 @@ let infoTurma;
 //Variavel que define o semestre em curso
 let semestreAtual = "2025/1";
 
-let urlBaseEmentario = "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10833"
-
-
+let urlBaseEmentario = "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10833";
 
 /*----------------Pegar as partes relevantes do site com variáveia aqui, para serem editadas depois no código-------------------*/
  
@@ -1554,7 +1552,7 @@ let turmaHTML = document.querySelector('.d-flex.flex-column.my-3');
 
 /*------------------------------------------------------------------------------------------------------------------------------*/
 
-function atualizaHTML(){
+function atualizaTurmaHTML(){
 
 	for (const child of turmaHTML.children) {
   		let textoChildSeparado = (child.textContent).split(/: /);
@@ -1593,7 +1591,10 @@ function atualizaHTML(){
 				break;
 		}
 	}
+}
 
+function atualizaTableHTML(){
+	
 	/* TODO: Implementar mudanças na tabela de alunos!
 	tabelaHTML =
  	*/
@@ -1630,12 +1631,11 @@ function carregaDoStorage(){
 
 //Aciona ao clicar nos botões de cada disciplina
 function mudaTurma(novaTurmaID){
-	codigoDisciplinaAtual = (novaTurmaID.split(" "))[0];
-	
 	listaAlunos = turmas.filter(turma => turma.turmaID === novaTurmaID).map(turma => turma.alunos);
 	
 	//Redefine valores manipulando o DOM para que as informações do site batam com as da nova disciplina
-	atualizaHTML();
+	atualizaTurmaHTML();
+	atualizaTableHTML();
 }
 
 //Chama a função 
