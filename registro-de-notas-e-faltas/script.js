@@ -1322,212 +1322,6 @@ let turmas = {"turmas":[
 	]
 }
 
-let disciplinas = {
-    "disciplinas": [
-        {
-            "codigo": "IME04-10842",
-            "nome": "Computação Gráfica",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10842",
-            "turmas": [ 
-                        {    
-                            "numero": 1,
-                            "turmaID": "IME04-10842 1 2025/1",
-                            "horario": ["TER M1 M2", "QUI M1 M2"]
-                        }
-            ]
-        },
-        {
-            "codigo": "IME04-10843",
-            "nome": "Inteligência Artificial",            
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10843",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME04-10843 1 2025/1",
-                            "horario": ["SEG M5 M6", "QUA M5 M6"]
-                        }
-            ]
-        },
-        {
-            "codigo": "IME04-11312",
-            "nome": "Otimização em Grafos",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11312",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME04-11312 1 2025/1",
-                            "horario": ["SEX M2 M3 M4"]
-                        }
-            ]
-        },
-        {
-            "codigo": "IME04-11311",
-            "nome": "Algoritmos em Grafos",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11311",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME04-11311 1 2025/1",
-                            "horario": ["SEX N2N3N4"]
-                        }
-
-            ]
-        },
-        {
-            "codigo": "IME04-10833",
-            "nome": "Análise e Projeto de Sistemas",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10833",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME04-10833 1 2025/1",
-                            "horario": ["TER M1M2", "QUI M1M2"]
-                        }
-            ]
-        },
-        {
-            "codigo": "IME04-10836",
-            "nome": "Arquitetura de Computadores II",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10836",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME04-10836 1 2025/1",
-                            "horario": ["TER M3M4", "QUI M3M4"]
-                        }
-
-            ]
-        },
-        {
-            "codigo": "IME04-10854",
-            "nome": "Aspectos Práticos em Ciência da Computação I",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10854",
-            "turmas":[
-                        {
-                            "numero": 8,
-                            "turmaID": "IME04-10854 8 2025/1",
-                            "horario": ["TER M5M6", "QUI M5M6"]
-                        }
-            ]
-        },
-        {
-            "codigo": "IME04-10832",
-            "nome": "Banco de Dados I",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10832",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME04-10832 1 2025/1",
-                            "horario": ["QUA M3M4", "SEX M5M6"]
-                        }
-            ]
-        },
-        {
-            "codigo": "IME04-10835",
-            "nome": "Sistemas Operacionais I",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME04-10835 1 2025/1",
-                            "horario": ["SEG M5M6", "QUA M5M6"]
-                        }
-
-            ]
-        },
-        {
-            "codigo": "IME01-04827",
-            "nome": "Cálculo I",            
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=04827",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME01-04827 1 2025/1",
-                            "horario": ["SEG M5M6", "TER M5M6", "QUI M5M6"]
-                        }
-
-            ]
-        },
-        {
-            "codigo": "IME01-06766",
-            "nome": "Cálculo II",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=06766",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME01-06766 1 2025/1",
-                            "horario": ["SEG N1N2", "QUI N1N2"]
-                        }
-
-            ]
-        },
-        {
-            "codigo": "IME02-10815",
-            "nome": "Álgebra",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10815",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME02-10815 1 2025/1",
-                            "horario": ["SEG M5M6", "SEX M5M6"]
-                        }
-
-            ]
-        },
-        {
-            "codigo": "IME02-10818",
-            "nome": "Álgebra Linear",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10818",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME02-10818 1 2025/1",
-                            "horario": ["TER T6N1N2", "QUI T6N1N2"]
-                        }
-
-            ]
-        },
-        {
-            "codigo": "IME04-10834",
-            "nome": "Estrutura de Linguagens",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10834",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "IME04-10834 1 2025/1",
-                            "horario": ["TER M5M6", "QUI M5M6"]
-                        }
-            ]
-        },
-        {
-            "codigo": "FIS01-10982",
-            "nome": "Física I",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10982",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "FIS01-10982 1 2025/1",
-                            "horario": ["TER M1M2", "QUI M1M2", "SEX M3M4"]
-                        }
-
-            ]
-        },
-        {
-            "codigo": "FIS03-10983",
-            "nome": "Física II",
-            "ementa": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10983",
-            "turmas":[
-                        {
-                            "numero": 1,
-                            "turmaID": "FIS03-10983 1 2025/1",
-                            "horario": ["SEG M5M6", "QUI M3M4", "SEX M5M6"]
-                        }
-                        
-            ]
-        }
-    ]
-}
-
 //Diz em qual turma esta
 let turmaIDAtual;
 //Diz lista de alunos da turma atual
@@ -1593,11 +1387,30 @@ function atualizaTurmaHTML(){
 	}
 }
 
+/* Exemplo de linha da tabela
+[0]	1			//Numero da linha
+[1]	202512345610		//Matricula
+[2]	Aluno1			//Nome
+[3]	aluno1@grad.uni		//Email
+[4]	"E/B"			//Nota P1
+[5]	"E/B"			//Nota P2
+[6]	"E/B"			//Nota PF
+[7]	0.0			//Media Final
+[8]	7			//Total de faltas
+*/
+
+
+
 function atualizaTabelaHTML(){
-	
-	/* TODO: Implementar mudanças na tabela de alunos!
-	tabelaHTML =
+		
+	let tableBody = tabelaHTML.querySelector("tbody");
+
+	/*
+		Implementar a mudança de alunos ao clicar em outra disciplina 
  	*/
+	
+	
+
 }
 
 /* Exemplo de infoTurma
@@ -1646,7 +1459,7 @@ document.addEventListener("clicaNovaTurma", (e) => {
 
 //Inicia página pela primeira vez
 function iniciaPag(){
-	
+	turmas = localStorage.getItem("turmas");
 	carregaDoStorage();
 	mudaDisciplina(turmaIDAtual);
 }
