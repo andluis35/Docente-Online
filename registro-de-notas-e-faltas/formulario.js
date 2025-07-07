@@ -1,18 +1,18 @@
-export function carregaFormulario(turmas){
-	//Se turmas foi atualizado antes, pega do localStorage. Senao, da fetch no json de turmas e salva em variavel e no localStorage
-	let existeNovoTurmas = (localStorage.getItem("turmas") !== null);
+export function carregaFormulario(turmasLocal){
+	//Se turmasLocal foi atualizado antes, pega do localStorage. Senao, da fetch no json de turmasLocal e salva em variavel e no localStorage
+	let existeNovoTurmas = (localStorage.getItem("turmasLocal") !== null);
 	if (existeNovoTurmas){
-		turmas = localStorage.getItem("turmas");
+		turmasLocal = localStorage.getItem("turmasLocal");
 	}
 	else{
-		fetch('./turmas.json')
+		fetch('./turmasLocal.json')
       			.then(response => {
         			if (!response.ok) throw new Error("Falha no carregamento");
         			return response.json();
       			})
       			.then(json => {
-        			turmas = json;
-        			localStorage.setItem("turmas", JSON.stringfy(json));
+        			turmasLocal = json;
+        			localStorage.setItem("turmasLocal", JSON.stringfy(json));
         			console.log("JSON de turma carregado e salvo");
       			})
       			.catch(error => {
@@ -20,10 +20,10 @@ export function carregaFormulario(turmas){
       			});
 	}
 
-	return turmas;
+	return turmasLocal;
 }
 
-export let turmas = carregaFormulario(turmas);
+export let turmasLocal = carregaFormulario(turmasLocal);
 let tbody = null;
 let disciplinaDet = null;
 //Assim que carregar a pagina
@@ -50,13 +50,13 @@ function salvaFormulario(turma){
 	}
 
 	// Salva JSON atualizado no localStorage
-	localStorage.setItem("turmas", JSON.stringfy(turmas));
+	localStorage.setItem("turmasLocal", JSON.stringfy(turmasLocal));
 }
 
 function checaFormulario(){
 	let turmaIDAtual = disciplinaDet.querySelector(".turmaID");	//Pega turmaID da turma atualizada
 		
-	let turma = turmas.turmas.find(turma => turma.turmaID === turmaIDAtual);	// Procura turma na lista de turmas usando turmaID 
+	let turma = turmasLocal.turmas.find(turma => turma.turmaID === turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
 
 	for(const child of tbody.children){
 		let matricula = child.children[1].textContent;		// Le matricula do aluno na tabela
