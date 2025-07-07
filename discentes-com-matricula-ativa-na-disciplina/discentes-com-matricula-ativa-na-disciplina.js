@@ -1550,7 +1550,7 @@ let infoDisciplina;
 
 //Inicia página pela primeira vez
 function iniciaPag(){
-	turmaIDAtual = (localStorage.getItem("turmaAtual") + " " + semestreAtual;
+	turmaIDAtual = (localStorage.getItem("turmaAtual") + " " + semestreAtual);
 	mudaDisciplina(turmaIDAtual);
 }
 
