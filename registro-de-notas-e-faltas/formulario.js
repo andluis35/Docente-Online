@@ -43,9 +43,11 @@ function salvaFormulario(turma){
 		aluno.P2 = notaP2;
 		aluno.PF = notaPF;
 		aluno.mediaFinal = notaMF;
+		console.log("Aluno salvo!");
 	}
 	// Salva JSON atualizado no localStorage
 	localStorage.setItem("turmasLocal", JSON.stringify(turmasLocal));
+	console.log("JSON salvo!");
 }
 
 function checaFormulario(){
@@ -72,8 +74,9 @@ function checaFormulario(){
 		if((notaMF<4) && (notaPF !== 0)){	//Aluno reprovado direto nao pode ter PF
 			throw new Error("Nota PF diferente de 0, mas aluno já está reprovado! ((P1+P2)/2 <4)");
 		}
+		console.log("Aluno checado!");
 	}
-	
+	console.log("Toda a turma foi checada!");
 	// Se nenhum erro foi encontrado, guarda novas notas
 	salvaFormulario(turma);
 }
@@ -82,6 +85,7 @@ function checaFormulario(){
 let btnEnvia = document.querySelector(".btn.btn-success");
 
 btnEnvia.addEventListener("click", () => {
+	console.log("botao salva clicado!");
 	try{
 		checaFormulario();
 	} catch(error){
