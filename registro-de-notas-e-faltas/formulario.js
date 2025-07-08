@@ -1,29 +1,25 @@
-export function carregaFormulario(turmasLocal){
+export async function carregaFormulario(){
 	//Se turmasLocal foi atualizado antes, pega do localStorage. Senao, da fetch no json de turmasLocal e salva em variavel e no localStorage
 	let existeNovoTurmas = (localStorage.getItem("turmasLocal") !== null);
 	if (existeNovoTurmas){
-		turmasLocal = localStorage.getItem("turmasLocal");
+		const updatedTurmas = localStorage.getItem("turmasLocal");
+		return JSON.parse(updatedTurmas);
 	}
-	else{
-		fetch('./turmasLocal.json')
-      			.then(response => {
-        			if (!response.ok) throw new Error("Falha no carregamento");
-        			return response.json();
-      			})
-      			.then(json => {
-        			turmasLocal = json;
-        			localStorage.setItem("turmasLocal", JSON.stringfy(json));
-        			console.log("JSON de turma carregado e salvo");
-      			})
-      			.catch(error => {
-        			console.error("Erro ao carregar JSON:", error);
-      			});
-	}
+	try{
+		const response = await fetch('./turmasLocal.json');
+    		if (!response.ok) throw new Error("Falha no carregamento");
 
-	return turmasLocal;
+    		const json = await response.json();
+    		localStorage.setItem("turmasLocal", JSON.stringify(json));
+    		console.log("JSON de turma carregado e salvo");
+    		return json;
+  	} catch (error) {
+    		console.error("Falha no carregamento do JSON!: ", error);
+    		return null;
+	}
 }
 
-export let turmasLocal = carregaFormulario(turmasLocal);
+let turmasLocal = carregaFormulario();
 let tbody = null;
 let disciplinaDet = null;
 //Assim que carregar a pagina
