@@ -19,13 +19,15 @@ export async function carregaFormulario(){
 	}
 }
 
-let turmasLocal = carregaFormulario();
+let turmasLocal = null;
 let tbody = null;
 let disciplinaDet = null;
 //Assim que carregar a pagina
 document.addEventListener("DOMContentLoaded", () => {
 	tbody = document.getElementById("alunosTabela");
 	disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
+
+	turmasLocal = await carregaFormulario();
 });
 
 function salvaFormulario(turma){
