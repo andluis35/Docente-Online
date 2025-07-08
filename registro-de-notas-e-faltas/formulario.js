@@ -28,6 +28,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 	disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
 
 	turmasLocal = await carregaFormulario();
+
+	let btnEnvia = document.querySelector(".btn.btn-success");
+	btnEnvia.addEventListener("click", () => {
+		console.log("botao salva clicado!");
+		try{
+			checaFormulario();
+		} catch(error){
+			console.error("Erro!: ", error);
+		}
+	});
 });
 
 function salvaFormulario(turma){
@@ -82,16 +92,3 @@ function checaFormulario(){
 	// Se nenhum erro foi encontrado, guarda novas notas
 	salvaFormulario(turma);
 }
-
-
-let btnEnvia = document.querySelector(".btn.btn-success");
-
-btnEnvia.addEventListener("click", () => {
-	console.log("botao salva clicado!");
-	try{
-		checaFormulario();
-	} catch(error){
-		console.error("Erro!: ", error);
-	}
-
-});
