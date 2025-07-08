@@ -51,7 +51,7 @@ function salvaFormulario(turma){
 }
 
 function checaFormulario(){
-	let turmaIDAtual = disciplinaDet.querySelector(".turmaID");	//Pega turmaID da turma atualizada
+	let turmaIDAtual = disciplinaDet.querySelector(".turmaID").textContent;	//Pega turmaID da turma atualizada
 		
 	let turma = turmasLocal.turmas.find(turma => turma.turmaID === turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
 
