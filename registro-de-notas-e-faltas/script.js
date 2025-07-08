@@ -1,3 +1,6 @@
+import {carregaFormulario} from "./formulario.js"
+
+
 // =-=-=-=-=-=-=-=-=-= Código relacionado ao filtro =-=-=-=-=-=-=-=-=-= //
 
 const INPUT_BUSCA = document.getElementById('busca');
@@ -5,7 +8,6 @@ let divDisciplinas = document.querySelector("#disciplinas");
 
 let disciplinas = [];
 let alunos = [];
-
 
 fetch ("./NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
@@ -33,21 +35,13 @@ fetch ("./NOVO-disciplinas.json").then((response) => {
 })
 
 function carregarAlunos(disciplina){
-  let turmaID = disciplina.turmas[0].turmaID;
+    let turmaID = disciplina.turmas[0].turmaID;
 
-  fetch('./turmas.json')
-      .then(response => response.json())
-      .then(element => {
-
-        let turma = element.turmas.find(item => item.turmaID == turmaID);
-        alunos = turma ? turma.alunos : undefined;
-        colocarAlunosTabela();
-
-
-      })
-      .catch(error => {
-        console.error("Erro ao carregar JSON:", error);
-      });
+    let turmasLocal = await carregaFormulario();
+    
+    let turma = turmasLocal.turmas.find(item => item.turmaID == turmaID);
+    alunos = turma ? turma.alunos : undefined;
+    colocarAlunosTabela();
 }
 
 function colocarAlunosTabela(){
