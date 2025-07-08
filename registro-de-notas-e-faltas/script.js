@@ -1,6 +1,5 @@
 import {carregaFormulario} from "./formulario.js"
 
-
 // =-=-=-=-=-=-=-=-=-= Código relacionado ao filtro =-=-=-=-=-=-=-=-=-= //
 
 const INPUT_BUSCA = document.getElementById('busca');
@@ -34,7 +33,7 @@ fetch ("./NOVO-disciplinas.json").then((response) => {
     })
 })
 
-function carregarAlunos(disciplina){
+async function carregarAlunos(disciplina){
     let turmaID = disciplina.turmas[0].turmaID;
 
     let turmasLocal = await carregaFormulario();
