@@ -1,5 +1,5 @@
-import { getSession, endSession } from "../../auth/auth.js";
-import { Navigate } from "../../route/routes.js";
+import { getSession, endSession } from "../auth/auth.js";
+import { Navigate } from "../route/routes.js";
 
 const userData = getSession();
 
