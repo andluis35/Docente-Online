@@ -6,7 +6,7 @@ export async function carregaFormulario(){
 		return JSON.parse(updatedTurmas);
 	}
 	try{
-		const response = await fetch('./turmasLocal.json');
+		const response = await fetch('./turmas.json');
     		if (!response.ok) throw new Error("Falha no carregamento");
 
     		const json = await response.json();
