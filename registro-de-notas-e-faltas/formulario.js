@@ -21,12 +21,9 @@ export async function carregaFormulario(){
 
 let turmasLocal = null;
 let tbody = null;
-let disciplinaDet = null;
 //Assim que carregar a pagina
 document.addEventListener("DOMContentLoaded", async () => {
 	tbody = document.getElementById("alunosTabela");
-	disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
-
 	turmasLocal = await carregaFormulario();
 
 	let btnEnvia = document.querySelector(".btn.btn-success");
@@ -63,6 +60,7 @@ function salvaFormulario(turma){
 }
 
 function checaFormulario(){
+	let disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
 	let turmaIDAtual = disciplinaDet.querySelector(".turmaID").textContent;	//Pega turmaID da turma atualizada
 		
 	let turma = turmasLocal.turmas.find(turma => turma.turmaID === turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
