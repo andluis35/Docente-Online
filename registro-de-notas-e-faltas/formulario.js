@@ -46,7 +46,7 @@ function salvaFormulario(turma){
 	}
 
 	// Salva JSON atualizado no localStorage
-	localStorage.setItem("turmasLocal", JSON.stringfy(turmasLocal));
+	localStorage.setItem("turmasLocal", JSON.stringify(turmasLocal));
 }
 
 function checaFormulario(){
