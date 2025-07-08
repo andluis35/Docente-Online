@@ -1,5 +1,5 @@
 import { Navigate } from "../route/routes.js";
-import { getSession , rememberAuthUser } from "../auth/auth.js"
+import { getSession, fazerLogin } from "../auth/auth.js"
 
 const inputMatriculaCpf = document.getElementById('matriculaCpf');
 
@@ -39,23 +39,12 @@ inputMatriculaCpf.addEventListener('input', function () {
     const usuarioDigitado = inputUsuario.value.trim();
     const senhaDigitada = inputSenha.value.trim();
 
-    fetch('../data/usuarios.json')
-      .then(response => response.json())
-      .then(usuarios => {
-        const usuarioEncontrado = usuarios.find(user =>
-          (user.cpf === usuarioDigitado || user.matricula === usuarioDigitado ) && user.senha === senhaDigitada 
-        );
-
-        if (usuarioEncontrado) {
-          rememberAuthUser(usuarioEncontrado);
-          Navigate.root();
-        } else {
+    fazerLogin(usuarioDigitado, senhaDigitada).then( sucesso => {
+      if (!sucesso){
           alert('Usuário ou senha inválidos.');
-        }
-      })
-      .catch(error => {
-        console.error('Erro ao carregar o arquivo JSON:', error);
-        alert('Erro ao autenticar. Tente novamente.');
-      });
+          return;
+      }
+    })
+
   });
 });

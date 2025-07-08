@@ -16,7 +16,20 @@ export function endSession() {
     Navigate.root()
 }
 
-export function rememberAuthUser(user) {
+export function fazerLogin(usuario, senha) {  
+    buscarCredenciais(usuario, senha).then( docente => {
+        if (!docente){
+            alert('Usuário ou senha inválidos.');
+            return;
+        }
+        rememberAuthUser(docente);
+        Navigate.root();
+    }).catch(() => {
+        alert('Erro ao autenticar. Tente novamente.');
+    });
+}
+
+function rememberAuthUser(user) {
     const userData = {
         nome: user.nome,
         cpf: user.cpf,
@@ -24,4 +37,23 @@ export function rememberAuthUser(user) {
     };
     
     localStorage.setItem('usuarioAutenticado', JSON.stringify(userData));
+}
+
+function buscarCredenciais(usuario, senha) {
+    return fetch('../data/usuarios.json')
+        .then(response => response.json())
+        .then(usuarios => {
+            const usuarioEncontrado = usuarios.find(user =>
+                (user.cpf === usuario || user.matricula === usuario) &&
+                user.senha === senha
+            );
+            if (usuarioEncontrado) {
+                return usuarioEncontrado;
+            } else {
+                return null;
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao carregar o arquivo JSON:', error);
+        });
 }
