@@ -23,7 +23,7 @@ let turmasLocal = null;
 let tbody = null;
 let disciplinaDet = null;
 //Assim que carregar a pagina
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
 	tbody = document.getElementById("alunosTabela");
 	disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
 
