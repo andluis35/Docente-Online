@@ -2,7 +2,7 @@ export function getDocenteDisciplinas(matricula) {
     const docenteDiscip = localStorage.getItem('docenteDiscip')
 
     if (!docenteDiscip) {
-        fetch('../data/docentes-turmas.json')
+        return fetch('../data/docentes-turmas.json')
         .then(response => response.json())
         .then(data => {
             const docentes = data.docentes.find(
@@ -17,6 +17,6 @@ export function getDocenteDisciplinas(matricula) {
             console.error('Erro ao carregar o arquivo', error);
         });
     }else {
-        return docenteDiscip;
+        return Promise.resolve(JSON.parse(docenteDiscip));
     }
 }

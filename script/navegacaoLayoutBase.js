@@ -7,8 +7,10 @@ if (!userData) {
   Navigate.root()
 }
 
-const disciplinas = getDocenteDisciplinas(userData.matricula)
-console.log(disciplinas)
+getDocenteDisciplinas(userData.matricula)
+    .then(disciplinas => {
+        console.log(disciplinas);
+    });
 
 $(document).on('click', '#btn-profile', function(event) {
   event.preventDefault();
