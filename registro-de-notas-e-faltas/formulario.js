@@ -25,7 +25,7 @@ let disciplinaDet = null;
 //Assim que carregar a pagina
 document.addEventListener("DOMContentLoaded", () => {
 	tbody = document.getElementById("alunosTabela");
-	disciplinaDet = document.getElementById("disciplinaDetalhada");
+	disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
 });
 
 function salvaFormulario(turma){
