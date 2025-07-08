@@ -69,12 +69,12 @@ function checaFormulario(){
 		if((notaMF>=7) && (notaPF !== 0)){ //Aluno aprovado direto nao pode ter PF
 			throw new Error("Nota PF diferente de 0, mas P1 e P2 já aprovam! ((P1+P2)/2 >=7)");
 		}
-			
-		}
+		
 		if((notaMF<4) && (notaPF !== 0)){	//Aluno reprovado direto nao pode ter PF
 			throw new Error("Nota PF diferente de 0, mas aluno já está reprovado! ((P1+P2)/2 <4)");
 		}
 	}
+	
 	// Se nenhum erro foi encontrado, guarda novas notas
 	salvaFormulario(turma);
 }
