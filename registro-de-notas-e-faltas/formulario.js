@@ -44,7 +44,6 @@ function salvaFormulario(turma){
 		aluno.PF = notaPF;
 		aluno.mediaFinal = notaMF;
 	}
-
 	// Salva JSON atualizado no localStorage
 	localStorage.setItem("turmasLocal", JSON.stringify(turmasLocal));
 }
@@ -78,3 +77,15 @@ function checaFormulario(){
 	// Se nenhum erro foi encontrado, guarda novas notas
 	salvaFormulario(turma);
 }
+
+
+let btnEnvia = document.querySelector(".btn.btn-success");
+
+btnEnvia.addEventListener("click", () => {
+	try{
+		checaFormulario();
+	} catch(error){
+		console.error("Erro!: ", error);
+	}
+
+});
