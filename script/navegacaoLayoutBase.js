@@ -1,11 +1,14 @@
 import { getSession, endSession } from "../auth/auth.js";
 import { Navigate } from "../route/routes.js";
+import { getDocenteDisciplinas } from "./consultarDados.js";
 
 const userData = getSession();
-
 if (!userData) {
   Navigate.root()
 }
+
+const disciplinas = getDocenteDisciplinas(userData.matricula)
+console.log(disciplinas)
 
 $(document).on('click', '#btn-profile', function(event) {
   event.preventDefault();
