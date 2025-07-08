@@ -29,7 +29,7 @@ $(document).on('click', '#btn-disciplinas-periodo', function(event) {
 
 $(document).on('click', '#btn-discentes-ativos', function(event) {
   event.preventDefault();
-  Navigate.discentes();
+  Navigate.notasEFaltas();
 });
 
 $(document).on('click', '#btn-registro-notas', function(event) {
@@ -39,15 +39,22 @@ $(document).on('click', '#btn-registro-notas', function(event) {
 
 $(document).on('click', '#footer-btn-disciplinas', function(event) {
   event.preventDefault();
-  console.log('Botão de rodapé "Disciplinas" clicado.');
+  Navigate.disciplinas()
 });
 
 $(document).on('click', '#footer-btn-discentes', function(event) {
   event.preventDefault();
   console.log('Botão de rodapé "Discentes" clicado.');
+  Navigate.notasEFaltas();
 });
 
 $(document).on('click', '#footer-btn-registro', function(event) {
   event.preventDefault();
   console.log('Botão de rodapé "Registro" clicado.');
+  Navigate.notasEFaltas();
+});
+
+$(document).on('click', '#btn-voltar', function(event) {
+  event.preventDefault();
+  Navigate.home();
 });
