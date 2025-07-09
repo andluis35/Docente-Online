@@ -1,3 +1,6 @@
+import {carregarAlunos, colocarAlunosTabela} from "./script.js"
+
+
 export async function carregaFormulario(){
 	//Se turmasLocal foi atualizado antes, pega do localStorage. Senao, da fetch no json de turmasLocal e salva em variavel e no localStorage
 	let existeNovoTurmas = (localStorage.getItem("turmasLocal") !== null);
@@ -34,8 +37,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 		} catch(error){
 			console.error("Erro!: ", error);
 		}
+		carregarAlunos();
+		colocarAlunosTabela();
 	});
 });
+
+function consomeCamposTabela(){
+	for(const child in tbody.children){
+		child.children[4].value = "";
+		child.children[5].value = "";
+		child.children[6].value = "";
+	}
+}
+
+
+
 
 function salvaFormulario(turma){
 	for(const child of tbody.children){
@@ -51,10 +67,10 @@ function salvaFormulario(turma){
 
 		let notaMF = (notaP1+notaP2)/2;
 
-		aluno.P1 = notaP1;
-		aluno.P2 = notaP2;
-		aluno.PF = notaPF;
-		aluno.mediaFinal = notaMF;
+		aluno.notas.P1 = notaP1;
+		aluno.notas.P2 = notaP2;
+		aluno.notas.PF = notaPF;
+		aluno.notas.mediaFinal = notaMF;
 		console.log("Aluno salvo!");
 	}
 	// Salva JSON atualizado no localStorage
@@ -66,6 +82,7 @@ function salvaFormulario(turma){
 	console.log("JSON salvo!");
 	console.log("localStorage: ", turmasLocal);
 	console.log("turmasLocal: ", JSON.parse(localStorage.getItem("turmasLocal")));
+	consomeCamposTabela();
 }
 
 function checaFormulario(){
@@ -79,9 +96,9 @@ function checaFormulario(){
 		let aluno = turma.alunos.find(aluno => aluno.matricula === matricula)	// Procura aluno na lista de alunos da turma usando matricula
 
 
-		let notaP1 = (child.children[4].value === "")?aluno.P1:child.children[4].value;
-		let notaP2 = (child.children[5].value === "")?aluno.P2:child.children[5].value;
-		let notaPF = (child.children[6].value === "")?aluno.PF:child.children[6].value; 
+		let notaP1 = (child.children[4].value === "")?aluno.notas.P1:child.children[4].value;
+		let notaP2 = (child.children[5].value === "")?aluno.notas.P2:child.children[5].value;
+		let notaPF = (child.children[6].value === "")?aluno.notas.PF:child.children[6].value; 
 
 		let notaMF = (notaP1+notaP2)/2;
 		
