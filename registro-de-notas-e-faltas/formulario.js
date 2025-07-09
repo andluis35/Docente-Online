@@ -102,9 +102,9 @@ function checaFormulario(){
 		let aluno = turma.alunos.find(aluno => aluno.matricula === matricula)	// Procura aluno na lista de alunos da turma usando matricula
 
 
-		let notaP1 = (child.children[4].value === "")?aluno.notas.P1:child.children[4].children[0].value;
-		let notaP2 = (child.children[5].value === "")?aluno.notas.P2:child.children[5].children[0].value;
-		let notaPF = (child.children[6].value === "")?aluno.notas.PF:child.children[6].children[0].value; 
+		let notaP1 = (child.children[4].value == "")?aluno.notas.P1:child.children[4].children[0].value;
+		let notaP2 = (child.children[5].value == "")?aluno.notas.P2:child.children[5].children[0].value;
+		let notaPF = (child.children[6].value == "")?aluno.notas.PF:child.children[6].children[0].value; 
 
 		let notaMF = (notaP1+notaP2)/2;
 		
