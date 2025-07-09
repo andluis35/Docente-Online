@@ -101,11 +101,15 @@ function checaFormulario(){
 		let notaP2 = (child.children[5].children[0].value === "")?aluno.notas.P2:child.children[5].children[0].value;
 		let notaPF = (child.children[6].children[0].value === "")?aluno.notas.PF:child.children[6].children[0].value; 
 
-		let notaMF = ( +notaP1 + +notaP2 )/2;
+		//Numeros nao nulos pra conta da media final
+		let notaP1Conta = (notaP1 == -0.1)?0.0:notaP1;
+		let notaP2Conta = (notaP2 == -0.1)?0.0:notaP2;
+
+		let notaMF = (+notaP1Conta + +notaP2Conta)/2;
 		
 		console.log("child atual:", child);
-		console.log("P1:", notaP2);
-		console.log("P2:", notaP1);
+		console.log("P1:", notaP1);
+		console.log("P2:", notaP2);
 		console.log("MF:", notaMF);
 
 		if ((notaP1<0) && (notaP1 != -0.1)
