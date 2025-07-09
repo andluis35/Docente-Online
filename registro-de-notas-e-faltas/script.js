@@ -8,7 +8,7 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
-fetch ("./NOVO-disciplinas.json").then((response) => {
+fetch ("../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
 
@@ -225,7 +225,7 @@ function estaNoHistorico(texto){
 
 adicionarDisciplinas();
 function adicionarDisciplinas(){
-    fetch('./NOVO-disciplinas.json')
+    fetch('../data/NOVO-disciplinas.json')
       .then(response => response.json())
       .then(data => {
 
