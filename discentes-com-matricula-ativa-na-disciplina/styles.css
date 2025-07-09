@@ -1,4 +1,4 @@
-@import '/style/styles.css';
+@import '../style/styles.css';
 
 *{
     font-family: var(--fonte-primaria);
