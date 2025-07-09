@@ -4,7 +4,7 @@ const INPUT_BUSCA = document.getElementById('busca');
 let divDisciplinas = document.querySelector("#disciplinas");
 
 
-fetch ("./NOVO-disciplinas.json").then((response) => {
+fetch ("../../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
             divDisciplinas.innerHTML += `<li> CÓDIGO: ${disciplina.codigo} <br> NOME: ${disciplina.nome} <br> TURMA: ${disciplina.turmas[0].numero} <br> HORARIO: ${disciplina.turmas[0].horario} <br> EMENTÁRIO: <a href="${disciplina.ementa}">${disciplina.ementa}</a></li>`

@@ -9,20 +9,10 @@
 						"notas":{
 								"P1": 5.5,
 								"P2": 9,
-								"PR": -1.0,
-								"mediaParcial": 7.25,
-								"PF": -1.0,
+								"PF": -0.1,
 								"mediaFinal": 7.25
 							},
-						"faltas": [
-								"06/03/2025, quinta",
-								"18/03/2025, terca",
-								"03/04/2025, quinta",
-								"15/04/2025, terca",
-								"08/05/2025, quinta",
-								"27/05/2025, terca",
-								"12/06/2025, quinta"
-							]
+						"faltas": 0
 					},
 					{
 						"nome": "Thiago Emanuel Correia",
@@ -31,16 +21,10 @@
 						"notas":{
 								"P1": 7.0,
 								"P2": 6.0,
-								"PR": -1.0,
-								"mediaParcial": 6.5,
 								"PF": 7,
 								"mediaFinal": 6.75
 							},
-						"faltas": [
-								"13/03/2025, quinta",
-								"24/04/2025, quinta",
-								"19/06/2025, quinta"
-							]
+						"faltas": 5
 					}
 				]
 		},
@@ -54,14 +38,10 @@
 						"notas":{
 								"P1": 8,
 								"P2": 3,
-								"PR": -1.0,
-								"mediaParcial": 5.5,
 								"PF": 8,
 								"mediaFinal": 6.75
 							},
-						"faltas": [
-								"10/03/2025, segunda"
-							]
+						"faltas": 3
 					},
 					{
 						"nome": "Daniel Luiz Barros",
@@ -69,15 +49,11 @@
 						"email": "dan.lbarros@uerj.br",
 						"notas":{
 								"P1": 4.5,
-								"P2": -1,
-								"PR": 8,
-								"mediaParcial": 6.25,
-								"PF": 4.75,
-								"mediaFinal": 5.5
+								"P2": 10,
+								"PF": -0.1,
+								"mediaFinal": 7.25
 							},
-						"faltas": [
-								"14/05/2025, quarta"
-							]
+						"faltas": 1
 					}
 				]
 
@@ -91,16 +67,10 @@
 						"notas":{
 								"P1": 5.4,
 								"P2": 7,
-								"PR": -1.0,
-								"mediaParcial": 7.25,
-								"PF": -1.0,
-								"mediaFinal": 7.25
+								"PF": -0.1,
+								"mediaFinal": 6.7
 							},
-						"faltas": [
-								"06/03/2025, quinta",
-								"18/03/2025, terca",
-								"03/04/2025, quinta"
-							]
+						"faltas": 0
 					},
 					{
 						"nome": "André Emanuel Correia",
@@ -109,16 +79,10 @@
 						"notas":{
 								"P1": 7.0,
 								"P2": 6.0,
-								"PR": -1.0,
-								"mediaParcial": 6.5,
 								"PF": 7,
 								"mediaFinal": 6.75
 							},
-						"faltas": [
-								"13/03/2025, quinta",
-								"24/04/2025, quinta",
-								"19/06/2025, quinta"
-							]
+						"faltas": 5
 					}
 				]
 		}		
