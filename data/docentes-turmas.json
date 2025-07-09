@@ -5,11 +5,13 @@
       "cpf": "123.456.789-01",
       "turmas": [
         {
+          "turmaID": "IME04-10842 1 2025/1",
           "disciplina": "IME04-10842",
           "turma": 1,
           "periodo": "2025/1"
         },
         {
+          "turmaID": "IME04-10843 1 2025/1",
           "disciplina": "IME04-10843",
           "turma": 1,
           "periodo": "2025/1"
@@ -21,11 +23,13 @@
       "cpf": "201.302.403-11",
       "turmas": [
         {
+          "turmaID": "IME04-10832 1 2025/1",
           "disciplina": "IME04-10832",
           "turma": 1,
           "periodo": "2025/1"
         },
         {
+          "turmaID": "IME04-10835 1 2025/1",
           "disciplina": "IME04-10835",
           "turma": 1,
           "periodo": "2025/1"
@@ -37,11 +41,13 @@
       "cpf": "987.654.321-00",
       "turmas": [
         {
+          "turmaID": "IME04-11311 1 2025/1",
           "disciplina": "IME04-11311",
           "turma": 1,
           "periodo": "2025/1"
         },
         {
+          "turmaID": "IME04-11312 1 2025/1",
           "disciplina": "IME04-11312",
           "turma": 1,
           "periodo": "2025/1"
@@ -53,16 +59,19 @@
       "cpf": "201.302.403-22",
       "turmas": [
         {
+          "turmaID": "IME04-10833 1 2025/1",
           "disciplina": "IME04-10833",
           "turma": 1,
           "periodo": "2025/1"
         },
         {
+          "turmaID": "IME04-10836 1 2025/1",
           "disciplina": "IME04-10836",
           "turma": 1,
           "periodo": "2025/1"
         },
         {
+          "turmaID": "IME04-10854 1 2025/1",
           "disciplina": "IME04-10854",
           "turma": 8,
           "periodo": "2025/1"
@@ -74,16 +83,19 @@
       "cpf": "112.233.445-56",
       "turmas": [
         {
+          "turmaID": "IME01-04827 1 2025/1",
           "disciplina": "IME01-04827",
           "turma": 1,
           "periodo": "2025/1"
         },
         {
+          "turmaID": "IME02-10815 1 2025/1",
           "disciplina": "IME02-10815",
           "turma": 1,
           "periodo": "2025/1"
         },
         {
+          "turmaID": "IME02-10818 1 2025/1",
           "disciplina": "IME02-10818",
           "turma": 1,
           "periodo": "2025/1"
@@ -100,6 +112,7 @@
       "cpf": "667.788.990-00",
       "turmas": [
         {
+          "turmaID": "IME01-06766 1 2025/1",
           "disciplina": "IME01-06766",
           "turma": 1,
           "periodo": "2025/1"
@@ -111,6 +124,7 @@
       "cpf": "201.302.403-44",
       "turmas": [
         {
+          "turmaID": "FIS01-10982 1 2025/1",
           "disciplina": "FIS01-10982",
           "turma": 1,
           "periodo": "2025/1"
@@ -122,11 +136,13 @@
       "cpf": "778.899.001-12",
       "turmas": [
         {
+          "turmaID": "FIS03-10982 1 2025/1",
           "disciplina": "FIS03-10982",
           "turma": 1,
           "periodo": "2025/1"
         },
         {
+          "turmaID": "FIS03-10983 1 2025/1",
           "disciplina": "FIS03-10983",
           "turma": 1,
           "periodo": "2025/1"
@@ -138,6 +154,7 @@
       "cpf": "201.302.403-55",
       "turmas": [
         {
+          "turmaID": "FIS01-10983 1 2025/1",
           "disciplina": "FIS01-10983",
           "turma": 1,
           "periodo": "2025/1"

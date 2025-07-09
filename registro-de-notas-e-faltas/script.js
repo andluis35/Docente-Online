@@ -1,3 +1,5 @@
+import {carregaFormulario} from "./formulario.js"
+
 // =-=-=-=-=-=-=-=-=-= Código relacionado ao filtro =-=-=-=-=-=-=-=-=-= //
 
 const INPUT_BUSCA = document.getElementById('busca');
@@ -6,8 +8,7 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
-
-fetch ("./NOVO-disciplinas.json").then((response) => {
+fetch ("../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
 
@@ -19,37 +20,30 @@ fetch ("./NOVO-disciplinas.json").then((response) => {
               NOME: ${disciplina.nome} <br> 
               TURMA: ${disciplina.turmas[0].numero} <br> 
               HORARIO: ${disciplina.turmas[0].horario}
+              <span style="display: none;" class = "turmaID">${disciplina.turmas[0].turmaID}</span>
             </button>`;
 
             document.querySelectorAll('.itemLista').forEach(element => {
             element.addEventListener('click', () => {
               exibirInformacoes(element.textContent);
-              carregarAlunos(encontrarDisciplina((element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim()));
+              carregarAlunos(element.querySelector(".turmaID").textContent);
               });
             });
         })
     })
 })
 
-function carregarAlunos(disciplina){
-  let turmaID = disciplina.turmas[0].turmaID;
-
-  fetch('./turmas.json')
-      .then(response => response.json())
-      .then(element => {
-
-        let turma = element.turmas.find(item => item.turmaID == turmaID);
-        alunos = turma ? turma.alunos : undefined;
-        colocarAlunosTabela();
-
-
-      })
-      .catch(error => {
-        console.error("Erro ao carregar JSON:", error);
-      });
+export async function carregarAlunos(turmaID){
+    let turmasLocal = await carregaFormulario();
+    
+    let turma = turmasLocal.turmas.find(item => item.turmaID == turmaID);
+    alunos = turma ? turma.alunos : undefined;
+    colocarAlunosTabela();
 }
 
-function colocarAlunosTabela(){
+
+
+export function colocarAlunosTabela(){
   let tabela = document.getElementById("alunosTabela");
   tabela.innerHTML = "";
   let numero = 1
@@ -58,18 +52,23 @@ function colocarAlunosTabela(){
     return;
   }
 
+ 
   alunos.forEach(element => {
+       // Renomeia -0.1 para ter diferenca entre nota 0 e nota nao dada.
+    let placeholderP1 = (element.notas.P1 == -0.1)?"N/A":element.notas.P1;
+    let placeholderP2 = (element.notas.P2 == -0.1)?"N/A":element.notas.P2;
+    let placeholderPF = (element.notas.PF == -0.1)?"N/A":element.notas.PF;
     let aluno = document.createElement("tr")
     aluno.innerHTML = 
     `<td>${numero}</td>
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
       <td>${element.email}</td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P1}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P2}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.PF}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
       <td class="celula-registros">${element.notas.mediaFinal}</td>
-      <td class="celula-registros">${element.faltas.length}</td>`
+      <td class="celula-registros">${element.faltas}</td>`
 
       tabela.appendChild(aluno);
       numero = numero + 1;
@@ -104,6 +103,7 @@ function exibirInformacoes(disciplina){
     TURMA: ${jsonDisciplina.turmas[0].numero} <br> 
     HORARIO: ${jsonDisciplina.turmas[0].horario} <br>
     EMENTÁRIO: <a href="${jsonDisciplina.ementa}">${jsonDisciplina.ementa}</a>
+    <span style="display: none;" class = "turmaID">${jsonDisciplina.turmas[0].turmaID}</span>
   </div>
   `
   detalhes.appendChild(infoDisc);
@@ -225,11 +225,11 @@ function estaNoHistorico(texto){
 
 adicionarDisciplinas();
 function adicionarDisciplinas(){
-    fetch('./NOVO-disciplinas.json')
+    fetch('../data/NOVO-disciplinas.json')
       .then(response => response.json())
       .then(data => {
 
-        item = data.disciplinas;
+        let item = data.disciplinas;
 
         item.forEach(element => {
           adicionarSugestao(element.nome);
@@ -287,7 +287,7 @@ function infoPertenceDisciplina(disciplina, info){
 
   for(var j=0; j<turma.length;j++){
     let infoLC = info.toLowerCase();
-    horario = turma[j].horario;
+    let horario = turma[j].horario;
 
     for(var i=0; i<horario.length; i++){
       if(horario[i].toLowerCase().includes(infoLC)){
@@ -342,7 +342,7 @@ function existeSugestao(){
   let sugestao = document.getElementById("sugestoes");
   let itens = Array.from(sugestao.children);
 
-  resultado = false;
+  let resultado = false;
   itens.forEach(element => {
     if(element.className == "itemHistorico"){
       resultado = true;
