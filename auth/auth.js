@@ -18,13 +18,14 @@ export function endSession() {
 }
 
 export function fazerLogin(usuario, senha) {  
-    buscarCredenciais(usuario, senha).then( docente => {
+    return buscarCredenciais(usuario, senha).then( docente => {
         if (!docente){
-            alert('Usuário ou senha inválidos.');
+            // alert('Usuário ou senha inválidos.');
             return;
         }
         rememberAuthUser(docente);
         Navigate.root();
+        return true;
     }).catch(() => {
         alert('Erro ao autenticar. Tente novamente.');
     });

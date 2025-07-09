@@ -2,6 +2,9 @@ import { Navigate } from "../route/routes.js";
 import { getSession, fazerLogin } from "../auth/auth.js"
 
 const inputMatriculaCpf = document.getElementById('matriculaCpf');
+const inputSenha = document.getElementById('senha');
+const botao = document.querySelector('button');
+
 
 if (getSession()) {
   Navigate.root()
@@ -32,8 +35,8 @@ inputMatriculaCpf.addEventListener('input', function () {
 
   document.addEventListener('DOMContentLoaded', function () {
   const inputUsuario = document.getElementById('matriculaCpf');
-  const inputSenha = document.getElementById('senha');
-  const botao = document.querySelector('button');
+  // const inputSenha = document.getElementById('senha');
+  // const botao = document.querySelector('button');
 
   botao.addEventListener('click', function () {
     const usuarioDigitado = inputUsuario.value.trim();
@@ -41,10 +44,22 @@ inputMatriculaCpf.addEventListener('input', function () {
 
     fazerLogin(usuarioDigitado, senhaDigitada).then( sucesso => {
       if (!sucesso){
-          alert('Usuário ou senha inválidos.');
-          return;
+        inputUsuario.style.borderColor = 'red';
+        inputSenha.style.borderColor = 'red';
+        // alert('Usuário ou senha inválidos.');
+        return;
       }
     })
 
   });
+});
+
+inputMatriculaCpf.addEventListener('input', function() {
+  inputMatriculaCpf.style.borderColor = '';
+  inputSenha.style.borderColor = '';
+});
+
+inputSenha.addEventListener('input', function() {
+  inputMatriculaCpf.style.borderColor = '';
+  inputSenha.style.borderColor = '';
 });
