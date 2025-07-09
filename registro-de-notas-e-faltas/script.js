@@ -26,22 +26,22 @@ fetch ("./NOVO-disciplinas.json").then((response) => {
             document.querySelectorAll('.itemLista').forEach(element => {
             element.addEventListener('click', () => {
               exibirInformacoes(element.textContent);
-              carregarAlunos(encontrarDisciplina((element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim()));
+              carregarAlunos(element.querySelector(".turmaID").textContent);
               });
             });
         })
     })
 })
 
-export async function carregarAlunos(disciplina){
-    let turmaID = disciplina.turmas[0].turmaID;
-
+export async function carregarAlunos(turmaID){
     let turmasLocal = await carregaFormulario();
     
     let turma = turmasLocal.turmas.find(item => item.turmaID == turmaID);
     alunos = turma ? turma.alunos : undefined;
     colocarAlunosTabela();
 }
+
+
 
 export function colocarAlunosTabela(){
   let tabela = document.getElementById("alunosTabela");
