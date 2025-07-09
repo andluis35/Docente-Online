@@ -43,7 +43,7 @@ function salvaFormulario(turma){
 		
 		console.log("Procurando matricula: ", matricula);
 		
-		let aluno = turma.alunos.find(aluno => aluno.matricula === matricula)	// Procura aluno na lista de alunos da turma usando matricula
+		let aluno = turma.alunos.find(aluno => aluno.matricula == matricula)	// Procura aluno na lista de alunos da turma usando matricula
 
 		let notaP1 = (child.children[4].value === "")?aluno.P1:child.children[4].value;
 		let notaP2 = (child.children[5].value === "")?aluno.P2:child.children[5].value;
