@@ -287,7 +287,7 @@ function infoPertenceDisciplina(disciplina, info){
 
   for(var j=0; j<turma.length;j++){
     let infoLC = info.toLowerCase();
-    horario = turma[j].horario;
+    let horario = turma[j].horario;
 
     for(var i=0; i<horario.length; i++){
       if(horario[i].toLowerCase().includes(infoLC)){
