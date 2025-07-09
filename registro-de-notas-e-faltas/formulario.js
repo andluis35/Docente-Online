@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 function salvaFormulario(turma){
 	for(const child of tbody.children){
 		let matricula = child.children[1].textContent;		// Le matricula do aluno na tabela
+		
+		console.log("Procurando matricula: ", matricula);
+		
 		let aluno = turma.alunos.find(aluno => aluno.matricula === matricula)	// Procura aluno na lista de alunos da turma usando matricula
 
 		let notaP1 = (child.children[4].value === "")?aluno.P1:child.children[4].value;
