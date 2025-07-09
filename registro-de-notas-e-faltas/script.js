@@ -52,11 +52,12 @@ export function colocarAlunosTabela(){
     return;
   }
 
-    // Renomeia -0.1 para ter diferenca entre nota 0 e nota nao dada.
-  let placeholderP1 = (element.notas.P1 == -0.1)?"N/A":element.notas.P1;
-  let placeholderP2 = (element.notas.P2 == -0.1)?"N/A":element.notas.P2;
-  let placeholderPF = (element.notas.PF == -0.1)?"N/A":element.notas.PF;
+ 
   alunos.forEach(element => {
+       // Renomeia -0.1 para ter diferenca entre nota 0 e nota nao dada.
+    let placeholderP1 = (element.notas.P1 == -0.1)?"N/A":element.notas.P1;
+    let placeholderP2 = (element.notas.P2 == -0.1)?"N/A":element.notas.P2;
+    let placeholderPF = (element.notas.PF == -0.1)?"N/A":element.notas.PF;
     let aluno = document.createElement("tr")
     aluno.innerHTML = 
     `<td>${numero}</td>
