@@ -8,7 +8,7 @@ function carregarNoticias() {
             container.insertAdjacentHTML(
                 'beforeend', 
                 `<div class="linha">
-                    <a>
+                    <a target="_blank" href="${noticia.link}">
                         <img src="${noticia.imagem}"></img>
                         <div class="linha-col-dir">
                             <h4>${noticia.titulo}</h4>
