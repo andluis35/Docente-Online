@@ -342,7 +342,7 @@ function existeSugestao(){
   let sugestao = document.getElementById("sugestoes");
   let itens = Array.from(sugestao.children);
 
-  resultado = false;
+  let resultado = false;
   itens.forEach(element => {
     if(element.className == "itemHistorico"){
       resultado = true;
