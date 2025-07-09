@@ -33,7 +33,7 @@ fetch ("./NOVO-disciplinas.json").then((response) => {
     })
 })
 
-async function carregarAlunos(disciplina){
+export async function carregarAlunos(disciplina){
     let turmaID = disciplina.turmas[0].turmaID;
 
     let turmasLocal = await carregaFormulario();
@@ -43,7 +43,7 @@ async function carregarAlunos(disciplina){
     colocarAlunosTabela();
 }
 
-function colocarAlunosTabela(){
+export function colocarAlunosTabela(){
   let tabela = document.getElementById("alunosTabela");
   tabela.innerHTML = "";
   let numero = 1
