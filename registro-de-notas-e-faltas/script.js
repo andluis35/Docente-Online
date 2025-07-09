@@ -52,6 +52,10 @@ export function colocarAlunosTabela(){
     return;
   }
 
+    // Renomeia -0.1 para ter diferenca entre nota 0 e nota nao dada.
+  let placeholderP1 = (element.notas.P1 == -0.1)?"N/A":element.notas.P1;
+  let placeholderP2 = (element.notas.P2 == -0.1)?"N/A":element.notas.P2;
+  let placeholderPF = (element.notas.PF == -0.1)?"N/A":element.notas.PF;
   alunos.forEach(element => {
     let aluno = document.createElement("tr")
     aluno.innerHTML = 
@@ -59,9 +63,9 @@ export function colocarAlunosTabela(){
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
       <td>${element.email}</td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P1}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.P2}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" max="10" step="0.1" placeholder=${element.notas.PF}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
       <td class="celula-registros">${element.notas.mediaFinal}</td>
       <td class="celula-registros">${element.faltas.length}</td>`
 
