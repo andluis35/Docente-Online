@@ -229,7 +229,7 @@ function adicionarDisciplinas(){
       .then(response => response.json())
       .then(data => {
 
-        item = data.disciplinas;
+        let item = data.disciplinas;
 
         item.forEach(element => {
           adicionarSugestao(element.nome);
