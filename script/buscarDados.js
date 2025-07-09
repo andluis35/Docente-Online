@@ -20,3 +20,18 @@ export function getDocenteDisciplinas(matricula) {
         return Promise.resolve(JSON.parse(docenteDiscip));
     }
 }
+
+export function getDisciplina(codigoDisciplina) {
+
+    return fetch('../data/disciplinas.json')
+    .then(response => response.json())
+    .then(data => {
+        const disciplina = data.disciplinas.find(
+            d => d.codigo === codigoDisciplina
+        )
+        return disciplina;
+
+    }).catch(error => {
+        console.error('Erro ao carregar o arquivo', error);
+    });
+}

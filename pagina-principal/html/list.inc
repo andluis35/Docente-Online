@@ -22,7 +22,7 @@
         class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary"
         style="width: 380px"
       >
-        <div class="list-group list-group-flush border-bottom scrollarea">
+        <div id="container-lista-discip" class="list-group list-group-flush border-bottom scrollarea">
           <!-- Item 1 -->
           <div class="list-group-item list-group-item-action py-3 lh-sm">
             <div>
