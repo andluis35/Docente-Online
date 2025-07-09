@@ -59,12 +59,12 @@ function salvaFormulario(turma){
 		
 		let notaMF = (+notaP1+ +notaP2)/2;
 		
-		if ((notaMF >= 4) && (notaMF < 7)){
+		if ((notaMF >= 4) && (notaMF < 7) && (notaPF != -0.1)){
 			notaMF = (+notaMF + +notaPF)/2;
 		}
 
 		if (notaMF < 0) notaMF = 0;
-	
+
 		aluno.notas.P1 = notaP1;
 		aluno.notas.P2 = notaP2;
 		aluno.notas.PF = notaPF;
@@ -103,13 +103,25 @@ function checaFormulario(){
 		console.log("P1:", notaP2);
 		console.log("P2:", notaP1);
 		console.log("MF:", notaMF);
+
+		if ((notaP1<0) && (notaP1 != -0.1)
+		    || (notaP2<0) && (notaP2 != -0.1)
+		    || (notaPF<0) && (notaPF != -0.1)){
+				throw new Error("Existe(m) nota(s) negativa(s). Aluno ", child.children[0].textContent);
+		    }
+
+		if ((notaP1>10)
+		    || (notaP2>10)
+		    || (notaPF>10)){
+				throw new Error("Existe(m) nota(s) acima de 10. Aluno ", child.children[0].textContent);
+		    }
 		
 		if((notaMF>=7) && (notaPF != -0.1)){ //Aluno aprovado direto nao pode ter PF
-			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7)");
+			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7). Aluno ", child.children[0].textContent);
 		}
 		
 		if((notaMF<4) && (notaPF != -0.1)){	//Aluno reprovado direto nao pode ter PF
-			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4)");
+			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). Aluno ", child.children[0].textContent);
 		}
 		console.log("Aluno checado!");
 	}
