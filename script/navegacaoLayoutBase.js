@@ -3,8 +3,8 @@ import { Navigate } from "../route/routes.js";
 import { getDocenteDisciplinas, getDisciplina } from "./buscarDados.js";
 import { criarItemDisciplina } from "./criarItemDisciplina.js"
 
-const userData = getSession();
-if (!userData) {
+const usuarioLogado = getSession();
+if (!usuarioLogado) {
   Navigate.root()
 }
 
@@ -14,7 +14,7 @@ let listaDiscipCarregada = false;
 $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 
 	if (!listaDiscipCarregada) {
-		getDocenteDisciplinas(userData.matricula)
+		getDocenteDisciplinas(usuarioLogado.matricula)
 			.then(docenteDisciplinas => {
 				
 				/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
@@ -55,12 +55,14 @@ $(document).on('click', '.list-group-item.list-group-item-action.py-3.lh-sm', fu
 	localStorage.setItem("disciplinaClicada",event.currentTarget.id)	
 	Navigate.discentes()});
 
+
+/** Daqui pra baixo são funções de click para os botões do header e do footer */
 $(document).on('click', '#btn-profile', function(event) {
   event.preventDefault();
   alert(
-    'Nome: ' + userData.nome+ '\n' +
-    'CPF: ' + userData.cpf + '\n' +
-    'Matrícula: ' + userData.matricula
+    'Nome: ' + usuarioLogado.nome+ '\n' +
+    'CPF: ' + usuarioLogado.cpf + '\n' +
+    'Matrícula: ' + usuarioLogado.matricula
   );
   console.log('Botão profile clicado.');
 });

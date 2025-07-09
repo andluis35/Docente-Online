@@ -2,9 +2,9 @@ import { Navigate } from "./route/routes.js";
 import { getSession } from "./auth/auth.js";
 
 (function() {
-    const userData = getSession();
+    const usuarioLogado = getSession();
 
-    if (!userData) {
+    if (!usuarioLogado) {
         Navigate.login()
         return;
     } else {

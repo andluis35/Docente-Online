@@ -1,3 +1,4 @@
+/** Função para criar o item do menu lateral do menu lateral de disciplinas do docente logado */
 export function criarItemDisciplina(codDisciplina, nomeDisciplina, codTurma, horarios, linkEmenta) {
 
     let itensHorario = '';

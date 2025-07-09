@@ -1,6 +1,8 @@
 import { Navigate } from "../route/routes.js";
 
 export function getSession() {
+    /**Obtem os dados do usuario logado salvos no localStorage 
+    * Retorna um objeto: { nome: string, cpf: string, matricula: string } */
     const userAuth = localStorage.getItem('usuarioAutenticado');
 
     if (!userAuth) {
@@ -32,6 +34,7 @@ export function fazerLogin(usuario, senha) {
 }
 
 function rememberAuthUser(user) {
+    /** Salva no local Storage os dados do usuario*/
     const userData = {
         nome: user.nome,
         cpf: user.cpf,
@@ -42,6 +45,8 @@ function rememberAuthUser(user) {
 }
 
 function buscarCredenciais(usuario, senha) {
+    /** Busca nos dados de usuarios se as credenciais passadas como argumento estão corretas
+     *  Retorna os dados do usuario encontrado caso as credenciais estejam corretas */
     return fetch('../data/usuarios.json')
         .then(response => response.json())
         .then(usuarios => {
