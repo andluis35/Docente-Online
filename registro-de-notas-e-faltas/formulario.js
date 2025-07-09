@@ -62,7 +62,9 @@ function salvaFormulario(turma){
 		if ((notaMF >= 4) && (notaMF < 7)){
 			notaMF = (+notaMF + +notaPF)/2;
 		}
-		
+
+		if (notaMF < 0) notaMF = 0;
+	
 		aluno.notas.P1 = notaP1;
 		aluno.notas.P2 = notaP2;
 		aluno.notas.PF = notaPF;
@@ -88,7 +90,7 @@ function checaFormulario(){
 
 	for(const child of tbody.children){
 		let matricula = child.children[1].textContent;		// Le matricula do aluno na tabela
-		let aluno = turma.alunos.find(aluno => aluno.matricula === matricula)	// Procura aluno na lista de alunos da turma usando matricula
+		let aluno = turma.alunos.find(aluno => aluno.matricula == matricula)	// Procura aluno na lista de alunos da turma usando matricula
 
 
 		let notaP1 = (child.children[4].children[0].value === "")?aluno.notas.P1:child.children[4].children[0].value;
