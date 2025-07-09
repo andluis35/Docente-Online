@@ -82,7 +82,6 @@ function salvaFormulario(turma){
 	console.log("JSON salvo!");
 	console.log("localStorage: ", turmasLocal);
 	console.log("turmasLocal: ", JSON.parse(localStorage.getItem("turmasLocal")));
-	consomeCamposTabela();
 }
 
 function checaFormulario(){
@@ -115,4 +114,5 @@ function checaFormulario(){
 	console.log("Toda a turma foi checada!");
 	// Se nenhum erro foi encontrado, guarda novas notas
 	salvaFormulario(turma);
+	consomeCamposTabela();
 }
