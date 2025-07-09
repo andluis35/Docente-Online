@@ -58,8 +58,14 @@ function salvaFormulario(turma){
 		console.log("Aluno salvo!");
 	}
 	// Salva JSON atualizado no localStorage
-	localStorage.setItem("turmasLocal", JSON.stringify(turmasLocal));
+	try{
+		localStorage.setItem("turmasLocal", JSON.stringify(turmasLocal));
+	}catch(error){
+		console.error("Erro ao salvar no localStorage!:", error);
+	}
 	console.log("JSON salvo!");
+	console.log("localStorage: ", turmasLocal);
+	console.log("turmasLocal: ", JSON.parse(localStorage.getItem("turmasLocal")));
 }
 
 function checaFormulario(){
