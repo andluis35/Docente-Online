@@ -9,6 +9,7 @@ if (!userData) {
 }
 
 
+/** Função responsável por preencher a lista de disciplinas do docente no menu lateral*/
 let listaDiscipCarregada = false;
 $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 
@@ -20,7 +21,6 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 				const containerDisciplinas = document.getElementById('container-lista-discip');
 				containerDisciplinas.innerHTML = ''
 				
-				let count = 0;
 				docenteDisciplinas.forEach(codigo => {
 	
 					
@@ -32,14 +32,28 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 						/* Injeta o item no componente.*/
 						containerDisciplinas.insertAdjacentHTML('beforeend', item)
 					});
-					count +=1
+
 				});
-				console.log(count)
+
 			});
 		}
 
 		listaDiscipCarregada = true;
 });
+
+
+/**
+ * Função de click para o item da lista do menu lateral:
+ * Essa função obtem o id do item clicado e salva no local storage com a chave "disciplinaClicada"  
+ */
+$(document).on('click', '.list-group-item.list-group-item-action.py-3.lh-sm', function(event) {
+//   console.log(event.currentTarget.id);
+	event.preventDefault(); 
+	
+	/*	Quando um item da lista é criado o seu id é definido como o codigo da disciplina.
+		Para obter esse id ao clicar usamos event.currentTarget.id */
+	localStorage.setItem("disciplinaClicada",event.currentTarget.id)	
+	Navigate.discentes()});
 
 $(document).on('click', '#btn-profile', function(event) {
   event.preventDefault();
