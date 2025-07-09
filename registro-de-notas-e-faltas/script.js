@@ -67,7 +67,7 @@ export function colocarAlunosTabela(){
       <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
       <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
       <td class="celula-registros">${element.notas.mediaFinal}</td>
-      <td class="celula-registros">${element.faltas.length}</td>`
+      <td class="celula-registros">${element.faltas}</td>`
 
       tabela.appendChild(aluno);
       numero = numero + 1;
