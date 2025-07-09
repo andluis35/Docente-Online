@@ -37,7 +37,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 		} catch(error){
 			console.error("Erro!: ", error);
 		}
-		await carregarAlunos();
+
+		let disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
+		let turmaIDAtual = disciplinaDet.querySelector(".turmaID").textContent;	//Pega turmaID da turma atualizada
+		await carregarAlunos(turmaIDAtual);
 	});
 });
 
