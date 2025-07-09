@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	turmasLocal = await carregaFormulario();
 
 	let btnEnvia = document.querySelector(".btn.btn-success");
-	btnEnvia.addEventListener("click", () => {
+	btnEnvia.addEventListener("click", async () => {
 		console.log("botao salva clicado!");
 		try{
 			checaFormulario();
