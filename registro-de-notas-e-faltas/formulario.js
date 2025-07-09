@@ -42,16 +42,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 	});
 });
 
-function consomeCamposTabela(){
-	for(const child in tbody.children){
-		child.children[4].children[0].value = "";
-		child.children[5].children[0].value = "";
-		child.children[6].children[0].value = "";
-	}
-}
-
-
-
 
 function salvaFormulario(turma){
 	for(const child of tbody.children){
@@ -82,7 +72,6 @@ function salvaFormulario(turma){
 	console.log("JSON salvo!");
 	console.log("localStorage: ", turmasLocal);
 	console.log("turmasLocal: ", JSON.parse(localStorage.getItem("turmasLocal")));
-	consomeCamposTabela();
 }
 
 function checaFormulario(){
