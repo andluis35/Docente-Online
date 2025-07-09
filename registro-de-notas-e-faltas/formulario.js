@@ -9,7 +9,7 @@ export async function carregaFormulario(){
 		return JSON.parse(updatedTurmas);
 	}
 	try{
-		const response = await fetch('./turmas.json');
+		const response = await fetch('../data/turmas.json');
     		if (!response.ok) throw new Error("Falha no carregamento");
 
     		const json = await response.json();
