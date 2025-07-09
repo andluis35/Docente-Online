@@ -234,12 +234,11 @@ img{
 }
 
 input{
+    border: solid 2px var(--cor-primaria);
     padding: 15px;
-    border: none;
     outline: none;
     border-radius: 10px;
     font-size: 15px;
-    border: var(--cor-primaria) 2px solid;
 }
 
 input::placeholder {

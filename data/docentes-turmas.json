@@ -1,0 +1,148 @@
+{
+  "docentes": [
+    {
+      "matricula": "91011-1",
+      "cpf": "123.456.789-01",
+      "turmas": [
+        {
+          "disciplina": "IME04-10842",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "disciplina": "IME04-10843",
+          "turma": 1,
+          "periodo": "2025/1"
+        }
+      ]
+    },
+    {
+      "matricula": "23456-7",
+      "cpf": "201.302.403-11",
+      "turmas": [
+        {
+          "disciplina": "IME04-10832",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "disciplina": "IME04-10835",
+          "turma": 1,
+          "periodo": "2025/1"
+        }
+      ]
+    },
+    {
+      "matricula": "91012-2",
+      "cpf": "987.654.321-00",
+      "turmas": [
+        {
+          "disciplina": "IME04-11311",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "disciplina": "IME04-11312",
+          "turma": 1,
+          "periodo": "2025/1"
+        }
+      ]
+    },
+    {
+      "matricula": "34578-9",
+      "cpf": "201.302.403-22",
+      "turmas": [
+        {
+          "disciplina": "IME04-10833",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "disciplina": "IME04-10836",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "disciplina": "IME04-10854",
+          "turma": 8,
+          "periodo": "2025/1"
+        }
+      ]
+    },
+    {
+      "matricula": "91013-3",
+      "cpf": "112.233.445-56",
+      "turmas": [
+        {
+          "disciplina": "IME01-04827",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "disciplina": "IME02-10815",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "disciplina": "IME02-10818",
+          "turma": 1,
+          "periodo": "2025/1"
+        }
+      ]
+    },
+    {
+      "matricula": "56789-0",
+      "cpf": "201.302.403-33",
+      "turmas": []
+    },
+    {
+      "matricula": "91014-4",
+      "cpf": "667.788.990-00",
+      "turmas": [
+        {
+          "disciplina": "IME01-06766",
+          "turma": 1,
+          "periodo": "2025/1"
+        }
+      ]
+    },
+    {
+      "matricula": "56780-1",
+      "cpf": "201.302.403-44",
+      "turmas": [
+        {
+          "disciplina": "FIS01-10982",
+          "turma": 1,
+          "periodo": "2025/1"
+        }
+      ]
+    },
+    {
+      "matricula": "91015-5",
+      "cpf": "778.899.001-12",
+      "turmas": [
+        {
+          "disciplina": "FIS03-10982",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "disciplina": "FIS03-10983",
+          "turma": 1,
+          "periodo": "2025/1"
+        }
+      ]
+    },
+    {
+      "matricula": "67890-2",
+      "cpf": "201.302.403-55",
+      "turmas": [
+        {
+          "disciplina": "FIS01-10983",
+          "turma": 1,
+          "periodo": "2025/1"
+        }
+      ]
+    }
+  ]
+}

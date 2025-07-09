@@ -1,7 +1,10 @@
 import { Navigate } from "../route/routes.js";
-import { getSession , rememberAuthUser } from "../auth/auth.js"
+import { getSession, fazerLogin } from "../auth/auth.js"
 
 const inputMatriculaCpf = document.getElementById('matriculaCpf');
+const inputSenha = document.getElementById('senha');
+const botao = document.querySelector('button');
+
 
 if (getSession()) {
   Navigate.root()
@@ -32,30 +35,31 @@ inputMatriculaCpf.addEventListener('input', function () {
 
   document.addEventListener('DOMContentLoaded', function () {
   const inputUsuario = document.getElementById('matriculaCpf');
-  const inputSenha = document.getElementById('senha');
-  const botao = document.querySelector('button');
+  // const inputSenha = document.getElementById('senha');
+  // const botao = document.querySelector('button');
 
   botao.addEventListener('click', function () {
     const usuarioDigitado = inputUsuario.value.trim();
     const senhaDigitada = inputSenha.value.trim();
 
-    fetch('../data/usuarios.json')
-      .then(response => response.json())
-      .then(usuarios => {
-        const usuarioEncontrado = usuarios.find(user =>
-          (user.cpf === usuarioDigitado || user.matricula === usuarioDigitado ) && user.senha === senhaDigitada 
-        );
+    fazerLogin(usuarioDigitado, senhaDigitada).then( sucesso => {
+      if (!sucesso){
+        inputUsuario.style.borderColor = 'red';
+        inputSenha.style.borderColor = 'red';
+        // alert('Usuário ou senha inválidos.');
+        return;
+      }
+    })
 
-        if (usuarioEncontrado) {
-          rememberAuthUser(usuarioEncontrado);
-          Navigate.root();
-        } else {
-          alert('Usuário ou senha inválidos.');
-        }
-      })
-      .catch(error => {
-        console.error('Erro ao carregar o arquivo JSON:', error);
-        alert('Erro ao autenticar. Tente novamente.');
-      });
   });
+});
+
+inputMatriculaCpf.addEventListener('input', function() {
+  inputMatriculaCpf.style.borderColor = '';
+  inputSenha.style.borderColor = '';
+});
+
+inputSenha.addEventListener('input', function() {
+  inputMatriculaCpf.style.borderColor = '';
+  inputSenha.style.borderColor = '';
 });
