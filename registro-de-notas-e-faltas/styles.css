@@ -23,3 +23,11 @@
 .table > tbody > tr > td > input[placeholder]{
     text-align: center;
 }
+
+@media (max-width: 600px){
+    .btn-tabela{
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}
