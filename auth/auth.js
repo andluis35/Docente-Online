@@ -30,7 +30,7 @@ export function fazerLogin(usuario, senha) {
         rememberAuthUser(docente);
 
         // Salva docenteTurmas no localStorage no momento do login
-        getDocenteTurmas(docente.matricula).then(turmas => {
+        let docenteTurmas = getDocenteTurmas(docente.matricula).then(turmas => {
             console.log("Turmas salvas!: ", turmas);
         }).catch(error => {
             console.error("Erro ao carregar turmas: ", error);
