@@ -16,7 +16,7 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 	if (!listaDiscipCarregada) {
 		getDocenteTurmas(usuarioLogado.matricula)
 			.then(docenteTurmas => {
-				
+				if(localStorage.getItem("docenteTurmas")){ console.log("Turmas salvas!");}
 				/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
 				const containerDisciplinas = document.getElementById('container-lista-discip');
 				containerDisciplinas.innerHTML = ''
