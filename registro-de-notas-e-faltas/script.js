@@ -8,30 +8,35 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
+let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
+
 fetch ("../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
 
-            salvarDisciplinas(disciplina);
+            disciplina.turmas.forEach(turma =>{
+                if(docenteTurmas.find(tID => tID == turma.turmaID)){    // Só utiliza turmas em que o professor está inscrito
+                    salvarDisciplinas(disciplina);
 
-            divDisciplinas.innerHTML += 
-            `<button class="itemLista"> 
-              CÓDIGO: ${disciplina.codigo} <br> 
-              NOME: ${disciplina.nome} <br> 
-              TURMA: ${disciplina.turmas[0].numero} <br> 
-              HORARIO: ${disciplina.turmas[0].horario}
-              <span style="display: none;" class = "turmaID">${disciplina.turmas[0].turmaID}</span>
-            </button>`;
-
-            document.querySelectorAll('.itemLista').forEach(element => {
-            element.addEventListener('click', () => {
-              exibirInformacoes(element.textContent);
-              carregarAlunos(element.querySelector(".turmaID").textContent);
-              });
+                    divDisciplinas.innerHTML += 
+                        `<button class="itemLista"> 
+                          CÓDIGO: ${disciplina.codigo} <br> 
+                          NOME: ${disciplina.nome} <br> 
+                          TURMA: ${turma.numero} <br> 
+                          HORARIO: ${turma.horario}
+                          <span style="display: none;" class = "turmaID">${turma.turmaID}</span>
+                        </button>`;
+                }
             });
-        })
-    })
-})
+        });
+        document.querySelectorAll('.itemLista').forEach(element => {
+                    element.addEventListener('click', () => {
+                        exibirInformacoes(element.textContent);
+                        carregarAlunos(element.querySelector(".turmaID").textContent);
+                    });
+        });
+    });
+});
 
 export async function carregarAlunos(turmaID){
     let turmasLocal = await carregaFormulario();
