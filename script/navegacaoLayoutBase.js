@@ -84,12 +84,7 @@ $(document).on('click', '#btn-disciplinas-periodo', function(event) {
 
 $(document).on('click', '#btn-discentes-ativos', function(event) {
   event.preventDefault();
-  //Só pra não aparecer tudo vazio quando clicar pela primeira vez ao se logar =)
-  if (!localStorage.getItem("disciplinaClicada")) {
-    $('#btn-docente-discip').click(); //invoca o menu lateral da lista de disciplinas pra escolher antes de navegar
-    return
-  }
-  Navigate.discentes();
+    Navigate.notasEFaltas();
 });
 
 $(document).on('click', '#btn-registro-notas', function(event) {
@@ -105,7 +100,7 @@ $(document).on('click', '#footer-btn-disciplinas', function(event) {
 
 $(document).on('click', '#footer-btn-discentes', function(event) {
   event.preventDefault();
-  Navigate.discentes()
+    Navigate.notasEFaltas();
   console.log('Botão de rodapé "Discentes" clicado.');
 });
 
