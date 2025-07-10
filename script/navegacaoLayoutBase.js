@@ -14,35 +14,34 @@ let listaDiscipCarregada = false;
 $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 
 	if (!listaDiscipCarregada) {
-		getDocenteTurmas(usuarioLogado.matricula)
-			.then(docenteTurmas => {
-				if(localStorage.getItem("docenteTurmas")){ console.log("Turmas salvas!");}
-				/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
-				const containerDisciplinas = document.getElementById('container-lista-discip');
-				containerDisciplinas.innerHTML = ''
+		let docenteTurmas = localStorage.getItem("docenteTurmas");
+		
+		if(localStorage.getItem("docenteTurmas")){ console.log("Turmas salvas!");}
+		/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
+		const containerDisciplinas = document.getElementById('container-lista-discip');
+		containerDisciplinas.innerHTML = ''
 				
-				docenteTurmas.forEach(codigo => {
+		docenteTurmas.forEach(codigo => {
 					
-					codigo = codigo.split(" ")[0]; 			// Pega codigo da discuplina a partir do turmaID
+			codigo = codigo.split(" ")[0]; 			// Pega codigo da discuplina a partir do turmaID
 
-					getDisciplina(codigo).then( disciplina => {
+			getDisciplina(codigo).then( disciplina => {
 
-						disciplina.turmas.forEach( turma =>{		// Código atualizado para aceitar NOVO-disciplinas.json ao invés de disciplinas.json
-							/* Cria o item html que será injetado */
-							const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, turma.numero, turma.horario, disciplina.ementa);
+				disciplina.turmas.forEach( turma =>{		// Código atualizado para aceitar NOVO-disciplinas.json ao invés de disciplinas.json
+		
+						/* Cria o item html que será injetado */
+					const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, turma.numero, turma.horario, disciplina.ementa);
 						
-							/* Injeta o item no componente.*/
-							containerDisciplinas.insertAdjacentHTML('beforeend', item);
-						})
+						/* Injeta o item no componente.*/
+					containerDisciplinas.insertAdjacentHTML('beforeend', item);
+				})
 						
 						
-					});
-				});
-
 			});
-		}
+		});
 
-		listaDiscipCarregada = true;
+	});
+	listaDiscipCarregada = true;
 });
 
 
