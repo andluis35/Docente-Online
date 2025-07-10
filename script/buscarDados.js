@@ -32,7 +32,7 @@ export function getDisciplina(codigoDisciplina) {
         link: URL para a ementa oficial da disciplina (ex: "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10842"
     */
 
-    return fetch('../data/disciplinas.json')
+    return fetch('../data/NOVO-disciplinas.json')
     .then(response => response.json())
     .then(data => {
         const disciplina = data.disciplinas.find(
