@@ -8,7 +8,7 @@ export function getDocenteTurmas(matricula) {
         .then(response => response.json())
         .then(data => {
             const docentes = data.docentes.find(
-                d => d.matricula === matricula
+                d => d.matricula == matricula
             )
             const turmas = docentes.turmas.map (turma => turma.turmaID);
             
