@@ -84,7 +84,7 @@ $(document).on('click', '#btn-disciplinas-periodo', function(event) {
 
 $(document).on('click', '#btn-discentes-ativos', function(event) {
   event.preventDefault();
-  Navigate.discentes();
+    Navigate.notasEFaltas();
 });
 
 $(document).on('click', '#btn-registro-notas', function(event) {
@@ -100,7 +100,7 @@ $(document).on('click', '#footer-btn-disciplinas', function(event) {
 
 $(document).on('click', '#footer-btn-discentes', function(event) {
   event.preventDefault();
-  Navigate.discentes()
+    Navigate.notasEFaltas();
   console.log('Botão de rodapé "Discentes" clicado.');
 });
 
