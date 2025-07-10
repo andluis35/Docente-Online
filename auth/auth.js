@@ -1,4 +1,5 @@
 import { Navigate } from "../route/routes.js";
+import { getDocenteTurmas } from "../script/layouts/buscarDados.js";
 
 export function getSession() {
     /**Obtem os dados do usuario logado salvos no localStorage 
