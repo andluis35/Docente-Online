@@ -56,7 +56,8 @@ function salvaFormulario(turma){
 		let notaP1 = (child.children[4].children[0].value === "")?aluno.notas.P1:child.children[4].children[0].value;
 		let notaP2 = (child.children[5].children[0].value === "")?aluno.notas.P2:child.children[5].children[0].value;
 		let notaPF = (child.children[6].children[0].value === "")?aluno.notas.PF:child.children[6].children[0].value; 
-
+		let faltas = (child.children[8].children[0].value === "")?aluno.faltas:child.children[8].children[0].value;
+		
 		//Numeros nao nulos pra conta da media final
 		let notaP1Conta = (notaP1 == -0.1)?0.0:notaP1;
 		let notaP2Conta = (notaP2 == -0.1)?0.0:notaP2;
@@ -73,7 +74,7 @@ function salvaFormulario(turma){
 		aluno.notas.P2 = notaP2;
 		aluno.notas.PF = notaPF;
 		aluno.notas.mediaFinal = notaMF;
-		aluno.faltas = child.children[8].children[0].value;
+		aluno.faltas = faltas;
 		console.log("Aluno salvo!");
 	}
 	// Salva JSON atualizado no localStorage
@@ -138,13 +139,20 @@ function checaFormulario(){
 			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). Aluno ", child.children[0].textContent);
 		}
 
-				/* CHECA FALTAS */
+
+		
+					/* CHECA FALTAS */
+
+		
 
 		let faltas = (child.children[8].children[0].value === "")?aluno.faltas:child.children[8].children[0].value;
 
 		if(faltas < 0){
 			throw new Error("Número de faltas não pode ser negativo!");
 		}
+
+
+
 		
 		console.log("Aluno checado!");
 	}
