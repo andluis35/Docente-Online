@@ -5,6 +5,7 @@
  * de classe css 'celula-registros' na interface do usuário usando jQuery.
  * O módulo aguarda um evento lançado pelo script (registro-de-notas-e-faltas/script.js)
  * que atualiza a tabela. Ao detectar o evento, atualiza a visualização de acordo com o modo atual.
+ * Razão: Sincronização.
  */
 
 $(function() {

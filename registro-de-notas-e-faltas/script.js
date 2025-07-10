@@ -64,11 +64,11 @@ export function colocarAlunosTabela(){
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
       <td>${element.email}</td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
-      <td class="celula-registros">${element.notas.mediaFinal}</td>
-      <td class="celula-registros">${element.faltas}</td>`
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
+      <td class="visao-registros">${element.notas.mediaFinal}</td>
+      <td class="visao-registros">${element.faltas}</td>`
 
       tabela.appendChild(aluno);
       numero = numero + 1;
