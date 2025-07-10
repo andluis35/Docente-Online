@@ -1,6 +1,6 @@
 import { getSession, endSession } from "../auth/auth.js";
 import { Navigate } from "../route/routes.js";
-import { getDocenteDisciplinas, getDisciplina } from "./buscarDados.js";
+import { getDocenteTurmas, getDisciplina } from "./buscarDados.js";
 import { criarItemDisciplina } from "./criarItemDisciplina.js"
 
 const usuarioLogado = getSession();
@@ -14,25 +14,29 @@ let listaDiscipCarregada = false;
 $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 
 	if (!listaDiscipCarregada) {
-		getDocenteDisciplinas(usuarioLogado.matricula)
-			.then(docenteDisciplinas => {
+		getDocenteTurmas(usuarioLogado.matricula)
+			.then(docenteTurmas => {
 				
 				/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
 				const containerDisciplinas = document.getElementById('container-lista-discip');
 				containerDisciplinas.innerHTML = ''
 				
-				docenteDisciplinas.forEach(codigo => {
-	
+				docenteTurmas.forEach(codigo => {
 					
+					codigo = codigo.split(" ")[0]; 			// Pega codigo da discuplina a partir do turmaID
+
 					getDisciplina(codigo).then( disciplina => {
 
-						/* Cria o item html que será injetado */
-						const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, disciplina.turma, disciplina.horario, disciplina.link);
+						disciplina.turmas.forEach( turma =>{		// Código atualizado para aceitar NOVO-disciplinas.json ao invés de disciplinas.json
+							/* Cria o item html que será injetado */
+							const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, turma.numero, turma.horario, disciplina.ementa);
 						
-						/* Injeta o item no componente.*/
-						containerDisciplinas.insertAdjacentHTML('beforeend', item)
+							/* Injeta o item no componente.*/
+							containerDisciplinas.insertAdjacentHTML('beforeend', item);
+						})
+						
+						
 					});
-
 				});
 
 			});
@@ -84,12 +88,7 @@ $(document).on('click', '#btn-disciplinas-periodo', function(event) {
 
 $(document).on('click', '#btn-discentes-ativos', function(event) {
   event.preventDefault();
-  //Só pra não aparecer tudo vazio quando clicar pela primeira vez ao se logar =)
-  if (!localStorage.getItem("disciplinaClicada")) {
-    $('#btn-docente-discip').click(); //invoca o menu lateral da lista de disciplinas pra escolher antes de navegar
-    return
-  }
-  Navigate.discentes();
+    Navigate.notasEFaltas();
 });
 
 $(document).on('click', '#btn-registro-notas', function(event) {
@@ -105,7 +104,7 @@ $(document).on('click', '#footer-btn-disciplinas', function(event) {
 
 $(document).on('click', '#footer-btn-discentes', function(event) {
   event.preventDefault();
-  Navigate.discentes()
+    Navigate.notasEFaltas();
   console.log('Botão de rodapé "Discentes" clicado.');
 });
 

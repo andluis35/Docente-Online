@@ -8,30 +8,35 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
+let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
+
 fetch ("../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
 
-            salvarDisciplinas(disciplina);
+            disciplina.turmas.forEach(turma =>{
+                if(docenteTurmas.find(tID => tID == turma.turmaID)){    // Só utiliza turmas em que o professor está inscrito
+                    salvarDisciplinas(disciplina);
 
-            divDisciplinas.innerHTML += 
-            `<button class="itemLista"> 
-              CÓDIGO: ${disciplina.codigo} <br> 
-              NOME: ${disciplina.nome} <br> 
-              TURMA: ${disciplina.turmas[0].numero} <br> 
-              HORARIO: ${disciplina.turmas[0].horario}
-              <span style="display: none;" class = "turmaID">${disciplina.turmas[0].turmaID}</span>
-            </button>`;
-
-            document.querySelectorAll('.itemLista').forEach(element => {
-            element.addEventListener('click', () => {
-              exibirInformacoes(element.textContent);
-              carregarAlunos(element.querySelector(".turmaID").textContent);
-              });
+                    divDisciplinas.innerHTML += 
+                        `<button class="itemLista"> 
+                          CÓDIGO: ${disciplina.codigo} <br> 
+                          NOME: ${disciplina.nome} <br> 
+                          TURMA: ${turma.numero} <br> 
+                          HORARIO: ${turma.horario}
+                          <span style="display: none;" class = "turmaID">${turma.turmaID}</span>
+                        </button>`;
+                }
             });
-        })
-    })
-})
+        });
+        document.querySelectorAll('.itemLista').forEach(element => {
+                    element.addEventListener('click', () => {
+                        exibirInformacoes(element.textContent);
+                        carregarAlunos(element.querySelector(".turmaID").textContent);
+                    });
+        });
+    });
+});
 
 export async function carregarAlunos(turmaID){
     let turmasLocal = await carregaFormulario();
@@ -68,7 +73,7 @@ export function colocarAlunosTabela(){
       <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
       <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
       <td class="celula-registros">${element.notas.mediaFinal}</td>
-      <td class="celula-registros">${element.faltas}</td>`
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" step="1" placeholder=${element.faltas}></td>`
 
       tabela.appendChild(aluno);
       numero = numero + 1;
@@ -97,12 +102,12 @@ function exibirInformacoes(disciplina){
   }
 
   infoDisc.innerHTML =
-  `<div class="disciplinaDetalhada">
-    <h1>${nomeDisciplina}</h1> <br>
+  `<div class="disciplinaDetalhada d-flex flex-column justify-content-start align-items-start p-1">
+    <h1 class="h4">${nomeDisciplina}</h1> <br>
     CÓDIGO: ${jsonDisciplina.codigo} <br> 
     TURMA: ${jsonDisciplina.turmas[0].numero} <br> 
     HORARIO: ${jsonDisciplina.turmas[0].horario} <br>
-    EMENTÁRIO: <a href="${jsonDisciplina.ementa}">${jsonDisciplina.ementa}</a>
+    EMENTÁRIO: <a href="${jsonDisciplina.ementa}" class="d-inline-block text-truncate w-100">${jsonDisciplina.ementa}</a>
     <span style="display: none;" class = "turmaID">${jsonDisciplina.turmas[0].turmaID}</span>
   </div>
   `
