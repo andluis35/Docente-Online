@@ -10,7 +10,7 @@ export function getDocenteTurmas(matricula) {
             const docentes = data.docentes.find(
                 d => d.matricula === matricula
             )
-            const turmas = docentes.turmas.map (turmas => turmas.turmaID);
+            const turmas = docentes.turmas.map (turma => turma.turmaID);
             
             localStorage.setItem('docenteTurmas', JSON.stringify(turmas)); 
             return turmas;
