@@ -20,12 +20,21 @@ export function endSession() {
 }
 
 export function fazerLogin(usuario, senha) {  
+    
     return buscarCredenciais(usuario, senha).then( docente => {
         if (!docente){
             // alert('Usuário ou senha inválidos.');
             return;
         }
         rememberAuthUser(docente);
+
+        // Salva docenteTurmas no localStorage no momento do login
+        getDocenteTurmas(docente.matricula).then(turmas => {
+            console.log("Turmas salvas!: ", turmas);
+        }).catch(error => {
+            console.error("Erro ao carregar turmas: ", error);
+        });
+        
         Navigate.root();
         return true;
     }).catch(() => {
