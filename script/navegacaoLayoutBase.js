@@ -14,7 +14,7 @@ let listaDiscipCarregada = false;
 $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 
 	if (!listaDiscipCarregada) {
-		let docenteTurmas = localStorage.getItem("docenteTurmas");
+		let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
 		
 		if(localStorage.getItem("docenteTurmas")){ console.log("Turmas salvas!");}
 
