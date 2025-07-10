@@ -11,14 +11,12 @@ if (!usuarioLogado) {
 
 /** Função responsável por preencher a lista de disciplinas do docente no menu lateral*/
 let listaDiscipCarregada = false;
-$(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
+$(document).on('show.bs.offcanvas', '#offcanvasList', async function(event) {
 
 	if (!listaDiscipCarregada) {
-		let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
-		
+		let docenteTurmas = await getDocenteTurmas(usuarioLogado.matricula);
 		if(localStorage.getItem("docenteTurmas")){ console.log("Turmas salvas!");}
 
-		
 		/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
 		const containerDisciplinas = document.getElementById('container-lista-discip');
 		containerDisciplinas.innerHTML = ''
