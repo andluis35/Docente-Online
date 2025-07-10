@@ -17,6 +17,8 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 		let docenteTurmas = localStorage.getItem("docenteTurmas");
 		
 		if(localStorage.getItem("docenteTurmas")){ console.log("Turmas salvas!");}
+
+		
 		/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
 		const containerDisciplinas = document.getElementById('container-lista-discip');
 		containerDisciplinas.innerHTML = ''
@@ -34,7 +36,7 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 						
 						/* Injeta o item no componente.*/
 					containerDisciplinas.insertAdjacentHTML('beforeend', item);
-				})
+				});
 						
 						
 			});
