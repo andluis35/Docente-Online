@@ -13,20 +13,26 @@ $(function() {
 
     function exibirVersaoDiscentes() {
         isDiscentesAtivo = true;
-        console.log('Contexto: Discentes com Matrícula Ativa');
-        $('#troca-contexto').text('Registro de Notas e Faltas');
         $('.visao-registros').hide();
+        $('#btn-registros').hide();
+        $('#troca-contexto').text('Registro de Notas e Faltas');
+        $('#troca-contexto-titulo').text('Registro de Notas e Faltas');
+        $('#troca-contexto-cabecalho').text('Registro de Notas e Faltas');
+        console.log('Contexto: Discentes com Matrícula Ativa');
     }
 
     function exibirVersaoRegistros() {
         isDiscentesAtivo = false;
-        console.log('Contexto: Registro de Notas e Faltas');
-        $('#troca-contexto').text('Discentes com Matrícula Ativa');
         $('.visao-registros').show();
+        $('#btn-registros').show();
+        $('#troca-contexto').text('Discentes com Matrícula Ativa');
+        $('#troca-contexto-titulo').text('Discentes com Matrícula Ativa');
+        $('#troca-contexto-cabecalho').text('Discentes com Matrícula Ativa');
+        console.log('Contexto: Registro de Notas e Faltas');
     }
 
 
-    $('#troca-contexto').on('click', function(event) {
+    $('#troca-contexto-btn').on('click', function(event) {
         event.preventDefault();
 
         if (isDiscentesAtivo) {
