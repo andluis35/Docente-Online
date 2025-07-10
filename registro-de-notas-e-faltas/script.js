@@ -8,30 +8,35 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
+let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
+
 fetch ("../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
 
-            salvarDisciplinas(disciplina);
+            disciplina.turmas.forEach(turma =>{
+                if(docenteTurmas.find(tID => tID == turma.turmaID)){    // Só utiliza turmas em que o professor está inscrito
+                    salvarDisciplinas(disciplina);
 
-            divDisciplinas.innerHTML += 
-            `<button class="itemLista"> 
-              CÓDIGO: ${disciplina.codigo} <br> 
-              NOME: ${disciplina.nome} <br> 
-              TURMA: ${disciplina.turmas[0].numero} <br> 
-              HORARIO: ${disciplina.turmas[0].horario}
-              <span style="display: none;" class = "turmaID">${disciplina.turmas[0].turmaID}</span>
-            </button>`;
-
-            document.querySelectorAll('.itemLista').forEach(element => {
-            element.addEventListener('click', () => {
-              exibirInformacoes(element.textContent);
-              carregarAlunos(element.querySelector(".turmaID").textContent);
-              });
+                    divDisciplinas.innerHTML += 
+                        `<button class="itemLista"> 
+                          CÓDIGO: ${disciplina.codigo} <br> 
+                          NOME: ${disciplina.nome} <br> 
+                          TURMA: ${turma.numero} <br> 
+                          HORARIO: ${turma.horario}
+                          <span style="display: none;" class = "turmaID">${turma.turmaID}</span>
+                        </button>`;
+                }
             });
-        })
-    })
-})
+        });
+        document.querySelectorAll('.itemLista').forEach(element => {
+                    element.addEventListener('click', () => {
+                        exibirInformacoes(element.textContent);
+                        carregarAlunos(element.querySelector(".turmaID").textContent);
+                    });
+        });
+    });
+});
 
 export async function carregarAlunos(turmaID){
     let turmasLocal = await carregaFormulario();
@@ -64,11 +69,11 @@ export function colocarAlunosTabela(){
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
       <td>${element.email}</td>
-      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
-      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
-      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
-      <td class="visao-registros">${element.notas.mediaFinal}</td>
-      <td class="visao-registros">${element.faltas}</td>`
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
+      <td class="celula-registros">${element.notas.mediaFinal}</td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" step="1" placeholder=${element.faltas}></td>`
 
       tabela.appendChild(aluno);
       numero = numero + 1;
