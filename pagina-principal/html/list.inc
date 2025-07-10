@@ -1,5 +1,6 @@
 <div class="container mb-3 mt-3">
   <button
+    id="btn-docente-discip"
     class="btn btn-primary"
     type="button"
     data-bs-toggle="offcanvas"

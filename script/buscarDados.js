@@ -44,3 +44,27 @@ export function getDisciplina(codigoDisciplina) {
         console.error('Erro ao carregar o arquivo', error);
     });
 }
+
+export function getAlunos(codigoDisciplina, numeroTurma) {
+    //implementar função para obter todos os alunos dessa turma
+    // Retornando dados mocados é só pra teste
+    return Promise.resolve([
+        {
+            "nome": "Pessoa",
+            "matricula": 123456789,
+            "email": "pessoa.pessoa@exemplo.com",
+        },
+        {
+            "nome": "Pessoa",
+            "matricula": 123456789,
+            "email": "pessoa.pessoa@exemplo.com",
+        },
+                {
+            "nome": "Pessoa",
+            "matricula": 123456789,
+            "email": "pessoa.pessoa@exemplo.com",
+        }
+    ]);
+
+    
+}
