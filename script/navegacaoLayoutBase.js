@@ -1,6 +1,6 @@
 import { getSession, endSession } from "../auth/auth.js";
 import { Navigate } from "../route/routes.js";
-import { getDocenteDisciplinas, getDisciplina } from "./buscarDados.js";
+import { getDocenteTurmas, getDisciplina } from "./buscarDados.js";
 import { criarItemDisciplina } from "./criarItemDisciplina.js"
 
 const usuarioLogado = getSession();
@@ -14,16 +14,21 @@ let listaDiscipCarregada = false;
 $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 
 	if (!listaDiscipCarregada) {
-		getDocenteDisciplinas(usuarioLogado.matricula)
-			.then(docenteDisciplinas => {
+		getDocenteTurmas(usuarioLogado.matricula)
+			.then(docenteTurmas => {
 				
 				/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
 				const containerDisciplinas = document.getElementById('container-lista-discip');
 				containerDisciplinas.innerHTML = ''
+
+				let IDTurmas = [];
 				
-				docenteDisciplinas.forEach(codigo => {
-	
+				docenteTurmas.forEach(codigo => {
+
+					IDTurmas.push(codigo);		// Salva turmaID em lista
 					
+					codigo = codigo.split(" ")[0]; 			// Pega codigo da discuplina a partir do turmaID
+
 					getDisciplina(codigo).then( disciplina => {
 
 						/* Cria o item html que será injetado */
@@ -32,8 +37,9 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 						/* Injeta o item no componente.*/
 						containerDisciplinas.insertAdjacentHTML('beforeend', item)
 					});
-
 				});
+
+				localStorage.setItem("docenteTurmas", IDTurmas)
 
 			});
 		}
