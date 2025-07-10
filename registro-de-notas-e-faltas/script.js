@@ -15,7 +15,7 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
         info.disciplinas.map((disciplina) => {
 
             disciplina.turmas.forEach(turma =>{
-                if(docenteTurmas.find(t => t.turma.ID == turma.turmaID)){    // Só utiliza em que o professor está inscrito
+                if(docenteTurmas.find(tID => tID == turma.turmaID)){    // Só utiliza turmas em que o professor está inscrito
                     salvarDisciplinas(disciplina);
 
                     divDisciplinas.innerHTML += 
