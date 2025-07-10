@@ -84,6 +84,11 @@ $(document).on('click', '#btn-disciplinas-periodo', function(event) {
 
 $(document).on('click', '#btn-discentes-ativos', function(event) {
   event.preventDefault();
+  //Só pra não aparecer tudo vazio quando clicar pela primeira vez ao se logar =)
+  if (!localStorage.getItem("disciplinaClicada")) {
+    $('#btn-docente-discip').click(); //invoca o menu lateral da lista de disciplinas pra escolher antes de navegar
+    return
+  }
   Navigate.discentes();
 });
 
