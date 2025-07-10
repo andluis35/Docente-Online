@@ -1,6 +1,6 @@
 import { getSession, endSession } from "../auth/auth.js";
 import { Navigate } from "../route/routes.js";
-import { getDocenteTurmas, getDisciplina } from "./buscarDados.js";
+import { getDocenteDisciplinas, getDisciplina } from "./buscarDados.js";
 import { criarItemDisciplina } from "./criarItemDisciplina.js"
 
 const usuarioLogado = getSession();
@@ -14,29 +14,25 @@ let listaDiscipCarregada = false;
 $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 
 	if (!listaDiscipCarregada) {
-		getDocenteTurmas(usuarioLogado.matricula)
-			.then(docenteTurmas => {
+		getDocenteDisciplinas(usuarioLogado.matricula)
+			.then(docenteDisciplinas => {
 				
 				/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
 				const containerDisciplinas = document.getElementById('container-lista-discip');
 				containerDisciplinas.innerHTML = ''
 				
-				docenteTurmas.forEach(codigo => {
+				docenteDisciplinas.forEach(codigo => {
+	
 					
-					codigo = codigo.split(" ")[0]; 			// Pega codigo da discuplina a partir do turmaID
-
 					getDisciplina(codigo).then( disciplina => {
 
-						disciplina.turmas.forEach( turma =>{		// Código atualizado para aceitar NOVO-disciplinas.json ao invés de disciplinas.json
-							/* Cria o item html que será injetado */
-							const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, turma.numero, turma.horario, disciplina.ementa);
+						/* Cria o item html que será injetado */
+						const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, disciplina.turma, disciplina.horario, disciplina.link);
 						
-							/* Injeta o item no componente.*/
-							containerDisciplinas.insertAdjacentHTML('beforeend', item);
-						})
-						
-						
+						/* Injeta o item no componente.*/
+						containerDisciplinas.insertAdjacentHTML('beforeend', item)
 					});
+
 				});
 
 			});
