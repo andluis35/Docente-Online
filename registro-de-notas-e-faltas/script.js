@@ -64,11 +64,11 @@ export function colocarAlunosTabela(){
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
       <td>${element.email}</td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
-      <td class="celula-registros">${element.notas.mediaFinal}</td>
-      <td class="celula-registros">${element.faltas}</td>`
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
+      <td class="visao-registros">${element.notas.mediaFinal}</td>
+      <td class="visao-registros">${element.faltas}</td>`
 
       tabela.appendChild(aluno);
       numero = numero + 1;
@@ -97,12 +97,12 @@ function exibirInformacoes(disciplina){
   }
 
   infoDisc.innerHTML =
-  `<div class="disciplinaDetalhada">
-    <h1>${nomeDisciplina}</h1> <br>
+  `<div class="disciplinaDetalhada d-flex flex-column justify-content-start align-items-start p-1">
+    <h1 class="h4">${nomeDisciplina}</h1> <br>
     CÓDIGO: ${jsonDisciplina.codigo} <br> 
     TURMA: ${jsonDisciplina.turmas[0].numero} <br> 
     HORARIO: ${jsonDisciplina.turmas[0].horario} <br>
-    EMENTÁRIO: <a href="${jsonDisciplina.ementa}">${jsonDisciplina.ementa}</a>
+    EMENTÁRIO: <a href="${jsonDisciplina.ementa}" class="d-inline-block text-truncate w-100">${jsonDisciplina.ementa}</a>
     <span style="display: none;" class = "turmaID">${jsonDisciplina.turmas[0].turmaID}</span>
   </div>
   `
