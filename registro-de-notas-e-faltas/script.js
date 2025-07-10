@@ -8,7 +8,7 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
-let docenteTurmas = localStorage.getItem("docenteTurmas");
+let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
 
 fetch ("../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
