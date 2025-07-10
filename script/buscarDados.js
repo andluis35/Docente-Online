@@ -8,9 +8,9 @@ export function getDocenteDisciplinas(matricula) {
         .then(response => response.json())
         .then(data => {
             const docentes = data.docentes.find(
-                d => d.matricula == matricula
+                d => d.matricula === matricula
             )
-            const turmas = docentes.turmas.map (turma => turma.turmaID);
+            const disciplinas = docentes.turmas.map (turmas => turmas.disciplina);
             
             localStorage.setItem('docenteDiscip', JSON.stringify(disciplinas)); 
             return disciplinas;

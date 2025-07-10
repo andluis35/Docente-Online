@@ -11,37 +11,34 @@ if (!usuarioLogado) {
 
 /** Função responsável por preencher a lista de disciplinas do docente no menu lateral*/
 let listaDiscipCarregada = false;
-$(document).on('show.bs.offcanvas', '#offcanvasList', async function(event) {
+$(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 
 	if (!listaDiscipCarregada) {
-		let docenteTurmas = await getDocenteTurmas(usuarioLogado.matricula);
-		if(localStorage.getItem("docenteTurmas")){ console.log("Turmas salvas!");}
-
-		/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
-		const containerDisciplinas = document.getElementById('container-lista-discip');
-		containerDisciplinas.innerHTML = ''
+		getDocenteDisciplinas(usuarioLogado.matricula)
+			.then(docenteDisciplinas => {
 				
-		docenteTurmas.forEach(codigo => {
+				/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
+				const containerDisciplinas = document.getElementById('container-lista-discip');
+				containerDisciplinas.innerHTML = ''
+				
+				docenteDisciplinas.forEach(codigo => {
+	
 					
-			codigo = codigo.split(" ")[0]; 			// Pega codigo da discuplina a partir do turmaID
+					getDisciplina(codigo).then( disciplina => {
 
-			getDisciplina(codigo).then( disciplina => {
-
-				disciplina.turmas.forEach( turma =>{		// Código atualizado para aceitar NOVO-disciplinas.json ao invés de disciplinas.json
-		
 						/* Cria o item html que será injetado */
-					const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, turma.numero, turma.horario, disciplina.ementa);
+						const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, disciplina.turma, disciplina.horario, disciplina.link);
 						
 						/* Injeta o item no componente.*/
-					containerDisciplinas.insertAdjacentHTML('beforeend', item);
-				});
-						
-						
-			});
-		});
+						containerDisciplinas.insertAdjacentHTML('beforeend', item)
+					});
 
-	}
-	listaDiscipCarregada = true;
+				});
+
+			});
+		}
+
+		listaDiscipCarregada = true;
 });
 
 
