@@ -140,7 +140,7 @@ function checaFormulario(){
 
 				/* CHECA FALTAS */
 
-		let faltas = (child.children[8].children[0].value === "")?aluno.notas.PF:child.children[8].children[0].value;
+		let faltas = (child.children[8].children[0].value === "")?aluno.faltas:child.children[8].children[0].value;
 
 		if(faltas < 0){
 			throw new Error("Número de faltas não pode ser negativo!");
