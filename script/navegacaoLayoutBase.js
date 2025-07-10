@@ -40,7 +40,7 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 			});
 		});
 
-	});
+	}
 	listaDiscipCarregada = true;
 });
 
