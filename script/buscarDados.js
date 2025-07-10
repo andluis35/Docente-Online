@@ -49,22 +49,27 @@ export function getAlunos(codigoDisciplina, numeroTurma) {
     //implementar função para obter todos os alunos dessa turma
     // Retornando dados mocados é só pra teste
     return Promise.resolve([
-        {
-            "nome": "Pessoa",
-            "matricula": 123456789,
-            "email": "pessoa.pessoa@exemplo.com",
-        },
-        {
-            "nome": "Pessoa",
-            "matricula": 123456789,
-            "email": "pessoa.pessoa@exemplo.com",
-        },
-                {
-            "nome": "Pessoa",
-            "matricula": 123456789,
-            "email": "pessoa.pessoa@exemplo.com",
-        }
-    ]);
+    {
+        "nome": "Aluno1",
+        "matricula": 202512345610,
+        "email": "aluno1@grad.uni"
+    },
+    {
+        "nome": "Aluno2",
+        "matricula": 202512345611,
+        "email": "aluno2@grad.uni"
+    },
+    {
+        "nome": "Aluno3",
+        "matricula": 202512345612,
+        "email": "aluno3@grad.uni"
+    },
+    {
+        "nome": "Aluno4",
+        "matricula": 202512345613,
+        "email": "aluno4@grad.uni"
+    }
+]);
 
     
 }
