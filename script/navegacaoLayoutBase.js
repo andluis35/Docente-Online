@@ -20,26 +20,24 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', function(event) {
 				/* Pega o id do comonente onde vai ser injetado a lista de disciplinas */	
 				const containerDisciplinas = document.getElementById('container-lista-discip');
 				containerDisciplinas.innerHTML = ''
-
-				let IDTurmas = [];
 				
 				docenteTurmas.forEach(codigo => {
-
-					IDTurmas.push(codigo);		// Salva turmaID em lista
 					
 					codigo = codigo.split(" ")[0]; 			// Pega codigo da discuplina a partir do turmaID
 
 					getDisciplina(codigo).then( disciplina => {
 
-						/* Cria o item html que será injetado */
-						const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, disciplina.turma, disciplina.horario, disciplina.link);
+						disciplina.turmas.forEach( turma =>{		// Código atualizado para aceitar NOVO-disciplinas.json ao invés de disciplinas.json
+							/* Cria o item html que será injetado */
+							const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, turma.numero, turma.horario, disciplina.ementa);
 						
-						/* Injeta o item no componente.*/
-						containerDisciplinas.insertAdjacentHTML('beforeend', item)
+							/* Injeta o item no componente.*/
+							containerDisciplinas.insertAdjacentHTML('beforeend', item);
+						})
+						
+						
 					});
 				});
-
-				localStorage.setItem("docenteTurmas", IDTurmas)
 
 			});
 		}
