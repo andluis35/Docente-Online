@@ -98,9 +98,22 @@ function exibirInformacoes(disciplina){
     return;
   }
 
+/*
+  infoDisc.innerHTML =
+  `<div class="disciplinaDetalhada d-flex flex-column justify-content-start align-items-start p-1">
+    <h1 class="h4">${nomeDisciplina}</h1> <br>
+    CÓDIGO: ${jsonDisciplina.codigo} <br> 
+    TURMA: ${jsonDisciplina.turmas[0].numero} <br> 
+    HORARIO: ${jsonDisciplina.turmas[0].horario} <br>
+    EMENTÁRIO: <a href="${jsonDisciplina.ementa}" class="d-inline-block text-truncate w-100">${jsonDisciplina.ementa}</a>
+    <span style="display: none;" class = "turmaID">${jsonDisciplina.turmas[0].turmaID}</span>
+  </div>
+  `
+*/
+
 infoDisc.innerHTML = `
-  <div class="disciplinaDetalhada d-flex flex-column justify-content-start align-items-start p-1">
-    <h1 class="h4">${nomeDisciplina}</h1>
+  <div class="disciplinaDetalhada">
+    <h1>${nomeDisciplina}</h1>
     <div style="display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; text-align: left; margin-top: 8px; width: 100%;">
       <span><strong>CÓDIGO:</strong></span>     <span>${jsonDisciplina.codigo}</span>
       <span><strong>TURMA:</strong></span>      <span>${jsonDisciplina.turmas[0].numero}</span>
