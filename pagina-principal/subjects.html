@@ -29,9 +29,11 @@
     $(function () {
       $("#search").load("html/subjects/search.inc");
     });
-    // $(function () {
-    //   $("#timetable").load("html/subjects/timetable.inc");
-    // });
+    $(function () {
+      $("#timetable").load("html/subjects/timetable.inc", function () {
+        preencherTabelaHorarios();
+      });
+    });
     $(function () {
       $("#footer").load("html/footer.inc");
     });
@@ -47,181 +49,8 @@
     <div class="container" id="search"></div>
   </div>
 
-  <div id="timetable">
-    <section class="my-3 container-md">
-      <div class="table-responsive">
-        <table class="table table-sm table-striped table-hover table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">Tempo</th>
-              <th class="SEG" scope="col">Segunda</th>
-              <th class="TER" scope="col">Terça</th>
-              <th class="QUA" scope="col">Quarta</th>
-              <th class="QUI" scope="col">Quinta</th>
-              <th class="SEX" scope="col">Sexta</th>
-              <th class="SAB" scope="col">Sábado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th class="M1" scope="row">M1</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="M2" scope="row">M2</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="M3" scope="row">M3</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="M4" scope="row">M4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="M5" scope="row">M5</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="M6" scope="row">M6</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="T1" scope="row">T1</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="T2" scope="row">T2</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="T3" scope="row">T3</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="T4" scope="row">T4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="T5" scope="row">T5</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="T6" scope="row">T6</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="N1" scope="row">N1</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="N2" scope="row">N2</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="N3" scope="row">N3</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="N4" scope="row">N4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th class="N5" scope="row">N5</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+  <div id="timetable"></div>
 
-  </div>
   <div class="container">
     <button id="btn_home" type="button" class="btn btn-danger mt-5"> Voltar</button>
   </div>
@@ -231,15 +60,15 @@
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
   <script type="module" src="../script/navegacaoLayoutBase.js"></script>
-  <!-- <script type="module" src="js/disciplinas.js"></script> -->
+  <script type="module" src="js/disciplinas.js"></script>
   <!-- ...existing code... -->
   <script>
     document.addEventListener("DOMContentLoaded", async function () {
-      // 1. Recupera matrícula do docente logado
+      // Recupera matrícula do docente logado
       let usuario = JSON.parse(localStorage.getItem('usuarioAutenticado') || "[]");
       let docenteMatricula = usuario.matricula;
 
-      // 2. Carrega as turmas do docente a partir do JSON
+      // Carrega as turmas do docente a partir do JSON
       let docentesTurmas = [];
       await fetch("../../data/docentes-turmas.json")
         .then(r => r.json())
@@ -255,23 +84,23 @@
       // Obtém apenas os IDs das turmas do docente
       const turmasDocente = docenteAtual.turmas.map(turma => turma.turmaID);
 
-      // 3. Carrega disciplinas do JSON
+      // Carrega disciplinas do JSON
       let disciplinas = [];
       await fetch("../../data/NOVO-disciplinas.json")
         .then(r => r.json())
         .then(data => disciplinas = data.disciplinas);
 
-      // 4. Filtra disciplinas do docente
+      // Filtra disciplinas do docente
       let disciplinasDocente = disciplinas.filter(disc =>
         disc.turmas.some(turma => turmasDocente.includes(turma.turmaID))
       );
 
-      // 5. Limpa a tabela antes de preencher (remove conteúdo existente)
+      // Limpa a tabela antes de preencher (remove conteúdo existente)
       document.querySelectorAll('table.table-bordered td').forEach(td => {
         td.textContent = '';
       });
 
-      // 6. Preenche a tabela
+      // Preenche a tabela
       disciplinasDocente.forEach(disciplina => {
         disciplina.turmas.forEach(turma => {
           if (!turmasDocente.includes(turma.turmaID)) return;
@@ -302,16 +131,12 @@
 
               let colIndexDia = Array.from(headerCells).indexOf(diaHeader);
 
-              // Se encontrou ambas as colunas, preenche a célula
               if (colIndexPeriodo !== -1 && colIndexDia !== -1) {
                 let tds = tr.querySelectorAll('td');
                 if (tds.length > colIndexDia - 1) {
                   let td = tds[colIndexDia - 1];
                   if (td) {
-                    // Adiciona o código da disciplina (ou nome se preferir)
                     td.textContent += (td.textContent ? ", " : "") + disciplina.codigo;
-                    // Ou use disciplina.nome para mostrar o nome em vez do código
-                    // td.textContent += (td.textContent ? ", " : "") + disciplina.nome;
                   }
                 }
               }
