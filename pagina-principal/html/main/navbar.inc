@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-uerj-azul-escuro rounded">
   <div class="container-fluid">
-    <a id="btn_home" class="navbar-brand" href="#">
+    <a class="navbar-brand btn-home" href="#">
       <img
         src="../assets/png/logo-branca.png"
         class="img-fluid"

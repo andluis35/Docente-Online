@@ -4,8 +4,8 @@
   >
     <div class="col-md-4 d-flex align-items-center">
       <a
-        href="/"
-        class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+        href="#"
+        class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1 btn-home"
         aria-label="Bootstrap"
       >
         <img

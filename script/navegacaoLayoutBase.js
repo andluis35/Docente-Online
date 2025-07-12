@@ -72,7 +72,7 @@ $(document).on('click', '#btn-logout', function(event) {
   endSession();
 });
 
-$(document).on('click', '#btn_home', function(event) {
+$(document).on('click', '.btn-home', function(event) {
   event.preventDefault();
   Navigate.home();
 });
@@ -90,4 +90,9 @@ $(document).on('click', '.btn-discentes-ativos', function(event) {
 $(document).on('click', '.btn-registro-notas', function(event) {
   event.preventDefault();
   Navigate.notasEFaltas();
+});
+
+$(document).on('click', '.btn-voltar', function(event) {
+  event.preventDefault();
+  history.back();
 });
