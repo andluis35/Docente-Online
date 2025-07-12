@@ -46,7 +46,7 @@ inputMatriculaCpf.addEventListener('input', function () {
       if (!sucesso){
         inputUsuario.style.borderColor = 'red';
         inputSenha.style.borderColor = 'red';
-        // alert('Usuário ou senha inválidos.');
+        alert('Usuário ou senha inválidos.');
         return;
       }
     })

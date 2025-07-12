@@ -4,8 +4,8 @@
   >
     <div class="col-md-4 d-flex align-items-center">
       <a
-        href="/"
-        class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+        href="#"
+        class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1 btn-home"
         aria-label="Bootstrap"
       >
         <img
@@ -21,7 +21,7 @@
     </div>
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
       <li class="ms-3">
-        <a id="footer-btn-disciplinas" class="text-body-secondary" href="#" aria-label="Disciplinas do período"
+        <a class="text-body-secondary btn-disciplinas-periodo" href="#" aria-label="Disciplinas do período"
           ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li class="ms-3">
-        <a id="footer-btn-discentes" class="text-body-secondary" href="#" aria-label="Disciplinas do período"
+        <a class="text-body-secondary btn-discentes-ativos" href="#" aria-label="Disciplinas do período"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -52,7 +52,7 @@
         </a>
       </li>
             <li class="ms-3">
-        <a id="footer-btn-registro" class="text-body-secondary" href="#" aria-label="Disciplinas do período"
+        <a class="text-body-secondary btn-registro-notas" href="#" aria-label="Disciplinas do período"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
