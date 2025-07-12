@@ -1,9 +1,9 @@
 import { Navigate } from "../route/routes.js";
 import { getSession, fazerLogin } from "../auth/auth.js"
 
-const inputMatriculaCpf = document.getElementById('matriculaCpf');
+const inputUsuario = document.getElementById('matriculaCpf');
 const inputSenha = document.getElementById('senha');
-const botao = document.querySelector('button');
+const aviso = document.getElementById('aviso');
 
 
 if (getSession()) {
@@ -12,7 +12,7 @@ if (getSession()) {
 
 
 // Máscara para matrícula (6 dígitos) e CPF (11 dígitos)
-inputMatriculaCpf.addEventListener('input', function () {
+inputUsuario.addEventListener('input', function () {
   let value = this.value.replace(/\D/g, ''); // remove tudo que não for número
 
   if (value.length <= 6) {
@@ -36,7 +36,7 @@ inputMatriculaCpf.addEventListener('input', function () {
   document.addEventListener('DOMContentLoaded', function () {
   const inputUsuario = document.getElementById('matriculaCpf');
   // const inputSenha = document.getElementById('senha');
-  // const botao = document.querySelector('button');
+  const botao = document.querySelector('button');
 
   botao.addEventListener('click', function () {
     const usuarioDigitado = inputUsuario.value.trim();
@@ -44,8 +44,7 @@ inputMatriculaCpf.addEventListener('input', function () {
 
     fazerLogin(usuarioDigitado, senhaDigitada).then( sucesso => {
       if (!sucesso){
-        inputUsuario.style.borderColor = 'red';
-        inputSenha.style.borderColor = 'red';
+        mostrarAviso();
         // alert('Usuário ou senha inválidos.');
         return;
       }
@@ -54,12 +53,24 @@ inputMatriculaCpf.addEventListener('input', function () {
   });
 });
 
-inputMatriculaCpf.addEventListener('input', function() {
-  inputMatriculaCpf.style.borderColor = '';
-  inputSenha.style.borderColor = '';
+inputUsuario.addEventListener('input', function() {
+  removerAviso();
 });
 
 inputSenha.addEventListener('input', function() {
-  inputMatriculaCpf.style.borderColor = '';
-  inputSenha.style.borderColor = '';
+  removerAviso();
 });
+
+function mostrarAviso() {
+  aviso.style.visibility = 'visible'
+  inputUsuario.style.borderColor = '#f56060';
+  inputSenha.style.borderColor = '#f56060';
+  aviso.classList.add('visivel');
+}
+
+function removerAviso() {
+  inputUsuario.style.borderColor = '';
+  inputSenha.style.borderColor = '';
+  aviso.style.visibility = 'hidden'
+  aviso.classList.remove('visivel');
+}
