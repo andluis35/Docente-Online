@@ -84,12 +84,14 @@ $(document).on('click', '#btn-disciplinas-periodo', function(event) {
 
 $(document).on('click', '#btn-discentes-ativos', function(event) {
   event.preventDefault();
-    Navigate.notasEFaltas();
+  localStorage.setItem("isDiscentesAtivo", 'true')
+  Navigate.controleDiscentes();
 });
 
 $(document).on('click', '#btn-registro-notas', function(event) {
   event.preventDefault();
-  Navigate.notasEFaltas();
+  localStorage.setItem("isDiscentesAtivo", 'false')
+  Navigate.controleDiscentes();
 });
 
 $(document).on('click', '#footer-btn-disciplinas', function(event) {
@@ -100,12 +102,14 @@ $(document).on('click', '#footer-btn-disciplinas', function(event) {
 
 $(document).on('click', '#footer-btn-discentes', function(event) {
   event.preventDefault();
-    Navigate.notasEFaltas();
+  localStorage.setItem("isDiscentesAtivo", 'true')
+  Navigate.controleDiscentes();
   console.log('Botão de rodapé "Discentes" clicado.');
 });
 
 $(document).on('click', '#footer-btn-registro', function(event) {
   event.preventDefault();
-  Navigate.notasEFaltas()
+  localStorage.setItem("isDiscentesAtivo", 'false')
+  Navigate.controleDiscentes();
   console.log('Botão de rodapé "Registro" clicado.');
 });

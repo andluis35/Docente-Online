@@ -54,4 +54,8 @@ export class Navigate {
   static painel() {
     window.location.href = fullPath("painel");
   }
+
+  static controleDiscentes(){
+    window.location.href = fullPath("controle-discentes/index.html");
+  }
 }
