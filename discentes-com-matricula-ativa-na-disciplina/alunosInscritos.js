@@ -31,7 +31,7 @@ function preencherInfo(codigoDiscip, nome, turma, listaHorarios, urlEmenta){
         <h3><a href="${urlEmenta}">Ementa</a></h3>
         <br>
         <h4>
-            <a href="" class="btn btn-primary">Registro de faltas e notas da disciplina</a>
+            <a href="" class="btn btn-primary btn-registro-notas">Registro de faltas e notas da disciplina</a>
         </h4>`;
 }
 
