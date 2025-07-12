@@ -20,19 +20,27 @@ function preencherInfo(codigoDiscip, nome, turma, listaHorarios, urlEmenta){
 
     let horarios = '';
     listaHorarios.forEach(h => {
-        horarios += `${h}\t`
+        horarios += `${h}\n`
     });
     
-    componenteInfoDiscip.innerHTML =  `
-        <h2>Disciplina: ${codigoDiscip}</h2>
-        <h2>Nome: ${nome}</h2>
-        <h3>Turma: ${turma}</h3>
-        <h3 style="white-space: pre;">Horários: ${horarios}</h3>
-        <h3><a href="${urlEmenta}">Ementa</a></h3>
-        <br>
-        <h4>
-            <a href="" class="btn btn-primary btn-registro-notas">Registro de faltas e notas da disciplina</a>
-        </h4>`;
+componenteInfoDiscip.innerHTML = `
+  <div class="p-2">
+    <div style="display: grid; grid-template-columns: max-content 1fr; gap: 2px 16px; text-align: left;">
+      <span class="h5"><strong>DISCIPLINA:</strong></span>  <span class="h5">${codigoDiscip}</span>
+      <span class="h5"><strong>NOME:</strong></span>         <span class="h5">${nome}</span>
+      <span class="h5"><strong>TURMA:</strong></span>        <span class="h5">${turma}</span>
+      <span class="h5"><strong>HORÁRIOS:</strong></span>     <span class="h5" style="white-space: pre;">${horarios}</span>
+      <span class="h5"><strong>EMENTA:</strong></span>       <span class="h5"><a href="${urlEmenta}" target="_blank">CONSULTAR EMENTA</a></span>
+    </div>
+    <div class="mt-3">
+      <a href="" class="btn btn-primary btn-registro-notas">
+        Registro de faltas e notas da disciplina
+      </a>
+    </div>
+  </div>
+`;
+
+
 }
 
 
