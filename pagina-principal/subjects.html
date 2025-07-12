@@ -1,74 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Página principal do sistema de gerenciamento docente online da UERJ. Acesse a grade de disciplinas, discentes com matrícula ativa e registre notas e faltas com facilidade."
-    />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="../../assets/svg/logo.svg"
-    />
-    <title>Docente online</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
-    <link href="css/base.css" rel="stylesheet" />
-    <link href="css/header.css" rel="stylesheet" />
-    <link href="css/navbar.css" rel="stylesheet" />
-    <link href="css/list.css" rel="stylesheet" />
-    <link href="css/footer.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-      $(function () {
-        $("#header").load("html/header.inc");
-      });
-      $(function () {
-        $("#navbar").load("html/main/navbar.inc");
-      });
-      $(function () {
-        $("#list").load("html/list.inc");
-      });
-      $(function () {
-        $("#search").load("html/subjects/search.inc");
-      });
-      $(function () {
-        $("#timetable").load("html/subjects/timetable.inc");
-      });
-      $(function () {
-        $("#footer").load("html/footer.inc");
-      });
-    </script>
-  </head>
-  <body>
-    <div id="header"></div>
-    <div id="navbar"></div>
-    <div id="list"></div>
-    <div
-      class="my-3 container-sm d-flex justify-content-between flex-wrap flex-column"
-    >
-      <h1>Disciplinas do Período</h1>
-      <div class="container" id="search"></div>
-    </div>
 
-    <div id="timetable"></div>
-    <div class="container">
-      <button id="btn_home" type="button" class="btn btn-danger mt-5"> Voltar</button>
-    </div>
-    <div id="footer"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Página principal do sistema de gerenciamento docente online da UERJ. Acesse a grade de disciplinas, discentes com matrícula ativa e registre notas e faltas com facilidade." />
+  <link rel="shortcut icon" type="image/x-icon" href="../../assets/svg/logo.svg" />
+  <title>Docente online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link href="css/base.css" rel="stylesheet" />
+  <link href="css/header.css" rel="stylesheet" />
+  <link href="css/navbar.css" rel="stylesheet" />
+  <link href="css/list.css" rel="stylesheet" />
+  <link href="css/footer.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      $("#header").load("html/header.inc");
+    });
+    $(function () {
+      $("#navbar").load("html/main/navbar.inc");
+    });
+    $(function () {
+      $("#list").load("html/list.inc");
+    });
+    $(function () {
+      $("#search").load("html/subjects/search.inc");
+    });
+    $(function () {
+      $("#timetable").load("html/subjects/timetable.inc", function () {
+        preencherTabelaHorarios();
+      });
+    });
+    $(function () {
+      $("#footer").load("html/footer.inc");
+    });
+  </script>
+</head>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="../script/navegacaoLayoutBase.js"></script>
-    <script type="module" src="js/disciplinas.js"></script>
-  </body>
+<body>
+  <div id="header"></div>
+  <div id="navbar"></div>
+  <div id="list"></div>
+  <div class="my-3 container-sm d-flex justify-content-between flex-wrap flex-column">
+    <h1>Disciplinas do Período</h1>
+    <div class="container" id="search"></div>
+  </div>
+
+  <div id="timetable"></div>
+
+  <div class="container">
+    <button id="btn_home" type="button" class="btn btn-danger mt-5"> Voltar</button>
+  </div>
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script type="module" src="../script/navegacaoLayoutBase.js"></script>
+  <script type="module" src="js/disciplinas.js"></script>
+  <!-- ...existing code... -->
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      // Recupera matrícula do docente logado
+      let usuario = JSON.parse(localStorage.getItem('usuarioAutenticado') || "[]");
+      let docenteMatricula = usuario.matricula;
+
+      // Carrega as turmas do docente a partir do JSON
+      let docentesTurmas = [];
+      await fetch("../../data/docentes-turmas.json")
+        .then(r => r.json())
+        .then(data => docentesTurmas = data.docentes);
+
+      // Encontra o docente atual
+      const docenteAtual = docentesTurmas.find(docente => docente.matricula === docenteMatricula);
+      if (!docenteAtual) {
+        console.error("Docente não encontrado");
+        return;
+      }
+
+      // Obtém apenas os IDs das turmas do docente
+      const turmasDocente = docenteAtual.turmas.map(turma => turma.turmaID);
+
+      // Carrega disciplinas do JSON
+      let disciplinas = [];
+      await fetch("../../data/NOVO-disciplinas.json")
+        .then(r => r.json())
+        .then(data => disciplinas = data.disciplinas);
+
+      // Filtra disciplinas do docente
+      let disciplinasDocente = disciplinas.filter(disc =>
+        disc.turmas.some(turma => turmasDocente.includes(turma.turmaID))
+      );
+
+      // Limpa a tabela antes de preencher (remove conteúdo existente)
+      document.querySelectorAll('table.table-bordered td').forEach(td => {
+        td.textContent = '';
+      });
+
+      // Preenche a tabela
+      disciplinasDocente.forEach(disciplina => {
+        disciplina.turmas.forEach(turma => {
+          if (!turmasDocente.includes(turma.turmaID)) return;
+
+          turma.horario.forEach(horario => {
+            // Processa o horário (ex: "TER M1 M2" ou "QUI M5M6" ou "SEX N2N3N4")
+            let partes = horario.split(" ");
+            let dia = partes[0];
+            let periodos = partes.slice(1).join("").match(/[A-Z]\d+/g) || [];
+
+            periodos.forEach(periodo => {
+              // Encontra a célula correspondente na tabela
+              let thPeriodo = document.querySelector(`th.${periodo}`);
+              if (!thPeriodo) return;
+
+              let tr = thPeriodo.parentElement;
+              let ths = tr.querySelectorAll('th');
+              let colIndexPeriodo = Array.from(ths).indexOf(thPeriodo);
+
+              // Encontra o cabeçalho do dia
+              let thead = document.querySelector('table thead');
+              let headerCells = thead.querySelectorAll('th');
+              let diaHeader = Array.from(headerCells).find(th =>
+                th.textContent.trim().toUpperCase().includes(dia.toUpperCase()) ||
+                th.classList.contains(dia)
+              );
+              if (!diaHeader) return;
+
+              let colIndexDia = Array.from(headerCells).indexOf(diaHeader);
+
+              if (colIndexPeriodo !== -1 && colIndexDia !== -1) {
+                let tds = tr.querySelectorAll('td');
+                if (tds.length > colIndexDia - 1) {
+                  let td = tds[colIndexDia - 1];
+                  if (td) {
+                    td.textContent += (td.textContent ? ", " : "") + disciplina.codigo;
+                  }
+                }
+              }
+            });
+          });
+        });
+      });
+    });
+  </script>
+  <!-- ...existing code... -->
+</body>
+
 </html>
