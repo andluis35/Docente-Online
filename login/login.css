@@ -14,10 +14,12 @@
     --fundo-item: #f6f4f2;
     --font-size-titulo: 6vh;
     --font-titulo: 'Roboto Condensed', sans-serif;
+    --cor-aviso: #f56060;  
 }
 
 body{
     background-color: var(--fundo-pagina);
+    border: b white;
 }
 
 h1{ 
@@ -79,7 +81,7 @@ a {
 #login{
     position:sticky;
     top: 20px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
     padding: 60px;
     margin: 10px;
     margin-top: 0px;
@@ -97,7 +99,6 @@ a {
         width: 100%;
         box-sizing: border-box;
         border-radius: 0;
-        /*Mechendo no login*/
         height: 100vh;
         position: absolute;
         top: 0;
@@ -114,6 +115,7 @@ a {
 }
 
 #login h1 {
+    /* display: none; */
     color: white;
     @media screen and (max-width: 600px) {
         display: none;
@@ -133,7 +135,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
     padding: 30px;
     margin: 10px;
     margin-top: 0px;
@@ -233,8 +235,49 @@ img{
     height: 80px;    
 }
 
+#aviso {
+    position: absolute;
+    top: calc(var(--font-size-titulo)* 4);
+    width: 45%;
+    left: 0;
+    z-index: 3;
+    align-items: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    padding:1vh;
+    visibility: hidden;
+    border-left: solid 3px var(--cor-aviso);
+    background-color: var(--fundo-item);
+    color: var(--cor-aviso);
+
+    opacity: 0;
+    transform: translateX(-50px);
+    visibility: hidden;
+
+    /* Transições suaves */
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    
+    @media screen and (max-width: 600px) {
+    top: calc(var(--font-size-titulo)* 2);
+    width: 85%;
+    }
+}
+
+#aviso.visivel {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1vh;
+    
+}
+
 input{
-    border: solid 2px var(--cor-primaria);
+    border: solid 1px var(--cor-primaria);
     padding: 15px;
     outline: none;
     border-radius: 10px;
@@ -315,7 +358,7 @@ h4 {
 }
 
 @media screen and (max-width: 600px) {
-    input:first-of-type {
+    form {
         margin-top: calc(var(--font-size-titulo)* 2.5);
     }
 }
