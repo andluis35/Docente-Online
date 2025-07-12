@@ -20,10 +20,6 @@
     min-width: 3rem
 }
 
-.table > tbody > tr > td > input[placeholder]{
-    text-align: center;
-}
-
 @media (max-width: 600px){
     .btn-tabela{
         flex-direction: column;
