@@ -69,7 +69,6 @@ async function preencherTabelaHorarios() {
 
 // Função para números circulados (mantida igual)
 function numeroParaCirculado(numero) {
-  const circulados = ['⓪', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩'];
-  if (numero >= 0 && numero <= 10) return circulados[numero];
-  return numero.toString().split('').map(d => circulados[parseInt(d)]).join('');
+  const circulados = ['⓪', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩', '⑪', '⑫', '⑬', '⑭', '⑮', '⑯', '⑰', '⑱', '⑲', '⑳'];
+  if (numero >= 0 && numero <= 20) return circulados[numero];
 }
