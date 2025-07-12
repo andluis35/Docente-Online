@@ -11,7 +11,7 @@ getDisciplina(codigoDisciplina).then( disciplina => {
         disciplina.horario,
         disciplina.link
     );
-    construirTabela(disciplina.turma, disciplina.turma);
+    construirTabela(codigoDisciplina, disciplina.turma);
 })
 
 
@@ -50,7 +50,7 @@ function construirTabela(codigoDisciplina, turma) {
                 <td>${index + 1}</td>
                 <td>${aluno.matricula}</td>
                 <td>${aluno.nome}</td>
-                <td>${aluno.email}</td>
+                <td>${aluno["e-mail"]}</td>
             `;
             tbody.appendChild(linhaAluno);
         });
