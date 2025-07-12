@@ -9,33 +9,34 @@
  */
 
 $(function() {
-    let isDiscentesAtivo = false;
+    let isDiscentesAtivo = true;
 
     function exibirVersaoDiscentes() {
         isDiscentesAtivo = true;
         $('.visao-registros').hide();
-        $('#troca-contexto').text('Registro de Notas e Faltas');
-        $('#troca-contexto-titulo').text('Registro de Notas e Faltas');
-        $('#troca-contexto-cabecalho').text('Registro de Notas e Faltas');
+        $('.visao-registros').show();
+        // $('#troca-contexto').text('Discentes com Matrícula Ativa');
+        $('#troca-contexto-titulo').text('Discentes com Matrícula Ativa');
+        $('#troca-contexto-cabecalho').text('Discentes com Matrícula Ativa');
         console.log('Contexto: Discentes com Matrícula Ativa');
     }
 
     function exibirVersaoRegistros() {
         isDiscentesAtivo = false;
         $('.visao-registros').show();
-        $('#troca-contexto').text('Discentes com Matrícula Ativa');
-        $('#troca-contexto-titulo').text('Discentes com Matrícula Ativa');
-        $('#troca-contexto-cabecalho').text('Discentes com Matrícula Ativa');
+        $('.visao-discente').hide();
+        // $('#troca-contexto').text('Registro de Notas e Faltas');
+        $('#troca-contexto-titulo').text('Registro de Notas e Faltas');
+        $('#troca-contexto-cabecalho').text('Registro de Notas e Faltas');
+        $('#troca-contexto-btn').hide();
         console.log('Contexto: Registro de Notas e Faltas');
     }
 
-
+    // Funcionalidade desativada (troca de discentes para registros)
     $('#troca-contexto-btn').on('click', function(event) {
         event.preventDefault();
 
-        if (isDiscentesAtivo) {
-            exibirVersaoRegistros();
-        } else {
+        if (!isDiscentesAtivo) {
             exibirVersaoDiscentes();
         }
     });
