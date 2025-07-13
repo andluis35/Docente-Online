@@ -35,8 +35,6 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
                         carregarAlunos(element.querySelector(".turmaID").textContent);
                     });
         });
-        document.dispatchEvent(new CustomEvent("novaTabelaAlunos", {}));
-
     });
 });
 
@@ -80,7 +78,8 @@ export function colocarAlunosTabela(){
       tabela.appendChild(aluno);
       numero = numero + 1;
   });
-  $(document).trigger('tabelaAtualizada');
+    document.dispatchEvent(new CustomEvent("novaTabelaAlunos", {}));
+    $(document).trigger('tabelaAtualizada');
 }
 
 function exibirInformacoes(disciplina){
