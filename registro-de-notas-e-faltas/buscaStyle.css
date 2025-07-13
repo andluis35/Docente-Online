@@ -16,6 +16,15 @@
     --font-titulo: 'Roboto Condensed', sans-serif;
 }
 
+#cabecalho{
+    background-color: #016ba5;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
 h1{ 
     word-break: keep-all;
     color: var(--cor-primaria);
@@ -42,8 +51,10 @@ a:hover {
     position: relative;
 
     border-color: var(--cor-primaria);
-    border-style: solid;
+    background-color: #f6f4f2;
     border-radius: 15px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     margin: 20px;
 
@@ -51,24 +62,46 @@ a:hover {
     flex-direction: column;
     align-items: center;
 
-    width:40vw;
-    height:80vh;
+    width:30vw;
+    height:85vh;
 }
 
 #direita{
     border-color: var(--cor-primaria);
-    border-style: solid;
+    background-color: #f6f4f2;
     border-radius: 15px;
 
     margin: 20px;
+    padding: 15px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: right;
 
-    width:40vw;
-    height:80vh;
+    width:55vw;
+    height:85vh;
+}
+
+#tabelaAlunos{
+    flex:1;
+}
+
+@media (max-width: 768px) {
+  #direita {
+    width:90vw;
+  }
+
+  #esquerda {
+    width:90vw;
+  }
+
+  #pagina {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 #resultadoBusca{
@@ -85,11 +118,16 @@ a:hover {
 }
 
 #busca{
-    background-color: rgb(216, 233, 255);
+    background-color: rgb(255, 255, 255);
+
+    border-color: #adadad;
+    border-radius: 10px;
+    border-width: 1px;
 
     font-size: 20px;
 
     margin: 10px;
+    margin-top: 25px;
     padding: 20px;
 
     width: 90%;
@@ -124,6 +162,7 @@ a:hover {
     width: 85%;
 
     background-color: rgb(230, 230, 230);
+    z-index: 1000;
 }
 
 .linhaHistorico{
@@ -132,8 +171,7 @@ a:hover {
 }
 
 .itemHistorico{
-    color: cornflowerblue;
-    font-weight: bold;
+    color: #0080c6;
 
     display: none;
 
@@ -218,7 +256,7 @@ input::placeholder {
 
 .itemLista{
     display: flex;
-    background-color: var(--fundo-item);
+    background-color: #ffffff;
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 10px;
@@ -240,10 +278,32 @@ input::placeholder {
 }
 
 .itemLista:hover{
-    background-color:  rgb(209, 209, 209);
+    filter: brightness(85%);
 }
 
-.itemLista:active {
-    background-color: var(--cor-secundaria);
-    color: var(--texto-sobre-fundo-escuro);
+
+/* =-=-=-= Personalização da barra de rolagem =-=-=-= */
+
+/* Barra de rolagem (trilho) */
+#resultadoBusca::-webkit-scrollbar {
+  width: 10px;
 }
+
+/* Fundo da barra */
+#resultadoBusca::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 0px;
+}
+
+/* Puxador da barra */
+#resultadoBusca::-webkit-scrollbar-thumb {
+  background-color: #cfcac0;
+  border-radius: 10px;
+}
+
+/* Puxador ao passar o mouse */
+#resultadoBusca::-webkit-scrollbar-thumb:hover {
+  background: #9a968d;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
