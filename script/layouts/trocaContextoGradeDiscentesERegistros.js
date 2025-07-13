@@ -9,7 +9,7 @@
  */
 
 $(function() {
-    let isDiscentesAtivo= Boolean(localStorage.getItem("isDiscentesAtivo"));
+    let isDiscentesAtivo= localStorage.getItem("isDiscentesAtivo") === "true";
 
     function exibirVersaoDiscentes() {
         isDiscentesAtivo = true;
