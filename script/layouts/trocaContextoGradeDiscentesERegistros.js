@@ -36,8 +36,8 @@ $(function() {
     $('#troca-contexto-btn').on('click', function(event) {
         event.preventDefault();
 
-        if (!isDiscentesAtivo) {
-            exibirVersaoDiscentes();
+        if (isDiscentesAtivo) {
+            exibirVersaoRegistros();
         }
     });
 
