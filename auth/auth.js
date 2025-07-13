@@ -1,4 +1,5 @@
 import { Navigate } from "../route/routes.js";
+import { getDocenteTurmas } from "../script/buscarDados.js";
 
 export function getSession() {
     /**Obtem os dados do usuario logado salvos no localStorage 
@@ -14,18 +15,26 @@ export function getSession() {
 
 export function endSession() {
     localStorage.removeItem('usuarioAutenticado');
-    localStorage.removeItem('docenteDiscip'); 
-    // alert('Você foi desconectado.');
+    localStorage.removeItem('docenteTurmas'); 
     Navigate.root()
 }
 
 export function fazerLogin(usuario, senha) {  
+    
     return buscarCredenciais(usuario, senha).then( docente => {
         if (!docente){
             // alert('Usuário ou senha inválidos.');
             return;
         }
         rememberAuthUser(docente);
+
+        // Salva docenteTurmas no localStorage no momento do login
+        let docenteTurmas = getDocenteTurmas(docente.matricula).then(turmas => {
+            console.log("Turmas salvas!: ", turmas);
+        }).catch(error => {
+            console.error("Erro ao carregar turmas: ", error);
+        });
+        
         Navigate.root();
         return true;
     }).catch(() => {
