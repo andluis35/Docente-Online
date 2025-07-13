@@ -1,18 +1,20 @@
 import {carregarAlunos, colocarAlunosTabela} from "./script.js"
 
-// Evento de zerar campo
-const inputs = document.querySelectorAll('.form-control.form-control-sm');
 
-inputs.forEach((input) => {
-	input.ondblclick = () => {
-		let minValue = input.min;
-		if (minValue == -0.1){		// Usa máscara de N/A para campos com mínimo de -0.1
-			input.value = "N/A";
-		}
-		else{ input.value = minValue; }
-	};
-});
-//Fim do evento de zerar campo
+window.addEventListener("DOMContentLoaded", () => {
+	// Evento de zerar campo
+	const inputs = document.querySelectorAll('.form-control.form-control-sm');
+	inputs.forEach((input) => {
+		input.ondblclick = () => {
+			let minValue = input.min;
+			if (minValue == -0.1){		// Usa máscara de N/A para campos com mínimo de -0.1
+				input.value = "N/A";
+			}
+			else{ input.value = minValue; }
+		};
+	});
+	//Fim do evento de zerar campo
+};
 
 
 export async function carregaFormulario(){
