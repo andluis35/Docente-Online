@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-uerj-azul-escuro rounded">
   <div class="container-fluid">
-    <a id="btn_home" class="navbar-brand" href="#">
+    <a class="navbar-brand btn-home" href="#">
       <img
         src="../assets/png/logo-branca.png"
         class="img-fluid"
@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbars">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a id="btn-disciplinas-periodo" class="nav-link text-white active" aria-current="page" href="#">
+          <a class="nav-link text-white active btn-disciplinas-periodo" aria-current="page" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -39,7 +39,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a id="btn-discentes-ativos" class="nav-link text-white active" aria-current="page" href="#">
+          <a class="nav-link text-white active btn-discentes-ativos" aria-current="page" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -56,7 +56,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a id="btn-registro-notas" class="nav-link text-white active" aria-current="page" href="#">
+          <a class="nav-link text-white active btn-registro-notas" aria-current="page" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
