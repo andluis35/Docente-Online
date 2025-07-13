@@ -35,6 +35,8 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
                         carregarAlunos(element.querySelector(".turmaID").textContent);
                     });
         });
+        document.dispatchEvent(new tabelaAlunosCriada("novaTabelaAlunos", {}));
+
     });
 });
 
