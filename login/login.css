@@ -81,7 +81,7 @@ a {
 #login{
     position:sticky;
     top: 20px;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
     padding: 60px;
     margin: 10px;
     margin-top: 0px;
@@ -135,7 +135,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
     padding: 30px;
     margin: 10px;
     margin-top: 0px;
@@ -236,8 +236,8 @@ img{
 }
 
 #aviso {
-    position: absolute;
-    top: calc(var(--font-size-titulo)* 4);
+    position: fixed;
+    top: calc(var(--font-size-titulo)* 0.4);
     width: 45%;
     left: 0;
     z-index: 3;
