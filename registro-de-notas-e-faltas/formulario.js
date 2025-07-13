@@ -148,7 +148,7 @@ function checaFormulario(){
 		}
 
 		// Checa se todos os campos são numéricos
-		if ( (isNaN(notaP1.trim())) || (isNaN(notaP2.trim())) || (isNaN(notaPF.trim())) || (isNaN(faltas.trim()))){
+		if ( (isNaN(notaP1)) || (isNaN(notaP2)) || (isNaN(notaPF)) || (isNaN(faltas)) ){
 			throw new Error("Existe(m) valor(es) não númericos no formulário. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 		}
 		
