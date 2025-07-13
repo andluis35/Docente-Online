@@ -15,6 +15,30 @@
           "disciplina": "IME04-10843",
           "turma": 1,
           "periodo": "2025/1"
+        },
+        {
+          "turmaID": "FIS01-10983 1 2025/1",
+          "disciplina": "FIS01-10983",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "turmaID": "IME04-10835 1 2025/1",
+          "disciplina": "IME04-10835",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "turmaID": "IME04-11311 1 2025/1",
+          "disciplina": "IME04-11311",
+          "turma": 1,
+          "periodo": "2025/1"
+        },
+        {
+          "turmaID": "IME04-11312 1 2025/1",
+          "disciplina": "IME04-11312",
+          "turma": 1,
+          "periodo": "2025/1"
         }
       ]
     },

@@ -35,7 +35,7 @@ function filtrarDisciplinas(){
     }
 }
 
-// =-=-=-=-=-=-=-=-=-= Código relacionado ao LocalStorage =-=-=-=-=-=-=-=-=-= //
+// =-=-=-=-=-=-=-=-=-= Código relacionado ao histórico =-=-=-=-=-=-=-=-=-= //
 
 let input = document.getElementById("busca");
 let sugestoes = document.getElementById("sugestoes");

@@ -12,8 +12,8 @@ export function getDocenteDisciplinas(matricula) {
             )
             const disciplinas = docentes.turmas.map (turmas => turmas.disciplina);
             
-            localStorage.setItem('docenteDiscip', JSON.stringify(disciplinas)); 
-            return disciplinas;
+            localStorage.setItem('docenteTurmas', JSON.stringify(turmas));
+            return turmas;
 
         }).catch(error => {
             console.error('Erro ao carregar o arquivo', error);
