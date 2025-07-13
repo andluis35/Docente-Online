@@ -84,11 +84,15 @@ $(document).on('click', '.btn-disciplinas-periodo', function(event) {
 
 $(document).on('click', '.btn-discentes-ativos', function(event) {
   event.preventDefault();
-    Navigate.notasEFaltas();
+  localStorage.setItem("isDiscentesAtivo", 'true')
+  Navigate.controleDiscentes();
+
 });
 
 $(document).on('click', '.btn-registro-notas', function(event) {
   event.preventDefault();
+  localStorage.setItem("isDiscentesAtivo", 'false')
+  Navigate.controleDiscentes();
   Navigate.notasEFaltas();
 });
 
