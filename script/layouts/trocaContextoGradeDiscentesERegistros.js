@@ -14,7 +14,7 @@ $(function() {
     function exibirVersaoDiscentes() {
         isDiscentesAtivo = true;
         $('.visao-registros').hide();
-        $('.visao-registros').show();
+        $('.visao-discente').show();
         // $('#troca-contexto').text('Discentes com Matrícula Ativa');
         $('#troca-contexto-titulo').text('Discentes com Matrícula Ativa');
         $('#troca-contexto-cabecalho').text('Discentes com Matrícula Ativa');
