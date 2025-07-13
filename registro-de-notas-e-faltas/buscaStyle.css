@@ -1,5 +1,44 @@
-h1{
+:root {
+    --cor-primaria: #016ba5;
+    --cor-secundaria: #0080c6;
+    --cor-terciaria: #bf9000;
+    --fundo-pagina: #ffffff;
+    --texto-sobre-fundo-escuro: #ffffff;
+    --texto-em-destaque: #df7026;
+    --texto-link: #337ab7;
+    --paragrafo: #333333;
+    --placeholder: #85888b;
+    --outro: #f37032;
+    --button-hover: deepskyblue;
+    --texto-on-button-hover: #ffffff;
+    --fundo-item: #f6f4f2;
+    --font-size-titulo: 6vh;
+    --font-titulo: 'Roboto Condensed', sans-serif;
+}
+
+#cabecalho{
+    background-color: #016ba5;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h1{ 
+    word-break: keep-all;
+    color: var(--cor-primaria);
+    font-family: var(--font-titulo);
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+
+a:hover {
+    color: var(--cor-terciaria);
 }
 
 #pagina{
@@ -11,8 +50,11 @@ h1{
 #esquerda{
     position: relative;
 
-    border-color: black;
-    border-style: solid;
+    border-color: var(--cor-primaria);
+    background-color: #f6f4f2;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     margin: 20px;
 
@@ -20,28 +62,51 @@ h1{
     flex-direction: column;
     align-items: center;
 
-    width:40vw;
-    height:80vh;
+    width:30vw;
+    height:85vh;
 }
 
 #direita{
-    border-color: black;
-    border-style: solid;
+    border-color: var(--cor-primaria);
+    background-color: #f6f4f2;
+    border-radius: 15px;
 
     margin: 20px;
+    padding: 15px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: right;
 
-    width:40vw;
-    height:80vh;
+    width:55vw;
+    height:85vh;
+}
+
+#tabelaAlunos{
+    flex:1;
+}
+
+@media (max-width: 768px) {
+  #direita {
+    width:90vw;
+  }
+
+  #esquerda {
+    width:90vw;
+  }
+
+  #pagina {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 #resultadoBusca{
     border-color: black;
-    border-style: solid;
+    /* border-style: solid; */
 
     margin: 15px;
 
@@ -49,14 +114,20 @@ h1{
     height:80%;
     overflow: scroll;
     overflow-x: hidden;
+    
 }
 
 #busca{
-    background-color: rgb(216, 233, 255);
+    background-color: rgb(255, 255, 255);
+
+    border-color: #adadad;
+    border-radius: 10px;
+    border-width: 1px;
 
     font-size: 20px;
 
     margin: 10px;
+    margin-top: 25px;
     padding: 20px;
 
     width: 90%;
@@ -91,6 +162,7 @@ h1{
     width: 85%;
 
     background-color: rgb(230, 230, 230);
+    z-index: 1000;
 }
 
 .linhaHistorico{
@@ -99,8 +171,7 @@ h1{
 }
 
 .itemHistorico{
-    color: cornflowerblue;
-    font-weight: bold;
+    color: #0080c6;
 
     display: none;
 
@@ -124,7 +195,7 @@ h1{
 
     padding: 10px;
     padding-left: 15px;
-
+    
     border: none;
     border-style: none;
 
@@ -140,7 +211,7 @@ h1{
     border: none;
 
     border-bottom: solid;
-    border-color: black;
+    border-color: var(--cor-terciaria);
     border-width: 1px;
 
     text-align: left;
@@ -150,9 +221,15 @@ h1{
     padding-left: 15px;
     padding-bottom: 20px;
     
+    margin-top: 2vh;
+
     border-bottom: solid;
     border-color: black;
     border-width: 1px;
+
+    div {
+        padding-top: 2vh;
+    }
 }
 
 .itemSugestao:hover{
@@ -163,6 +240,70 @@ h1{
     background-color:  rgb(209, 209, 209);
 }
 
-.itemLista:hover{
-    background-color:  rgb(209, 209, 209);
+
+
+input{
+    border: solid 2px var(--cor-primaria);
+    padding: 15px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
 }
+
+input::placeholder {
+    color: var(--placeholder);
+}
+
+.itemLista{
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    gap: 20px;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;   
+    }
+}
+
+.itemLista:hover{
+    filter: brightness(85%);
+}
+
+
+/* =-=-=-= Personalização da barra de rolagem =-=-=-= */
+
+/* Barra de rolagem (trilho) */
+#resultadoBusca::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Fundo da barra */
+#resultadoBusca::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 0px;
+}
+
+/* Puxador da barra */
+#resultadoBusca::-webkit-scrollbar-thumb {
+  background-color: #cfcac0;
+  border-radius: 10px;
+}
+
+/* Puxador ao passar o mouse */
+#resultadoBusca::-webkit-scrollbar-thumb:hover {
+  background: #9a968d;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */

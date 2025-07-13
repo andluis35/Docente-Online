@@ -12,7 +12,7 @@ export function getDocenteTurmas(matricula) {
             )
             const turmas = docentes.turmas.map (turma => turma.turmaID);
             
-            localStorage.setItem('docenteTurmas', JSON.stringify(turmas)); 
+            localStorage.setItem('docenteTurmas', JSON.stringify(turmas));
             return turmas;
 
         }).catch(error => {

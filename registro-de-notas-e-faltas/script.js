@@ -10,6 +10,7 @@ let alunos = [];
 
 let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
 
+
 fetch ("../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
@@ -31,12 +32,34 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
         });
         document.querySelectorAll('.itemLista').forEach(element => {
                     element.addEventListener('click', () => {
-                        exibirInformacoes(element.textContent);
+                        let disc = document.getElementById("infoDisc");
+                        disc.innerHTML = "";
+                        let h1 = document.createElement("h1");
+                        h1.textContent = (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim();
+                        disc.appendChild(h1);
+                        //exibirInformacoes(element.textContent);
                         carregarAlunos(element.querySelector(".turmaID").textContent);
+                        destacarDisciplina(element);
                     });
         });
     });
 });
+
+function destacarDisciplina(disciplinaAlvo){
+  let resultadoBusca = document.getElementById("disciplinas");
+  let disciplinas = Array.from(resultadoBusca.children);
+
+  disciplinas.forEach(element => {
+    if((disciplinaAlvo.textContent.match(/NOME:\s*(.*)\n/)[1]).trim() == (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim()){
+      element.style.backgroundColor="#0080c6";
+      element.style.color="#ffffff";
+    }
+    else{
+      element.style.backgroundColor="#ffffff";
+      element.style.color="#000000";
+    }
+  });
+}
 
 export async function carregarAlunos(turmaID){
     let turmasLocal = await carregaFormulario();
@@ -60,20 +83,19 @@ export function colocarAlunosTabela(){
  
   alunos.forEach(element => {
        // Renomeia -0.1 para ter diferenca entre nota 0 e nota nao dada.
-    let placeholderP1 = (element.notas.P1 == -0.1)?"N/A":element.notas.P1;
-    let placeholderP2 = (element.notas.P2 == -0.1)?"N/A":element.notas.P2;
-    let placeholderPF = (element.notas.PF == -0.1)?"N/A":element.notas.PF;
+    let placeholderP1 = (element.notas.P1 == -0.1)?"":element.notas.P1;
+    let placeholderP2 = (element.notas.P2 == -0.1)?"":element.notas.P2;
+    let placeholderPF = (element.notas.PF == -0.1)?"":element.notas.PF;
     let aluno = document.createElement("tr")
     aluno.innerHTML = 
     `<td>${numero}</td>
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
-      <td>${element.email}</td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" value=${placeholderP1}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" value=${placeholderP2}></td>
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" value=${placeholderPF}></td>
       <td class="celula-registros">${element.notas.mediaFinal}</td>
-      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" step="1" placeholder=${element.faltas}></td>`
+      <td class="celula-registros"><input type="number" class="form-control form-control-sm" min="0" step="1" value=${element.faltas}></td>`
 
       tabela.appendChild(aluno);
       numero = numero + 1;
@@ -121,22 +143,17 @@ INPUT_BUSCA.addEventListener("input", () => {
 });
 
 function filtrarDisciplinas(){
-  let expressaoDigitada = INPUT_BUSCA.value.toUpperCase();
-    let listaDisciplinas = divDisciplinas.getElementsByClassName('itemLista');
+  let expressaoDigitada = INPUT_BUSCA.value;
+  let listaDisciplinas = Array.from(divDisciplinas.getElementsByClassName('itemLista'));
 
-    for (let posicao in listaDisciplinas) {
-        if (isNaN(posicao)) {
-            continue;
-        }
-        let disciplina = listaDisciplinas[posicao].innerText.toUpperCase();
-        
-        if (disciplina.includes(expressaoDigitada)) {
-            listaDisciplinas[posicao].style.display = '';
-        }
-        else {
-            listaDisciplinas[posicao].style.display = 'none';
-        }
+  listaDisciplinas.forEach(element => {
+    element.style.display = "none";
+    let disciplinaOBJ = encontrarDisciplina(element.textContent.match(/NOME:\s*(.*)\n/)[1].trim());
+
+    if(infoPertenceDisciplina(disciplinaOBJ, expressaoDigitada)){
+      element.style.display = "";
     }
+  });
 }
 
 function salvarDisciplinas(element){
@@ -186,11 +203,14 @@ input.addEventListener("input", () => {
 input.addEventListener("focus", () => {
   exibirSugestoes(true);
   filtrarSugestoes(input.value);
+  input.style.borderColor="#016ba5";
 });
 
 input.addEventListener("blur", () => {
   setTimeout(() => {
     exibirSugestoes(false);
+  input.style.borderColor="#adadad";
+
   }, 100);
 });
 
@@ -203,7 +223,6 @@ function adicionarHistorico(texto){
     item.addEventListener("click", () => {
       input.value = item.textContent;
       filtrarDisciplinas();
-      exibirInformacoes(item.textContent);
     });
 
     let sugestoes = document.getElementById("sugestoes");
@@ -320,7 +339,6 @@ function adicionarSugestao(texto){
 
     let sugestoes = document.getElementById("sugestoes");
     sugestoes.prepend(item);
-    exibirInformacoes(item.textContent);
     filtrarDisciplinas();
   });
 
