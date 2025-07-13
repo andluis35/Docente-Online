@@ -1,5 +1,19 @@
 import {carregarAlunos, colocarAlunosTabela} from "./script.js"
 
+// Evento de zerar campo
+const inputs = document.querySelectorAll('.form-control.form-control-sm');
+
+inputs.forEach((input) => {
+	input.ondblclick = () => {
+		let minValue = input.min;
+		if (minValue == -0.1){		// Usa máscara de N/A para campos com mínimo de -0.1
+			input.value = "N/A";
+		}
+		else{ input.value = minValue; }
+	};
+});
+//Fim do evento de zerar campo
+
 
 export async function carregaFormulario(){
 	//Se turmasLocal foi atualizado antes, pega do localStorage. Senao, da fetch no json de turmasLocal e salva em variavel e no localStorage
@@ -108,6 +122,16 @@ function checaFormulario(){
 		let notaP2 = (child.children[5].children[0].value === "")?aluno.notas.P2:child.children[5].children[0].value;
 		let notaPF = (child.children[6].children[0].value === "")?aluno.notas.PF:child.children[6].children[0].value; 
 
+		if (notaP1 == "N/A"){
+			notaP1 = -0.1;
+		}
+		if (notaP2 == "N/A"){
+			notaP2 = -0.1;
+		}
+		if (notaPF == "N/A"){
+			notaPF = -0.1;
+		}
+		
 		//Numeros nao nulos pra conta da media final
 		let notaP1Conta = (notaP1 == -0.1)?0.0:notaP1;
 		let notaP2Conta = (notaP2 == -0.1)?0.0:notaP2;
