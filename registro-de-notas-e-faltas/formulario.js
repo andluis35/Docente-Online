@@ -2,10 +2,12 @@ import {carregarAlunos, colocarAlunosTabela} from "./script.js"
 
 
 window.addEventListener("DOMContentLoaded", () => {
+	console.log("DOM carregado");
 	// Evento de zerar campo
 	const inputs = document.querySelectorAll('.form-control.form-control-sm');
 	inputs.forEach((input) => {
 		input.addEventListener("dblclick", () => {
+			console.log("~ Input clicado 2x! ~");
 			let minValue = parseFloat(input.min);
 			if (minValue == -0.1){		// Usa máscara de N/A para campos com mínimo de -0.1
 				input.value = "N/A";
