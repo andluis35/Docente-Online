@@ -15,16 +15,16 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 4. [ ] Retirar tabela da direita em 'Registro de Notas e Faltas'
 5. [ ] Pintar disciplina selecionada (ou colocar somente um label abaixo da tabela dizendo qual é)
 6. [ ] min-width na tabela de 'Disciplinas do Período'
-7. [ ] Caminhos das abas 'Discentes com matrícula ativa na disciplina' e 'Registro de notas e faltas' estão levando para a mesma página (registro-de-notas-e-faltas/index.html)
+7. [x] Caminhos das abas 'Discentes com matrícula ativa na disciplina' e 'Registro de notas e faltas' estão levando para a mesma página (registro-de-notas-e-faltas/index.html)
 8. [ ] Ao digitar notas negativas, o formulário aceita (não deveria somente mostrar no console)
 9. [ ] Implementação de página simples do SAG (verificar foto)
-10. [ ] Alinhamento das notas à direita
+10. [x] Alinhamento das notas à direita
 11. [ ] Máscara de conversão de nota com vírgula para ponto
-12. [ ] Tirar e-mail da tabela de registrar notas em 'Registro de Notas e Faltas'
-13. [ ] Nova coluna 'Número de horas dadas'
+12. [x] Tirar e-mail da tabela de registrar notas em 'Registro de Notas e Faltas'
+13. [x] Nova coluna 'Número de horas dadas'
 14. [ ] Nova coluna 'Situação' (Reprovado por nota; Reprovado por falta; Aprovado)
-15. [ ] Retirar botão que trocam as páginas
-16. [ ] Reimplementar tela 'Discentes com matrícula ativa'
+15. [x] Retirar botão que trocam as páginas
+16. [x] Reimplementar tela 'Discentes com matrícula ativa'
 17. [ ] Transformar botão laranja 'Acesse a lista de Disciplinas' em um sidemenu
 18. [x] Retirar campo de busca da navbar
 19. [x] Aumentar tamanho ícones footer

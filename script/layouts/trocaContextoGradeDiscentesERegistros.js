@@ -14,19 +14,19 @@ $(function() {
     function exibirVersaoDiscentes() {
         isDiscentesAtivo = true;
         $('.visao-registros').hide();
-        $('#troca-contexto').text('Registro de Notas e Faltas');
-        $('#troca-contexto-titulo').text('Registro de Notas e Faltas');
-        $('#troca-contexto-cabecalho').text('Registro de Notas e Faltas');
-        console.log('Contexto: Discentes com Matrícula Ativa');
+        $('#troca-contexto').text('Registro de notas e faltas');
+        $('#troca-contexto-titulo').text('Registro de notas e faltas');
+        $('#troca-contexto-cabecalho').text('Registro de notas e faltas');
+        console.log('Contexto: Discentes com matrícula ativa');
     }
 
     function exibirVersaoRegistros() {
         isDiscentesAtivo = false;
         $('.visao-registros').show();
-        $('#troca-contexto').text('Discentes com Matrícula Ativa');
-        $('#troca-contexto-titulo').text('Discentes com Matrícula Ativa');
-        $('#troca-contexto-cabecalho').text('Discentes com Matrícula Ativa');
-        console.log('Contexto: Registro de Notas e Faltas');
+        $('#troca-contexto').text('Discentes com matrícula ativa');
+        $('#troca-contexto-titulo').text('Discentes com matrícula ativa');
+        $('#troca-contexto-cabecalho').text('Discentes com matrícula ativa');
+        console.log('Contexto: Registro de motas e faltas');
     }
 
 
