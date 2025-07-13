@@ -41,13 +41,18 @@ export class Navigate {
     window.location.href = fullPath("pagina-principal/subjects.html");
   }
 
-  static discentes() {
-    window.location.href = fullPath(
-      "discentes-com-matricula-ativa-na-disciplina/index.html"
-    );
-  }
+  // static discentes() {
+  //   window.location.href = fullPath(
+  //     "discentes-com-matricula-ativa-na-disciplina/index.html"
+  //   );
+  // }
 
-  static notasEFaltas() {
-    window.location.href = fullPath("registro-de-notas-e-faltas/index.html");
+  // static notasEFaltas() {
+  //   window.location.href = fullPath("registro-de-notas-e-faltas/index.html");
+  // }
+
+  static controleDiscentes(){
+    window.location.href = fullPath("controle-discentes/index.html");
   }
 }
+
