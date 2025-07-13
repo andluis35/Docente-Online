@@ -9,7 +9,7 @@
  */
 
 $(function() {
-    let isDiscentesAtivo = Boolean(localStorage.getItem("isDiscentesAtivo"));
+    let isDiscentesAtivo= Boolean(localStorage.getItem("isDiscentesAtivo"));
 
     function exibirVersaoDiscentes() {
         isDiscentesAtivo = true;
@@ -50,5 +50,9 @@ $(function() {
         }
     });
 
-    exibirVersaoRegistros();
+    if (isDiscentesAtivo) {
+        exibirVersaoDiscentes();
+    }else{
+        exibirVersaoRegistros();
+    }
 });
