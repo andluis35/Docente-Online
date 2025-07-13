@@ -15,7 +15,6 @@ $(function() {
         isDiscentesAtivo = true;
         $('.visao-registros').hide();
         $('.visao-discente').show();
-        $('#troca-contexto').text('Registro de notas e faltas');
         $('#troca-contexto-titulo').text('Discentes com Matrícula Ativa');
         $('#troca-contexto-cabecalho').text('Discentes com Matrícula Ativa');
         console.log('Contexto: Discentes com Matrícula Ativa');
@@ -25,7 +24,7 @@ $(function() {
         isDiscentesAtivo = false;
         $('.visao-registros').show();
         $('.visao-discente').hide();
-        // $('#troca-contexto').text('Registro de Notas e Faltas');
+        // $('#troca-contexto').text('Discentes com Matrícula Ativa');
         $('#troca-contexto-titulo').text('Registro de Notas e Faltas');
         $('#troca-contexto-cabecalho').text('Registro de Notas e Faltas');
         $('#troca-contexto-btn').hide();
