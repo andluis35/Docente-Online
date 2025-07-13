@@ -1,1084 +1,1044 @@
-{"turmas":[
-
-		{
-			"turmaID" : "IME01-04827 1 2025/1",
-			"alunos" : [
-					{
-                                                "nome": "João Pedro Oliveira Santos",
-                                                "matricula": 202200912332,
-                                                "e-mail": "jpos2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Larissa Cristina Moreira",
-                                                "matricula": 202000123582,
-                                                "e-mail": "lari.moreira@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Camila Duarte Nogueira",
-                                                "matricula": 202200891280,
-                                                "e-mail": "cami.eng2022@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Isabela Martins de Souza",
-                                                "matricula": 202200567931,
-                                                "e-mail": "isam.souza679@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Bruno César Monteiro",
-                                                "matricula": 202100912493,
-                                                "e-mail": "brunocesar@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-
-
-				]
-		},
-		{
-			"turmaID": "IME01-06766 1 2025/1",
-			"alunos" : [
-					{
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200123403,
-                                                "e-mail": "bia.dasilva@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "João Pedro Oliveira Santos",
-                                                "matricula": 202200912332,
-                                                "e-mail": "jpos2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Camila Duarte Nogueira",
-                                                "matricula": 202200891280,
-                                                "e-mail": "cami.eng2022@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Felipe Pereira dos Santos",
-                                                "matricula": 202200234608,
-                                                "e-mail": "f.psantos@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Gustavo Vinícius de Andrade",
-                                                "matricula": 202100678078,
-                                                "e-mail": "guh.vandrade@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-
-
-				]
-		},
-		{
-			"turmaID": "FIS01-10982 1 2025/1",
-			"alunos" : [
-					{
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200567853,
-                                                "e-mail": "ana.bea2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "João Pedro Oliveira Santos",
-                                                "matricula": 202200912332,
-                                                "e-mail": "jpos2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Lucas da Costa Ferreira",
-                                                "matricula": 202100678938,
-                                                "e-mail": "lucasfer.comp@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Matheus Henrique Cardoso",
-                                                "matricula": 202000456710,
-                                                "e-mail": "mhcardoso23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Camila Duarte Nogueira",
-                                                "matricula": 202200891280,
-                                                "e-mail": "cami.eng2022@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-
-
-				]
-		},
-		{
-			"turmaID": "FIS03-10983 1 2025/1",
-			"alunos" : [
-                                        {
-                                                "nome": "Lucas da Costa Ferreira",
-                                                "matricula": 202100678938,
-                                                "e-mail": "lucasfer.comp@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Camila Duarte Nogueira",
-                                                "matricula": 202200891280,
-                                                "e-mail": "cami.eng2022@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Felipe Pereira dos Santos",
-                                                "matricula": 202200234608,
-                                                "e-mail": "f.psantos@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Bruno César Monteiro",
-                                                "matricula": 202100912493,
-                                                "e-mail": "brunocesar@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Letícia Ramos Figueiredo",
-                                                "matricula": 202100345716,
-                                                "e-mail": "let.figueiredo@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-				]
-		},
-		{
-			"turmaID": "IME02-10815 1 2025/1",
-			"alunos" : [
-                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200567853,
-                                                "e-mail": "ana.bea2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "João Pedro Oliveira Santos",
-                                                "matricula": 202200912332,
-                                                "e-mail": "jpos2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Larissa Cristina Moreira",
-                                                "matricula": 202000123582,
-                                                "e-mail": "lari.moreira@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Matheus Henrique Cardoso",
-                                                "matricula": 202000456710,
-                                                "e-mail": "mhcardoso23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Camila Duarte Nogueira",
-                                                "matricula": 202200891280,
-                                                "e-mail": "cami.eng2022@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-
-
-				]
-		},
-		{
-			"turmaID": "IME02-10818 1 2025/1",
-			"alunos" : [
-					{
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200123403,
-                                                "e-mail": "bia.dasilva@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Mariana Costa Lima",
-                                                "matricula": 202100234504,
-                                                "e-mail": "mari.costa.lima@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Lucas da Costa Ferreira",
-                                                "matricula": 202100678938,
-                                                "e-mail": "lucasfer.comp@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Júlia Mendes Rocha",
-                                                "matricula": 202100345641,
-                                                "e-mail": "julinha.mr456@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Matheus Henrique Cardoso",
-                                                "matricula": 202000456710,
-                                                "e-mail": "mhcardoso23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-				]
-		},
-		{
-			"turmaID": "IME04-10834 1 2025/1",
-			"alunos" : [
-                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200567853,
-                                                "e-mail": "ana.bea2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Mariana Costa Lima",
-                                                "matricula": 202100234504,
-                                                "e-mail": "mari.costa.lima@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Júlia Mendes Rocha",
-                                                "matricula": 202100345641,
-                                                "e-mail": "julinha.mr456@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Rafael Augusto Almeida",
-                                                "matricula": 202000789037,
-                                                "e-mail": "rafael.ti23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Matheus Henrique Cardoso",
-                                                "matricula": 202000456710,
-                                                "e-mail": "mhcardoso23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-				]
-		},
-		{
-			"turmaID": "IME04-10835 1 2025/1",
-			"alunos" : [
-					                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200123403,
-                                                "e-mail": "bia.dasilva@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Mariana Costa Lima",
-                                                "matricula": 202100234504,
-                                                "e-mail": "mari.costa.lima@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Lucas da Costa Ferreira",
-                                                "matricula": 202100678938,
-                                                "e-mail": "lucasfer.comp@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Júlia Mendes Rocha",
-                                                "matricula": 202100345641,
-                                                "e-mail": "julinha.mr456@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Larissa Cristina Moreira",
-                                                "matricula": 202000123582,
-                                                "e-mail": "lari.moreira@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-
-
-				]
-		},
-		{
-			"turmaID": "IME04-10832 1 2025/1",
-			"alunos" : [
-					                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200123403,
-                                                "e-mail": "bia.dasilva@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "João Pedro Oliveira Santos",
-                                                "matricula": 202200912332,
-                                                "e-mail": "jpos2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Júlia Mendes Rocha",
-                                                "matricula": 202100345641,
-                                                "e-mail": "julinha.mr456@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Larissa Cristina Moreira",
-                                                "matricula": 202000123582,
-                                                "e-mail": "lari.moreira@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Matheus Henrique Cardoso",
-                                                "matricula": 202000456710,
-                                                "e-mail": "mhcardoso23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-
-
-				]
-		},
-		{
-			"turmaID": "IME04-10854 8 2025/1",
-			"alunos" : [
-					{
-                                                "nome": "Mariana Costa Lima",
-                                                "matricula": 202100234504,
-                                                "e-mail": "mari.costa.lima@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                  	{
-                                                "nome": "Lucas da Costa Ferreira",
-                                                "matricula": 202100678938,
-                                                "e-mail": "lucasfer.comp@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Júlia Mendes Rocha",
-                                                "matricula": 202100345641,
-                                                "e-mail": "julinha.mr456@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Rafael Augusto Almeida",
-                                                "matricula": 202000789037,
-                                                "e-mail": "rafael.ti23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Matheus Henrique Cardoso",
-                                                "matricula": 202000456710,
-                                                "e-mail": "mhcardoso23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-				]
-		},
-		{
-			"turmaID": "IME04-10836 1 2025/1",
-			"alunos" : [
-                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200123403,
-                                                "e-mail": "bia.dasilva@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200567853,
-                                                "e-mail": "ana.bea2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Mariana Costa Lima",
-                                                "matricula": 202100234504,
-                                                "e-mail": "mari.costa.lima@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Júlia Mendes Rocha",
-                                                "matricula": 202100345641,
-                                                "e-mail": "julinha.mr456@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Rafael Augusto Almeida",
-                                                "matricula": 202000789037,
-                                                "e-mail": "rafael.ti23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-				]
-		},
-		{
-			"turmaID": "IME04-10833 1 2025/1",
-			"alunos" : [
-                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200123403,
-                                                "e-mail": "bia.dasilva@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "João Pedro Oliveira Santos",
-                                                "matricula": 202200912332,
-                                                "e-mail": "jpos2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Mariana Costa Lima",
-                                                "matricula": 202100234504,
-                                                "e-mail": "mari.costa.lima@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Lucas da Costa Ferreira",
-                                                "matricula": 202100678938,
-                                                "e-mail": "lucasfer.comp@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Matheus Henrique Cardoso",
-                                                "matricula": 202000456710,
-                                                "e-mail": "mhcardoso23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-				]
-		},
-		{
-			"turmaID": "IME04-11311 1 2025/1",
-			"alunos" : [
-                                        {
-                                                "nome": "João Pedro Oliveira Santos",
-                                                "matricula": 202200912332,
-                                                "e-mail": "jpos2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Júlia Mendes Rocha",
-                                                "matricula": 202100345641,
-                                                "e-mail": "julinha.mr456@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Rafael Augusto Almeida",
-                                                "matricula": 202000789037,
-                                                "e-mail": "rafael.ti23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Larissa Cristina Moreira",
-                                                "matricula": 202000123582,
-                                                "e-mail": "lari.moreira@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Felipe Pereira dos Santos",
-                                                "matricula": 202200234608,
-                                                "e-mail": "f.psantos@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-				]
-		},
-		{
-			"turmaID": "IME04-11312 1 2025/1",
-			"alunos" : [
-                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200123403,
-                                                "e-mail": "bia.dasilva@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "João Pedro Oliveira Santos",
-                                                "matricula": 202200912332,
-                                                "e-mail": "jpos2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Felipe Pereira dos Santos",
-                                                "matricula": 202200234608,
-                                                "e-mail": "f.psantos@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Vitória Helena Cunha",
-                                                "matricula": 201800789234,
-                                                "e-mail": "vhcunha@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Natália Borges Menezes",
-                                                "matricula": 202201234592,
-                                                "e-mail": "nati.menezes.mat@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-
-
-				]
-		},
-		{
-			"turmaID" : "IME04-10843 1 2025/1",
-			"alunos" :[
-                                        {
-                                                "nome": "Ana Beatriz da Silva",
-                                                "matricula": 202200567853,
-                                                "e-mail": "ana.bea2025@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Rafael Augusto Almeida",
-                                                "matricula": 202000789037,
-                                                "e-mail": "rafael.ti23@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Gustavo Vinícius de Andrade",
-                                                "matricula": 202100678078,
-                                                "e-mail": "guh.vandrade@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Amanda Ribeiro Teixeira",
-                                                "matricula": 202000123617,
-                                                "e-mail": "amrt1236@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Leonardo Moura Bastos",
-                                                "matricula": 201900891383,
-                                                "e-mail": "leo.bastos2019@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-				]
-		},
-		{
-			"turmaID" : "IME04-10842 1 2025/1",
-			"alunos":[
-                                        {
-                                                "nome": "Larissa Cristina Moreira",
-                                                "matricula": 202000123582,
-                                                "e-mail": "lari.moreira@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Bruno César Monteiro",
-                                                "matricula": 202100912493,
-                                                "e-mail": "brunocesar@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Leonardo Moura Bastos",
-                                                "matricula": 201900891383,
-                                                "e-mail": "leo.bastos2019@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Nicole Azevedo Tavares",
-                                                "matricula": 201800123745,
-                                                "e-mail": "n.a.tavares@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        },
-                                        {
-                                                "nome": "Vitória Helena Cunha",
-                                                "matricula": 201800789234,
-                                                "e-mail": "vhcunha@uerj.br",
-                                                "notas":{
-                                                        "P1": -0.1,
-                                                        "P2": -0.1,
-                                                        "PF": -0.1,
-                                                        "mediaFinal": -0.1
-                                                },
-                                                "faltas": 0
-                                        }
-				]
-
-
-		}
-	]
+{
+  "turmas": [
+    {
+      "turmaID": "IME01-04827 1 2025/1",
+      "alunos": [
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "e-mail": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "e-mail": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "e-mail": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Isabela Martins de Souza",
+          "matricula": 202200567931,
+          "e-mail": "isam.souza679@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Bruno César Monteiro",
+          "matricula": 202100912493,
+          "e-mail": "brunocesar@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME01-06766 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "e-mail": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "e-mail": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "e-mail": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Felipe Pereira dos Santos",
+          "matricula": 202200234608,
+          "e-mail": "f.psantos@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Gustavo Vinícius de Andrade",
+          "matricula": 202100678078,
+          "e-mail": "guh.vandrade@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "FIS01-10982 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "e-mail": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "e-mail": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "e-mail": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "e-mail": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "e-mail": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "FIS03-10983 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "e-mail": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "e-mail": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Felipe Pereira dos Santos",
+          "matricula": 202200234608,
+          "e-mail": "f.psantos@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Bruno César Monteiro",
+          "matricula": 202100912493,
+          "e-mail": "brunocesar@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Letícia Ramos Figueiredo",
+          "matricula": 202100345716,
+          "e-mail": "let.figueiredo@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME02-10815 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "e-mail": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "e-mail": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "e-mail": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "e-mail": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "e-mail": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME02-10818 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "e-mail": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "e-mail": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "e-mail": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "e-mail": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "e-mail": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10834 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "e-mail": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "e-mail": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "e-mail": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "e-mail": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "e-mail": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10835 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "e-mail": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "e-mail": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "e-mail": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "e-mail": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "e-mail": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10832 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "e-mail": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "e-mail": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "e-mail": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "e-mail": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "e-mail": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10854 8 2025/1",
+      "alunos": [
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "e-mail": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "e-mail": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "e-mail": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "e-mail": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "e-mail": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10836 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "e-mail": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "e-mail": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "e-mail": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "e-mail": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "e-mail": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10833 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "e-mail": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "e-mail": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "e-mail": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "e-mail": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "e-mail": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-11311 1 2025/1",
+      "alunos": [
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "e-mail": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "e-mail": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "e-mail": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "e-mail": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Felipe Pereira dos Santos",
+          "matricula": 202200234608,
+          "e-mail": "f.psantos@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-11312 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "e-mail": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "e-mail": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Felipe Pereira dos Santos",
+          "matricula": 202200234608,
+          "e-mail": "f.psantos@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Vitória Helena Cunha",
+          "matricula": 201800789234,
+          "e-mail": "vhcunha@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Natália Borges Menezes",
+          "matricula": 202201234592,
+          "e-mail": "nati.menezes.mat@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10843 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "e-mail": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "e-mail": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Gustavo Vinícius de Andrade",
+          "matricula": 202100678078,
+          "e-mail": "guh.vandrade@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Amanda Ribeiro Teixeira",
+          "matricula": 202000123617,
+          "e-mail": "amrt1236@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Leonardo Moura Bastos",
+          "matricula": 201900891383,
+          "e-mail": "leo.bastos2019@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10842 1 2025/1",
+      "alunos": [
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "e-mail": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Bruno César Monteiro",
+          "matricula": 202100912493,
+          "e-mail": "brunocesar@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Leonardo Moura Bastos",
+          "matricula": 201900891383,
+          "e-mail": "leo.bastos2019@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Nicole Azevedo Tavares",
+          "matricula": 201800123745,
+          "e-mail": "n.a.tavares@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        },
+        {
+          "nome": "Vitória Helena Cunha",
+          "matricula": 201800789234,
+          "e-mail": "vhcunha@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": -0.1
+          },
+          "faltas": 0
+        }
+      ]
+    }
+  ]
 }

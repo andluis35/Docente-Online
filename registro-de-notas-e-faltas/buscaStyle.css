@@ -1,5 +1,35 @@
-h1{
+:root {
+    --cor-primaria: #016ba5;
+    --cor-secundaria: #0080c6;
+    --cor-terciaria: #bf9000;
+    --fundo-pagina: #ffffff;
+    --texto-sobre-fundo-escuro: #ffffff;
+    --texto-em-destaque: #df7026;
+    --texto-link: #337ab7;
+    --paragrafo: #333333;
+    --placeholder: #85888b;
+    --outro: #f37032;
+    --button-hover: deepskyblue;
+    --texto-on-button-hover: #ffffff;
+    --fundo-item: #f6f4f2;
+    --font-size-titulo: 6vh;
+    --font-titulo: 'Roboto Condensed', sans-serif;
+}
+
+h1{ 
+    word-break: keep-all;
+    color: var(--cor-primaria);
+    font-family: var(--font-titulo);
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+
+a:hover {
+    color: var(--cor-terciaria);
 }
 
 #pagina{
@@ -11,8 +41,9 @@ h1{
 #esquerda{
     position: relative;
 
-    border-color: black;
+    border-color: var(--cor-primaria);
     border-style: solid;
+    border-radius: 15px;
 
     margin: 20px;
 
@@ -25,8 +56,9 @@ h1{
 }
 
 #direita{
-    border-color: black;
+    border-color: var(--cor-primaria);
     border-style: solid;
+    border-radius: 15px;
 
     margin: 20px;
 
@@ -41,7 +73,7 @@ h1{
 
 #resultadoBusca{
     border-color: black;
-    border-style: solid;
+    /* border-style: solid; */
 
     margin: 15px;
 
@@ -49,6 +81,7 @@ h1{
     height:80%;
     overflow: scroll;
     overflow-x: hidden;
+    
 }
 
 #busca{
@@ -124,7 +157,7 @@ h1{
 
     padding: 10px;
     padding-left: 15px;
-
+    
     border: none;
     border-style: none;
 
@@ -140,7 +173,7 @@ h1{
     border: none;
 
     border-bottom: solid;
-    border-color: black;
+    border-color: var(--cor-terciaria);
     border-width: 1px;
 
     text-align: left;
@@ -150,9 +183,15 @@ h1{
     padding-left: 15px;
     padding-bottom: 20px;
     
+    margin-top: 2vh;
+
     border-bottom: solid;
     border-color: black;
     border-width: 1px;
+
+    div {
+        padding-top: 2vh;
+    }
 }
 
 .itemSugestao:hover{
@@ -163,6 +202,48 @@ h1{
     background-color:  rgb(209, 209, 209);
 }
 
+
+
+input{
+    border: solid 2px var(--cor-primaria);
+    padding: 15px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: var(--placeholder);
+}
+
+.itemLista{
+    display: flex;
+    background-color: var(--fundo-item);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    gap: 20px;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;   
+    }
+}
+
 .itemLista:hover{
     background-color:  rgb(209, 209, 209);
+}
+
+.itemLista:active {
+    background-color: var(--cor-secundaria);
+    color: var(--texto-sobre-fundo-escuro);
 }
