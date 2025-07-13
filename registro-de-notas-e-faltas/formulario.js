@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		};
 	});
 	//Fim do evento de zerar campo
-};
+});
 
 
 export async function carregaFormulario(){
