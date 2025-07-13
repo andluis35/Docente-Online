@@ -65,7 +65,7 @@ export function colocarAlunosTabela(){
     `<td>${numero}</td>
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
-      <td>${element.email}</td>
+      <td class="visao-discentes">${element.email}</td>
       <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
       <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
       <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
