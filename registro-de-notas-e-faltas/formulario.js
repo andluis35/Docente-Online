@@ -17,6 +17,10 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function trocaVirgulaFloat(str) {
+  return str.replace(",", ".");
+}
+
 export async function carregaFormulario(){
 	//Se turmasLocal foi atualizado antes, pega do localStorage. Senao, da fetch no json de turmasLocal e salva em variavel e no localStorage
 	let existeNovoTurmas = (localStorage.getItem("turmasLocal") !== null);
@@ -83,10 +87,9 @@ function salvaFormulario(turma){
 		if (notaPF == "N/A".trim()){
 			notaPF = -0.1;
 		}
-
-		
-
-
+		notaP1 = trocaVirgulaFloat(notaP1);
+		notaP2 = trocaVirgulaFloat(notaP2);
+		notaPF = trocaVirgulaFloat(notaPF);
 		
 		//Numeros nao nulos pra conta da media final
 		let notaP1Conta = (notaP1 == -0.1)?0.0:notaP1;
@@ -149,6 +152,10 @@ function checaFormulario(){
 			notaPF = -0.1;
 		}
 
+		notaP1 = trocaVirgulaFloat(notaP1);
+		notaP2 = trocaVirgulaFloat(notaP2);
+		notaPF = trocaVirgulaFloat(notaPF);
+		
 		// Checa se todos os campos são numéricos
 		if ( (isNaN(notaP1)) || (isNaN(notaP2)) || (isNaN(notaPF)) || (isNaN(faltas)) ){
 			throw new Error("Existe(m) valor(es) não númericos no formulário. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
