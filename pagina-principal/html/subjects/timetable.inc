@@ -1,5 +1,5 @@
 <section class="my-3 container-md">
-  <div class="table-responsive">
+  <div class="table-responsive" style="min-width: 300px">
     <table class="table table-sm table-striped table-hover table-bordered">
       <thead>
         <tr>
