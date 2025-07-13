@@ -65,12 +65,14 @@ export function colocarAlunosTabela(){
     `<td>${numero}</td>
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
-      <td>${element.email}</td>
-      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
-      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
-      <td class="visao-registros"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
-      <td class="visao-registros">${element.notas.mediaFinal}</td>
-      <td class="visao-registros">${element.faltas}</td>`
+      <td class="visao-discente">${element.email}</td>
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm text-end" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm text-end" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
+      <td class="visao-registros"><input type="number" class="form-control form-control-sm text-end" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
+      <td class="visao-registros text-end">${element.notas.mediaFinal}</td>
+      <td class="visao-registros text-end">${element.faltas}</td>
+      <td class="visao-registros"><!--TODO: Obter situação com base em faltas e critérios de nota. Obs.: A coluna já existe, falta esta célula.-->TODO</td>
+`
 
       tabela.appendChild(aluno);
       numero = numero + 1;

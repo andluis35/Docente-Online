@@ -50,4 +50,8 @@ export class Navigate {
   static notasEFaltas() {
     window.location.href = fullPath("registro-de-notas-e-faltas/index.html");
   }
+
+  static controleDiscentes(){
+    window.location.href = fullPath("controle-discentes/index.html");
+  }
 }
