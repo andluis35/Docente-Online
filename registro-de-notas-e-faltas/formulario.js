@@ -122,21 +122,21 @@ function checaFormulario(){
 		if ((notaP1<0) && (notaP1 != -0.1)
 		    || (notaP2<0) && (notaP2 != -0.1)
 		    || (notaPF<0) && (notaPF != -0.1)){
-				throw new Error("Existe(m) nota(s) negativa(s). Aluno ", child.children[0].textContent);
+				throw new Error("Existe(m) nota(s) negativa(s). (Erro no Aluno " + child.children[0].textContent + ").");
 		    }
 
 		if ((notaP1>10)
 		    || (notaP2>10)
 		    || (notaPF>10)){
-				throw new Error("Existe(m) nota(s) acima de 10. Aluno ", child.children[0].textContent);
+				throw new Error("Existe(m) nota(s) acima de 10. (Erro no Aluno " + child.children[0].textContent + ").");
 		    }
 		
 		if((notaMF>=7) && (notaPF != -0.1)){ //Aluno aprovado direto nao pode ter PF
-			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7). Aluno ", child.children[0].textContent);
+			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7). (Erro no Aluno " + child.children[0].textContent + ").");
 		}
 		
 		if((notaMF<4) && (notaPF != -0.1)){	//Aluno reprovado direto nao pode ter PF
-			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). Aluno ", child.children[0].textContent);
+			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). (Erro no Aluno " + child.children[0].textContent + ").");
 		}
 
 
@@ -148,10 +148,12 @@ function checaFormulario(){
 		let faltas = (child.children[8].children[0].value === "")?aluno.faltas:child.children[8].children[0].value;
 
 		if(faltas < 0){
-			throw new Error("Número de faltas não pode ser negativo!");
+			throw new Error("Número de faltas não pode ser negativo! (Erro no Aluno " + child.children[0].textContent + ").");
 		}
 
-
+		if ((faltas % 1) != 0){
+			throw new Error("Número de faltas deve ser inteiro! (Erro no Aluno " + child.children[0].textContent + ").");
+		}
 
 		
 		console.log("Aluno checado!");
