@@ -10,11 +10,11 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 ### Funcionalidades e Correções
 
 1. [x] Mensagens de resposta ao usuário (em caso de falha de autenticação / label "Login" e "Senha")
-2. [ ] Destaque maior para "Atenção aos prazos"
+2. [x] Destaque maior para "Atenção aos prazos"
 3. [ ] Página com dados do professor (botão ao lado do logout)
 4. [ ] Retirar tabela da direita em 'Registro de Notas e Faltas'
 5. [ ] Pintar disciplina selecionada (ou colocar somente um label abaixo da tabela dizendo qual é)
-6. [ ] min-width na tabela de 'Disciplinas do Período'
+6. [x] min-width na tabela de 'Disciplinas do Período'
 7. [x] Caminhos das abas 'Discentes com matrícula ativa na disciplina' e 'Registro de notas e faltas' estão levando para a mesma página (registro-de-notas-e-faltas/index.html)
 8. [ ] Ao digitar notas negativas, o formulário aceita (não deveria somente mostrar no console)
 9. [ ] Implementação de página simples do SAG (verificar foto)
@@ -25,7 +25,7 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 14. [ ] Nova coluna 'Situação' (Reprovado por nota; Reprovado por falta; Aprovado)
 15. [x] Retirar botão que trocam as páginas
 16. [x] Reimplementar tela 'Discentes com matrícula ativa'
-17. [ ] Transformar botão laranja 'Acesse a lista de Disciplinas' em um sidemenu
+17. [x] Transformar botão laranja 'Acesse a lista de Disciplinas' em um sidemenu
 18. [x] Retirar campo de busca da navbar
 19. [x] Aumentar tamanho ícones footer
 20. [x] Mudar ícone do relógio para 'table-clock' (Material Design Icons)

@@ -1,15 +1,6 @@
 <div class="container mb-3 mt-3">
-  <button
-    id="btn-docente-discip"
-    class="btn btn-primary"
-    type="button"
-    data-bs-toggle="offcanvas"
-    data-bs-target="#offcanvasList"
-  >
-    Acesse a lista de Disciplinas
-  </button>
 
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasList">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasList">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title text-uerj-amarelo">Lista de Disciplinas</h5>
       <button
