@@ -15,7 +15,7 @@ $(function() {
         isDiscentesAtivo = true;
         $('.visao-registros').hide();
         $('.visao-discente').show();
-        // $('#troca-contexto').text('Discentes com Matrícula Ativa');
+        $('#troca-contexto').text('Registro de notas e faltas');
         $('#troca-contexto-titulo').text('Discentes com Matrícula Ativa');
         $('#troca-contexto-cabecalho').text('Discentes com Matrícula Ativa');
         console.log('Contexto: Discentes com Matrícula Ativa');
