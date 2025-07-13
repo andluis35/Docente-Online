@@ -25,7 +25,7 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 14. [ ] Nova coluna 'Situação' (Reprovado por nota; Reprovado por falta; Aprovado)
 15. [ ] Retirar botão que trocam as páginas
 16. [ ] Reimplementar tela 'Discentes com matrícula ativa'
-17. [ ] Transformar botão laranja 'Acesse a lista de Disciplinas' em um sidemenu
+17. [x] Transformar botão laranja 'Acesse a lista de Disciplinas' em um sidemenu
 18. [x] Retirar campo de busca da navbar
 19. [x] Aumentar tamanho ícones footer
 20. [x] Mudar ícone do relógio para 'table-clock' (Material Design Icons)
