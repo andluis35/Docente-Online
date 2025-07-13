@@ -26,11 +26,11 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 15. [ ] Retirar botão que trocam as páginas
 16. [ ] Reimplementar tela 'Discentes com matrícula ativa'
 17. [ ] Transformar botão laranja 'Acesse a lista de Disciplinas' em um sidemenu
-18. [ ] Retirar campo de busca da navbar
-19. [ ] Aumentar tamanho ícones footer
-20. [ ] Mudar ícone do relógio para 'table-clock' (Material Design Icons)
-21. [ ] Mudar ícone das pessoas para 'account-group' (Material Design Icons)
-22. [ ] Mudar ícone das prancheta para 'clipboard-check-outline' (Material Design Icons)
+18. [x] Retirar campo de busca da navbar
+19. [x] Aumentar tamanho ícones footer
+20. [x] Mudar ícone do relógio para 'table-clock' (Material Design Icons)
+21. [x] Mudar ícone das pessoas para 'account-group' (Material Design Icons)
+22. [x] Mudar ícone das prancheta para 'clipboard-check-outline' (Material Design Icons)
 23. [ ] Legenda para as disciplinas ministradas pelo docente (Código - Disciplina)
 24. [ ] Filtro de busca em 'Disciplinas do Período' (Digitar código ou nome, destacando a disciplina digitada e escondendo as demais)
 25. [ ] Exibir código disciplinas com a turma (caracter unicode circled numbers) na tabela
