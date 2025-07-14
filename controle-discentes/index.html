@@ -1,142 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title id="troca-contexto-titulo">Registro de notas e faltas</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="troca-contexto-titulo">Registro de notas e faltas</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-              rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-              crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-        <link
-                rel="shortcut icon"
-                type="image/x-icon"
-                href="../assets/svg/logo.svg"
-        />
-        <link rel="stylesheet" href="./styles.css">
-        <link rel="stylesheet" href="../pagina-principal/css/list.css">
-        <link rel="stylesheet" href="../pagina-principal/css/footer.css">
-        <link rel="stylesheet" href="../pagina-principal/css/header.css">
-        <link rel="stylesheet" href="../pagina-principal/css/base.css">
-        <link rel="stylesheet" href="../pagina-principal/css/navbar.css">
-        <link rel="stylesheet" href="./buscaStyle.css">
-    </head>
-    <body class="d-flex flex-column vh-100 fonte-padrao">
-        <header class="w-100" id="header">
-            <!--Conteúdo injetado por script.-->
-        </header>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/svg/logo.svg"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="../pagina-principal/css/sidemenu.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../pagina-principal/css/list.css" />
+    <link rel="stylesheet" href="../pagina-principal/css/footer.css" />
+    <link rel="stylesheet" href="../pagina-principal/css/header.css" />
+    <link rel="stylesheet" href="../pagina-principal/css/base.css" />
+    <link rel="stylesheet" href="../pagina-principal/css/navbar.css" />
+    <link rel="stylesheet" href="./buscaStyle.css" />
+  </head>
+  <body class="d-flex flex-column vh-100 fonte-padrao">
+    <header class="w-100" id="header">
+      <!--Conteúdo injetado por script.-->
+    </header>
 
-        <main class="d-flex flex-grow-1 flex-column">
-            <div id="navbar">
-                <!--Conteúdo injetado por script.-->
+    <main class="d-flex flex-grow-1 flex-column">
+      <div id="navbar">
+        <!--Conteúdo injetado por script.-->
+      </div>
+
+      <div id="menu-fixo" class="container">
+        <!--Conteúdo injetado por script.-->
+      </div>
+
+      <section class="my-3 container-sm">
+        <h1 id="troca-contexto-cabecalho"></h1>
+        <div id="pagina">
+          <div id="esquerda">
+            <input
+              id="busca"
+              type="text"
+              placeholder="Buscar Disciplinas"
+              autocomplete="off"
+            />
+
+            <div id="sugestoes"></div>
+
+            <div id="resultadoBusca">
+              <div id="disciplinas"></div>
+            </div>
+          </div>
+
+          <div id="direita">
+            <div id="infoDisc">
+              <h1>Nenhuma disciplina selecionada</h1>
+            </div>
+            <div id="tabelaAlunos" class="table-responsive">
+              <table
+                class="table table-sm table-striped table-hover table-bordered"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">Número</th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col" class="visao-discentes">email</th>
+                    <th scope="col" class="visao-registros">Nota P1</th>
+                    <th scope="col" class="visao-registros">Nota P2</th>
+                    <th scope="col" class="visao-registros">Nota PF</th>
+                    <th scope="col" class="visao-registros">Média Final</th>
+                    <th scope="col" class="visao-registros">Total de faltas</th>
+                    <th scope="col" class="visao-registros">Situação</th>
+                  </tr>
+                </thead>
+
+                <tbody id="alunosTabela"></tbody>
+              </table>
             </div>
 
-            <div id="menu-fixo" class="container">
-                <!--Conteúdo injetado por script.-->
+            <div class="d-flex justify-content-between mt-3 btn-tabela">
+              <button type="button" class="btn btn-success visao-registros">
+                Salvar Notas
+              </button>
+              <button type="button" class="btn btn-warning visao-registros">
+                Enviar para Sistema Acadêmico de Graduação (SAG)
+              </button>
             </div>
+          </div>
+        </div>
 
-            <section class="my-3 container-sm">
-                <h1 id="troca-contexto-cabecalho"></h1>
-                <div id="pagina">
-                    <div id="esquerda">
-                        <input id="busca" type="text" placeholder="Buscar Disciplinas" autocomplete="off">
+        <div>
+          <button
+            class="btn btn-primary visao-discentes"
+            id="troca-contexto-btn"
+          >
+            Registro de notas e faltas
+          </button>
+        </div>
 
-                        <div id="sugestoes">
-                        </div>
+        <div class="mb-3"></div>
 
-                        <div id="resultadoBusca">
-                            <div id="disciplinas">
+        <div class="d-flex justify-content-between mt-5">
+          <button type="button" class="btn btn-danger btn-voltar">
+            Voltar
+          </button>
+          <a
+            href="mailto:dgti@uerj.br"
+            class="btn btn-primary"
+            aria-label="Enviar E-mail para DGTI"
+            title="Enviar E-mail"
+          >
+            <i class="bi bi-envelope-at-fill"></i>
+          </a>
+        </div>
+      </section>
+    </main>
 
-                            </div>
-                        </div>
+    <footer class="w-100" id="footer">
+      <!--Conteúdo injetado por script.-->
+    </footer>
 
-                    </div>
+    <script type="module" src="formulario.js"></script>
 
-                    <div id="direita">
-                        <div id="infoDisc">
-                            <h1>Nenhuma disciplina selecionada</h1>
-                        </div>
-                        <div id="tabelaAlunos" class="table-responsive">
-                            <table class="table table-sm table-striped table-hover table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Número</th>
-                                        <th scope="col">Matricula</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col" class="visao-discentes">email</th>
-                                        <th scope="col" class="visao-registros">Nota P1</th>
-                                        <th scope="col" class="visao-registros">Nota P2</th>
-                                        <th scope="col" class="visao-registros">Nota PF</th>
-                                        <th scope="col" class="visao-registros">Média Final</th>
-                                        <th scope="col" class="visao-registros">Total de faltas</th>
-                                        <th scope="col" class="visao-registros">Situação</th>
-                                    </tr>
-                                </thead>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
 
-                                <tbody id="alunosTabela">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-                                </tbody>
-                            </table>
-                        </div>
+    <script>
+      $(function () {
+        $("#navbar").load("../pagina-principal/html/main/navbar.inc");
+        $("#menu-fixo").load("../pagina-principal/html/list.inc");
+        $("#header").load("../pagina-principal/html/header.inc");
+        $("#footer").load("../pagina-principal/html/footer.inc");
+      });
+    </script>
 
-                        <div class="d-flex justify-content-between mt-3 btn-tabela">
-                            <button type="button" class="btn btn-success visao-registros">Salvar Notas</button>
-                            <button type="button" class="btn btn-warning visao-registros">Enviar para Sistema Acadêmico de Graduação (SAG)</button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div>
-                    <button class="btn btn-primary visao-discentes" id="troca-contexto-btn">
-                        Registro de notas e faltas
-                    </button>
-                </div>
-
-                <div class="mb-3">
-
-                </div>
-
-
-
-                <div class="d-flex justify-content-between mt-5">
-                    <button type="button" class="btn btn-danger btn-voltar"> Voltar</button>
-                    <a href="mailto:dgti@uerj.br" class="btn btn-primary" aria-label="Enviar E-mail para DGTI" title="Enviar E-mail">
-                        <i class="bi bi-envelope-at-fill"></i>
-                    </a>
-                </div>
-
-            </section>
-        </main>
-
-        <footer class="w-100" id ="footer">
-            <!--Conteúdo injetado por script.-->
-        </footer>
-
-        <script type="module" src="formulario.js"></script>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-                crossorigin="anonymous">
-        </script>
-        
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-        <script>
-            $(function() {
-                $('#navbar').load('../pagina-principal/html/main/navbar.inc');
-                $('#menu-fixo').load('../pagina-principal/html/list.inc');
-                $('#header').load('../pagina-principal/html/header.inc');
-                $('#footer').load('../pagina-principal/html/footer.inc');
-            });
-        </script>
-
-        <script type='module' src="../script/layouts/trocaContextoGradeDiscentesERegistros.js"></script>
-        <script type="module" src="./script.js"></script>
-        <script type="module" src="../script/navegacaoLayoutBase.js"></script>
-    </body>
+    <script
+      type="module"
+      src="../script/layouts/trocaContextoGradeDiscentesERegistros.js"
+    ></script>
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="../script/navegacaoLayoutBase.js"></script>
+  </body>
 </html>
