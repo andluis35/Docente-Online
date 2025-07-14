@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 			await carregarAlunos(turmaIDAtual);
 		} catch(error){
 			console.error("Erro!: ", error);
+			document.dispatchEvent(new CustomEvent("erroFormulario", {detail: error }));
 		}
 	});
 });
@@ -160,6 +161,7 @@ function checaFormulario(){
 		
 	let turma = turmasLocal.turmas.find(t => t.turmaID == turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
 
+	let err = null;
 	for(const child of tbody.children){
 		let matricula = child.children[1].textContent;		// Le matricula do aluno na tabela
 		let aluno = turma.alunos.find(aluno => aluno.matricula == matricula)	// Procura aluno na lista de alunos da turma usando matricula
@@ -204,42 +206,159 @@ function checaFormulario(){
 		console.log("P2:", notaP2);
 		console.log("MF:", notaMF);
 
-		if ((notaP1<0) && (notaP1 != -0.1)
-		    || (notaP2<0) && (notaP2 != -0.1)
-		    || (notaPF<0) && (notaPF != -0.1)){
-				throw new Error("Existe(m) nota(s) negativa(s). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
-		    }
-
-		if ((notaP1>10)
-		    || (notaP2>10)
-		    || (notaPF>10)){
-				throw new Error("Existe(m) nota(s) acima de 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
-		    }
-		
-		if((notaMF>=7) && (notaPF != -0.1)){ //Aluno aprovado direto nao pode ter PF
-			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+		// Erros de nota negativa
+		if ((notaP1<0) && (notaP1 != -0.1)){
+			err = new Error("Nota P1 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+			err.errorList = [1];
+			err.alunoList = [child.children[0].textContent];
+			err.errorCamp = [child.children[4].children[0]];
 		}
-		
-		if((notaMF<4) && (notaPF != -0.1)){	//Aluno reprovado direto nao pode ter PF
-			throw new Error("Nota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+		if ((notaP2<0) && (notaP2 != -0.1)){
+			if (err == null){
+				err = new Error("Nota P2 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [2];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[5].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota P2 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(2);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[5].children[0]);
+			}
+		}	
+		if ((notaPF<0) && (notaPF != -0.1)){
+			if (err == null){
+				err = new Error("Nota PF deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [3];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[6].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota PF deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(3);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[6].children[0]);
+			}
 		}
 
+		//Erros de nota acima de 10
+		if (notaP1>10){
+			if (err == null){
+				err = new Error("Nota P1 deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [4];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[4].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota P1 deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(4);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[4].children[0]);
+			}
+		}
+		if (notaP2>10){
+			if (err == null){
+				err = new Error("Nota P2 deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [5];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[5].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota P2 deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(5);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[5].children[0]);
+			}
+		}	
+		if (notaPF>10){
+			if (err == null){
+				err = new Error("Nota PF deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [6];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[6].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota PF deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(6);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[6].children[0]);
+			}
+		}
 
+		//Aluno aprovado direto nao pode ter PF
+		if((notaMF>=7) && (notaPF != -0.1)){
+			if (err == null){
+				err = new Error("Nota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [7];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[6].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(7);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[6].children[0]);
+			}
+		}
+
+		//Aluno reprovado direto nao pode ter PF
+		if((notaMF<4) && (notaPF != -0.1)){
+			if (err == null){
+				err = new Error("Nota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [8];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[6].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(8);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[6].children[0]);
+			}
+		}
 		
 					/* CHECA FALTAS */
-
+		//Faltas negativas
 		if(faltas < 0){
-			throw new Error("Número de faltas não pode ser negativo! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+			if (err == null){
+				err = new Error("Número de faltas não pode ser negativo! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [9];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[8].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNúmero de faltas não pode ser negativo! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(9);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[8].children[0]);
+			}
 		}
 
+		//Faltas nao inteiras
 		if ((faltas % 1) != 0){
-			throw new Error("Número de faltas deve ser inteiro! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+			if (err == null){
+				err = new Error("Número de faltas deve ser inteiro! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [10];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamp = [child.children[8].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNúmero de faltas deve ser inteiro! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(10);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamp.push(child.children[8].children[0]);
+			}
 		}
-
-		
 		console.log("Aluno checado!");
 	}
 	console.log("Toda a turma foi checada!");
+
+	//Se achou erros, lança todos de uma vez
+	if (err != null){
+		throw err;
+	}
+
 	// Se nenhum erro foi encontrado, guarda novas notas
 	salvaFormulario(turma);
 }
