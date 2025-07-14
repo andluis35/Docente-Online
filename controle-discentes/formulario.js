@@ -142,6 +142,7 @@ function salvaFormulario(turma){
 		aluno.notas.P2 = notaP2;
 		aluno.notas.PF = notaPF;
 		aluno.notas.mediaFinal = notaMF;
+		aluno.faltas = faltas;
 		console.log("Aluno salvo!");
 	}
 	// Salva JSON atualizado no localStorage
