@@ -99,6 +99,28 @@ export function colocarAlunosTabela(){
     let placeholderP1 = (element.notas.P1 == -0.1)?"":element.notas.P1;
     let placeholderP2 = (element.notas.P2 == -0.1)?"":element.notas.P2;
     let placeholderPF = (element.notas.PF == -0.1)?"":element.notas.PF;
+
+    //Trata display de situação do aluno
+    let situacao = element.situacao;
+    let corSituacao = "color:black";
+
+    switch(situacao){
+      case "Aprovação":
+        corSituacao = "color: green";
+        break;
+      case "Reprovação por faltas":
+        corSituacao = "color:#DAA52";
+        break;
+      case "Reprovação por notas":
+        corSituacao = "color: orange";
+        break;
+      case "Prova Final":
+        corSituacao = "color: blue";
+        break;
+      default:
+        corSituacao = "color:black";
+        break;
+        
     let aluno = document.createElement("tr");
     aluno.innerHTML = 
     `<td>${numero}</td>
@@ -110,7 +132,7 @@ export function colocarAlunosTabela(){
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm text-end inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
       <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm text-end inputFaltas" min="0" step="1" placeholder=${element.faltas}></td>
-      <td class="visao-registros"> TODO </td>
+      <td class="visao-registros situacao-aluno" style =${corSituacao}>${element.faltas}</td>
     `;
 
       tabela.appendChild(aluno);
