@@ -22,11 +22,21 @@
   border-color: #e05d1f;
 }
 
+.btn-primary:focus {
+  background-color: #e05d1f;
+  border-color: #e05d1f;
+}
+
 .btn-secondary {
   background-color: #dfa40e;
   border-color: #dfa40e;
 }
 .btn-secondary:hover {
+  background-color: #b38208;
+  border-color: #b38208;
+}
+
+.btn-secondary:focus {
   background-color: #b38208;
   border-color: #b38208;
 }

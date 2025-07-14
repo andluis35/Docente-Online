@@ -22,6 +22,8 @@
     <link href="css/base.css" rel="stylesheet" />
     <link href="css/header.css" rel="stylesheet" />
     <link href="css/navbar.css" rel="stylesheet" />
+    <link href="css/sidemenu.css" rel="stylesheet" />
+    <!--teste-->
     <link href="css/list.css" rel="stylesheet" />
     <link href="css/calendar.css" rel="stylesheet" />
     <link href="css/footer.css" rel="stylesheet" />
@@ -32,7 +34,9 @@
       });
       $(function () {
         $("#navbar").load("html/main/navbar.inc");
-        // aplicarIcones();
+      });
+      $(function () {
+        $("#list").load("html/sidemenu.inc");
       });
       $(function () {
         $("#list").load("html/list.inc");
@@ -51,6 +55,7 @@
   <body>
     <div id="header"></div>
     <div id="navbar"></div>
+    <div id="sidemenu"></div>
     <div id="list"></div>
     <div class="container" id="calendar"></div>
     <div id="welcome"></div>
