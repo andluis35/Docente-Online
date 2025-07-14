@@ -102,23 +102,23 @@ export function colocarAlunosTabela(){
 
     //Trata display de situação do aluno
     let situacao = element.situacao;
-    let corSituacao = "color:black";
+    let corSituacao = 'color:black';
 
     switch(situacao){
       case "Aprovação":
-        corSituacao = "color: green";
+        corSituacao = 'color: green';
         break;
       case "Reprovação por faltas":
-        corSituacao = "color:#DAA520";
+        corSituacao = 'color:#DAA520';
         break;
       case "Reprovação por notas":
-        corSituacao = "color: orange";
+        corSituacao = 'color: orange';
         break;
       case "Prova Final":
-        corSituacao = "color: blue";
+        corSituacao = 'color: blue';
         break;
       default:
-        corSituacao = "color:black";
+        corSituacao = 'color:black';
         break;
     }
         
@@ -133,7 +133,7 @@ export function colocarAlunosTabela(){
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm text-end inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
       <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm text-end inputFaltas" min="0" step="1" placeholder=${element.faltas}></td>
-      <td class="visao-registros situacao-aluno" style =${corSituacao}>${element.situacao}</td>
+      <td class="visao-registros situacao-aluno" style="${corSituacao}">${element.situacao}</td>
     `;
 
       tabela.appendChild(aluno);
