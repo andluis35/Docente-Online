@@ -109,7 +109,7 @@ export function colocarAlunosTabela(){
         corSituacao = "color: green";
         break;
       case "Reprovação por faltas":
-        corSituacao = "color:#DAA52";
+        corSituacao = "color:#DAA520";
         break;
       case "Reprovação por notas":
         corSituacao = "color: orange";
@@ -120,6 +120,7 @@ export function colocarAlunosTabela(){
       default:
         corSituacao = "color:black";
         break;
+    }
         
     let aluno = document.createElement("tr");
     aluno.innerHTML = 
