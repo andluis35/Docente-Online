@@ -77,6 +77,7 @@ export async function carregaFormulario(){
 
 let turmasLocal = null;
 let tbody = null;
+let camposMarcados = null;
 //Assim que carregar a pagina
 document.addEventListener("DOMContentLoaded", async () => {
 	tbody = document.getElementById("alunosTabela");
@@ -91,6 +92,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 		} catch(error){
 			console.error("Erro!: ", error);
 
+			if (camposMarcados != null){
+				//Desmarca campos marcados anteriormente em outro erro
+				for(let i = 0; i < camposMarcados.length; i++){
+					error.errorCamps[i].style.border = "";
+				}
+			}
+			else{
+				//Salva campos a serem marcados
+				camposMarcados = error.errorCamps;
+			}
 			//Vai em cada campo que deu erro e marca com uma borda tracejada
 			for(let i = 0; i < error.errorCamps.length; i++){
 				error.errorCamps[i].style.border = "2px dashed red";
