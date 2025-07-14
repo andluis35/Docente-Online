@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 			if (camposMarcados != null){
 				//Desmarca campos marcados anteriormente em outro erro
 				for(let i = 0; i < camposMarcados.length; i++){
-					error.errorCamps[i].style.border = "";
+					camposMarcados[i].style.border = "";
 				}
 			}
 			else{
