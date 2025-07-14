@@ -104,10 +104,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 	});
 });
 
-
-document.addEventListener("btnErroClicado", function(e) {
+errorPopUpButton.addEventListener("click", () => {
 	console.log("botão de erro clicado!");
-	errorPopUpConteiner.style.visibility = hidden;
+	errorPopUpConteiner.style.visibility = "hidden";
 });
 
 
