@@ -194,10 +194,63 @@ function checaFormulario(){
 		notaPF = trocaVirgulaFloat(notaPF.toString());
 		
 		// Checa se todos os campos são numéricos
-		if ( (isNaN(notaP1)) || (isNaN(notaP2)) || (isNaN(notaPF)) || (isNaN(faltas)) ){
-			throw new Error("Existe(m) valor(es) não númericos no formulário. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+		if (isNaN(notaP1)){
+			if (err == null){
+				err = new Error("Nota P1 deve ser numérica (ou N/A). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [11];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamps = [child.children[4].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota P1 deve ser numérica (ou N/A). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(11);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamps.push(child.children[4].children[0]);
+			}
 		}
-
+		if (isNaN(notaP2)){
+			if (err == null){
+				err = new Error("Nota P2 deve ser numérica (ou N/A). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [12];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamps = [child.children[5].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota P2 deve ser numérica (ou N/A). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(12);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamps.push(child.children[5].children[0]);
+			}
+		}
+		if (isNaN(notaPF)){
+			if (err == null){
+				err = new Error("Nota PF deve ser numérica (ou N/A). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [13];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamps = [child.children[6].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota PF deve ser numérica (ou N/A). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(13);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamps.push(child.children[6].children[0]);
+			}
+			
+		}
+		if (isNaN(faltas)){
+			if (err == null){
+				err = new Error("Número de faltas deve ser numérico. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [14];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamps = [child.children[8].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNúmero de faltas deve ser numérico. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(14);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamps.push(child.children[8].children[0]);
+			}
+		}
 		notaP1 = Number(notaP1);
 		notaP2 = Number(notaP2);
 		notaPF = Number(notaPF);
@@ -215,10 +268,18 @@ function checaFormulario(){
 
 		// Erros de nota negativa
 		if ((notaP1<0) && (notaP1 != -0.1)){
-			err = new Error("Nota P1 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
-			err.errorList = [1];
-			err.alunoList = [child.children[0].textContent];
-			err.errorCamps = [child.children[4].children[0]];
+			if (err == null){
+				err = new Error("Nota P1 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
+				err.errorList = [1];
+				err.alunoList = [child.children[0].textContent];
+				err.errorCamps = [child.children[4].children[0]];
+			}
+			else{
+				err.message = err.message + "\nNota P1 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
+				err.errorList.push(1);
+				err.alunoList.push(child.children[0].textContent);
+				err.errorCamps.push(child.children[4].children[0]);
+			}
 		}
 		if ((notaP2<0) && (notaP2 != -0.1)){
 			if (err == null){
