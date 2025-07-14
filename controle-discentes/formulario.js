@@ -157,7 +157,7 @@ function salvaFormulario(turma){
 
 function checaFormulario(){
 		
-	let turma = turmasLocal.turmas.find(turma => turma.turmaID === turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
+	let turma = turmasLocal.turmas.find(t => t.turmaID == turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
 
 	for(const child of tbody.children){
 		let matricula = child.children[1].textContent;		// Le matricula do aluno na tabela
