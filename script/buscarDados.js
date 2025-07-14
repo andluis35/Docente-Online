@@ -1,25 +1,25 @@
-export function getDocenteDisciplinas(matricula) {
+export function getDocenteTurmas(matricula) {
     /**Parametro: Matricula do docente
-     * Retorna uma lista com o código das disciplinas, exemplo: ["IME04-12345", "IME04-12345"] */
-    const docenteDiscip = localStorage.getItem('docenteDiscip')
+     * Retorna uma lista com o ID turmas exemplo: ["IME04-12345 1 2025/1", "IME04-12345 4 2023/2"] */
+    const docenteTurmas = localStorage.getItem('docenteTurmas');
 
-    if (!docenteDiscip) {
+    if (!docenteTurmas) {
         return fetch('../data/docentes-turmas.json')
         .then(response => response.json())
         .then(data => {
             const docentes = data.docentes.find(
-                d => d.matricula === matricula
+                d => d.matricula == matricula
             )
-            const disciplinas = docentes.turmas.map (turmas => turmas.disciplina);
+            const turmas = docentes.turmas.map (turma => turma.turmaID);
             
-            localStorage.setItem('docenteTurmas', JSON.stringify(turmas));
+            localStorage.setItem('docenteTurmas', JSON.stringify(turmas)); 
             return turmas;
 
         }).catch(error => {
             console.error('Erro ao carregar o arquivo', error);
         });
     }else {
-        return Promise.resolve(JSON.parse(docenteDiscip));
+        return Promise.resolve(JSON.parse(docenteTurmas));
     }
 }
 
@@ -32,7 +32,7 @@ export function getDisciplina(codigoDisciplina) {
         link: URL para a ementa oficial da disciplina (ex: "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10842"
     */
 
-    return fetch('../data/disciplinas.json')
+    return fetch('../data/NOVO-disciplinas.json')
     .then(response => response.json())
     .then(data => {
         const disciplina = data.disciplinas.find(
@@ -45,10 +45,24 @@ export function getDisciplina(codigoDisciplina) {
     });
 }
 
+export function getTurma(turmaID) {
+    return getDisciplina(turmaID.split(" ")[0]).then( disciplina => {
+        const turma = disciplina.turmas.find(t => t.turmaID === turmaID);
+        return {
+            "codigo": disciplina.codigo,
+            "nome": disciplina.nome,
+            "numero": turma.numero,
+            "horario": turma.horario,
+            "ementa": disciplina.ementa
+        }
+    })
+}
+
 export function getAlunos(codigoDisciplina, numeroTurma) {
     return fetch('../data/OUTRO-turmas.json')
     .then(response => response.json())
     .then(data => {
+        console.log("getAlunos - codigoDisciplina: " + codigoDisciplina + " numeroTurma: " + numeroTurma)
         const turma = data.turmas.find(
             t => t.turmaID === `${codigoDisciplina} ${numeroTurma} 2025/1`
         )

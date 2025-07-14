@@ -1,21 +1,24 @@
-import { getDisciplina, getAlunos } from "../script/buscarDados.js";
+import { getDisciplina, getAlunos, getTurma } from "../script/buscarDados.js";
 
 
-const codigoDisciplina = localStorage.getItem("disciplinaClicada");
+// const codigoDisciplina = localStorage.getItem("disciplinaClicada");
+const turmaClicada = localStorage.getItem("turma-clicada");
+console.log("Turma clicada: " + turmaClicada)
 
-getDisciplina(codigoDisciplina).then( disciplina => {
+getTurma(turmaClicada).then( turma => {
     preencherInfo(
-        codigoDisciplina, 
-        disciplina.nome,
-        disciplina.turma,
-        disciplina.horario,
-        disciplina.link
+        turma.codigo, 
+        turma.nome,
+        turma.numero,
+        turma.horario,
+        turma.ementa
     );
-    construirTabela(codigoDisciplina, disciplina.turma);
+    console.log("AlunosInscritos.js getDisciplina \n" + JSON.stringify(turma, null, 2))
+    construirTabela(turma.codigo, turma.numero);
 })
 
 
-function preencherInfo(codigoDiscip, nome, turma, listaHorarios, urlEmenta){
+function preencherInfo(codigoDiscip, nome, numeroTurma, listaHorarios, urlEmenta){
     const componenteInfoDiscip = document.getElementById('info-disciplina')
 
     let horarios = '';
@@ -28,7 +31,7 @@ componenteInfoDiscip.innerHTML = `
     <div style="display: grid; grid-template-columns: max-content 1fr; gap: 2px 16px; text-align: left;">
       <span class="h5"><strong>DISCIPLINA:</strong></span>  <span class="h5">${codigoDiscip}</span>
       <span class="h5"><strong>NOME:</strong></span>         <span class="h5">${nome}</span>
-      <span class="h5"><strong>TURMA:</strong></span>        <span class="h5">${turma}</span>
+      <span class="h5"><strong>TURMA:</strong></span>        <span class="h5">${numeroTurma}</span>
       <span class="h5"><strong>HORÁRIOS:</strong></span>     <span class="h5" style="white-space: pre;">${horarios}</span>
       <span class="h5"><strong>EMENTA:</strong></span>       <span class="h5"><a href="${urlEmenta}" target="_blank">CONSULTAR EMENTA</a></span>
     </div>
