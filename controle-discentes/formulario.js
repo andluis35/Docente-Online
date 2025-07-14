@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 			//Vai em cada campo que deu erro e marca com uma borda tracejada
 			for(let i = 0; i < error.errorCamps.length; i++){
-				errorCamp[i].style.border = "2px dashed red";
+				error.errorCamps[i].style.border = "2px dashed red";
 			}
 
 			//Cria evento de erro no DOM
