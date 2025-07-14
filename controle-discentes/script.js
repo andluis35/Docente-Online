@@ -48,7 +48,7 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
                         destacarDisciplina(element);
 
                         //Dispara evento no DOM informando a turma selecionada
-                        document.dispatchEvent(new CustomEvent("turmaTrocadaFormulario", {
+                        document.dispatchEvent(new CustomEvent("trocaTurmaFormulario", {
                           detail:{
                             turmaID: element.children[1].textContent
                           }
