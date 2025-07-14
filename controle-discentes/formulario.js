@@ -127,6 +127,8 @@ function salvaFormulario(turma){
 		let notaPF = (child.children[6].children[0].value === "")?aluno.notas.PF:child.children[6].children[0].value; 
 		let faltas = (child.children[8].children[0].value === "")?aluno.faltas:child.children[8].children[0].value;
 
+		let situacao = "";
+
 		if (notaP1 == "N/A".trim()){
 			notaP1 = -0.1;
 		}
@@ -150,18 +152,45 @@ function salvaFormulario(turma){
 		let notaP2Conta = (notaP2 == -0.1)?0.0:notaP2;
 
 		let notaMF = (+notaP1Conta + +notaP2Conta)/2;
-		
-		if ((notaMF >= 4) && (notaMF < 7) && (notaPF != -0.1)){
-			notaMF = (+notaMF + +notaPF)/2;
+
+		if ((notaP1 == -0.1)|| (notaP2 == -0.1)){	// Se P1 ou P2 não foram registradas
+			if ((notaP1 == -0.1) && !(notaP2 == -0.1)){	// Campo P1 vazio, mas P2 cheio
+				situacao = "Esperando P1";
+			}
+			else if (!(notaP1 == -0.1) && (notaP2 == -0.1)){	// Campo P1 cheio, mas P2 vazio
+				situacao = "Esperando P2";
+			}
+			else{		// Ambos P1 e P2 vazios
+				situacao = "Esperando P1 e P2";
+			}
+		}
+		else{	// Se P1 e P2 foram registradas
+			//Aprovado direto
+			if (notaMF >= 7){ situacao = "Aprovação"; }
+
+			//Reprovado direto
+			else if (notaMF < 4){ situacao = "Reprovação por nota"; }
+
+			//Prova final necessária
+			else{
+				if (notaPF != -0.1){
+					notaMF = (+notaMF + +notaPF)/2;
+					situacao = (notaMF >= 5) ? "Aprovação" : "Reprovação por nota";
+				}
+				else{
+					situacao = "Prova Final";
+				}
+			}
 		}
 
-		if (notaMF < 0) notaMF = 0;
-
+		//if (notaMF < 0) notaMF = 0;
+		
 		aluno.notas.P1 = notaP1;
 		aluno.notas.P2 = notaP2;
 		aluno.notas.PF = notaPF;
 		aluno.notas.mediaFinal = notaMF;
 		aluno.faltas = faltas;
+		aluno.situacao = situacao;
 		console.log("Aluno salvo!");
 	}
 	// Salva JSON atualizado no localStorage
@@ -189,7 +218,6 @@ function checaFormulario(){
 		let notaP2 = (child.children[5].children[0].value === "")?aluno.notas.P2:child.children[5].children[0].value;
 		let notaPF = (child.children[6].children[0].value === "")?aluno.notas.PF:child.children[6].children[0].value; 
 		let faltas = (child.children[8].children[0].value === "")?aluno.faltas:child.children[8].children[0].value;
-		
 		if (notaP1 == "N/A".trim()){
 			notaP1 = -0.1;
 		}
