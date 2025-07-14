@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 			console.error("Erro!: ", error);
 
 			//Vai em cada campo que deu erro e marca com uma borda tracejada
-			for(let i = 0; i < error.errorCamp.length; i++){
+			for(let i = 0; i < error.errorCamps.length; i++){
 				errorCamp[i].style.border = "2px dashed red";
 			}
 
