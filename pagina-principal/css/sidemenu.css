@@ -1,0 +1,15 @@
+#btn-docente-discip {
+  writing-mode: vertical-lr;
+  position: fixed;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  z-index: 1045;
+  white-space: nowrap;
+  height: auto;
+  animation: pulse_mensagem 2s infinite;
+}
+
+#btn-docente-discip svg {
+  margin-right: 0.8rem;
+}

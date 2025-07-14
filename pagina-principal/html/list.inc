@@ -1,6 +1,25 @@
-<div class="container mb-3 mt-3">
+<button
+    id="btn-docente-discip"
+    class="btn btn-secondary"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasList"
+    aria-label="Abrir lista de disciplinas"
+  >
+<svg 
+  xmlns="http://www.w3.org/2000/svg"
+  width="16"
+  height="16"
+  fill = currentColor
+  viewBox="0 0 20 20">
+  <title>arrow-left-bold</title>
+  <path d="M20,9V15H12V19.84L4.16,12L12,4.16V9H20Z" />
+</svg>
+  <span class="fw-bold">Lista de Disciplinas</span>
+</button>
 
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasList">
+<div class="container mb-3 mt-3">
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasList">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title text-uerj-amarelo">Lista de Disciplinas</h5>
       <button
