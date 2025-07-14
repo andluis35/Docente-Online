@@ -13,7 +13,6 @@ $(function() {
 
     function exibirVersaoDiscentes() {
         isDiscentesAtivo = true;
-        $('.visao-email-registros').show();
         $('.visao-registros').hide();
         $('.visao-discentes').show();
         $('#troca-contexto-titulo').text('Discentes com matrícula ativa');
@@ -23,7 +22,6 @@ $(function() {
 
     function exibirVersaoRegistros() {
         isDiscentesAtivo = false;
-         $('.visao-email-registros').hide();
         $('.visao-registros').show();
         $('.visao-discentes').hide();
         $('#troca-contexto-titulo').text('Registro de notas e faltas');
