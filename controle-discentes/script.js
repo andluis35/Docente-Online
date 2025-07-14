@@ -99,7 +99,7 @@ export function colocarAlunosTabela(){
     let placeholderP1 = (element.notas.P1 == -0.1)?"":element.notas.P1;
     let placeholderP2 = (element.notas.P2 == -0.1)?"":element.notas.P2;
     let placeholderPF = (element.notas.PF == -0.1)?"":element.notas.PF;
-    let aluno = document.createElement("tr")
+    let aluno = document.createElement("tr");
     aluno.innerHTML = 
     `<td>${numero}</td>
       <td>${element.matricula}</td>
@@ -111,7 +111,7 @@ export function colocarAlunosTabela(){
       <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" placeholder=${element.faltas}></td>
       <td class="visao-registros"> TODO </td>
-    `
+    `;
 
       tabela.appendChild(aluno);
       numero = numero + 1;
