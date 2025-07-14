@@ -14,7 +14,7 @@ export function getSession() {
 
 export function endSession() {
     localStorage.removeItem('usuarioAutenticado');
-    localStorage.removeItem('docenteDiscip'); 
+    localStorage.removeItem('docenteTurmas'); 
     // alert('Você foi desconectado.');
     Navigate.root()
 }
