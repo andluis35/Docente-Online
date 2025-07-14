@@ -1,7 +1,7 @@
 import {carregarAlunos, colocarAlunosTabela} from "./script.js"
 
 let turmaIDAtual = null;
-let errorPopUpConteiner = window.querySelector("#error-popup-conteiner");
+let errorPopUpConteiner = document.querySelector("#error-popup-conteiner");
 let errorPopUpList = errorPopUpConteiner.children[0];
 let errorPopUpButton = errorPopUpConteiner.children[1];
 document.addEventListener("novaTabelaAlunos", () => {
