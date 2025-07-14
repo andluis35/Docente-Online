@@ -87,11 +87,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 		console.log("botao salva clicado!");
 		try{
 			checaFormulario();
+			await carregarAlunos(turmaIDAtual);
 		} catch(error){
 			console.error("Erro!: ", error);
 		}
-
-		await carregarAlunos(turmaIDAtual);
 	});
 });
 
