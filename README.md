@@ -12,8 +12,8 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 1. [x] Mensagens de resposta ao usuário (em caso de falha de autenticação / label "Login" e "Senha")
 2. [x] Destaque maior para "Atenção aos prazos"
 3. [ ] Página com dados do professor (botão ao lado do logout)
-4. [ ] Retirar tabela da direita em 'Registro de Notas e Faltas'
-5. [ ] Pintar disciplina selecionada (ou colocar somente um label abaixo da tabela dizendo qual é)
+4. [x] Retirar tabela da direita em 'Registro de Notas e Faltas'
+5. [x] Pintar disciplina selecionada (ou colocar somente um label abaixo da tabela dizendo qual é)
 6. [x] min-width na tabela de 'Disciplinas do Período'
 7. [x] Caminhos das abas 'Discentes com matrícula ativa na disciplina' e 'Registro de notas e faltas' estão levando para a mesma página (registro-de-notas-e-faltas/index.html)
 8. [ ] Ao digitar notas negativas, o formulário aceita (não deveria somente mostrar no console)
@@ -33,5 +33,9 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 22. [x] Mudar ícone das prancheta para 'clipboard-check-outline' (Material Design Icons)
 23. [ ] Legenda para as disciplinas ministradas pelo docente (Código - Disciplina)
 24. [ ] Filtro de busca em 'Disciplinas do Período' (Digitar código ou nome, destacando a disciplina digitada e escondendo as demais)
-25. [ ] Exibir código disciplinas com a turma (caracter unicode circled numbers) na tabela
+25. [x] Exibir código disciplinas com a turma (caracter unicode circled numbers) na tabela
 26. [x] Tirar alert do logout
+27. [] Tem ementa e ementario, deixar apenas uma escrita
+28. [] Tirar o voltar do notas para alunos com matricula ativa
+29. [] Nota não ficar com cara de placeholder
+30. [] A disciplina ficar selecionada com o autocompletar
