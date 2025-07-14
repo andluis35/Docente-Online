@@ -20,8 +20,8 @@
     min-width: 3rem
 }
 
-.table > tbody > tr > td > input[placeholder]{
-    text-align: center;
+.table > tbody > tr > td > input[value]{
+    text-align: right;
 }
 
 @media (max-width: 600px){
