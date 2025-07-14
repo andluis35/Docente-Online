@@ -29,16 +29,6 @@ $(function() {
         console.log('Contexto: Registro de notas e faltas');
     }
 
-
-    $('#troca-contexto-btn').on('click', function(event) {
-        event.preventDefault();
-
-        if (isDiscentesAtivo) {
-            exibirVersaoRegistros();
-        }
-    });
-
-
     $(document).on('tabelaAtualizada', function(event) {
         if (isDiscentesAtivo) {
             exibirVersaoDiscentes();
