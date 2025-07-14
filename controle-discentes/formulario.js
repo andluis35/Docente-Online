@@ -92,10 +92,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 				let errorLine = document.createElement("li");
     				
 				errorLine.innerHTML = 
-    				`<span>Erro ${numero}: </span>
+    				`<span>${numero} - Erro ${error.errorList[numero-1]}: </span>
       				<span>${e}</span>`;
 				
-      				tabela.appendChild(aluno);
+      				errorPopUpList.appendChild(errorLine);
       				numero = numero + 1;
 				
 			});
