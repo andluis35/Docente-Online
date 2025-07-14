@@ -46,6 +46,13 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
                         //exibirInformacoes(element.textContent);
                         carregarAlunos(element.querySelector(".turmaID").textContent);
                         destacarDisciplina(element);
+
+                        //Dispara evento no DOM informando a turma selecionada
+                        document.dispatchEvent(new CustomEvent("turmaTrocadaFormulario", {
+                          detail:{
+                            turmaID: element.children[1].textContent
+                          }
+                        }));
                     });
         });
     });
