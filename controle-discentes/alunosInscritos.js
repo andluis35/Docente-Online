@@ -35,11 +35,6 @@ componenteInfoDiscip.innerHTML = `
       <span class="h5"><strong>HORÁRIOS:</strong></span>     <span class="h5" style="white-space: pre;">${horarios}</span>
       <span class="h5"><strong>EMENTA:</strong></span>       <span class="h5"><a href="${urlEmenta}" target="_blank">CONSULTAR EMENTA</a></span>
     </div>
-    <div class="mt-3">
-      <a href="" class="btn btn-primary btn-registro-notas">
-        Registro de faltas e notas da disciplina
-      </a>
-    </div>
   </div>
 `;
 
@@ -58,23 +53,16 @@ function construirTabela(codigoDisciplina, turma) {
         alunos.forEach((aluno, index) => {
             let linhaAluno = document.createElement("tr");
             linhaAluno.innerHTML =
-                `
-                    <!-- <td>${index + 1}</td> -->
-                    <!-- <td>${aluno.matricula}</td> -->
-                    <!-- <td>${aluno.nome}</td> -->
-                    <!-- <td>${aluno["e-mail"]}</td> -->
-                    
-                    <td>${index + 1}</td>
-                    <td>${aluno.matricula}</td>
-                    <td>${aluno.nome}</td>
-                    <td class="visao-discentes">${aluno["e-mail"]}</td>
-                    <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
-                    <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
-                    <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
-                    <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
-                    <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${element.faltas}></td>
-                    <td class="visao-registros"> TODO </td>
-                `;
+                `<td>${index + 1}</td>
+                <td>${aluno.matricula}</td>
+                <td>${aluno.nome}</td>
+                <td class="visao-discentes">${aluno["e-mail"]}</td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
+                <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${element.faltas}></td>
+                <td class="visao-registros"> TODO </td>`;
             tbody.appendChild(linhaAluno);
         });
     });
@@ -83,26 +71,24 @@ function construirTabela(codigoDisciplina, turma) {
 
 function construirCabecalho(componenteTabela) {
     componenteTabela.innerHTML =
-        `
-            <table class="table table-sm table-striped table-hover table-bordered">
-                <thead> 
-                    <tr>
-                        <th scope="col">Número</th>
-                        <th scope="col">Matricula</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col" class="visao-discentes">email</th>
-                        <th scope="col" class="visao-registros">Nota P1</th>
-                        <th scope="col" class="visao-registros">Nota P2</th>
-                        <th scope="col" class="visao-registros">Nota PF</th>
-                        <th scope="col" class="visao-registros">Média Final</th>
-                        <th scope="col" class="visao-registros">Total de faltas</th>
-                        <th scope="col" class="visao-registros">Situação</th>
-                    </tr>
-                </thead>
-        
-                <tbody id="alunosTabela"></tbody>
-            </table>
-        `;
+        `<table class="table table-sm table-striped table-hover table-bordered">
+            <thead> 
+                <tr>
+                    <th scope="col">Número</th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col" class="visao-discentes">email</th>
+                    <th scope="col" class="visao-registros">Nota P1</th>
+                    <th scope="col" class="visao-registros">Nota P2</th>
+                    <th scope="col" class="visao-registros">Nota PF</th>
+                    <th scope="col" class="visao-registros">Média Final</th>
+                    <th scope="col" class="visao-registros">Total de faltas</th>
+                    <th scope="col" class="visao-registros">Situação</th>
+                </tr>
+            </thead>
+    
+            <tbody id="alunosTabela"></tbody>
+        </table>`;
     const tbody = componenteTabela.querySelector("#alunosTabela");
     return tbody;
 }
