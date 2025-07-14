@@ -90,7 +90,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 			await carregarAlunos(turmaIDAtual);
 		} catch(error){
 			console.error("Erro!: ", error);
-			document.dispatchEvent(new CustomEvent("erroFormulario", {detail: error }));
+
+			//Vai em cada campo que deu erro e marca com uma borda tracejada
+			for(let i = 0; i < error.errorCamp.length; i++){
+				errorCamp[i].style.border = "2px dashed red";
+			}
+
+			//Cria evento de erro no DOM
+			document.dispatchEvent(new CustomEvent("erroFormulario", {detail: error}));
 		}
 	});
 });
@@ -211,20 +218,20 @@ function checaFormulario(){
 			err = new Error("Nota P1 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 			err.errorList = [1];
 			err.alunoList = [child.children[0].textContent];
-			err.errorCamp = [child.children[4].children[0]];
+			err.errorCamps = [child.children[4].children[0]];
 		}
 		if ((notaP2<0) && (notaP2 != -0.1)){
 			if (err == null){
 				err = new Error("Nota P2 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [2];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[5].children[0]];
+				err.errorCamps = [child.children[5].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNota P2 deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(2);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[5].children[0]);
+				err.errorCamps.push(child.children[5].children[0]);
 			}
 		}	
 		if ((notaPF<0) && (notaPF != -0.1)){
@@ -232,13 +239,13 @@ function checaFormulario(){
 				err = new Error("Nota PF deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [3];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[6].children[0]];
+				err.errorCamps = [child.children[6].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNota PF deve ser positiva. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(3);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[6].children[0]);
+				err.errorCamps.push(child.children[6].children[0]);
 			}
 		}
 
@@ -248,13 +255,13 @@ function checaFormulario(){
 				err = new Error("Nota P1 deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [4];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[4].children[0]];
+				err.errorCamps = [child.children[4].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNota P1 deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(4);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[4].children[0]);
+				err.errorCamps.push(child.children[4].children[0]);
 			}
 		}
 		if (notaP2>10){
@@ -262,13 +269,13 @@ function checaFormulario(){
 				err = new Error("Nota P2 deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [5];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[5].children[0]];
+				err.errorCamps = [child.children[5].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNota P2 deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(5);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[5].children[0]);
+				err.errorCamps.push(child.children[5].children[0]);
 			}
 		}	
 		if (notaPF>10){
@@ -276,13 +283,13 @@ function checaFormulario(){
 				err = new Error("Nota PF deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [6];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[6].children[0]];
+				err.errorCamps = [child.children[6].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNota PF deve ser menor que 10. (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(6);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[6].children[0]);
+				err.errorCamps.push(child.children[6].children[0]);
 			}
 		}
 
@@ -292,13 +299,13 @@ function checaFormulario(){
 				err = new Error("Nota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [7];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[6].children[0]];
+				err.errorCamps = [child.children[6].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNota PF diferente de N/A, mas P1 e P2 já aprovam sozinhas! ((P1+P2)/2 >=7). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(7);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[6].children[0]);
+				err.errorCamps.push(child.children[6].children[0]);
 			}
 		}
 
@@ -308,13 +315,13 @@ function checaFormulario(){
 				err = new Error("Nota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [8];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[6].children[0]];
+				err.errorCamps = [child.children[6].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNota PF diferente de N/A, mas P1 e P2 já reprovam sozinhas! ((P1+P2)/2 <4). (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(8);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[6].children[0]);
+				err.errorCamps.push(child.children[6].children[0]);
 			}
 		}
 		
@@ -325,13 +332,13 @@ function checaFormulario(){
 				err = new Error("Número de faltas não pode ser negativo! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [9];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[8].children[0]];
+				err.errorCamps = [child.children[8].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNúmero de faltas não pode ser negativo! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(9);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[8].children[0]);
+				err.errorCamps.push(child.children[8].children[0]);
 			}
 		}
 
@@ -341,13 +348,13 @@ function checaFormulario(){
 				err = new Error("Número de faltas deve ser inteiro! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").");
 				err.errorList = [10];
 				err.alunoList = [child.children[0].textContent];
-				err.errorCamp = [child.children[8].children[0]];
+				err.errorCamps = [child.children[8].children[0]];
 			}
 			else{
 				err.message = err.message + "\nNúmero de faltas deve ser inteiro! (Erro no(a) Aluno(a) " + child.children[0].textContent + ").";
 				err.errorList.push(10);
 				err.alunoList.push(child.children[0].textContent);
-				err.errorCamp.push(child.children[8].children[0]);
+				err.errorCamps.push(child.children[8].children[0]);
 			}
 		}
 		console.log("Aluno checado!");
