@@ -12,7 +12,8 @@
 								"PF": -0.1,
 								"mediaFinal": 7.25
 							},
-						"faltas": 0
+						"faltas": 0,
+						"situacao": "Aprovação"
 					},
 					{
 						"nome": "Thiago Emanuel Correia",
@@ -24,7 +25,8 @@
 								"PF": 7,
 								"mediaFinal": 6.75
 							},
-						"faltas": 5
+						"faltas": 5,
+						"situacao": "Aprovação"
 					}
 				]
 		},
@@ -41,7 +43,8 @@
 								"PF": 8,
 								"mediaFinal": 6.75
 							},
-						"faltas": 3
+						"faltas": 3,
+						"situacao": "Aprovação"
 					},
 					{
 						"nome": "Daniel Luiz Barros",
@@ -53,7 +56,8 @@
 								"PF": -0.1,
 								"mediaFinal": 7.25
 							},
-						"faltas": 1
+						"faltas": 1,
+						"situacao": "Aprovação"
 					}
 				]
 
@@ -70,7 +74,8 @@
 								"PF": -0.1,
 								"mediaFinal": 6.7
 							},
-						"faltas": 0
+						"faltas": 0,
+						"situacao": "Prova Final"
 					},
 					{
 						"nome": "André Emanuel Correia",
@@ -82,7 +87,8 @@
 								"PF": 7,
 								"mediaFinal": 6.75
 							},
-						"faltas": 5
+						"faltas": 5,
+						"situacao": "Aprovação"
 					}
 				]
 		}		
