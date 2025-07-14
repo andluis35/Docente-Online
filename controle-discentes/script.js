@@ -133,7 +133,7 @@ export function colocarAlunosTabela(){
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm text-end inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
       <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm text-end inputFaltas" min="0" step="1" placeholder=${element.faltas}></td>
-      <td class="visao-registros situacao-aluno" style =${corSituacao}>${element.faltas}</td>
+      <td class="visao-registros situacao-aluno" style =${corSituacao}>${element.situacao}</td>
     `;
 
       tabela.appendChild(aluno);
