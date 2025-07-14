@@ -16,7 +16,7 @@
     --font-titulo: 'Roboto Condensed', sans-serif;
 }
 
-#cabecalho{
+.cabecalho{
     background-color: #016ba5;
     color: white;
     border-radius: 20px;
