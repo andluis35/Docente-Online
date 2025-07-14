@@ -1,8 +1,9 @@
 import {carregarAlunos, colocarAlunosTabela} from "./script.js"
 
-
 let turmaIDAtual = null;
-let errotPopUp = 
+let errorPopUpConteiner = window.querySelector("#error-popup-conteiner");
+let errorPopUpList = errorPopUpConteiner.children[0];
+let errorPopUpButton = errorPopUpConteiner.children[1];
 document.addEventListener("novaTabelaAlunos", () => {
 	console.log("tabela carregada!");
 	// Evento de zerar campo
@@ -83,11 +84,32 @@ document.addEventListener("DOMContentLoaded", async () => {
 				error.errorCamps[i].style.border = "2px dashed red";
 			}
 
-			//Cria evento de erro no DOM
-			document.dispatchEvent(new CustomEvent("erroFormulario", {detail: error}));
+			//Atualiza html com lista dos erros encontrados
+			let allErrors = error.message.split("\n");
+			//Numero na sequencia de erros, nao o codigo do erro em si
+			let numero = 1;
+			allErrors.forEach(e => {
+				let errorLine = document.createElement("li");
+    				
+				errorLine.innerHTML = 
+    				`<span>Erro ${numero}: </span>
+      				<span>${e}</span>`;
+				
+      				tabela.appendChild(aluno);
+      				numero = numero + 1;
+				
+			});
+			errorPopUpConteiner.style.visibility = visible;
 		}
 	});
 });
+
+
+document.addEventListener("btnErroClicado", function(e) {
+	console.log("botão de erro clicado!");
+	errorPopUpConteiner.style.visibility = hidden;
+});
+
 
 
 function salvaFormulario(turma){
