@@ -1,5 +1,9 @@
 import {carregarAlunos, colocarAlunosTabela} from "./script.js"
 
+
+let turmaIDAtual = null;
+
+
 /*
 window.addEventListener("DOMContentLoaded", () => {
 	console.log("DOM carregado");
@@ -41,7 +45,10 @@ document.addEventListener("novaTabelaAlunos", () => {
 	//Fim do evento de zerar campo
 });
 
-
+document.addEventListener("trocaTurmaFormulario", function(e) {
+	console.log("turma trocada!");
+	turmaIDAtual = e.detail.turmaID;
+});
 
 function trocaVirgulaFloat(str) {
   return str.replace(",", ".");
@@ -84,8 +91,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 			console.error("Erro!: ", error);
 		}
 
-		let disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
-		let turmaIDAtual = disciplinaDet.querySelector(".turmaID").textContent;	//Pega turmaID da turma atualizada
 		await carregarAlunos(turmaIDAtual);
 	});
 });
@@ -152,8 +157,6 @@ function salvaFormulario(turma){
 }
 
 function checaFormulario(){
-	let disciplinaDet = document.getElementsByClassName("disciplinaDetalhada")[0];
-	let turmaIDAtual = disciplinaDet.querySelector(".turmaID").textContent;	//Pega turmaID da turma atualizada
 		
 	let turma = turmasLocal.turmas.find(turma => turma.turmaID === turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
 
