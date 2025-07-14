@@ -39,7 +39,9 @@
         $("#search").load("html/subjects/search.inc");
       });
       $(function () {
-        $("#timetable").load("html/subjects/timetable.inc");
+        $("#timetable").load("html/subjects/timetable.inc", function () {
+        preencherTabelaHorarios();
+        });
       });
       $(function () {
         $("#footer").load("html/footer.inc");
@@ -69,6 +71,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="../script/navegacaoLayoutBase.js"></script>
-    <script type="module" src="js/disciplinas.js"></script>
+    <script src="js/gradeDeHorarios.js"></script>
   </body>
 </html>
