@@ -8,31 +8,32 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
-let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
 
+function trocaPontoFloat(str) {
+  return str.replace(".", ",");
+}
+
+let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
 
 fetch ("../data/NOVO-disciplinas.json").then((response) => {
     response.json().then((info) => {
         info.disciplinas.map((disciplina) => {
 
-            salvarDisciplinas(disciplina);
+            disciplina.turmas.forEach(turma =>{
+                if(docenteTurmas.find(tID => tID == turma.turmaID)){    // Só utiliza turmas em que o professor está inscrito
+                    salvarDisciplinas(disciplina);
 
-            divDisciplinas.innerHTML += `
-            <button class="itemLista">
-              <div style="display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; text-align: left;">
-                <span><strong>CÓDIGO:</strong></span>   <span>${disciplina.codigo}</span>
-                <span><strong>NOME:</strong></span>     <span>${disciplina.nome}</span>
-                <span><strong>TURMA:</strong></span>    <span>${disciplina.turmas[0].numero}</span>
-                <span><strong>HORÁRIO:</strong></span>  <span>${disciplina.turmas[0].horario}</span>
-              </div>
-              <span style="display: none;" class="turmaID">${disciplina.turmas[0].turmaID}</span>
-            </button>`;
-
-            document.querySelectorAll('.itemLista').forEach(element => {
-            element.addEventListener('click', () => {
-              exibirInformacoes(element.textContent);
-              carregarAlunos(element.querySelector(".turmaID").textContent);
-              });
+                    divDisciplinas.innerHTML += `
+                      <button class="itemLista">
+                        <div style="display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; text-align: left;">
+                          <span><strong>CÓDIGO:</strong></span>   <span>${disciplina.codigo}</span>
+                          <span><strong>NOME:</strong></span>     <span>${disciplina.nome}</span>
+                          <span><strong>TURMA:</strong></span>    <span>${turma.numero}</span>
+                          <span><strong>HORÁRIO:</strong></span>  <span>${turma.horario}</span>
+                        </div>
+                        <span style="display: none;" class="turmaID">${turma.turmaID}</span>
+                      </button>`;
+                }
             });
         });
         document.querySelectorAll('.itemLista').forEach(element => {
@@ -96,19 +97,19 @@ export function colocarAlunosTabela(){
     `<td>${numero}</td>
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
-      <td class="visao-discentes">${element.email}</td>
-      <td class="visao-registros text-end"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP1}></td>
-      <td class="visao-registros text-end"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderP2}></td>
-      <td class="visao-registros text-end"><input type="number" class="form-control form-control-sm" min="-0.1" max="10" step="0.1" placeholder=${placeholderPF}></td>
-      <td class="visao-registros text-end">${element.notas.mediaFinal}</td>
-      <td class="visao-registros text-end"><input type="number" class="form-control form-control-sm" min="0" step="1" value=${element.faltas}></td>
+      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
+      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
+      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
+      <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
+      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" placeholder=${element.faltas}></td>
       <td class="visao-registros"> TODO </td>
     `
 
       tabela.appendChild(aluno);
       numero = numero + 1;
   });
-  $(document).trigger('tabelaAtualizada');
+    document.dispatchEvent(new CustomEvent("novaTabelaAlunos", {}));
+    $(document).trigger('tabelaAtualizada');
 }
 
 function exibirInformacoes(disciplina){
