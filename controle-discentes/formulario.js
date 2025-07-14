@@ -63,6 +63,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 	let btnEnvia = document.querySelector(".btn.btn-success");
 	btnEnvia.addEventListener("click", async () => {
 		console.log("botao salva clicado!");
+
+		// Reseta o popup a cada tentativa de salvar
+		if(errorPopUpConteiner.style.visibility == "visible"){
+			errorPopUpConteiner.style.visibility = "hidden";
+			errorPopUpList.innerHTML = "";
+		}
+		
 		try{
 			checaFormulario();
 			await carregarAlunos(turmaIDAtual);
