@@ -1,13 +1,13 @@
 /** Função para criar o item do menu lateral do menu lateral de disciplinas do docente logado */
-export function criarItemDisciplina(codDisciplina, nomeDisciplina, codTurma, horarios, linkEmenta) {
-
+export function criarItemDisciplina(codDisciplina, nomeDisciplina, codTurma, horarios, linkEmenta, turmaID) {
+    const turmaID_ = turmaID.replaceAll(" ", "_")
     let itensHorario = '';
     horarios.forEach(h => {
         itensHorario += `<small class="text-body-secondary">${h}</small>`
     });
 
     return `
-            <div id="${codDisciplina}" class="list-group-item list-group-item-action py-3 lh-sm">
+            <div id="itemturma_${turmaID_}" class="list-group-item list-group-item-action py-3 lh-sm">
                 <div>
                     <a class="text-uerj-amarelo link-primary link-underline-opacity-0" href="#">
                         <div

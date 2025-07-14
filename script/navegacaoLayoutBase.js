@@ -28,9 +28,9 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', async function(event) {
 			getDisciplina(codigo).then( disciplina => {
 
 				disciplina.turmas.forEach( turma =>{		// Código atualizado para aceitar NOVO-disciplinas.json ao invés de disciplinas.json
-		
+          console.log("Criaçao do item: " + JSON.stringify(turma, null, 2))
 						/* Cria o item html que será injetado */
-					const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, turma.numero, turma.horario, disciplina.ementa);
+					const item = criarItemDisciplina(disciplina.codigo, disciplina.nome, turma.numero, turma.horario, disciplina.ementa, turma.turmaID);
 						
 						/* Injeta o item no componente.*/
 					containerDisciplinas.insertAdjacentHTML('beforeend', item);
@@ -49,14 +49,16 @@ $(document).on('show.bs.offcanvas', '#offcanvasList', async function(event) {
  * Função de click para o item da lista do menu lateral:
  * Essa função obtem o id do item clicado e salva no local storage com a chave "disciplinaClicada"  
  */
-$(document).on('click', '.list-group-item.list-group-item-action.py-3.lh-sm', function(event) {
+$(document).on('click', '.list-group-item', function(event) {
 //   console.log(event.currentTarget.id);
 	event.preventDefault(); 
 	
 	/*	Quando um item da lista é criado o seu id é definido como o codigo da disciplina.
 		Para obter esse id ao clicar usamos event.currentTarget.id */
-	localStorage.setItem("disciplinaClicada",event.currentTarget.id)	
-	Navigate.discentes()});
+  const turmaID = event.currentTarget.id.replace("itemturma_", "").replaceAll("_"," ");
+  localStorage.setItem("turma-clicada", turmaID);
+	Navigate.discentes()
+});
 
 
 /** Daqui pra baixo são funções de click para os botões do header e do footer */
@@ -75,40 +77,27 @@ $(document).on('click', '#btn-logout', function(event) {
   endSession();
 });
 
-$(document).on('click', '#btn_home', function(event) {
+$(document).on('click', '.btn-home', function(event) {
   event.preventDefault();
   Navigate.home();
 });
 
-$(document).on('click', '#btn-disciplinas-periodo', function(event) {
+$(document).on('click', '.btn-disciplinas-periodo', function(event) {
   event.preventDefault(); 
   Navigate.disciplinas();
 });
 
-$(document).on('click', '#btn-discentes-ativos', function(event) {
+$(document).on('click', '.btn-discentes-ativos', function(event) {
   event.preventDefault();
     Navigate.notasEFaltas();
 });
 
-$(document).on('click', '#btn-registro-notas', function(event) {
+$(document).on('click', '.btn-registro-notas', function(event) {
   event.preventDefault();
   Navigate.notasEFaltas();
 });
 
-$(document).on('click', '#footer-btn-disciplinas', function(event) {
+$(document).on('click', '.btn-voltar', function(event) {
   event.preventDefault();
-  Navigate.disciplinas()
-  console.log('Botão de rodapé "Disciplinas" clicado.');
-});
-
-$(document).on('click', '#footer-btn-discentes', function(event) {
-  event.preventDefault();
-    Navigate.notasEFaltas();
-  console.log('Botão de rodapé "Discentes" clicado.');
-});
-
-$(document).on('click', '#footer-btn-registro', function(event) {
-  event.preventDefault();
-  Navigate.notasEFaltas()
-  console.log('Botão de rodapé "Registro" clicado.');
+  history.back();
 });

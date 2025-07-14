@@ -45,31 +45,31 @@ export function getDisciplina(codigoDisciplina) {
     });
 }
 
-export function getAlunos(codigoDisciplina, numeroTurma) {
-    //implementar função para obter todos os alunos dessa turma
-    // Retornando dados mocados é só pra teste
-    return Promise.resolve([
-    {
-        "nome": "Aluno1",
-        "matricula": 202512345610,
-        "email": "aluno1@grad.uni"
-    },
-    {
-        "nome": "Aluno2",
-        "matricula": 202512345611,
-        "email": "aluno2@grad.uni"
-    },
-    {
-        "nome": "Aluno3",
-        "matricula": 202512345612,
-        "email": "aluno3@grad.uni"
-    },
-    {
-        "nome": "Aluno4",
-        "matricula": 202512345613,
-        "email": "aluno4@grad.uni"
-    }
-]);
+export function getTurma(turmaID) {
+    return getDisciplina(turmaID.split(" ")[0]).then( disciplina => {
+        const turma = disciplina.turmas.find(t => t.turmaID === turmaID);
+        return {
+            "codigo": disciplina.codigo,
+            "nome": disciplina.nome,
+            "numero": turma.numero,
+            "horario": turma.horario,
+            "ementa": disciplina.ementa
+        }
+    })
+}
 
-    
+export function getAlunos(codigoDisciplina, numeroTurma) {
+    return fetch('../data/OUTRO-turmas.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log("getAlunos - codigoDisciplina: " + codigoDisciplina + " numeroTurma: " + numeroTurma)
+        const turma = data.turmas.find(
+            t => t.turmaID === `${codigoDisciplina} ${numeroTurma} 2025/1`
+        )
+        const alunos = turma.alunos
+        return alunos;
+
+    }).catch(error => {
+        console.error('Erro ao carregar o arquivo', error);
+    });
 }

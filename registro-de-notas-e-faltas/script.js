@@ -18,14 +18,16 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
                 if(docenteTurmas.find(tID => tID == turma.turmaID)){    // Só utiliza turmas em que o professor está inscrito
                     salvarDisciplinas(disciplina);
 
-                    divDisciplinas.innerHTML += 
-                        `<button class="itemLista"> 
-                          CÓDIGO: ${disciplina.codigo} <br> 
-                          NOME: ${disciplina.nome} <br> 
-                          TURMA: ${turma.numero} <br> 
-                          HORARIO: ${turma.horario}
-                          <span style="display: none;" class = "turmaID">${turma.turmaID}</span>
-                        </button>`;
+                    divDisciplinas.innerHTML += `
+                      <button class="itemLista">
+                        <div style="display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; text-align: left;">
+                          <span><strong>CÓDIGO:</strong></span>   <span>${disciplina.codigo}</span>
+                          <span><strong>NOME:</strong></span>     <span>${disciplina.nome}</span>
+                          <span><strong>TURMA:</strong></span>    <span>${turma.numero}</span>
+                          <span><strong>HORÁRIO:</strong></span>  <span>${turma.horario}</span>
+                        </div>
+                        <span style="display: none;" class="turmaID">${turma.turmaID}</span>
+                      </button>`;
                 }
             });
         });
@@ -101,6 +103,7 @@ function exibirInformacoes(disciplina){
     return;
   }
 
+/*
   infoDisc.innerHTML =
   `<div class="disciplinaDetalhada d-flex flex-column justify-content-start align-items-start p-1">
     <h1 class="h4">${nomeDisciplina}</h1> <br>
@@ -111,6 +114,26 @@ function exibirInformacoes(disciplina){
     <span style="display: none;" class = "turmaID">${jsonDisciplina.turmas[0].turmaID}</span>
   </div>
   `
+*/
+
+infoDisc.innerHTML = `
+  <div class="disciplinaDetalhada">
+    <h1>${nomeDisciplina}</h1>
+    <div style="display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; text-align: left; margin-top: 8px; width: 100%;">
+      <span><strong>CÓDIGO:</strong></span>     <span>${jsonDisciplina.codigo}</span>
+      <span><strong>TURMA:</strong></span>      <span>${jsonDisciplina.turmas[0].numero}</span>
+      <span><strong>HORÁRIO:</strong></span>    <span>${jsonDisciplina.turmas[0].horario}</span>
+      <span><strong>EMENTÁRIO:</strong></span>  
+      <span>
+        <a href="${jsonDisciplina.ementa}" target="_blank" class="d-inline-block text-truncate w-100">
+          CONSULTAR EMENTA
+        </a>
+      </span>
+    </div>
+    <span style="display: none;" class="turmaID">${jsonDisciplina.turmas[0].turmaID}</span>
+  </div>
+`;
+
   detalhes.appendChild(infoDisc);
 
 }
