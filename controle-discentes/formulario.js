@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       				numero = numero + 1;
 				
 			});
-			errorPopUpConteiner.style.visibility = visible;
+			errorPopUpConteiner.style.visibility = "visible";
 		}
 	});
 });
