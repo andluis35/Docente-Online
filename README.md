@@ -35,7 +35,7 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 24. [ ] Filtro de busca em 'Disciplinas do Período' (Digitar código ou nome, destacando a disciplina digitada e escondendo as demais)
 25. [x] Exibir código disciplinas com a turma (caracter unicode circled numbers) na tabela
 26. [x] Tirar alert do logout
-27. [] Tem ementa e ementario, deixar apenas uma escrita
-28. [] Tirar o voltar do notas para alunos com matricula ativa
-29. [] Nota não ficar com cara de placeholder
-30. [] A disciplina ficar selecionada com o autocompletar
+27. [ ] Tem ementa e ementario, deixar apenas uma escrita
+28. [ ] Tirar o voltar do notas para alunos com matricula ativa
+29. [ ] Nota não ficar com cara de placeholder
+30. [ ] A disciplina ficar selecionada com o autocompletar
