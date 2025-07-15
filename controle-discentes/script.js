@@ -81,7 +81,7 @@ export async function carregarAlunos(turmaID){
     let turma = turmasLocal.turmas.find(item => item.turmaID == turmaID);
     alunos = turma ? turma.alunos : undefined;
     colocarAlunosTabela();
-    caixaTemposFaltosos.value = turma.temposFaltosos;
+    caixaTemposFaltosos.children[1].value = turma.temposFaltosos;
     caixaTemposFaltosos.style.visibility = "visible";
 }
 
