@@ -58,7 +58,9 @@ export async function carregaFormulario(){
 let turmasLocal = null;
 let tbody = null;
 let camposMarcados = null;
-let caixaTemposFaltososMarcado = false;
+//let caixaTemposFaltososMarcado = false;
+
+
 //Assim que carregar a pagina
 document.addEventListener("DOMContentLoaded", async () => {
 	tbody = document.getElementById("alunosTabela");
@@ -84,12 +86,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 			popUpConteiner.style.visibility = "visible";
 		} catch(error){
 			console.error("Erro!: ", error);
-			
+
+			/*
 			if (caixaTemposFaltososMarcado){
-				campoTemposFaltosos.style.border = "";
+				
 				caixaTemposFaltososMarcado = false
 			}
+			*/
 			
+			campoTemposFaltosos.children[1].style.border = "";
+   
 			if (camposMarcados != null){
 				//Desmarca campos marcados anteriormente em outro erro
 				for(let i = 0; i < camposMarcados.length; i++){
@@ -113,9 +119,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 			allErrors.forEach((e, index) => {
 				
 				//Se código do erro é referente ao campo de tempos faltosos
-				if ((errorList[index] > 14) && (errorList[index] < 19)){
+				if ((error.errorList[index] > 14) && (error.errorList[index] < 19)){
 					caixaTemposFaltosos.children[1].style.border = "2px dashed red";
-					caixaTemposFaltososMarcado = true;
+					//caixaTemposFaltososMarcado = true;
 				}
 				
 				let errorLine = document.createElement("li");
