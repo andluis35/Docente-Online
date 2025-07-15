@@ -103,8 +103,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 				let errorLine = document.createElement("li");
     				
 				errorLine.innerHTML = 
-    				`<span style = "color: white">$ Erro ${error.errorList[index]}: </span>
-      				<span>${e}</span>`;
+    				`<span style = "color: white">$ Erro ${error.errorList[index]}: ${e}</span>`;
 				
       				popUpList.appendChild(errorLine);
 				
