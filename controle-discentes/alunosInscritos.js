@@ -69,7 +69,6 @@ function construirTabela(codigoDisciplina, turma) {
                 <td class="visao-registros"> TODO </td>`;
             tbody.appendChild(linhaAluno);
         });
-
     });
 }
 
@@ -97,3 +96,5 @@ function construirCabecalho(componenteTabela) {
     const tbody = componenteTabela.querySelector("#alunosTabela");
     return tbody;
 }
+
+$(document).trigger('tabelaAtualizada');
