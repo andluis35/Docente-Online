@@ -8,6 +8,7 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
+let caixaTemposFaltosos = document.querySelector("#caixa-de-tempos-faltosos");
 
 function trocaPontoFloat(str) {
   return str.replace(".", ",");
@@ -80,6 +81,7 @@ export async function carregarAlunos(turmaID){
     let turma = turmasLocal.turmas.find(item => item.turmaID == turmaID);
     alunos = turma ? turma.alunos : undefined;
     colocarAlunosTabela();
+    caixaTemposFaltosos.value = turma.temposFaltosos;
 }
 
 
