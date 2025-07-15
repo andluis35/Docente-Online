@@ -244,6 +244,11 @@ function checaFormulario(){
 		
 	let turma = turmasLocal.turmas.find(t => t.turmaID == turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
 
+	let temposFaltosos = (caixaTemposFaltosos.childern[0].value === "")?turma.temposFaltosos:caixaTemposFaltosos.childern[0].value;
+	let cargaHoraria = turma.cargaHoraria;
+	let temposPrevistos = (cargaHoraria*1.2);
+	let temposDoPeriodo = +temposPrevistos - +temposFaltosos;
+	
 	let err = null;
 	for(const child of tbody.children){
 		let matricula = child.children[1].textContent;		// Le matricula do aluno na tabela
@@ -254,9 +259,6 @@ function checaFormulario(){
 		let notaP2 = (child.children[5].children[0].value === "")?aluno.notas.P2:child.children[5].children[0].value;
 		let notaPF = (child.children[6].children[0].value === "")?aluno.notas.PF:child.children[6].children[0].value; 
 		let faltas = (child.children[8].children[0].value === "")?aluno.faltas:child.children[8].children[0].value;
-		let temposFaltosos = (caixaTemposFaltosos.childern[0].value === "")?turma.temposFaltosos:caixaTemposFaltosos.childern[0].value;
-		let cargaHoraria = turma.cargaHoraria;
-		let temposPrevistos = (cargaHoraria*1.2);
 		
 		if (notaP1 == "N/A".trim()){
 			notaP1 = -0.1;
@@ -552,15 +554,15 @@ function checaFormulario(){
 	}
 
 	//Tempos faltosos maior que tempos previstos
-	if (temposFaltosos > temposPrevistos){
+	if (temposFaltosos > temposDoPeriodo){
 		if (err == null){
-			err = new Error("Número de tempos faltosos deve ser menor que o número de aulas previstos para a disciplina! (Erro no campo de tempos faltosos).");
+			err = new Error("Número de tempos faltosos deve ser menor que o número de aulas possíveis no período! (Erro no campo de tempos faltosos).");
 			err.errorList = [17];
 			err.alunoList = [caixaTemposFaltosos.children[0]];
 			err.errorCamps = [caixaTemposFaltosos.children[1]];
 		}
 		else{
-			err.message = err.message + "\nNúmero de tempos faltosos deve ser menor que o número de aulas previstos para a disciplina! (Erro no campo de tempos faltosos).";
+			err.message = err.message + "\nNúmero de tempos faltosos deve ser menor que o número de aulas possíveis no período! (Erro no campo de tempos faltosos).";
 			err.errorList.push(17);
 			err.alunoList.push(caixaTemposFaltosos.children[0]);
 			err.errorCamps.push(caixaTemposFaltosos.children[1]);
