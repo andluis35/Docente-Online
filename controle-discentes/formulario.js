@@ -105,8 +105,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 				errorLine.innerHTML = 
     				`<span style = "color: white">$ Erro ${error.errorList[index]}: ${e}</span>`;
 				
-      				popUpList.appendChild(errorLine);
+				errorLine.style.color = "white";
 				
+      				popUpList.appendChild(errorLine);
 			});
 			popUpConteiner.style.backgroundColor = "red";
 			popUpConteiner.style.visibility = "visible";
