@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 		try{
 			checaFormulario();
 			await carregarAlunos(turmaIDAtual);
-			// Reseta o popup a cada tentativa de salvar
+			// Mostra mensagem na tela informando que o formulário foi salvo
 			popUpList.innerHTML = 
-				'<span>Formulário enviado com sucesso!</span>';
+				'<span>Formulário salvo com sucesso!</span>';
 			popUpConteiner.style.visibility = "visible";
 		}
 		} catch(error){
@@ -99,15 +99,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 			//Atualiza html com lista dos erros encontrados
 			let allErrors = error.message.split("\n");
 			//Numero na sequencia de erros, nao o codigo do erro em si
-			allErrors.forEach(e => {
+			allErrors.forEach((e, index) => {
 				let errorLine = document.createElement("li");
     				
 				errorLine.innerHTML = 
-    				`<span>$ Erro ${error.errorList[numero-1]}: </span>
+    				`<span>$ Erro ${error.errorList[index]}: </span>
       				<span>${e}</span>`;
 				
       				popUpList.appendChild(errorLine);
-      				numero = numero + 1;
 				
 			});
 			popUpConteiner.style.visibility = "visible";
