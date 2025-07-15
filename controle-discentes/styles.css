@@ -32,7 +32,7 @@
     }
 }
 
-#error-popup-conteiner{
+#popup-conteiner{
     position: fixed;
     top: 50%;
     left: 50%;
