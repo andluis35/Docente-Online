@@ -17,7 +17,7 @@
 
 .table > tbody > tr > td > input{
     width: 4rem;
-    min-width: 3rem
+    min-width: 3rem;
 }
 
 .table > tbody > tr > td > input[placeholder]{
@@ -38,4 +38,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: grey;
+    width: 33vw;
+}
+
+#popup-message-list{
+    color: white;
 }
