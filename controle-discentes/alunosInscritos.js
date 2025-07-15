@@ -19,7 +19,7 @@ getTurma(turmaClicada).then( turma => {
 
 
 function preencherInfo(codigoDiscip, nome, numeroTurma, listaHorarios, urlEmenta){
-    const componenteInfoDiscip = document.getElementById('info-disciplina')
+    const componenteInfoDiscip = document.getElementById('infoDisc')
 
     let horarios = '';
     listaHorarios.forEach(h => {
