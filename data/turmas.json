@@ -6,7 +6,7 @@
         {
           "nome": "João Pedro Oliveira Santos",
           "matricula": 202200912332,
-          "e-mail": "jpos2025@uerj.br",
+          "email": "jpos2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -19,7 +19,7 @@
         {
           "nome": "Larissa Cristina Moreira",
           "matricula": 202000123582,
-          "e-mail": "lari.moreira@uerj.br",
+          "email": "lari.moreira@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -32,7 +32,7 @@
         {
           "nome": "Camila Duarte Nogueira",
           "matricula": 202200891280,
-          "e-mail": "cami.eng2022@uerj.br",
+          "email": "cami.eng2022@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -45,7 +45,7 @@
         {
           "nome": "Isabela Martins de Souza",
           "matricula": 202200567931,
-          "e-mail": "isam.souza679@uerj.br",
+          "email": "isam.souza679@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -58,7 +58,7 @@
         {
           "nome": "Bruno César Monteiro",
           "matricula": 202100912493,
-          "e-mail": "brunocesar@uerj.br",
+          "email": "brunocesar@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -76,7 +76,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200123403,
-          "e-mail": "bia.dasilva@uerj.br",
+          "email": "bia.dasilva@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -89,7 +89,7 @@
         {
           "nome": "João Pedro Oliveira Santos",
           "matricula": 202200912332,
-          "e-mail": "jpos2025@uerj.br",
+          "email": "jpos2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -102,7 +102,7 @@
         {
           "nome": "Camila Duarte Nogueira",
           "matricula": 202200891280,
-          "e-mail": "cami.eng2022@uerj.br",
+          "email": "cami.eng2022@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -115,7 +115,7 @@
         {
           "nome": "Felipe Pereira dos Santos",
           "matricula": 202200234608,
-          "e-mail": "f.psantos@uerj.br",
+          "email": "f.psantos@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -128,7 +128,7 @@
         {
           "nome": "Gustavo Vinícius de Andrade",
           "matricula": 202100678078,
-          "e-mail": "guh.vandrade@uerj.br",
+          "email": "guh.vandrade@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -146,7 +146,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200567853,
-          "e-mail": "ana.bea2025@uerj.br",
+          "email": "ana.bea2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -159,7 +159,7 @@
         {
           "nome": "João Pedro Oliveira Santos",
           "matricula": 202200912332,
-          "e-mail": "jpos2025@uerj.br",
+          "email": "jpos2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -172,7 +172,7 @@
         {
           "nome": "Lucas da Costa Ferreira",
           "matricula": 202100678938,
-          "e-mail": "lucasfer.comp@uerj.br",
+          "email": "lucasfer.comp@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -185,7 +185,7 @@
         {
           "nome": "Matheus Henrique Cardoso",
           "matricula": 202000456710,
-          "e-mail": "mhcardoso23@uerj.br",
+          "email": "mhcardoso23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -198,7 +198,7 @@
         {
           "nome": "Camila Duarte Nogueira",
           "matricula": 202200891280,
-          "e-mail": "cami.eng2022@uerj.br",
+          "email": "cami.eng2022@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -216,7 +216,7 @@
         {
           "nome": "Lucas da Costa Ferreira",
           "matricula": 202100678938,
-          "e-mail": "lucasfer.comp@uerj.br",
+          "email": "lucasfer.comp@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -229,7 +229,7 @@
         {
           "nome": "Camila Duarte Nogueira",
           "matricula": 202200891280,
-          "e-mail": "cami.eng2022@uerj.br",
+          "email": "cami.eng2022@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -242,7 +242,7 @@
         {
           "nome": "Felipe Pereira dos Santos",
           "matricula": 202200234608,
-          "e-mail": "f.psantos@uerj.br",
+          "email": "f.psantos@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -255,7 +255,7 @@
         {
           "nome": "Bruno César Monteiro",
           "matricula": 202100912493,
-          "e-mail": "brunocesar@uerj.br",
+          "email": "brunocesar@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -268,7 +268,7 @@
         {
           "nome": "Letícia Ramos Figueiredo",
           "matricula": 202100345716,
-          "e-mail": "let.figueiredo@uerj.br",
+          "email": "let.figueiredo@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -286,7 +286,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200567853,
-          "e-mail": "ana.bea2025@uerj.br",
+          "email": "ana.bea2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -299,7 +299,7 @@
         {
           "nome": "João Pedro Oliveira Santos",
           "matricula": 202200912332,
-          "e-mail": "jpos2025@uerj.br",
+          "email": "jpos2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -312,7 +312,7 @@
         {
           "nome": "Larissa Cristina Moreira",
           "matricula": 202000123582,
-          "e-mail": "lari.moreira@uerj.br",
+          "email": "lari.moreira@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -325,7 +325,7 @@
         {
           "nome": "Matheus Henrique Cardoso",
           "matricula": 202000456710,
-          "e-mail": "mhcardoso23@uerj.br",
+          "email": "mhcardoso23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -338,7 +338,7 @@
         {
           "nome": "Camila Duarte Nogueira",
           "matricula": 202200891280,
-          "e-mail": "cami.eng2022@uerj.br",
+          "email": "cami.eng2022@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -356,7 +356,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200123403,
-          "e-mail": "bia.dasilva@uerj.br",
+          "email": "bia.dasilva@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -369,7 +369,7 @@
         {
           "nome": "Mariana Costa Lima",
           "matricula": 202100234504,
-          "e-mail": "mari.costa.lima@uerj.br",
+          "email": "mari.costa.lima@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -382,7 +382,7 @@
         {
           "nome": "Lucas da Costa Ferreira",
           "matricula": 202100678938,
-          "e-mail": "lucasfer.comp@uerj.br",
+          "email": "lucasfer.comp@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -395,7 +395,7 @@
         {
           "nome": "Júlia Mendes Rocha",
           "matricula": 202100345641,
-          "e-mail": "julinha.mr456@uerj.br",
+          "email": "julinha.mr456@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -408,7 +408,7 @@
         {
           "nome": "Matheus Henrique Cardoso",
           "matricula": 202000456710,
-          "e-mail": "mhcardoso23@uerj.br",
+          "email": "mhcardoso23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -426,7 +426,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200567853,
-          "e-mail": "ana.bea2025@uerj.br",
+          "email": "ana.bea2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -439,7 +439,7 @@
         {
           "nome": "Mariana Costa Lima",
           "matricula": 202100234504,
-          "e-mail": "mari.costa.lima@uerj.br",
+          "email": "mari.costa.lima@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -452,7 +452,7 @@
         {
           "nome": "Júlia Mendes Rocha",
           "matricula": 202100345641,
-          "e-mail": "julinha.mr456@uerj.br",
+          "email": "julinha.mr456@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -465,7 +465,7 @@
         {
           "nome": "Rafael Augusto Almeida",
           "matricula": 202000789037,
-          "e-mail": "rafael.ti23@uerj.br",
+          "email": "rafael.ti23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -478,7 +478,7 @@
         {
           "nome": "Matheus Henrique Cardoso",
           "matricula": 202000456710,
-          "e-mail": "mhcardoso23@uerj.br",
+          "email": "mhcardoso23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -496,7 +496,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200123403,
-          "e-mail": "bia.dasilva@uerj.br",
+          "email": "bia.dasilva@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -509,7 +509,7 @@
         {
           "nome": "Mariana Costa Lima",
           "matricula": 202100234504,
-          "e-mail": "mari.costa.lima@uerj.br",
+          "email": "mari.costa.lima@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -522,7 +522,7 @@
         {
           "nome": "Lucas da Costa Ferreira",
           "matricula": 202100678938,
-          "e-mail": "lucasfer.comp@uerj.br",
+          "email": "lucasfer.comp@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -535,7 +535,7 @@
         {
           "nome": "Júlia Mendes Rocha",
           "matricula": 202100345641,
-          "e-mail": "julinha.mr456@uerj.br",
+          "email": "julinha.mr456@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -548,7 +548,7 @@
         {
           "nome": "Larissa Cristina Moreira",
           "matricula": 202000123582,
-          "e-mail": "lari.moreira@uerj.br",
+          "email": "lari.moreira@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -566,7 +566,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200123403,
-          "e-mail": "bia.dasilva@uerj.br",
+          "email": "bia.dasilva@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -579,7 +579,7 @@
         {
           "nome": "João Pedro Oliveira Santos",
           "matricula": 202200912332,
-          "e-mail": "jpos2025@uerj.br",
+          "email": "jpos2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -592,7 +592,7 @@
         {
           "nome": "Júlia Mendes Rocha",
           "matricula": 202100345641,
-          "e-mail": "julinha.mr456@uerj.br",
+          "email": "julinha.mr456@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -605,7 +605,7 @@
         {
           "nome": "Larissa Cristina Moreira",
           "matricula": 202000123582,
-          "e-mail": "lari.moreira@uerj.br",
+          "email": "lari.moreira@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -618,7 +618,7 @@
         {
           "nome": "Matheus Henrique Cardoso",
           "matricula": 202000456710,
-          "e-mail": "mhcardoso23@uerj.br",
+          "email": "mhcardoso23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -636,7 +636,7 @@
         {
           "nome": "Mariana Costa Lima",
           "matricula": 202100234504,
-          "e-mail": "mari.costa.lima@uerj.br",
+          "email": "mari.costa.lima@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -649,7 +649,7 @@
         {
           "nome": "Lucas da Costa Ferreira",
           "matricula": 202100678938,
-          "e-mail": "lucasfer.comp@uerj.br",
+          "email": "lucasfer.comp@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -662,7 +662,7 @@
         {
           "nome": "Júlia Mendes Rocha",
           "matricula": 202100345641,
-          "e-mail": "julinha.mr456@uerj.br",
+          "email": "julinha.mr456@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -675,7 +675,7 @@
         {
           "nome": "Rafael Augusto Almeida",
           "matricula": 202000789037,
-          "e-mail": "rafael.ti23@uerj.br",
+          "email": "rafael.ti23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -688,7 +688,7 @@
         {
           "nome": "Matheus Henrique Cardoso",
           "matricula": 202000456710,
-          "e-mail": "mhcardoso23@uerj.br",
+          "email": "mhcardoso23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -706,7 +706,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200123403,
-          "e-mail": "bia.dasilva@uerj.br",
+          "email": "bia.dasilva@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -719,7 +719,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200567853,
-          "e-mail": "ana.bea2025@uerj.br",
+          "email": "ana.bea2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -732,7 +732,7 @@
         {
           "nome": "Mariana Costa Lima",
           "matricula": 202100234504,
-          "e-mail": "mari.costa.lima@uerj.br",
+          "email": "mari.costa.lima@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -745,7 +745,7 @@
         {
           "nome": "Júlia Mendes Rocha",
           "matricula": 202100345641,
-          "e-mail": "julinha.mr456@uerj.br",
+          "email": "julinha.mr456@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -758,7 +758,7 @@
         {
           "nome": "Rafael Augusto Almeida",
           "matricula": 202000789037,
-          "e-mail": "rafael.ti23@uerj.br",
+          "email": "rafael.ti23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -776,7 +776,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200123403,
-          "e-mail": "bia.dasilva@uerj.br",
+          "email": "bia.dasilva@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -789,7 +789,7 @@
         {
           "nome": "João Pedro Oliveira Santos",
           "matricula": 202200912332,
-          "e-mail": "jpos2025@uerj.br",
+          "email": "jpos2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -802,7 +802,7 @@
         {
           "nome": "Mariana Costa Lima",
           "matricula": 202100234504,
-          "e-mail": "mari.costa.lima@uerj.br",
+          "email": "mari.costa.lima@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -815,7 +815,7 @@
         {
           "nome": "Lucas da Costa Ferreira",
           "matricula": 202100678938,
-          "e-mail": "lucasfer.comp@uerj.br",
+          "email": "lucasfer.comp@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -828,7 +828,7 @@
         {
           "nome": "Matheus Henrique Cardoso",
           "matricula": 202000456710,
-          "e-mail": "mhcardoso23@uerj.br",
+          "email": "mhcardoso23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -846,7 +846,7 @@
         {
           "nome": "João Pedro Oliveira Santos",
           "matricula": 202200912332,
-          "e-mail": "jpos2025@uerj.br",
+          "email": "jpos2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -859,7 +859,7 @@
         {
           "nome": "Júlia Mendes Rocha",
           "matricula": 202100345641,
-          "e-mail": "julinha.mr456@uerj.br",
+          "email": "julinha.mr456@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -872,7 +872,7 @@
         {
           "nome": "Rafael Augusto Almeida",
           "matricula": 202000789037,
-          "e-mail": "rafael.ti23@uerj.br",
+          "email": "rafael.ti23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -885,7 +885,7 @@
         {
           "nome": "Larissa Cristina Moreira",
           "matricula": 202000123582,
-          "e-mail": "lari.moreira@uerj.br",
+          "email": "lari.moreira@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -898,7 +898,7 @@
         {
           "nome": "Felipe Pereira dos Santos",
           "matricula": 202200234608,
-          "e-mail": "f.psantos@uerj.br",
+          "email": "f.psantos@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -916,7 +916,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200123403,
-          "e-mail": "bia.dasilva@uerj.br",
+          "email": "bia.dasilva@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -929,7 +929,7 @@
         {
           "nome": "João Pedro Oliveira Santos",
           "matricula": 202200912332,
-          "e-mail": "jpos2025@uerj.br",
+          "email": "jpos2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -942,7 +942,7 @@
         {
           "nome": "Felipe Pereira dos Santos",
           "matricula": 202200234608,
-          "e-mail": "f.psantos@uerj.br",
+          "email": "f.psantos@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -955,7 +955,7 @@
         {
           "nome": "Vitória Helena Cunha",
           "matricula": 201800789234,
-          "e-mail": "vhcunha@uerj.br",
+          "email": "vhcunha@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -968,7 +968,7 @@
         {
           "nome": "Natália Borges Menezes",
           "matricula": 202201234592,
-          "e-mail": "nati.menezes.mat@uerj.br",
+          "email": "nati.menezes.mat@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -986,7 +986,7 @@
         {
           "nome": "Ana Beatriz da Silva",
           "matricula": 202200567853,
-          "e-mail": "ana.bea2025@uerj.br",
+          "email": "ana.bea2025@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -999,7 +999,7 @@
         {
           "nome": "Rafael Augusto Almeida",
           "matricula": 202000789037,
-          "e-mail": "rafael.ti23@uerj.br",
+          "email": "rafael.ti23@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -1012,7 +1012,7 @@
         {
           "nome": "Gustavo Vinícius de Andrade",
           "matricula": 202100678078,
-          "e-mail": "guh.vandrade@uerj.br",
+          "email": "guh.vandrade@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -1025,7 +1025,7 @@
         {
           "nome": "Amanda Ribeiro Teixeira",
           "matricula": 202000123617,
-          "e-mail": "amrt1236@uerj.br",
+          "email": "amrt1236@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -1038,7 +1038,7 @@
         {
           "nome": "Leonardo Moura Bastos",
           "matricula": 201900891383,
-          "e-mail": "leo.bastos2019@uerj.br",
+          "email": "leo.bastos2019@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -1056,7 +1056,7 @@
         {
           "nome": "Larissa Cristina Moreira",
           "matricula": 202000123582,
-          "e-mail": "lari.moreira@uerj.br",
+          "email": "lari.moreira@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -1069,7 +1069,7 @@
         {
           "nome": "Bruno César Monteiro",
           "matricula": 202100912493,
-          "e-mail": "brunocesar@uerj.br",
+          "email": "brunocesar@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -1082,7 +1082,7 @@
         {
           "nome": "Leonardo Moura Bastos",
           "matricula": 201900891383,
-          "e-mail": "leo.bastos2019@uerj.br",
+          "email": "leo.bastos2019@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -1095,7 +1095,7 @@
         {
           "nome": "Nicole Azevedo Tavares",
           "matricula": 201800123745,
-          "e-mail": "n.a.tavares@uerj.br",
+          "email": "n.a.tavares@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
@@ -1108,7 +1108,7 @@
         {
           "nome": "Vitória Helena Cunha",
           "matricula": 201800789234,
-          "e-mail": "vhcunha@uerj.br",
+          "email": "vhcunha@uerj.br",
           "notas": {
             "P1": -0.1,
             "P2": -0.1,
