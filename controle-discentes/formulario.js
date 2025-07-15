@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 				let errorLine = document.createElement("li");
     				
 				errorLine.innerHTML = 
-    				`<span style = "color: white">$ Erro ${error.errorList[index]}: ${e}</span>`;
+    				`<span style = "color: white"> Erro ${error.errorList[index]}: ${e}</span>`;
 				
 				errorLine.style.color = "white";
 				
