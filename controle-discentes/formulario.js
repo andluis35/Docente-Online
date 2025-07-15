@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 			}
 			*/
 			
-			campoTemposFaltosos.children[1].style.border = "";
+			caixaTemposFaltosos.children[1].style.border = "";
    
 			if (camposMarcados != null){
 				//Desmarca campos marcados anteriormente em outro erro
