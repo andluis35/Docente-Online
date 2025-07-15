@@ -46,7 +46,7 @@ componenteInfoDiscip.innerHTML = `
 
 
 function construirTabela(codigoDisciplina, turma) {
-    const componenteTabela = document.getElementById('tabelaAlunos')
+    const componenteTabela = document.getElementById('alunosTabela')
     const tbody = construirCabecalho(componenteTabela)
 
     // Buscar lista de alunos, 
