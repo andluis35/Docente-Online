@@ -84,6 +84,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 			popUpList.innerHTML = 
 				'<span style = "color: white">Formulário salvo com sucesso!</span>';
 			popUpConteiner.style.visibility = "visible";
+			caixaTemposFaltosos.children[1].style.border = "";
+			
 		} catch(error){
 			console.error("Erro!: ", error);
 
