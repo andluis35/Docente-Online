@@ -7,7 +7,7 @@ export function criarItemDisciplina(codDisciplina, nomeDisciplina, codTurma, hor
     });
 
     return `
-            <div id="itemturma_${turmaID_}" class="list-group-item list-group-item-action py-3 lh-sm">
+            <div id="itemturma_${turmaID_}" class="list-group-item list-group-item-action py-3 lh-sm item-turma">
                 <div>
                     <a class="text-uerj-amarelo link-primary link-underline-opacity-0" href="#">
                         <div
