@@ -25,6 +25,17 @@ document.addEventListener("novaTabelaAlunos", () => {
 	//Fim do evento de zerar campo
 });
 
+
+caixaTemposFaltosos.children[1].addEventListener("dblclick", () => {
+	console.log("~ Input clicado 2x! ~");
+	let minValue = parseFloat(input.min);
+	if (minValue == -0.1){		// Usa máscara de N/A para campos com mínimo de -0.1
+		input.value = "N/A";
+	}
+	else{ input.value = minValue; }
+});
+
+
 document.addEventListener("trocaTurmaFormulario", function(e) {
 	console.log("turma trocada!");
 	turmaIDAtual = e.detail.turmaID;
