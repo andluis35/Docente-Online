@@ -57,7 +57,7 @@ $(document).on('click', '.list-group-item', function(event) {
 		Para obter esse id ao clicar usamos event.currentTarget.id */
   const turmaID = event.currentTarget.id.replace("itemturma_", "").replaceAll("_"," ");
   localStorage.setItem("turma-clicada", turmaID);
-  localStorage.setItem("isDiscentesAtivo", 'true')
+  localStorage.setItem("isDiscentesAtivo", 'true');
   Navigate.controleDiscentes();
 });
 
