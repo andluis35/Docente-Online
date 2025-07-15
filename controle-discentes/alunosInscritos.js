@@ -14,9 +14,8 @@ getTurma(turmaClicada).then( turma => {
         turma.ementa
     );
     console.log("AlunosInscritos.js getDisciplina \n" + JSON.stringify(turma, null, 2))
-    construirTabela(turma.codigo, turma.numero);
+    return construirTabela(turma.codigo, turma.numero);
 }).then(() => {
-    localStorage.setItem("isDiscentesAtivo", 'true');
     $(document).trigger('tabelaAtualizada');
     console.log("Tabela atualizada - lista-disciplinas.");
 })
@@ -52,7 +51,7 @@ function construirTabela(codigoDisciplina, turma) {
     // Buscar lista de alunos,
     // OBS não está implementada,
     // Implementar a função getAlunos() em /script/buscarDados.js
-    getAlunos(codigoDisciplina, turma).then(alunos => {
+    return getAlunos(codigoDisciplina, turma).then(alunos => {
         alunos.forEach((aluno, index) => {
             let placeholderP1 = (aluno.notas.P1 == -0.1)?"":aluno.notas.P1;
             let placeholderP2 = (aluno.notas.P2 == -0.1)?"":aluno.notas.P2;
