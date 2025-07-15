@@ -87,7 +87,7 @@
 
                         <div class="d-flex justify-content-between mt-3 btn-tabela">
                             <button type="button" class="btn btn-success visao-registros">Salvar Notas</button>
-                            <button type="button" class="btn btn-warning visao-registros">Enviar para Sistema Acadêmico de Graduação (SAG)</button>
+                            <button type="button" class="btn btn-warning visao-registros" data-bs-toggle="modal" data-bs-target="#confirmacaoModal">Enviar para Sistema Acadêmico de Graduação (SAG)</button>
                         </div>
                     </div>
                 </div>
@@ -101,6 +101,23 @@
                     </a>
                 </div>
 
+                <div class="modal fade" id="confirmacaoModal" tabindex="-1" aria-labelledby="confirmacaoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="confirmacaoModalLabel">Confirmação Necessária</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Você tem certeza que deseja realizar esta ação?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger" id="btnConfirmarAcao">Sim, tenho certeza!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
