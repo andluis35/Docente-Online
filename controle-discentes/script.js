@@ -108,10 +108,10 @@ export function colocarAlunosTabela(){
       case "Aprovação":
         corSituacao = 'color: green';
         break;
-      case "Reprovação por faltas":
+      case "Reprovação por falta":
         corSituacao = 'color:#DAA520';
         break;
-      case "Reprovação por notas":
+      case "Reprovação por nota":
         corSituacao = 'color: orange';
         break;
       case "Prova Final":
