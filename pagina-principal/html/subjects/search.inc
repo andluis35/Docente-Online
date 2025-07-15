@@ -4,7 +4,7 @@
       id="busca"
       type="text"
       class="form-control"
-      placeholder="Buscar Disciplinas"
+      placeholder="Buscar Disciplinas (código, nome, turma (Ex.: ⑧) ou horário)"
       autocomplete="off"
     />
 

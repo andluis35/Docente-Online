@@ -31,8 +31,8 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 20. [x] Mudar ícone do relógio para 'table-clock' (Material Design Icons)
 21. [x] Mudar ícone das pessoas para 'account-group' (Material Design Icons)
 22. [x] Mudar ícone das prancheta para 'clipboard-check-outline' (Material Design Icons)
-23. [ ] Legenda para as disciplinas ministradas pelo docente (Código - Disciplina)
-24. [ ] Filtro de busca em 'Disciplinas do Período' (Digitar código ou nome, destacando a disciplina digitada e escondendo as demais)
+23. [x] Legenda para as disciplinas ministradas pelo docente (Código - Disciplina)
+24. [x] Filtro de busca em 'Disciplinas do Período' (Digitar código ou nome, destacando a disciplina digitada e escondendo as demais)
 25. [x] Exibir código disciplinas com a turma (caracter unicode circled numbers) na tabela
 26. [x] Tirar alert do logout
 27. [ ] Tem ementa e ementario, deixar apenas uma escrita

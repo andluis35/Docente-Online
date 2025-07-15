@@ -3,10 +3,12 @@
   background-color: #016ba5;
   color: white;
 }
+
 .bg-uerj-azul-claro {
   background-color: #0080c6;
   color: white;
 }
+
 .bg-uerj-laranja {
   background-color: #f37032;
   color: white;
@@ -17,6 +19,7 @@
   background-color: #f37032;
   border-color: #f37032;
 }
+
 .btn-primary:hover {
   background-color: #e05d1f;
   border-color: #e05d1f;
@@ -31,6 +34,7 @@
   background-color: #dfa40e;
   border-color: #dfa40e;
 }
+
 .btn-secondary:hover {
   background-color: #b38208;
   border-color: #b38208;
@@ -52,4 +56,21 @@
 .bi-emoji-surprise {
   width: 6px;
   height: 6px;
+}
+
+.destaque-busca {
+  box-shadow: 0 0 0 2px #ffab00;
+  position: relative;
+}
+
+.destaque-busca::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 4px solid #ffab00;
+  border-radius: 4px;
+  pointer-events: none;
 }
