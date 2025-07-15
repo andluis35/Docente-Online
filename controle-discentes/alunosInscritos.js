@@ -69,6 +69,7 @@ function construirTabela(codigoDisciplina, turma) {
             tbody.appendChild(linhaAluno);
         });
     });
+    $(document).trigger('tabelaAtualizada');
 }
 
 
