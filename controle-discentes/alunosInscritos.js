@@ -19,6 +19,7 @@ getTurma(turmaClicada).then( turma => {
     localStorage.setItem("isDiscentesAtivo", 'true');
     $(document).trigger('tabelaAtualizada');
     console.log("Tabela atualizada - lista-disciplinas.");
+    $('.visao-registros').hide();
 })
 
 function preencherInfo(codigoDiscip, nome, numeroTurma, listaHorarios, urlEmenta){
