@@ -74,8 +74,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 			checaFormulario();
 			await carregarAlunos(turmaIDAtual);
 			// Mostra mensagem na tela informando que o formulário foi salvo
+			popUpConteiner.style.backgroundColor = "green";
 			popUpList.innerHTML = 
-				'<span>Formulário salvo com sucesso!</span>';
+				'<span style = "color: white">Formulário salvo com sucesso!</span>';
 			popUpConteiner.style.visibility = "visible";
 		} catch(error){
 			console.error("Erro!: ", error);
@@ -102,12 +103,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 				let errorLine = document.createElement("li");
     				
 				errorLine.innerHTML = 
-    				`<span>$ Erro ${error.errorList[index]}: </span>
+    				`<span style = "color: white">$ Erro ${error.errorList[index]}: </span>
       				<span>${e}</span>`;
 				
       				popUpList.appendChild(errorLine);
 				
 			});
+			popUpConteiner.style.backgroundColor = "red";
 			popUpConteiner.style.visibility = "visible";
 		}
 	});
