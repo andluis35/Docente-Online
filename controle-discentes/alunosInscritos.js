@@ -1,5 +1,5 @@
 import { getDisciplina, getAlunos, getTurma } from "../script/buscarDados.js";
-import { trocaPontoFloat } from "./script";
+import { trocaPontoFloat } from "./script.js";
 
 // const codigoDisciplina = localStorage.getItem("disciplinaClicada");
 const turmaClicada = localStorage.getItem("turma-clicada");
