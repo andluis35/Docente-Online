@@ -37,15 +37,6 @@ $(function() {
         }
     });
 
-    $('.item-turma').on('click', function(event){
-        event.preventDefault();
-        if (isDiscentesAtivo) {
-            exibirVersaoDiscentes();
-        }else{
-            exibirVersaoRegistros();
-        }
-    })
-
     if (isDiscentesAtivo){
         exibirVersaoDiscentes()
     }else{

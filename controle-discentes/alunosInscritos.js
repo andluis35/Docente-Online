@@ -56,7 +56,7 @@ function construirTabela(codigoDisciplina, turma) {
                 `<td>${index + 1}</td>
                 <td>${aluno.matricula}</td>
                 <td>${aluno.nome}</td>
-                <td class="visao-discentes">${aluno.email}</td>
+                <td class="visao-discentes">${aluno['e-mail']}</td>
                 <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
                 <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
                 <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
