@@ -1,9 +1,9 @@
 import {carregarAlunos, colocarAlunosTabela} from "./script.js"
 
 let turmaIDAtual = null;
-let errorPopUpConteiner = document.querySelector("#error-popup-conteiner");
-let errorPopUpList = errorPopUpConteiner.children[0];
-let errorPopUpButton = errorPopUpConteiner.children[1];
+let popUpConteiner = document.querySelector("#popup-conteiner");
+let popUpList = popUpConteiner.children[0];
+let popUpButton = popUpConteiner.children[1];
 document.addEventListener("novaTabelaAlunos", () => {
 	console.log("tabela carregada!");
 	// Evento de zerar campo
@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 		console.log("botao salva clicado!");
 
 		// Reseta o popup a cada tentativa de salvar
-		if(errorPopUpConteiner.style.visibility == "visible"){
-			errorPopUpConteiner.style.visibility = "hidden";
-			errorPopUpList.innerHTML = "";
+		if(popUpConteiner.style.visibility == "visible"){
+			popUpConteiner.style.visibility = "hidden";
+			popUpList.innerHTML = "";
 		}
 		
 		try{
@@ -102,19 +102,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     				`<span>${numero} - Erro ${error.errorList[numero-1]}: </span>
       				<span>${e}</span>`;
 				
-      				errorPopUpList.appendChild(errorLine);
+      				popUpList.appendChild(errorLine);
       				numero = numero + 1;
 				
 			});
-			errorPopUpConteiner.style.visibility = "visible";
+			popUpConteiner.style.visibility = "visible";
 		}
 	});
 });
 
-errorPopUpButton.addEventListener("click", () => {
+popUpButton.addEventListener("click", () => {
 	console.log("botão de erro clicado!");
-	errorPopUpConteiner.style.visibility = "hidden";
-	errorPopUpList.innerHTML = "";
+	popUpConteiner.style.visibility = "hidden";
+	popUpList.innerHTML = "";
 });
 
 
