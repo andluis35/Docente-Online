@@ -46,46 +46,32 @@ componenteInfoDiscip.innerHTML = `
 
 
 function construirTabela(codigoDisciplina, turma) {
-    const tbody = document.getElementById('alunosTabela');
-    
-    tbody.innerHTML = '';
+    const componenteTabela = document.getElementById('tabelaAlunos')
+    const tbody = construirCabecalho(componenteTabela)
 
-    construirCabecalho(document.getElementById('tabelaAlunos'));
-
+    // Buscar lista de alunos,
+    // OBS não está implementada,
+    // Implementar a função getAlunos() em /script/buscarDados.js
     getAlunos(codigoDisciplina, turma).then(alunos => {
-        if (Array.isArray(alunos) && alunos.length > 0) {
-            alunos.forEach((aluno, index) => {
-                let placeholderP1 = (aluno.notas.P1 === -0.1) ? "" : aluno.notas.P1;
-                let placeholderP2 = (aluno.notas.P2 === -0.1) ? "" : aluno.notas.P2;
-                let placeholderPF = (aluno.notas.PF === -0.1) ? "" : aluno.notas.PF;
-
-                let linhaAluno = document.createElement("tr");
-
-                linhaAluno.innerHTML =
-                    `<td>${index + 1}</td>
-                    <td>${aluno.matricula}</td>
-                    <td>${aluno.nome}</td>
-                    <td class="visao-discentes">${aluno["e-mail"]}</td>
-                    <td class="visao-registros text-end">
-                        <input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder="${trocaPontoFloat(placeholderP1.toString())}">
-                    </td>
-                    <td class="visao-registros text-end">
-                        <input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder="${trocaPontoFloat(placeholderP2.toString())}">
-                    </td>
-                    <td class="visao-registros text-end">
-                        <input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder="${trocaPontoFloat(placeholderPF.toString())}">
-                    </td>
-                    <td class="visao-registros text-end">${trocaPontoFloat(aluno.notas.mediaFinal.toString())}</td>
-                    <td class="visao-registros text-end">
-                        <input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value="${aluno.faltas}">
-                    </td>
-                    <td class="visao-registros"> ${aluno.situacao || 'N/A'} </td>
-                    `;
-
-                tbody.appendChild(linhaAluno);
-            });
-        }
-    })
+        alunos.forEach((aluno, index) => {
+            let placeholderP1 = (aluno.notas.P1 == -0.1)?"":aluno.notas.P1;
+            let placeholderP2 = (aluno.notas.P2 == -0.1)?"":aluno.notas.P2;
+            let placeholderPF = (aluno.notas.PF == -0.1)?"":aluno.notas.PF;
+            let linhaAluno = document.createElement("tr");
+            linhaAluno.innerHTML =
+                `<td>${index + 1}</td>
+                <td>${aluno.matricula}</td>
+                <td>${aluno.nome}</td>
+                <td class="visao-discentes">${aluno["e-mail"]}</td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
+                <td class="visao-registros text-end">${trocaPontoFloat(aluno.notas.mediaFinal.toString())}</td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${aluno.faltas}></td>
+                <td class="visao-registros"> TODO </td>`;
+            tbody.appendChild(linhaAluno);
+        });
+    });
 }
 
 
