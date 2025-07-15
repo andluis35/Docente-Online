@@ -28,12 +28,14 @@ $(function() {
     }
 
     $(document).on('tabelaAtualizada', function(event) {
-        isDiscentesAtivo= localStorage.getItem("isDiscentesAtivo") === "true";
+        isDiscentesAtivo = localStorage.getItem("isDiscentesAtivo") === "true";
         if (isDiscentesAtivo) {
             exibirVersaoDiscentes();
         }else{
             exibirVersaoRegistros();
         }
+        console.log("Estado atual da tabela: " + isDiscentesAtivo);
+        console.log("Tabela atualizada!");
     });
 
     if (isDiscentesAtivo){
