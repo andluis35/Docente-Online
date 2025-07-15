@@ -28,6 +28,7 @@ $(function() {
     }
 
     $(document).on('tabelaAtualizada', function(event) {
+        isDiscentesAtivo= localStorage.getItem("isDiscentesAtivo") === "true";
         if (isDiscentesAtivo) {
             exibirVersaoDiscentes();
         }else{
