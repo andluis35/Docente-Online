@@ -144,7 +144,7 @@ popUpButton.addEventListener("click", () => {
 function salvaFormulario(turma){
 	let temposFaltosos = (caixaTemposFaltosos.childern[0].value === "")?turma.temposFaltosos:caixaTemposFaltosos.childern[0].value;
 	let cargaHoraria = turma.cargaHoraria;
-	let temposPrevistos = (cargaHoraria*1.2);
+	let temposPrevistos = (cargaHoraria*1.2); 	// Cálculo de hora-aula 50 min, baseado na carga horária total 
 	let temposDoPeriodo = +temposPrevistos - +temposFaltosos;
 	turma.temposFaltosos = temposFaltosos;
 	
@@ -216,6 +216,10 @@ function salvaFormulario(turma){
 			}
 		}
 
+		//Proporção de faltas excede 25% === Proporção de presença
+		if ((+faltas / +temposDoPeriodo) > 0.25){
+			situacao = "Reprovação por falta";
+		}
 		
 		aluno.notas.P1 = notaP1;
 		aluno.notas.P2 = notaP2;
