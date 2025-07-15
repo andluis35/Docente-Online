@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 			popUpList.innerHTML = 
 				'<span>Formulário salvo com sucesso!</span>';
 			popUpConteiner.style.visibility = "visible";
-		}
 		} catch(error){
 			console.error("Erro!: ", error);
 
