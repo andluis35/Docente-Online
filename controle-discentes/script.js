@@ -9,7 +9,7 @@ let disciplinas = [];
 let alunos = [];
 
 
-function trocaPontoFloat(str) {
+export function trocaPontoFloat(str) {
   return str.replace(".", ",");
 }
 

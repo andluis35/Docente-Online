@@ -12,7 +12,6 @@ $(function() {
     let isDiscentesAtivo= localStorage.getItem("isDiscentesAtivo") === "true";
 
     function exibirVersaoDiscentes() {
-        isDiscentesAtivo = true;
         $('.visao-registros').hide();
         $('.visao-discentes').show();
         $('#troca-contexto-titulo').text('Discentes com matrícula ativa');
@@ -21,7 +20,6 @@ $(function() {
     }
 
     function exibirVersaoRegistros() {
-        isDiscentesAtivo = false;
         $('.visao-registros').show();
         $('.visao-discentes').hide();
         $('#troca-contexto-titulo').text('Registro de notas e faltas');
