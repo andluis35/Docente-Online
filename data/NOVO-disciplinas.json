@@ -9,6 +9,11 @@
                             "numero": 1,
                             "turmaID": "IME04-10842 1 2025/1",
                             "horario": ["TER M1 M2", "QUI M1 M2"]
+                        },
+                        {    
+                            "numero": 2,
+                            "turmaID": "IME04-10842 2 2025/1",
+                            "horario": ["SEG M3 M4", "QUA M2 M4"]
                         }
             ]
         },
