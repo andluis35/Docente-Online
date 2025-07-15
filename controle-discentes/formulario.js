@@ -28,7 +28,7 @@ document.addEventListener("novaTabelaAlunos", () => {
 
 caixaTemposFaltosos.children[1].addEventListener("dblclick", () => {
 	console.log("~ Input clicado 2x! ~");
-	caixaTemposFaltosos.value = minValue;
+	caixaTemposFaltosos.value = caixaTemposFaltosos.min;
 });
 
 
