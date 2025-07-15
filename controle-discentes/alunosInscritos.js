@@ -15,6 +15,7 @@ getTurma(turmaClicada).then( turma => {
     );
     console.log("AlunosInscritos.js getDisciplina \n" + JSON.stringify(turma, null, 2))
     construirTabela(turma.codigo, turma.numero);
+    localStorage.setItem("isDiscentesAtivo", 'true')
     $(document).trigger('tabelaAtualizada');
 })
 
