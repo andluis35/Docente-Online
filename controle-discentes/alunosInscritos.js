@@ -15,6 +15,7 @@ getTurma(turmaClicada).then( turma => {
     );
     console.log("AlunosInscritos.js getDisciplina \n" + JSON.stringify(turma, null, 2))
     construirTabela(turma.codigo, turma.numero);
+    $(document).trigger('tabelaAtualizada');
 })
 
 
@@ -69,7 +70,6 @@ function construirTabela(codigoDisciplina, turma) {
             tbody.appendChild(linhaAluno);
         });
     });
-    $(document).trigger('tabelaAtualizada');
 }
 
 
