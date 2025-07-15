@@ -17,7 +17,7 @@
 
 .table > tbody > tr > td > input{
     width: 4rem;
-    min-width: 3rem
+    min-width: 3rem;
 }
 
 .table > tbody > tr > td > input[value]{
@@ -30,4 +30,27 @@
         gap: 1rem;
         margin-top: 2rem;
     }
+}
+
+#popup-conteiner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    width: 33vw;
+}
+
+#popup-message-list{
+    color: white;
+}
+
+#caixa-de-tempos-faltosos{
+    background-color: white;
+    visibility: hidden;
+}
+
+#caixa-de-tempos-faltosos > input{
+    width: 4rem;
+    min-width: 3rem;
 }

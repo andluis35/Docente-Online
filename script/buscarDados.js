@@ -59,7 +59,7 @@ export function getTurma(turmaID) {
 }
 
 export function getAlunos(codigoDisciplina, numeroTurma) {
-    return fetch('../data/OUTRO-turmas.json')
+    return fetch('../data/turmas.json')
     .then(response => response.json())
     .then(data => {
         console.log("getAlunos - codigoDisciplina: " + codigoDisciplina + " numeroTurma: " + numeroTurma)

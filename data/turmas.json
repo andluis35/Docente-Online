@@ -1,92 +1,1156 @@
-{"turmas":[
-		{
-			"turmaID": "IME04-10842 1 2025/1",
-			"alunos":[
-					{
-						"nome": "Débora Regina Soares",
-						"matricula": 2018015670,
-						"email": "deb.soares@uerj.br",
-						"notas":{
-								"P1": 5.5,
-								"P2": 9,
-								"PF": -0.1,
-								"mediaFinal": 7.25
-							},
-						"faltas": 0
-					},
-					{
-						"nome": "Thiago Emanuel Correia",
-						"matricula": 2019002347,
-						"email": "thi.emc@uerj.br",
-						"notas":{
-								"P1": 7.0,
-								"P2": 6.0,
-								"PF": 7,
-								"mediaFinal": 6.75
-							},
-						"faltas": 5
-					}
-				]
-		},
-		{
-			"turmaID": "IME04-10843 1 2025/1",
-			"alunos":[
-					{
-						"nome": "Débora Regina Soares",
-						"matricula": 2018015670,
-						"email": "deb.soares@uerj.br",
-						"notas":{
-								"P1": 8,
-								"P2": 3,
-								"PF": 8,
-								"mediaFinal": 6.75
-							},
-						"faltas": 3
-					},
-					{
-						"nome": "Daniel Luiz Barros",
-						"matricula": 2020004568,
-						"email": "dan.lbarros@uerj.br",
-						"notas":{
-								"P1": 4.5,
-								"P2": 10,
-								"PF": -0.1,
-								"mediaFinal": 7.25
-							},
-						"faltas": 1
-					}
-				]
-
-		},
-		{"turmaID": "IME04-11312 1 2025/1",
-			"alunos":[
-					{
-						"nome": "Raissa Silva Nunes",
-						"matricula": 2019015670,
-						"email": "rasilva@uerj.br",
-						"notas":{
-								"P1": 5.4,
-								"P2": 7,
-								"PF": -0.1,
-								"mediaFinal": 6.7
-							},
-						"faltas": 0
-					},
-					{
-						"nome": "André Emanuel Correia",
-						"matricula": 2020002347,
-						"email": "andycorreia@uerj.br",
-						"notas":{
-								"P1": 7.0,
-								"P2": 6.0,
-								"PF": 7,
-								"mediaFinal": 6.75
-							},
-						"faltas": 5
-					}
-				]
-		}		
-
-	]
-
+{
+  "turmas": [
+    {
+      "turmaID": "IME01-04827 1 2025/1",
+	"cargaHoraria": 90,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "email": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "email": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "email": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Isabela Martins de Souza",
+          "matricula": 202200567931,
+          "email": "isam.souza679@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Bruno César Monteiro",
+          "matricula": 202100912493,
+          "email": "brunocesar@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        }
+      ]
+    },
+    {
+      "turmaID": "IME01-06766 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "email": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "email": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "email": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Felipe Pereira dos Santos",
+          "matricula": 202200234608,
+          "email": "f.psantos@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Gustavo Vinícius de Andrade",
+          "matricula": 202100678078,
+          "email": "guh.vandrade@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        }
+      ]
+    },
+    {
+      "turmaID": "FIS01-10982 1 2025/1",
+	"cargaHoraria": 90,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "email": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "email": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "email": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "email": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "email": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        }
+      ]
+    },
+    {
+      "turmaID": "FIS03-10983 1 2025/1",
+	"cargaHoraria": 90,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "email": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "email": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Felipe Pereira dos Santos",
+          "matricula": 202200234608,
+          "email": "f.psantos@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Bruno César Monteiro",
+          "matricula": 202100912493,
+          "email": "brunocesar@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Letícia Ramos Figueiredo",
+          "matricula": 202100345716,
+          "email": "let.figueiredo@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        }
+      ]
+    },
+    {
+      "turmaID": "IME02-10815 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "email": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "email": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "email": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "email": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Camila Duarte Nogueira",
+          "matricula": 202200891280,
+          "email": "cami.eng2022@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        }
+      ]
+    },
+    {
+      "turmaID": "IME02-10818 1 2025/1",
+	"cargaHoraria": 90,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "email": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "email": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "email": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+          "situacao": "Esperando P1 e P2"
+        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "email": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "email": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10834 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "email": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "email": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "email": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "email": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "email": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10835 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "email": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "email": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "email": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "email": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "email": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10832 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "email": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "email": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "email": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "email": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "email": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10854 8 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "email": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "email": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "email": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "email": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "email": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10836 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "email": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "email": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "email": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "email": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "email": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10833 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "email": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "email": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Mariana Costa Lima",
+          "matricula": 202100234504,
+          "email": "mari.costa.lima@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Lucas da Costa Ferreira",
+          "matricula": 202100678938,
+          "email": "lucasfer.comp@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Matheus Henrique Cardoso",
+          "matricula": 202000456710,
+          "email": "mhcardoso23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-11311 1 2025/1",
+	"cargaHoraria": 45,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "email": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Júlia Mendes Rocha",
+          "matricula": 202100345641,
+          "email": "julinha.mr456@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "email": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "email": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Felipe Pereira dos Santos",
+          "matricula": 202200234608,
+          "email": "f.psantos@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-11312 1 2025/1",
+	"cargaHoraria": 45,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200123403,
+          "email": "bia.dasilva@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "João Pedro Oliveira Santos",
+          "matricula": 202200912332,
+          "email": "jpos2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Felipe Pereira dos Santos",
+          "matricula": 202200234608,
+          "email": "f.psantos@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Vitória Helena Cunha",
+          "matricula": 201800789234,
+          "email": "vhcunha@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Natália Borges Menezes",
+          "matricula": 202201234592,
+          "email": "nati.menezes.mat@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10843 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Ana Beatriz da Silva",
+          "matricula": 202200567853,
+          "email": "ana.bea2025@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Rafael Augusto Almeida",
+          "matricula": 202000789037,
+          "email": "rafael.ti23@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Gustavo Vinícius de Andrade",
+          "matricula": 202100678078,
+          "email": "guh.vandrade@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Amanda Ribeiro Teixeira",
+          "matricula": 202000123617,
+          "email": "amrt1236@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Leonardo Moura Bastos",
+          "matricula": 201900891383,
+          "email": "leo.bastos2019@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    },
+    {
+      "turmaID": "IME04-10842 1 2025/1",
+	"cargaHoraria": 60,
+	"temposFaltosos": 0,
+      "alunos": [
+        {
+          "nome": "Larissa Cristina Moreira",
+          "matricula": 202000123582,
+          "email": "lari.moreira@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Bruno César Monteiro",
+          "matricula": 202100912493,
+          "email": "brunocesar@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Leonardo Moura Bastos",
+          "matricula": 201900891383,
+          "email": "leo.bastos2019@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Nicole Azevedo Tavares",
+          "matricula": 201800123745,
+          "email": "n.a.tavares@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        },
+        {
+          "nome": "Vitória Helena Cunha",
+          "matricula": 201800789234,
+          "email": "vhcunha@uerj.br",
+          "notas": {
+            "P1": -0.1,
+            "P2": -0.1,
+            "PF": -0.1,
+            "mediaFinal": 0
+          },
+          "faltas": 0,
+					"situacao": "Esperando P1 e P2"
+	        }
+      ]
+    }
+  ]
 }

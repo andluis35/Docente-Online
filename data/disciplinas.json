@@ -4,6 +4,7 @@
             "codigo": "IME04-10842",
             "nome": "Computação Gráfica",
             "turma": 1,
+            "cargaHoraria": 60,
             "horario": ["TER M1 M2", "QUI M1 M2"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10842"
         },
@@ -11,6 +12,7 @@
             "codigo": "IME04-10843",
             "nome": "Inteligência Artificial",
             "turma": 1,
+            "cargaHoraria": 60,
             "horario": ["SEG M5 M6", "QUA M5 M6"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10843"
         },
@@ -18,6 +20,7 @@
             "codigo": "IME04-11312",
             "nome": "Otimização em Grafos",
             "turma": 1,
+            "cargaHoraria": 45,
             "horario": ["SEX M2 M3 M4"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11312"
         },
@@ -25,6 +28,7 @@
             "codigo": "IME04-11311",
             "nome": "Algoritmos em Grafos",
             "turma": 1,
+            "cargaHoraria": 45,
             "horario": ["SEX N2N3N4"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=11311"
         },
@@ -32,6 +36,7 @@
             "codigo": "IME04-10833",
             "nome": "Análise e Projeto de Sistemas",
             "turma": 1,
+            "cargaHoraria": 60,
             "horario": ["TER M1M2", "QUI M1M2"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10833"
         },
@@ -39,6 +44,7 @@
             "codigo": "IME04-10836",
             "nome": "Arquitetura de Computadores II",
             "turma": 1,
+            "cargaHoraria": 60,
             "horario": ["TER M3M4", "QUI M3M4"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10836"
         },
@@ -46,6 +52,7 @@
             "codigo": "IME04-10854",
             "nome": "Aspectos Práticos em Ciência da Computação I",
             "turma": 8,
+            "cargaHoraria": 60,
             "horario": ["TER M5M6", "QUI M5M6"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10854"
         },
@@ -53,6 +60,7 @@
             "codigo": "IME04-10832",
             "nome": "Banco de Dados I",
             "turma": 1,
+            "cargaHoraria": 60,
             "horario": ["QUA M3M4", "SEX M5M6"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10832"
         },
@@ -60,6 +68,7 @@
             "codigo": "IME04-10835",
             "nome": "Sistemas Operacionais I",
             "turma": 1,
+            "cargaHoraria": 60,
             "horario": ["SEG M5M6", "QUA M5M6"],
             "link": "https://www.ementario.uerj.br/ementa.php?cdg_disciplina=10835"
         }
