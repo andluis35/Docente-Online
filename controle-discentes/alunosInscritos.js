@@ -96,5 +96,3 @@ function construirCabecalho(componenteTabela) {
     const tbody = componenteTabela.querySelector("#alunosTabela");
     return tbody;
 }
-
-$(document).trigger('tabelaAtualizada');
