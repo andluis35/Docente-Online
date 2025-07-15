@@ -19,7 +19,7 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 8. [ ] Ao digitar notas negativas, o formulário aceita (não deveria somente mostrar no console)
 9. [ ] Implementação de página simples do SAG (verificar foto)
 10. [x] Alinhamento das notas à direita
-11. [ ] Máscara de conversão de nota com vírgula para ponto
+11. [x] Máscara de conversão de nota com vírgula para ponto
 12. [x] Tirar e-mail da tabela de registrar notas em 'Registro de Notas e Faltas'
 13. [x] Nova coluna 'Número de horas dadas'
 14. [ ] Nova coluna 'Situação' (Reprovado por nota; Reprovado por falta; Aprovado)

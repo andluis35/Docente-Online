@@ -8,6 +8,7 @@ let divDisciplinas = document.querySelector("#disciplinas");
 let disciplinas = [];
 let alunos = [];
 
+let caixaTemposFaltosos = document.querySelector("#caixa-de-tempos-faltosos");
 
 function trocaPontoFloat(str) {
   return str.replace(".", ",");
@@ -42,7 +43,14 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
                         discSelecionada.textContent = (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim();
                         //exibirInformacoes(element.textContent);
                         carregarAlunos(element.querySelector(".turmaID").textContent);
-                        destacarDisciplina((element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim(), parseInt((element.textContent.match(/TURMA:\s*(.*)\n/)[1]).trim()));
+                        destacarDisciplina(element);
+
+                        //Dispara evento no DOM informando a turma selecionada
+                        document.dispatchEvent(new CustomEvent("trocaTurmaFormulario", {
+                          detail:{
+                            turmaID: element.children[1].textContent
+                          }
+                        }));
                     });
         });
     });
@@ -72,6 +80,8 @@ export async function carregarAlunos(turmaID){
     let turma = turmasLocal.turmas.find(item => item.turmaID == turmaID);
     alunos = turma ? turma.alunos : undefined;
     colocarAlunosTabela();
+    caixaTemposFaltosos.children[1].value = turma.temposFaltosos;
+    caixaTemposFaltosos.style.visibility = "visible";
 }
 
 
@@ -91,19 +101,42 @@ export function colocarAlunosTabela(){
     let placeholderP1 = (element.notas.P1 == -0.1)?"":element.notas.P1;
     let placeholderP2 = (element.notas.P2 == -0.1)?"":element.notas.P2;
     let placeholderPF = (element.notas.PF == -0.1)?"":element.notas.PF;
-    let aluno = document.createElement("tr")
+
+    //Trata display de situação do aluno
+    let situacao = element.situacao;
+    let corSituacao = 'color:black';
+
+    switch(situacao){
+      case "Aprovação":
+        corSituacao = 'color: green';
+        break;
+      case "Reprovação por falta":
+        corSituacao = 'color:#FFD700';
+        break;
+      case "Reprovação por nota":
+        corSituacao = 'color: #FF8C00';
+        break;
+      case "Prova Final":
+        corSituacao = 'color: blue';
+        break;
+      default:
+        corSituacao = 'color:black';
+        break;
+    }
+        
+    let aluno = document.createElement("tr");
     aluno.innerHTML = 
     `<td>${numero}</td>
       <td>${element.matricula}</td>
       <td>${element.nome}</td>
-      <td class="visao-email-registros">${element.email}</td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
+      <td class= "visao-discentes">${element.email}</td>
+      <td class="visao-registros text-end"><input tabIndex ="${numero}" type="text" class="form-control form-control-sm text-end inputNotas" min="-0.1" max="10" step="0.1" value=${trocaPontoFloat(placeholderP1.toString())}></td>
+      <td class="visao-registros text-end"><input tabIndex ="${+numero + 1000000}" type="text" class="form-control form-control-sm text-end inputNotas" min="-0.1" max="10" step="0.1" value=${trocaPontoFloat(placeholderP2.toString())}></td>
+      <td class="visao-registros text-end"><input tabIndex ="${+numero + 2000000}" type="text" class="form-control form-control-sm text-end inputNotas" min="-0.1" max="10" step="0.1" value=${trocaPontoFloat(placeholderPF.toString())}></td>
       <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${element.faltas}></td>
-      <td class="visao-registros"> TODO </td>
-    `
+      <td class="visao-registros text-end"><input tabIndex ="${+numero + 3000000}" type="text" class="form-control form-control-sm text-end inputFaltas" min="0" step="1" value=${element.faltas}></td>
+      <td class="visao-registros situacao-aluno" style="${corSituacao}">${element.situacao}</td>
+    `;
 
       tabela.appendChild(aluno);
       numero = numero + 1;
