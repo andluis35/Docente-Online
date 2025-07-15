@@ -1,5 +1,5 @@
 import { getDisciplina, getAlunos, getTurma } from "../script/buscarDados.js";
-import { trocaPontoFloat, colocarAlunosTabela } from "./script.js";
+import { trocaPontoFloat} from "./script.js";
 
 // const codigoDisciplina = localStorage.getItem("disciplinaClicada");
 const turmaClicada = localStorage.getItem("turma-clicada");
@@ -51,6 +51,9 @@ function construirTabela(codigoDisciplina, turma) {
     // Implementar a função getAlunos() em /script/buscarDados.js
     getAlunos(codigoDisciplina, turma).then(alunos => {
         alunos.forEach((aluno, index) => {
+            let placeholderP1 = (aluno.notas.P1 == -0.1)?"":aluno.notas.P1;
+            let placeholderP2 = (aluno.notas.P2 == -0.1)?"":aluno.notas.P2;
+            let placeholderPF = (aluno.notas.PF == -0.1)?"":aluno.notas.PF;
             let linhaAluno = document.createElement("tr");
             linhaAluno.innerHTML =
                 `<td>${index + 1}</td>
@@ -60,8 +63,8 @@ function construirTabela(codigoDisciplina, turma) {
                 <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
                 <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
                 <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
-                <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
-                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${element.faltas}></td>
+                <td class="visao-registros text-end">${trocaPontoFloat(aluno.notas.mediaFinal.toString())}</td>
+                <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${aluno.faltas}></td>
                 <td class="visao-registros"> TODO </td>`;
             tbody.appendChild(linhaAluno);
         });
