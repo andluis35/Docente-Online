@@ -1,6 +1,8 @@
 {"turmas":[
 		{
 			"turmaID": "IME04-10842 1 2025/1",
+			"cargaHoraria": 60,
+			"temposFaltosos": 0,
 			"alunos":[
 					{
 						"nome": "Débora Regina Soares",
@@ -32,6 +34,8 @@
 		},
 		{
 			"turmaID": "IME04-10843 1 2025/1",
+			"cargaHoraria": 60,
+			"temposFaltosos": 0,
 			"alunos":[
 					{
 						"nome": "Débora Regina Soares",
@@ -63,6 +67,8 @@
 
 		},
 		{"turmaID": "IME04-11312 1 2025/1",
+			"cargaHoraria": 45,
+			"temposFaltosos": 0,
 			"alunos":[
 					{
 						"nome": "Raissa Silva Nunes",
