@@ -559,8 +559,8 @@ function checaFormulario(){
 		}
 	}
 
-	//Tempos faltosos maior que tempos previstos
-	if (temposFaltosos > temposDoPeriodo){
+	//Tempos faltosos maior que tempos previstos (tempos do período negativo)
+	if (temposDoPeriodo < 0){
 		if (err == null){
 			err = new Error("Número de tempos faltosos deve ser menor que o número de aulas possíveis no período! (Erro no campo de tempos faltosos).");
 			err.errorList = [17];
