@@ -244,7 +244,7 @@ function checaFormulario(){
 		
 	let turma = turmasLocal.turmas.find(t => t.turmaID == turmaIDAtual);	// Procura turma na lista de turmasLocal usando turmaID 
 
-	let temposFaltosos = (caixaTemposFaltosos.childern[0].value === "")?turma.temposFaltosos:caixaTemposFaltosos.childern[0].value;
+	let temposFaltosos = (caixaTemposFaltosos.children[0].value === "")?turma.temposFaltosos:caixaTemposFaltosos.childern[0].value;
 	let cargaHoraria = turma.cargaHoraria;
 	let temposPrevistos = (cargaHoraria*1.2);
 	let temposDoPeriodo = +temposPrevistos - +temposFaltosos;
