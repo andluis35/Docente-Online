@@ -481,6 +481,23 @@ function checaFormulario(){
 	}
 
 						/* CHECA TEMPOS FALTOSOS */
+
+	//Tempos faltosos não numérico
+	if (isNaN(temposFaltosos)){
+		if (err == null){
+			err = new Error("Número de tempos faltosos deve ser numérico! (Erro no campo de tempos faltosos).");
+			err.errorList = [18];
+			err.alunoList = [caixaTemposFaltosos.children[0]];
+			err.errorCamps = [caixaTemposFaltosos.children[1]];
+		}
+		else{
+			err.message = err.message + "\nNúmero de tempos faltosos deve ser numérico! (Erro no campo de tempos faltosos).";
+			err.errorList.push(18);
+			err.alunoList.push(caixaTemposFaltosos.children[0]);
+			err.errorCamps.push(caixaTemposFaltosos.children[1]);
+		}
+	}
+	
 	//Tempos faltosos negativos
 	if(temposFaltosos < 0){
 		if (err == null){
