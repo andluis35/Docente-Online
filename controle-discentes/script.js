@@ -6,8 +6,7 @@ const INPUT_BUSCA = document.getElementById('busca');
 let divDisciplinas = document.querySelector("#disciplinas");
 
 let disciplinas = [];
-let alunos = [];
-
+// let alunos = []; // Esta variável 'alunos' pode ser removida se você sempre buscar os alunos da turma.
 
 export function trocaPontoFloat(str) {
   return str.replace(".", ",");
@@ -16,14 +15,14 @@ export function trocaPontoFloat(str) {
 let docenteTurmas = JSON.parse(localStorage.getItem("docenteTurmas"));
 
 fetch ("../data/NOVO-disciplinas.json").then((response) => {
-    response.json().then((info) => {
-        info.disciplinas.map((disciplina) => {
+  response.json().then((info) => {
+    info.disciplinas.map((disciplina) => {
 
-            disciplina.turmas.forEach(turma =>{
-                if(docenteTurmas.find(tID => tID == turma.turmaID)){    // Só utiliza turmas em que o professor está inscrito
-                    salvarDisciplinas(disciplina);
+      disciplina.turmas.forEach(turma =>{
+        if(docenteTurmas.find(tID => tID == turma.turmaID)){    // Só utiliza turmas em que o professor está inscrito
+          salvarDisciplinas(disciplina);
 
-                    divDisciplinas.innerHTML += `
+          divDisciplinas.innerHTML += `
                       <button class="itemLista">
                         <div style="display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; text-align: left;">
                           <span><strong>CÓDIGO:</strong></span>   <span>${disciplina.codigo}</span>
@@ -33,22 +32,22 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
                         </div>
                         <span style="display: none;" class="turmaID">${turma.turmaID}</span>
                       </button>`;
-                }
-            });
-        });
-        document.querySelectorAll('.itemLista').forEach(element => {
-                    element.addEventListener('click', () => {
-                        let disc = document.getElementById("infoDisc");
-                        disc.innerHTML = "";
-                        let h1 = document.createElement("h1");
-                        h1.textContent = (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim();
-                        disc.appendChild(h1);
-                        //exibirInformacoes(element.textContent);
-                        carregarAlunos(element.querySelector(".turmaID").textContent);
-                        destacarDisciplina(element);
-                    });
-        });
+        }
+      });
     });
+    document.querySelectorAll('.itemLista').forEach(element => {
+      element.addEventListener('click', () => {
+        let disc = document.getElementById("infoDisc");
+        disc.innerHTML = "";
+        let h1 = document.createElement("h1");
+        h1.textContent = (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim();
+        disc.appendChild(h1);
+        //exibirInformacoes(element.textContent); // Esta linha pode ser revisada ou removida se não for mais usada.
+        carregarAlunosETabela(element.querySelector(".turmaID").textContent); // Alterado para carregar e preencher a tabela
+        destacarDisciplina(element);
+      });
+    });
+  });
 });
 
 function destacarDisciplina(disciplinaAlvo){
@@ -67,52 +66,77 @@ function destacarDisciplina(disciplinaAlvo){
   });
 }
 
-export async function carregarAlunos(turmaID){
-    let turmasLocal = await carregaFormulario();
-    
-    let turma = turmasLocal.turmas.find(item => item.turmaID == turmaID);
-    alunos = turma ? turma.alunos : undefined;
-    colocarAlunosTabela();
+// Nova função para carregar alunos e preencher a tabela
+export async function carregarAlunosETabela(turmaID) {
+  let turmasLocal = await carregaFormulario();
+  let turma = turmasLocal.turmas.find(item => item.turmaID == turmaID);
+
+  if (turma && turma.alunos) {
+    const componenteTabela = document.getElementById('tabelaAlunos');
+    construirCabecalhoTabelaAlunos(componenteTabela); // Garante que o cabeçalho seja construído
+    preencherTabelaAlunos(turma.alunos, trocaPontoFloat);
+  } else {
+    console.warn(`Não foi possível encontrar alunos para a turma ID: ${turmaID}`);
+    // Opcional: Limpar a tabela ou exibir uma mensagem de "sem alunos"
+    document.getElementById("alunosTabela").innerHTML = "";
+  }
+  document.dispatchEvent(new CustomEvent("novaTabelaAlunos", {}));
+  $(document).trigger('tabelaAtualizada');
 }
 
+// Função exportada para construir o cabeçalho da tabela
+export function construirCabecalhoTabelaAlunos(componenteTabela) {
+  componenteTabela.innerHTML =
+      `<table class="table table-sm table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Número</th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col" class="visao-discentes">email</th>
+                    <th scope="col" class="visao-registros">Nota P1</th>
+                    <th scope="col" class="visao-registros">Nota P2</th>
+                    <th scope="col" class="visao-registros">Nota PF</th>
+                    <th scope="col" class="visao-registros">Média Final</th>
+                    <th scope="col" class="visao-registros">Total de faltas</th>
+                    <th scope="col" class="visao-registros">Situação</th>
+                </tr>
+            </thead>
+            <tbody id="alunosTabela"></tbody>
+        </table>`;
+}
 
+// Função exportada para preencher a tabela de alunos
+export function preencherTabelaAlunos(alunos, formatarNotaCallback) {
+  const tbody = document.getElementById("alunosTabela");
+  tbody.innerHTML = ""; // Limpa o corpo da tabela antes de preencher
 
-export function colocarAlunosTabela(){
-  let tabela = document.getElementById("alunosTabela");
-  tabela.innerHTML = "";
-  let numero = 1
-
-  if(!alunos){
+  if (!alunos || alunos.length === 0) {
     return;
   }
 
- 
-  alunos.forEach(element => {
-       // Renomeia -0.1 para ter diferenca entre nota 0 e nota nao dada.
-    let placeholderP1 = (element.notas.P1 == -0.1)?"":element.notas.P1;
-    let placeholderP2 = (element.notas.P2 == -0.1)?"":element.notas.P2;
-    let placeholderPF = (element.notas.PF == -0.1)?"":element.notas.PF;
-    let aluno = document.createElement("tr")
-    aluno.innerHTML = 
-    `<td>${numero}</td>
-      <td>${element.matricula}</td>
-      <td>${element.nome}</td>
-      <td class="visao-discentes">${element.email}</td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
-      <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${element.faltas}></td>
-      <td class="visao-registros"> TODO </td>
-    `
+  alunos.forEach((aluno, index) => {
+    let placeholderP1 = (aluno.notas.P1 == -0.1) ? "" : aluno.notas.P1;
+    let placeholderP2 = (aluno.notas.P2 == -0.1) ? "" : aluno.notas.P2;
+    let placeholderPF = (aluno.notas.PF == -0.1) ? "" : aluno.notas.PF;
 
-      tabela.appendChild(aluno);
-      numero = numero + 1;
+    let linhaAluno = document.createElement("tr");
+    linhaAluno.innerHTML =
+        `<td>${index + 1}</td>
+            <td>${aluno.matricula}</td>
+            <td>${aluno.nome}</td>
+            <td class="visao-discentes">${aluno["e-mail"] || aluno.email}</td>
+            <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${formatarNotaCallback(placeholderP1.toString())}></td>
+            <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${formatarNotaCallback(placeholderP2.toString())}></td>
+            <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${formatarNotaCallback(placeholderPF.toString())}></td>
+            <td class="visao-registros text-end">${formatarNotaCallback(aluno.notas.mediaFinal.toString())}</td>
+            <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${aluno.faltas}></td>
+            <td class="visao-registros"> TODO </td>`;
+    tbody.appendChild(linhaAluno);
   });
-    document.dispatchEvent(new CustomEvent("novaTabelaAlunos", {}));
-    $(document).trigger('tabelaAtualizada');
 }
 
+// Funções que não foram alteradas mas fazem parte do script.js original
 function exibirInformacoes(disciplina){
   let detalhes = document.getElementById("infoDisc");
   detalhes.innerHTML = "";
@@ -133,27 +157,14 @@ function exibirInformacoes(disciplina){
     return;
   }
 
-/*
-  infoDisc.innerHTML =
-  `<div class="disciplinaDetalhada d-flex flex-column justify-content-start align-items-start p-1">
-    <h1 class="h4">${nomeDisciplina}</h1> <br>
-    CÓDIGO: ${jsonDisciplina.codigo} <br> 
-    TURMA: ${jsonDisciplina.turmas[0].numero} <br> 
-    HORARIO: ${jsonDisciplina.turmas[0].horario} <br>
-    EMENTÁRIO: <a href="${jsonDisciplina.ementa}" class="d-inline-block text-truncate w-100">${jsonDisciplina.ementa}</a>
-    <span style="display: none;" class = "turmaID">${jsonDisciplina.turmas[0].turmaID}</span>
-  </div>
-  `
-*/
-
-infoDisc.innerHTML = `
+  infoDisc.innerHTML = `
   <div class="disciplinaDetalhada">
     <h1>${nomeDisciplina}</h1>
     <div style="display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; text-align: left; margin-top: 8px; width: 100%;">
       <span><strong>CÓDIGO:</strong></span>     <span>${jsonDisciplina.codigo}</span>
       <span><strong>TURMA:</strong></span>      <span>${jsonDisciplina.turmas[0].numero}</span>
       <span><strong>HORÁRIO:</strong></span>    <span>${jsonDisciplina.turmas[0].horario}</span>
-      <span><strong>EMENTÁRIO:</strong></span>  
+      <span><strong>EMENTÁRIO:</strong></span>
       <span>
         <a href="${jsonDisciplina.ementa}" target="_blank" class="d-inline-block text-truncate w-100">
           CONSULTAR EMENTA
@@ -191,22 +202,22 @@ function salvarDisciplinas(element){
   let turma = [];
 
   element.turmas.forEach(item => {
-  let t = {
-    numero: item.numero,
-    turmaID: item.turmaID,
-    horario: item.horario
+    let t = {
+      numero: item.numero,
+      turmaID: item.turmaID,
+      horario: item.horario
     }
     turma.push(t);
-    });
+  });
 
-    let disciplina = {
-      codigo: element.codigo,
-      nome: element.nome,
-      ementa: element.ementa,
-      turmas: turma
-      };
+  let disciplina = {
+    codigo: element.codigo,
+    nome: element.nome,
+    ementa: element.ementa,
+    turmas: turma
+  };
 
-    disciplinas.push(disciplina);
+  disciplinas.push(disciplina);
 }
 
 // =-=-=-=-=-=-=-=-=-= Código relacionado ao LocalStorage =-=-=-=-=-=-=-=-=-= //
@@ -228,7 +239,7 @@ input.addEventListener("keydown", (event) => {
 
 input.addEventListener("input", () => {
   filtrarSugestoes(input.value);
-  exibirSugestoes(true);  
+  exibirSugestoes(true);
 });
 
 input.addEventListener("focus", () => {
@@ -240,7 +251,7 @@ input.addEventListener("focus", () => {
 input.addEventListener("blur", () => {
   setTimeout(() => {
     exibirSugestoes(false);
-  input.style.borderColor="#adadad";
+    input.style.borderColor="#adadad";
 
   }, 100);
 });
@@ -280,7 +291,7 @@ function estaNoHistorico(texto){
 
 adicionarDisciplinas();
 function adicionarDisciplinas(){
-    fetch('../data/NOVO-disciplinas.json')
+  fetch('../data/NOVO-disciplinas.json')
       .then(response => response.json())
       .then(data => {
 
@@ -289,7 +300,7 @@ function adicionarDisciplinas(){
         item.forEach(element => {
           adicionarSugestao(element.nome);
         });
-        
+
       })
       .catch(error => {
         console.error("Erro ao carregar JSON:", error);
@@ -310,14 +321,14 @@ function filtrarSugestoes(conteudoBusca){
       if(infoPertenceDisciplina(encontrarDisciplina(element.textContent),conteudoBusca)){
         element.style.display="block";
       }
-   }
-  
-  let nomeDisciplina = element.textContent.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-  let regex = new RegExp("\\b" + conteudoBusca, "i");
-  
-  if(element.className == "itemHistorico" && (regex.test(nomeDisciplina))){
-        element.style.display="block";
-      }
+    }
+
+    let nomeDisciplina = element.textContent.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+    let regex = new RegExp("\\b" + conteudoBusca, "i");
+
+    if(element.className == "itemHistorico" && (regex.test(nomeDisciplina))){
+      element.style.display="block";
+    }
   });
 
 }
