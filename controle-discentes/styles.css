@@ -44,3 +44,12 @@
 #popup-message-list{
     color: white;
 }
+
+#caixa-de-tempos-faltosos{
+    background-color: grey;
+}
+
+#caixa-de-tempos-faltosos > input{
+    width: 4rem;
+    min-width: 3rem;
+}
