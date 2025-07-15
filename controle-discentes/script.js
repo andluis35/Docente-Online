@@ -38,25 +38,23 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
         });
         document.querySelectorAll('.itemLista').forEach(element => {
                     element.addEventListener('click', () => {
-                        let disc = document.getElementById("infoDisc");
-                        disc.innerHTML = "";
-                        let h1 = document.createElement("h1");
-                        h1.textContent = (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim();
-                        disc.appendChild(h1);
+                        let discSelecionada = document.getElementById("discSelecionada");
+                        discSelecionada.textContent = (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim();
                         //exibirInformacoes(element.textContent);
                         carregarAlunos(element.querySelector(".turmaID").textContent);
-                        destacarDisciplina(element);
+                        destacarDisciplina((element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim(), parseInt((element.textContent.match(/TURMA:\s*(.*)\n/)[1]).trim()));
                     });
         });
     });
 });
 
-function destacarDisciplina(disciplinaAlvo){
+function destacarDisciplina(nomeDisc, nTurma){
+
   let resultadoBusca = document.getElementById("disciplinas");
   let disciplinas = Array.from(resultadoBusca.children);
 
   disciplinas.forEach(element => {
-    if((disciplinaAlvo.textContent.match(/NOME:\s*(.*)\n/)[1]).trim() == (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim()){
+    if(nomeDisc == (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim() && nTurma == (element.textContent.match(/TURMA:\s*(.*)\n/)[1]).trim()){
       element.style.backgroundColor="#0080c6";
       element.style.color="#ffffff";
     }
@@ -65,6 +63,7 @@ function destacarDisciplina(disciplinaAlvo){
       element.style.color="#000000";
     }
   });
+
 }
 
 export async function carregarAlunos(turmaID){
@@ -240,9 +239,11 @@ input.addEventListener("focus", () => {
 input.addEventListener("blur", () => {
   setTimeout(() => {
     exibirSugestoes(false);
-  input.style.borderColor="#adadad";
-
+    subitem.style.display = "none";
+    input.style.borderColor="#adadad";
   }, 100);
+
+  let subitem = document.getElementById("subItens");
 });
 
 function adicionarHistorico(texto){
@@ -320,6 +321,9 @@ function filtrarSugestoes(conteudoBusca){
       }
   });
 
+  let subitens = document.getElementById("subItens");
+  subitens.style.display = "none";
+
 }
 
 function infoPertenceDisciplina(disciplina, info){
@@ -371,10 +375,67 @@ function adicionarSugestao(texto){
     let sugestoes = document.getElementById("sugestoes");
     sugestoes.prepend(item);
     filtrarDisciplinas();
+
+    let objDisc = encontrarDisciplina(item.textContent.trim());
+    if(objDisc && objDisc.turmas.length > 1){
+      setTimeout(() => {
+        input.focus();
+        adicionarSubitem(objDisc);
+      }, 100);
+      input.style.borderColor="#016ba5";
+    }
+    else{
+      let subItens = document.getElementById("subItens");
+      subItens.innerHTML="";
+      destacarDisciplina(item.textContent, 1);
+      let discSelecionada = document.getElementById("discSelecionada");
+      discSelecionada.textContent = item.textContent;
+
+      let objDisc = encontrarDisciplina(item.textContent);
+      carregarAlunos(objDisc.turmas[0].turmaID);
+    }
   });
 
   let sugestoes = document.getElementById("sugestoes");
   sugestoes.appendChild(item);
+}
+
+function adicionarSubitem(objDisc){
+  let subItens = document.getElementById("subItens");
+  subItens.innerHTML="";
+
+  let nomeDisc = document.createElement("h4");
+  nomeDisc.textContent = "Selecione uma turma:";
+  nomeDisc.style.color = "#016ba5";
+
+  subItens.appendChild(nomeDisc);
+
+  for(let i=1; i<objDisc.turmas.length+1; i++){
+    let turma = document.createElement("button");
+    turma.classList.add("itemSugestao");
+    turma.style.display = "block";
+    turma.textContent = objDisc.nome + ": "+ " Turma " + i;
+
+    turma.addEventListener('click', () => {
+
+        const regex = turma.textContent.match(/^(.*?):\s*Turma\s+(\d+)$/);
+
+        let nome = regex[1].trim();
+        let nTurma = parseInt(regex[2], 10);
+
+        let obj = encontrarDisciplina(nome);
+        let codTurma = obj.turmas[nTurma-1].turmaID;
+        carregarAlunos(codTurma);
+        destacarDisciplina(nome, nTurma);
+        let discSelecionada = document.getElementById("discSelecionada");
+        discSelecionada.textContent = (nome);
+        
+     });
+
+    subItens.appendChild(turma);
+  }
+
+  subItens.style.display = "block";
 }
 
 
