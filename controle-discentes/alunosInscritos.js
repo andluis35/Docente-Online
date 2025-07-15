@@ -15,9 +15,8 @@ getTurma(turmaClicada).then( turma => {
     );
     console.log("AlunosInscritos.js getDisciplina \n" + JSON.stringify(turma, null, 2))
     construirTabela(turma.codigo, turma.numero);
-    $(document).trigger('tabelaAtualizada');
 })
-
+$(document).trigger('tabelaAtualizada');
 
 function preencherInfo(codigoDiscip, nome, numeroTurma, listaHorarios, urlEmenta){
     const componenteInfoDiscip = document.getElementById('infoDisc')
