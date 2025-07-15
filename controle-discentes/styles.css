@@ -47,6 +47,7 @@
 
 #caixa-de-tempos-faltosos{
     background-color: grey;
+    visibility: hidden;
 }
 
 #caixa-de-tempos-faltosos > input{
