@@ -82,6 +82,7 @@ export async function carregarAlunos(turmaID){
     alunos = turma ? turma.alunos : undefined;
     colocarAlunosTabela();
     caixaTemposFaltosos.value = turma.temposFaltosos;
+    caixaTemposFaltosos.style.visibility = "visible";
 }
 
 
