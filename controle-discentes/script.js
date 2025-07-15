@@ -101,8 +101,8 @@ export function colocarAlunosTabela(){
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP1.toString())}></td>
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderP2.toString())}></td>
       <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputNotas" min="-0.1" max="10" step="0.1" placeholder=${trocaPontoFloat(placeholderPF.toString())}></td>
-      <td class="visao-registros text-end">${trocaPontoFloat(element.notas.mediaFinal.toString())}</td>
-      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${element.faltas}></td>
+      <td class="visao-registros text-end">${trocaPontoFloat(aluno.notas.mediaFinal.toString())}</td>
+      <td class="visao-registros text-end"><input type="text" class="form-control form-control-sm inputFaltas" min="0" step="1" value=${aluno.faltas}></td>
       <td class="visao-registros"> TODO </td>
     `
 
