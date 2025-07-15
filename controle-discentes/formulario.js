@@ -58,6 +58,7 @@ export async function carregaFormulario(){
 let turmasLocal = null;
 let tbody = null;
 let camposMarcados = null;
+let caixaTemposFaltososMarcado = false;
 //Assim que carregar a pagina
 document.addEventListener("DOMContentLoaded", async () => {
 	tbody = document.getElementById("alunosTabela");
@@ -83,7 +84,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 			popUpConteiner.style.visibility = "visible";
 		} catch(error){
 			console.error("Erro!: ", error);
-
+			
+			if (caixaTemposFaltososMarcado){
+				campoTemposFaltosos.style.border = "";
+				caixaTemposFaltososMarcado = false
+			}
+			
 			if (camposMarcados != null){
 				//Desmarca campos marcados anteriormente em outro erro
 				for(let i = 0; i < camposMarcados.length; i++){
@@ -94,6 +100,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 				//Salva campos a serem marcados
 				camposMarcados = error.errorCamps;
 			}
+
+			
 			//Vai em cada campo que deu erro e marca com uma borda tracejada
 			for(let i = 0; i < error.errorCamps.length; i++){
 				error.errorCamps[i].style.border = "2px dashed red";
@@ -101,8 +109,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 			//Atualiza html com lista dos erros encontrados
 			let allErrors = error.message.split("\n");
-			//Numero na sequencia de erros, nao o codigo do erro em si
+			
 			allErrors.forEach((e, index) => {
+				
+				//Se código do erro é referente ao campo de tempos faltosos
+				if ((errorList[index] > 14) && (errorList[index] < 19)){
+					caixaTemposFaltosos.children[1].style.border = "2px dashed red";
+					caixaTemposFaltososMarcado = true;
+				}
+				
 				let errorLine = document.createElement("li");
     				
 				errorLine.innerHTML = 
@@ -127,6 +142,12 @@ popUpButton.addEventListener("click", () => {
 
 
 function salvaFormulario(turma){
+	let temposFaltosos = (caixaTemposFaltosos.childern[0].value === "")?turma.temposFaltosos:caixaTemposFaltosos.childern[0].value;
+	let cargaHoraria = turma.cargaHoraria;
+	let temposPrevistos = (cargaHoraria*1.2);
+	let temposDoPeriodo = +temposPrevistos - +temposFaltosos;
+	turma.temposFaltosos = temposFaltosos;
+	
 	for(const child of tbody.children){
 		let matricula = child.children[1].textContent;		// Le matricula do aluno na tabela
 		
@@ -138,10 +159,6 @@ function salvaFormulario(turma){
 		let notaP2 = (child.children[5].children[0].value === "")?aluno.notas.P2:child.children[5].children[0].value;
 		let notaPF = (child.children[6].children[0].value === "")?aluno.notas.PF:child.children[6].children[0].value; 
 		let faltas = (child.children[8].children[0].value === "")?aluno.faltas:child.children[8].children[0].value;
-		let temposFaltosos = (caixaTemposFaltosos.childern[0].value === "")?turma.temposFaltosos:caixaTemposFaltosos.childern[0].value;
-		let cargaHoraria = turma.cargaHoraria;
-		let temposPrevistos = (cargaHoraria*1.2);
-		let temposDoPeriodo = +temposPrevistos - +temposFaltosos;
 
 		let situacao = "";
 
