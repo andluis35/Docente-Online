@@ -41,6 +41,9 @@ document.addEventListener("novaTabelaAlunos", () => {
 			divDblClick.style.left = e.clientX + 15 + "px";
  			divDblClick.style.top = e.clientY + 15 + "px";
   			divDblClick.style.visibility = "visible";
+			setTimeout(() =>{
+				divDblClick.style.visibility = "hidden";
+			}, 2000);
 		});
 		input.addEventListener("mouseleave", () => {
   			divDblClick.style.visibility = "hidden";
@@ -57,12 +60,15 @@ caixaTemposFaltosos.children[1].addEventListener("dblclick", () => {
 });
 
 
-caixaTemposFaltosos.addEventListener("mousemove", (e) =>{
+caixaTemposFaltosos.children[1].addEventListener("mousemove", (e) =>{
 	divDblClick.style.left = e.clientX + 15 + "px";
 	divDblClick.style.top = e.clientY + 15 + "px";
 	divDblClick.style.visibility = "visible";
+	setTimeout(() =>{
+		divDblClick.style.visibility = "hidden";
+	}, 2000);
 });
-caixaTemposFaltosos.addEventListener("mouseleave", () => {
+caixaTemposFaltosos.children[1].addEventListener("mouseleave", () => {
 	divDblClick.style.visibility = "hidden";
 });
 
