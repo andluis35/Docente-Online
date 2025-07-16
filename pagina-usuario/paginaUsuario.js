@@ -6,8 +6,22 @@ export function constroiPaginaUsuario(usuario) {
         const componente = constroiPagina(usuario) 
         pagina.innerHTML = componente;
         console.log(pagina)
+        
         const btnFechar = pagina.querySelector("#btn-fechar");
         const btnSalvar = pagina.querySelector("#btn-salvar");
+        
+        const telInput1 = document.getElementById('tel-1');
+        const telInput2 = document.getElementById('tel-2');
+
+        const emailInput1 = document.getElementById('email-input-1');
+        const emailInput2 = document.getElementById('email-input-2');
+        
+        const cepInput = document.getElementById('cep-input');        
+        
+
+        mascaraTelefone(telInput1);
+        mascaraTelefone(telInput2);
+        mascaraCEP(cepInput);
 
         console.log(btnFechar)
         btnFechar.addEventListener("click", () => {
@@ -21,6 +35,57 @@ export function constroiPaginaUsuario(usuario) {
 
         abrirPagina(pagina);
     }
+}
+
+
+
+function abrirPagina(pagina) {
+  pagina.classList.add('pg-user-mostrar');
+  console.log("ABRIR!")
+  janelaAberta = true;
+}
+
+function fecharPagina(pagina) {
+  pagina.classList.remove('pg-user-mostrar');
+    console.log("FECHAR!")
+  janelaAberta = false
+}
+
+
+function mascaraTelefone(input) {
+  input.addEventListener('input', function(event) {
+    let valor = event.target.value;
+
+    valor = valor.replace(/\D/g, '');
+
+    if (valor.length > 10) { 
+      valor = valor.replace(/^(\d\d)(\d{5})(\d{4}).*/, '($1) $2-$3');
+    } else if (valor.length > 6) { 
+      valor = valor.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+    } else if (valor.length > 2) { 
+      valor = valor.replace(/^(\d\d)(\d{0,5})/, '($1) $2');
+    } else { 
+      valor = valor.replace(/^(\d*)/, '($1');
+    }
+    event.target.value = valor;
+  });
+}
+
+function mascaraCEP(input) {
+  input.addEventListener('input', function(event) {
+    let valor = event.target.value;
+    
+    valor = valor.replace(/\D/g, '');
+
+    if (valor.length > 8) {
+      valor = valor.substring(0, 8);
+    }
+
+    if (valor.length > 5) {
+      valor = valor.replace(/^(\d{5})(\d{0,3}).*/, '$1-$2');
+    }
+    event.target.value = valor;
+  });
 }
 
 function constroiPagina(usuario) {
@@ -49,27 +114,27 @@ function constroiPagina(usuario) {
         </div>
         <img 
             id="profile-pic" 
-            src="https://randomuser.me/api/portraits/men/50.jpg" 
+            src="${usuario.foto}" 
             alt="Foto de perfil"
         >
         </div>
         <br><br>
         <div class="formularios">
             <h1>Dados para contato</h1>
-            <h3>Mantenha atualizado o seu cadastro.\nCorrija ou complemente os dados abaixo.</h3>
+            <h3 style="white-space: pre;"><strong>Mantenha atualizado o seu cadastro.</strong> \nCorrija ou complemente os dados abaixo.</h3>
             <form class="user-form tel-form form-duplo">
-                <input type="tel" class="tel" placeholder="Telefone 1*" maxlength="13">
-                <input type="tel" class="tel" placeholder="Telefone 2" maxlength="13">
+                <input id="tel-1" type="tel" class="tel" placeholder="Telefone 1*">
+                <input id="tel-2" type="tel" class="tel" placeholder="Telefone 2" >
             </form>
             <form class="user-form email-form form-duplo">
-                <input type="email" id="email-input" placeholder="E-mail 1*" maxlength="13">
-                <input type="email" id="email-input" placeholder="E-mail 2" maxlength="13">
+                <input type="email" id="email-input-1" placeholder="E-mail 1*">
+                <input type="email" id="email-input-2" placeholder="E-mail 2">
             </form>
             <form class="user-form">
                 <div class="address_field">
-                    <input type="text" placeholder="CEP" id="user-cpf" alt="cep">
-                    <input placeholder="RJ">
-                    <select placeholder="UF" id="uf-input"></select>
+                    <input id="cep-input" type="text" placeholder="CEP" id="user-cpf" alt="cep">
+                    <input id="uf-input" type="text" placeholder="RJ" maxlength="2">
+                    <select placeholder="UF" id="uf-select"></select>
                 </div>
                 <input type="text" placeholder="Municipio"  alt="municipio">
                 <input type="text" placeholder="Bairro" alt="bairro">
@@ -81,23 +146,4 @@ function constroiPagina(usuario) {
     </div>
 </div>
     `;
-}
-
-
-function abrirPagina(pagina) {
-//   aviso.style.visibility = 'visible'
-//   inputUsuario.style.borderColor = '#f56060';
-//   inputSenha.style.borderColor = '#f56060';
-  pagina.classList.add('pg-user-mostrar');
-  console.log("ABRIR!")
-  janelaAberta = true;
-}
-
-function fecharPagina(pagina) {
-//   inputUsuario.style.borderColor = '';
-//   inputSenha.style.borderColor = '';
-//   aviso.style.visibility = 'hidden'
-  pagina.classList.remove('pg-user-mostrar');
-    console.log("FECHAR!")
-  janelaAberta = false
 }
