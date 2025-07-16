@@ -6,15 +6,6 @@
     --fundo-item: #f6f4f2;
 }
 
-h1 {
-    color: var(--cor-primaria);
-}
-
-h3 {
-    color: var(--cor-terciaria);
-    margin-bottom: 4vh;
-}
-
 .pg-user {
     visibility: hidden;
 }
@@ -112,6 +103,16 @@ img:hover {
     @media screen and (max-width:600px) {
         margin-left: 13vw;
         margin-right: 13vw
+    }
+
+    h1 {
+        text-align: start;
+        color: var(--cor-primaria);
+    }
+
+    h3 {
+        color: var(--cor-terciaria);
+        margin-bottom: 4vh;
     }
 
     input{

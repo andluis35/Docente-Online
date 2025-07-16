@@ -56,7 +56,7 @@ function constroiPagina(usuario) {
         <br><br>
         <div class="formularios">
             <h1>Dados para contato</h1>
-            <h3>Mantenha atualizado o seu cadastro. Corrija ou complemente os dados abaixo.</h3>
+            <h3>Mantenha atualizado o seu cadastro.\nCorrija ou complemente os dados abaixo.</h3>
             <form class="user-form tel-form form-duplo">
                 <input type="tel" class="tel" placeholder="Telefone 1*" maxlength="13">
                 <input type="tel" class="tel" placeholder="Telefone 2" maxlength="13">
