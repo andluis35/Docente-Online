@@ -113,6 +113,19 @@ img:hover {
         margin-left: 13vw;
         margin-right: 13vw
     }
+
+    input{
+        width: 20vh;
+        border: solid 1px var(--cor-primaria);
+        padding: 1vh;
+        outline: none;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    input::placeholder {
+        color: var(--placeholder);
+    }
 }
 
 .form-duplo {
@@ -140,9 +153,7 @@ img:hover {
     }
 }
 
-input {
-    width: 20vh;
-}
+
 
 .user-pg-botton-btn-container {
     padding: 0.6vh;
