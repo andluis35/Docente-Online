@@ -117,6 +117,39 @@
                     </a>
                 </div>
 
+                <div class="modal fade" id="confirmacaoModal" tabindex="-1" aria-labelledby="confirmacaoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="confirmacaoModalLabel">Confirmação Necessária</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Você tem certeza que deseja enviar as notas para o Sistema Acadêmico de Graduação (SAG)?</p>
+                                <p>Esta ação não poderá ser desfeita!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger" id="btnConfirmarAcao">Sim, tenho certeza!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="sucessoModal" tabindex="-1" aria-labelledby="sucessoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="sucessoModalLabel">Ação Concluída!</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>As notas foram enviadas para o Sistema Acadêmico de Graduação.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <div id="usuario-container"></div>
         </main>
@@ -149,6 +182,6 @@
         <script type='module' src="../script/layouts/trocaContextoGradeDiscentesERegistros.js"></script>
         <script type="module" src="./script.js"></script>
         <script type="module" src="../script/navegacaoLayoutBase.js"></script>
-        
+        <script type="module" src="./modal.js"></script>
     </body>
 </html>
