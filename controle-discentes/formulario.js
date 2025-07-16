@@ -7,12 +7,27 @@ let popUpButton = popUpConteiner.children[1];
 let caixaTemposFaltosos = document.querySelector("#caixa-de-tempos-faltosos");
 
 
+let divDblClick = document.createElement("div");
+divDblClick.innerHTML = 'Dê dois cliques para anular o campo';
+divDblClick.style.visibility = "hidden";
+divDblClick.style.position = "fixed";
+divDblClick.style.backgroundColor = "#333";
+divDblClick.style.color = "#fff";
+divDblClick.style.padding = "6px 10px";
+divDblClick.style.borderRadius = "4px";
+divDblClick.style.fontSize = "14px";
+divDblClick.style.pointerEvents = "none";
+divDblClick.style.zIndex = "1000";
+divDblClick.id = "divDblClick";
+document.body.appendChild(divDblClick);
+
 document.addEventListener("novaTabelaAlunos", () => {
 	console.log("tabela carregada!");
 	// Evento de zerar campo
 	const inputs = document.querySelectorAll('.form-control.form-control-sm');
 
 	inputs.forEach((input) => {
+		
 		input.addEventListener("dblclick", () => {
 			console.log("~ Input clicado 2x! ~");
 			let minValue = parseFloat(input.min);
@@ -21,6 +36,19 @@ document.addEventListener("novaTabelaAlunos", () => {
 			}
 			else{ input.value = minValue; }
 		});
+		
+		input.addEventListener("mousemove", (e) =>{
+			divDblClick.style.left = e.clientX + 15 + "px";
+ 			divDblClick.style.top = e.clientY + 15 + "px";
+  			divDblClick.style.visibility = "visible";
+			setTimeout(() =>{
+				divDblClick.style.visibility = "hidden";
+			}, 2000);
+		});
+		input.addEventListener("mouseleave", () => {
+  			divDblClick.style.visibility = "hidden";
+		});
+
 	});
 	//Fim do evento de zerar campo
 });
@@ -30,6 +58,21 @@ caixaTemposFaltosos.children[1].addEventListener("dblclick", () => {
 	console.log("~ Input clicado 2x! ~");
 	caixaTemposFaltosos.children[1].value = caixaTemposFaltosos.children[1].min;
 });
+
+
+caixaTemposFaltosos.children[1].addEventListener("mousemove", (e) =>{
+	divDblClick.style.left = e.clientX + 15 + "px";
+	divDblClick.style.top = e.clientY + 15 + "px";
+	divDblClick.style.visibility = "visible";
+	setTimeout(() =>{
+		divDblClick.style.visibility = "hidden";
+	}, 2000);
+});
+caixaTemposFaltosos.children[1].addEventListener("mouseleave", () => {
+	divDblClick.style.visibility = "hidden";
+});
+
+
 
 
 document.addEventListener("trocaTurmaFormulario", function(e) {
