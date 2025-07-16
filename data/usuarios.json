@@ -3,60 +3,80 @@
         "nome": "Fabio da Silva",
         "cpf": "123.456.789-01",
         "matricula": "91011-1",
-        "senha": "Senha@123"
+        "senha": "Senha@123",
+        "foto": "https://randomuser.me/api/portraits/men/50.jpg",
+        "admissao": "2015"
     },
     {
         "nome": "Cecilia Souza",
         "cpf": "201.302.403-11",
         "matricula": "23456-7",
-        "senha": "Pass!456"
+        "senha": "Pass!456",
+        "foto": "https://randomuser.me/api/portraits/women/51.jpg",
+        "admissao": "1998"
     },
     {
         "nome": "Beto Pereira",
         "cpf": "987.654.321-00",
         "matricula": "91012-2",
-        "senha": "Forte#789"
+        "senha": "Forte#789",
+        "foto": "https://randomuser.me/api/portraits/men/52.jpg",
+        "admissao": "2021"
     },
     {
         "nome": "Maria Oliveira",
         "cpf": "201.302.403-22",
         "matricula": "34578-9",
-        "senha": "Maria123!"
+        "senha": "Maria123!",
+        "foto": "https://randomuser.me/api/portraits/women/53.jpg",
+        "admissao": "2005"
     },
     {
         "nome": "João Santos",
         "cpf": "112.233.445-56",
         "matricula": "91013-3",
-        "senha": "Js!2025"
+        "senha": "Js!2025",
+        "foto": "https://randomuser.me/api/portraits/men/54.jpg",
+        "admissao": "1991"
     },
     {
         "nome": "Ana Costa",
         "cpf": "201.302.403-33",
         "matricula": "56789-0",
-        "senha": "AnaC@123"
+        "senha": "AnaC@123",
+        "foto": "https://randomuser.me/api/portraits/women/55.jpg",
+        "admissao": "2018"
     },
     {
         "nome": "José Rodrigues",
         "cpf": "667.788.990-00",
         "matricula": "91014-4",
-        "senha": "R0dr1gues"
+        "senha": "R0dr1gues",
+        "foto": "https://randomuser.me/api/portraits/men/56.jpg",
+        "admissao": "2003"
     },
     {
         "nome": "Mariana Almeida",
         "cpf": "201.302.403-44",
         "matricula": "56780-1",
-        "senha": "Almeida#22"
+        "senha": "Almeida#22",
+        "foto": "https://randomuser.me/api/portraits/women/57.jpg",
+        "admissao": "2024"
     },
     {
         "nome": "Carlos Ferreira",
         "cpf": "778.899.001-12",
         "matricula": "91015-5",
-        "senha": "Ferreira_99"
+        "senha": "Ferreira_99",
+        "foto": "https://randomuser.me/api/portraits/men/58.jpg",
+        "admissao": "2011"
     },
     {
         "nome": "Laura Gomes",
         "cpf": "201.302.403-55",
         "matricula": "67890-2",
-        "senha": "Lgomes@321"
+        "senha": "Lgomes@321",
+        "foto": "https://randomuser.me/api/portraits/women/59.jpg",
+        "admissao": "1995"
     }
 ]

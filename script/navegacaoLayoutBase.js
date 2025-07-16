@@ -1,7 +1,8 @@
 import { getSession, endSession } from "../auth/auth.js";
 import { Navigate } from "../route/routes.js";
 import { getDocenteTurmas, getDisciplina } from "./buscarDados.js";
-import { criarItemDisciplina } from "./criarItemDisciplina.js"
+import { criarItemDisciplina } from "./criarItemDisciplina.js";
+import { constroiPaginaUsuario } from "../pagina-usuario/paginaUsuario.js"
 
 const usuarioLogado = getSession();
 if (!usuarioLogado) {
@@ -64,12 +65,13 @@ $(document).on('click', '.list-group-item', function(event) {
 /** Daqui pra baixo são funções de click para os botões do header e do footer */
 $(document).on('click', '#btn-profile', function(event) {
   event.preventDefault();
-  alert(
-    'Nome: ' + usuarioLogado.nome+ '\n' +
-    'CPF: ' + usuarioLogado.cpf + '\n' +
-    'Matrícula: ' + usuarioLogado.matricula
-  );
-  console.log('Botão profile clicado.');
+  constroiPaginaUsuario(usuarioLogado);
+
+  // alert(
+  //   'Nome: ' + usuarioLogado.nome+ '\n' +
+  //   'CPF: ' + usuarioLogado.cpf + '\n' +
+  //   'Matrícula: ' + usuarioLogado.matricula
+  // );
 });
 
 $(document).on('click', '#btn-logout', function(event) {
