@@ -38,7 +38,8 @@ function rememberAuthUser(user) {
     const userData = {
         nome: user.nome,
         cpf: user.cpf,
-        matricula: user.matricula
+        matricula: user.matricula,
+        admissao: user.admissao
     };
     
     localStorage.setItem('usuarioAutenticado', JSON.stringify(userData));
