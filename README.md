@@ -11,7 +11,7 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 
 1. [x] Mensagens de resposta ao usuário (em caso de falha de autenticação / label "Login" e "Senha")
 2. [x] Destaque maior para "Atenção aos prazos"
-3. [ ] Página com dados do professor (botão ao lado do logout)
+3. [x] Página com dados do professor (botão ao lado do logout)
 4. [x] Retirar tabela da direita em 'Registro de Notas e Faltas'
 5. [x] Pintar disciplina selecionada (ou colocar somente um label abaixo da tabela dizendo qual é)
 6. [x] min-width na tabela de 'Disciplinas do Período'

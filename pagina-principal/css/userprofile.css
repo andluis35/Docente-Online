@@ -63,13 +63,21 @@
     padding-right: 2vh;
 
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     justify-content: space-between;
 
     padding-left: 6vw;
     padding-right: 6vw;
 
     background-color: var(--cor-primaria);
+
+    padding-left: 6vw;
+    padding-right: 6vw;
+
+    @media screen and (max-width:600px) {
+        padding-left: 13vw;
+        padding-right: 13vw
+    }
 }
 
 img {
@@ -173,4 +181,8 @@ img:hover {
     a:hover {
         cursor: pointer;
     }
+}
+
+.pg-user-body {
+    width: 100%;
 }

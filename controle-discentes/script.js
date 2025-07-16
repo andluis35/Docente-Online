@@ -43,7 +43,7 @@ fetch ("../data/NOVO-disciplinas.json").then((response) => {
                         discSelecionada.textContent = (element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim();
                         //exibirInformacoes(element.textContent);
                         carregarAlunos(element.querySelector(".turmaID").textContent);
-                        destacarDisciplina(element);
+                        destacarDisciplina((element.textContent.match(/NOME:\s*(.*)\n/)[1]).trim(), parseInt((element.textContent.match(/TURMA:\s*(.*)\n/)[1]).trim()));
 
                         //Dispara evento no DOM informando a turma selecionada
                         document.dispatchEvent(new CustomEvent("trocaTurmaFormulario", {
