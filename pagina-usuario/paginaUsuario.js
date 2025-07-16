@@ -114,7 +114,7 @@ function constroiPagina(usuario) {
         </div>
         <img 
             id="profile-pic" 
-            src="https://randomuser.me/api/portraits/men/50.jpg" 
+            src="${usuario.foto}" 
             alt="Foto de perfil"
         >
         </div>
