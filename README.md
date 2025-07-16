@@ -17,7 +17,7 @@ Hospedado em: [https://andluis35.github.io/Docente-Online/](https://andluis35.gi
 6. [x] min-width na tabela de 'Disciplinas do Período'
 7. [x] Caminhos das abas 'Discentes com matrícula ativa na disciplina' e 'Registro de notas e faltas' estão levando para a mesma página (registro-de-notas-e-faltas/index.html)
 8. [x] Ao digitar notas negativas, o formulário aceita (não deveria somente mostrar no console)
-9. [ ] Implementação de página simples do SAG (verificar foto)
+9. [x] Implementação de página simples do SAG (verificar foto)
 10. [x] Alinhamento das notas à direita
 11. [x] Máscara de conversão de nota com vírgula para ponto
 12. [x] Tirar e-mail da tabela de registrar notas em 'Registro de Notas e Faltas'
